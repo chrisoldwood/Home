@@ -1,0 +1,12 @@
+//
+// Draw a simple box.
+//
+
+var sides  = 4
+var angle  = 360 / sides
+var length = 50
+
+REPEAT sides
+  FORWARD length
+  RIGHT angle
+END
