@@ -57,9 +57,17 @@ hopefully I will get it finished soon...
 <p>
 Sources are available for everything. Binaries will be limited to those
 applications where I know people won't want to, or can't build it
-themselves. The sources are by no means an example of how to write good
-code. My style has changed somewhat over the years and I'm not necessarily
-sure it is for the better. At the end of the day you get what you pay for.
+themselves. Increasingly I am also providing debug builds to help diagnose
+problems on other set-ups. The code is all linked statically and doesn't use
+the MFC so no DLL version conflicts should arise. The only real dependency
+is on the common controls DLL (COMCTL32.DLL) - you need at least v4.71 which
+shipped with IE 4.
+<p>
+The sources are by no means an example of how to write good code. Some of the
+core libraries like WCL have a long heritage which predates templates and so
+uses its own containers and string class. My style has also changed somewhat
+over the years and I'm not necessarily sure it is for the better. At the end
+of the day you get what you pay for.
 </p>
 
 <a name="Licence"></a>
@@ -80,6 +88,24 @@ decent job you shouldn't experience any problems, however, given that I haven't
 even finished some of the code on this site - you never can tell.
 </p>
 
+<a name="Credits"></a>
+<h3>Credits</h3>
+<p>
+Most of this software could not have been written without the time and resources
+of others, and so here is a big thank you to the companies and people who have
+contributed to my efforts...
+</p><p>
+<u>GST Software Plc</u> - My first employer. Most of the 16-bit DOS &amp; Windows
+code was written whilst working here. Special thanks goes to <i>Ian Masters</i>
+and <i>Steve Sorrell</i> for help developing the various NetWare utilities.
+</p><p>
+<u>Trio Internet Systems</u> - My current employer. Most of the 32-bit Windows
+and Java code has been written within the last 4 years. A debt of gratitude goes
+to <i>Mark Woolcott</i> for all his help, particularly whilst writing the NetDDE
+Bridge and UT Cache Manager. Also thanks goes to <i>Graham Corless</i> for his
+ideas for F.C. Manager.
+</p>
+
 <a name="Feedback"></a>
 <h3>Feedback</h3>
 <p>
@@ -95,7 +121,7 @@ My email address is <a href="mailto:gort@cix.co.uk">gort@cix.co.uk</a>.
 <table width="100%">
 <tr><td align="left">
 Chris Oldwood<br>
-13/01/2003
+05/03/2003
 </td><td align="right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
