@@ -1,1 +1,5 @@
 - Add some more JLogo examples.
+
+- Added release notes for updates.
+
+- Add more links.
