@@ -44,6 +44,114 @@ h3		{ font-size: 12pt }
 <p>
 </p>
 
+<a name="UTCacheMgr"></a>
+<table width="100%">
+<tr>
+<td><h3>UTCacheMgr v1.0 - UT Cache Manager</h3></td>
+<td align="right" valign="top">01/08/2002</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win32/utcachemgr10s.zip">Source (313k)</a>
+<a href="win32/utcachemgr10r.zip">Binary (121k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="TaskTracker"></a>
+<table width="100%">
+<tr>
+<td><h3>TaskTracker v3.5 - Work Hours Database</h3></td>
+<td align="right" valign="top">09/08/2002</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This is an updated version of the TASKTRAK application in the Win16 section.
+The application is very simple, you clock in and out during the day and associate
+a short phrase with each block of work. At any time you can run a report which
+shows your hours grouped by week, month or task and sums them up based on the
+grouping. The report can be viewed, printed or saved to a file or the clipboard.
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win32/tasktrak35s.zip">Source (247k)</a>
+<a href="win32/tasktrak35r.zip">Binary (72k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="PQT"></a>
+<table width="100%">
+<tr>
+<td><h3>PQT - Parameterised DB Query Tool</h3></td>
+<td align="right" valign="top">09/08/2002</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This tool is designed provide an alterative way to run parameterised queries
+without having to resort to writing stored procedures. You write your basic
+query and when it is correct you replace the hard-coded values with variable
+names. Next time when you run the query it will prompt you for the variables
+values in a dialog and substitute them in the query. It also allows you to
+configure logical connections and associate script paths with them to make it
+quicker to find and run scripts for a given database.
+<br>
+At the moment most of the tool is complete, you can set up logical connections,
+load, save and execute queries and view the results. Unfortunately the only thing
+you can't do is parameterise them as I haven't got around to that bit yet!
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win32/pqt01s.zip">Source (278k)</a>
+<a href="win32/pqt01r.zip">Binary (82k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="FCManager"></a>
+<table width="100%">
+<tr>
+<td><h3>FCManager - Football Club Manager</h3></td>
+<td align="right" valign="top">18/09/2001</td>
+</tr>
+<tr><td colspan="2"><p>
+</p></td></tr>
+<tr>
+<td colspan="2">
+<p>
+<!--a href="win32/.zip"-->Source<!--/a-->
+<!--a href="win32/.zip"-->Binary<!--/a-->
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <a name="WCL"></a>
 <table width="100%">
 <tr>
@@ -59,16 +167,10 @@ The library provides a basic set of application classes for dialog and SDI based
 apps - wrappers for most of the common controls and GDI objects - a basic set of
 container classes and some I/O classes.
 <br>
-It started as a WIN32 version of the same WCL that exists in my Win16 section, but
+It is a WIN32 version of the same WCL that exists in my Win16 section, but
 with support for the extra WIN32 features such as the new Common Controls.
-However as I started reading about patterns and templates etc. I started to
-rework some of the core application classes and templatize the old "generic"
-container classes.
-<br>
 It is not a complete class library, it grows when requirements from my
-applications forces it to, which isn't much these days. Mostly I find that I
-haven't provided a virtual function for a particular windows message, or that
-I haven't supplied a wrapper function for a particular common control message.
+applications forces it to, which isn't much these days.
 </p>
 </td>
 </tr>
@@ -95,7 +197,7 @@ I haven't supplied a wrapper function for a particular common control message.
 This library provides classes to create an in-memory copy of a database. The data
 and table schema can be provided programmatically or derived from a query result
 set run on an actual database. Currently ODBC is the only DB library supported with
-ADO due soon. The database can also be serialized into a binary file. The library
+ADO on the list. The database can also be serialized into a binary file. The library
 supports many data types and natural database features such as indexing, primary
 keys, foreign keys and triggers. It was designed with performance more in mind than
 features because I saw it most useful as a caching technology.
@@ -106,115 +208,6 @@ features because I saw it most useful as a caching technology.
 <td colspan="2">
 <p>
 <a href="win32/mdbl.zip">Source (58k)</a>
-</p>
-</td>
-</tr>
-</table>
-
-<p></p>
-
-<a name="UTCacheMgr"></a>
-<table width="100%">
-<tr>
-<td><h3>UTCacheMgr - UT Cache Manager</h3></td>
-<td align="right" valign="top">01/08/2002</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/utcachemgr10s.zip">Source (313k)</a>
-<a href="win32/utcachemgr10r.zip">Binary (121k)</a>
-</p>
-</td>
-</tr>
-</table>
-
-<p></p>
-
-<a name="TaskTracker"></a>
-<table width="100%">
-<tr>
-<td><h3>TaskTracker - Work Hours Database</h3></td>
-<td align="right" valign="top">03/08/2001</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-This is an updated version of the TASKTRAK application in the Win16 section.
-The application is very simple, you clock in and out during the day and associate
-a short phrase with each block of work. At any time you can run a report which
-shows your hours grouped by week, month or task and sums them up based on the
-grouping. The report can be viewed, printed or saved to a file or the clipboard.
-</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<!--a href="win32/.zip"-->Source<!--/a-->
-<!--a href="win32/.zip"-->Binary<!--/a-->
-</p>
-</td>
-</tr>
-</table>
-
-<p></p>
-
-<a name="PQT"></a>
-<table width="100%">
-<tr>
-<td><h3>PQT - Parameterized DB Query Tool</h3></td>
-<td align="right" valign="top">05/06/2001</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-This tool is designed provide an alterative way to run parameterised queries
-without having to resort to writing stored procedures. You write your basic
-query and when it is correct you replace the hard-coded values with variable
-names. Next time when you run the query it will prompt you for the variables
-values in a dialog and substitute them in the query. It also allows you to
-configure logical connections and associate script paths with them to make it
-quicker to find and run scripts for a given database.
-<br>
-At the moment most of the tool is complete, you can set up logical connections,
-load, save and execute queries and view the results. Unfortunately the only thing
-you can't do is parameterise them as I haven't got around to that bit yet! I'm
-afraid I started working with Java and haven't been back to finish this off.
-</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<!--a href="win32/.zip"-->Source<!--/a-->
-<!--a href="win32/.zip"-->Binary<!--/a-->
-</p>
-</td>
-</tr>
-</table>
-
-<p></p>
-
-<a name="FCManager"></a>
-<table width="100%">
-<tr>
-<td><h3>FCManager - Football Club Manager</h3></td>
-<td align="right" valign="top">18/09/2001</td>
-</tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
-<tr>
-<td colspan="2">
-<p>
-<!--a href="win32/.zip"-->Source<!--/a-->
-<!--a href="win32/.zip"-->Binary<!--/a-->
 </p>
 </td>
 </tr>
