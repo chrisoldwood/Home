@@ -50,6 +50,40 @@ function ShowScreenShot(strURL)
 <table width="600">
 <tr><td>
 
+<a name="Setup"></a>
+<table width="100%">
+<tr>
+<td><h3>Setup v1.0</h3></td>
+<td align="right" valign="top">29/01/2004</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This is the installer that I will be using for all my applications. It is driven
+by a simple config (.ini) file that supplies the default folder name, program
+group, list of files to be copied, shortcuts to create etc. It has no uninstall
+support at present.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<a href="win32/setup10r.zip">Binary (58k)</a>
+<a href="win32/setup10s.zip">Source (245k)</a>
+<a href="win32/setup10d.zip">Debug  (124k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+<a href="javascript:ShowScreenShot('win32/setup.gif');">ScreenShot</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <a name="UTCacheMgr"></a>
 <table width="100%">
 <tr>
@@ -203,8 +237,8 @@ server can support multiple DDE Services, but are limited to using the
 standard CF_* data formats.
 <br>
 The implementation currently only supports Named Pipes and uses Overlapped
-I/O and so is limited to Windows NT/2K/XP. I hope to add Sockets support
-soon.
+I/O and so is limited to Windows NT/2K/XP. Sockets support will be added at
+some point.
 </p>
 </td>
 </tr>
@@ -397,6 +431,39 @@ included here only for completeness.
 
 <p></p>
 
+<a name="MDADBG"></a>
+<table width="100%">
+<tr>
+<td><h3>MDA Debug Monitor</h3></td>
+<td align="right" valign="top">15/02/1996</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+A debugging tool that dumps all the Trace output from the OS and from calls
+to OutputDebugString() onto the seconday monochrome display. It was written
+because there was no Win32 version of DBWIN. It accesses the MDA through a
+Win16 .DLL, which in turn is accessed by a Win32 thunking .DLL.
+</p><p>
+This requires the Thunk compiler from the DDK.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<a href="win32/mdadbg10s.zip">Source (60k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <a name="WCL"></a>
 <table width="100%">
 <tr>
@@ -486,7 +553,7 @@ is still in its early days.
 <table width="100%">
 <tr><td align="left">
 Page Last Updated:<br>
-19/06/2003
+29/01/2004
 </td><td align="right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
