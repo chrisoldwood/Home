@@ -14,6 +14,16 @@ p		{ font-size: 10pt }
 h3		{ font-size: 12pt }
 -->
 </style>
+<script language="JavaScript">
+<!--
+
+function ShowScreenShot(strURL)
+{
+	popupwnd = window.open(strURL, "ScreenShot", "toolbar=no,status=yes,resize=yes");
+}
+
+-->
+</script>
 </head>
 
 <body>
@@ -40,83 +50,199 @@ h3		{ font-size: 12pt }
 <table width="600">
 <tr><td>
 
+<a name="TaskTracker"></a>
 <table width="100%">
 <tr>
-<td><h3>WCL - Windows C++ Library</h3></td>
-<td align="right" valign="top">15/11/1998</td>
-</tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
-</table>
-
-<table width="100%">
-<tr>
-<td><h3>TASKTRAK - Work Hours Database</h3></td>
+<td><h3>Task Tracker v2.0</h3></td>
 <td align="right" valign="top">24/06/1998</td>
 </tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
-</table>
-
-<table width="100%">
 <tr>
-<td><h3>HFGEN - HelpFile Generator</h3></td>
-<td align="right" valign="top">11/11/1998</td>
+<td colspan="2">
+<p>
+This is a simple tool for keeping track of the hours you spend at work on various
+projects. You clock in and out during the day and associate a short phrase with
+each block of work. At any time you can run a report which shows your hours grouped
+by week, month or task and it sums them up based on the grouping. The report can
+be viewed, printed or saved to a file or the clipboard. I wrote it whilst contracting.
+</p>
+</td>
 </tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
-</table>
-
-<table width="100%">
 <tr>
-<td><h3>KILLAPP - Application Closer</h3></td>
-<td align="right" valign="top">05/12/1995</td>
+<td>
+<p>
+<a href="win16/tasktrak20r.zip">Binary (36k)</a>
+<a href="win16/tasktrak20s.zip">Source (189k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+<a href="javascript:ShowScreenShot('win16/tasktrak.gif');">ScreenShot</a>
+</p>
+</td>
 </tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
-</table>
-
-<table width="100%">
-<tr>
-<td><h3>MAILTOSS - WinPMail Mail Forwarder</h3></td>
-<td align="right" valign="top">20/12/1995</td>
-</tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
-</table>
-
-<table width="100%">
-<tr>
-<td><h3>MDALIB - Mono Display Adapter Library</h3></td>
-<td align="right" valign="top">10/04/1995</td>
-</tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
-</table>
-
-<table width="100%">
-<tr>
-<td><h3>MDARSC - MDA Resource Monitor</h3></td>
-<td align="right" valign="top">04/12/1995</td>
-</tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
-</table>
-
-<table width="100%">
-<tr>
-<td><h3>MONODBG - MDA Debug Terminal</h3></td>
-<td align="right" valign="top">15/02/1996</td>
-</tr>
-<tr><td colspan="2"><p>
-</p></td></tr>
 </table>
 
 <p></p>
+
+<a name="HFGen"></a>
+<table width="100%">
+<tr>
+<td><h3>HelpFile Generator v1.0 (Alpha)</h3></td>
+<td align="right" valign="top">11/11/1998</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This is a simple IDE for generating application HelpFilea (.HLP). You create
+the helpfile topics, specifying keywords etc and when you invoke the build
+command it generates the .RTF and .HPJ files and calls the WinHelp compiler
+for you.
+</p><p>
+This application is unfinished.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<a href="win16/hfgen10r.zip">Binary (30k)</a>
+<a href="win16/hfgen10s.zip">Source (160k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+<a href="javascript:ShowScreenShot('win16/hfgen.gif');">ScreenShot</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="KilApp"></a>
+<table width="100%">
+<tr>
+<td><h3>KillApp</h3></td>
+<td align="right" valign="top">05/12/1995</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+A simple application which closes another application by sending it a WM_CLOSE.
+The window class name and optional title are specified in the KillApp.ini file.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<a href="win16/killapp10r.zip">Binary (4k)</a>
+<a href="win16/killapp10s.zip">Source (4k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="MailToss"></a>
+<table width="100%">
+<tr>
+<td><h3>Netware Mail Tosser</h3></td>
+<td align="right" valign="top">20/12/1995</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This application delivers emails to users mailboxes on a NetWare 3.x server,
+where the emails have been downloaded to a single folder using something like
+KA9Q or WinPMail. It is configured using an .ini file, where you can set the
+incoming mail folder, mail server name and any aliases.
+</p><p>
+This requires <i>nwcalls.h</i> and <i>nwcalls.lib</i> from the NetWare SDK.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<a href="win16/mailtoss10s.zip">Source (18k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="WCL"></a>
+<table width="100%">
+<tr>
+<td><h3>Windows C++ Library</h3></td>
+<td align="right" valign="top">15/11/1998</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This is the core library that some of my applications rely on to provide the basic
+C++ classes to wrap the WIN16 API. It is my equivalent of the MFC library.
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win16/wcl.zip">Source (118k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="MDALIB"></a>
+<table width="100%">
+<tr>
+<td><h3>Mono Display Adapter Library</h3></td>
+<td align="right" valign="top">10/04/1995</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This library (.DLL) provides an API for drawing on a Monochrome Display Adapter.
+These were often used as a secondary display on which you ran a debugger, such
+as CodeView. The archives include a sample application called RscMon which shows
+the current Memory and GDI usage as a couple of bars.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<a href="win16/mdalib10r.zip">Binary (8k)</a>
+<a href="win16/mdalib10s.zip">Source (23k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <table width="100%">
 <tr><td align="left">
 Page Last Updated:<br>
-01/09/2002
+29/01/2004
 </td><td align="right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
