@@ -14,6 +14,16 @@ p		{ font-size: 10pt }
 h3		{ font-size: 12pt }
 -->
 </style>
+<script language="JavaScript">
+<!--
+
+function ShowScreenShot(strURL)
+{
+	popupwnd = window.open(strURL, "ScreenShot", "toolbar=no,status=yes,resize=yes");
+}
+
+-->
+</script>
 </head>
 
 <body>
@@ -39,10 +49,109 @@ h3		{ font-size: 12pt }
 <table width="600">
 <tr><td>
 
+<a name="UTCacheMgr"></a>
+<table width="100%">
+<tr>
+<td><h3>UT Cache Manager v2.0</h3></td>
+<td align="right" valign="top">01/08/2002</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This is a utility for Unreal Tournament which allows you to manage the cache where
+files are downloaded when you play online. It can move/copy files into your main
+folders so that you can play the maps offline, copy files from another users cache
+to save downloading over slow connections, remove failed downloads and old entries
+from the cache index and restore files back to the cache if a conflict occurs.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<a href="win32/utcachemgr10r.zip">Binary (121k)</a>
+<a href="win32/utcachemgr10s.zip">Source (313k)</a>
+<a href="win32/utcachemgr10d.zip">Debug  (???k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+<a href="javascript:ShowScreenShot('win32/utcmgr.gif');">ScreenShot</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="UTSvrBrowser"></a>
+<table width="100%">
+<tr>
+<td><h3>UT Server Browser v1.0</h3></td>
+<td align="right" valign="top">??/??/2003</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This utility for Unreal Tournament (and all its mods) allows you to find and
+monitor UT servers and to add/remove them from your favourites. It has a number
+of filtering options (mod, players, ping, partial name etc) to help you reduce
+the noise. It comes with configs for the most popular mods.
+<br>
+This is currently in the final stages of development.
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win32/utsvrbrw10r.zip">Binary (???k)</a>
+<a href="win32/utsvrbrw10s.zip">Source (???k)</a>
+<a href="win32/utsvrbrw10d.zip">Debug  (???k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<a name="SockTrace"></a>
+<table width="100%">
+<tr>
+<td><h3>Socket Tracer v1.0</h3></td>
+<td align="right" valign="top">12/03/2003</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This is a kind of TCP/UDP proxy that allows you to capture the traffic sent
+and received by a client and server. You point the client to the tool and direct
+the tool to forward to the server and it writes any data sent between the two
+to a file. I wrote it to sniff the traffic between Unreal Tournament and the
+HTTP, master and game servers used in on-line play.
+<br>
+It still needs a lot of work as this version only support a single connection
+on a single port.
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win32/socktrace10r.zip">Binary (???k)</a>
+<a href="win32/socktrace10s.zip">Source (???k)</a>
+<a href="win32/socktrace10d.zip">Debug  (???k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <a name="HttpQuery"></a>
 <table width="100%">
 <tr>
-<td><h3>HttpQuery v1.0 - HTTP Query Tool</h3></td>
+<td><h3>HTTP Query Tool v1.0</h3></td>
 <td align="right" valign="top">04/03/2003</td>
 </tr>
 <tr>
@@ -58,14 +167,14 @@ sort out issues with proxies and firewalls.
 <tr>
 <td>
 <p>
-<a href="win32/httpquery10r.zip">Binary (52k)</a>
-<a href="win32/httpquery10s.zip">Source (275k)</a>
-<a href="win32/httpquery10d.zip">Debug  (114k)</a>
+<a href="win32/httpquery10r.zip">Binary (???k) </a>
+<a href="win32/httpquery10s.zip">Source (???k)</a>
+<a href="win32/httpquery10d.zip">Debug  (???k)</a>
 </p>
 </td>
 <td align="right">
 <p>
-<a href="win32/httpquery.gif">Screen Capture (???x???)</a>
+<!--<a href="win32/httpquery.gif">Screen Capture (???x???)</a>-->
 </p>
 </td>
 </tr>
@@ -76,7 +185,7 @@ sort out issues with proxies and firewalls.
 <a name="NetDDE"></a>
 <table width="100%">
 <tr>
-<td><h3>NetDDE v1.0 - DDE Network Bridge</h3></td>
+<td><h3>DDE Network Bridge v1.0</h3></td>
 <td align="right" valign="top">04/03/2003</td>
 </tr>
 <tr>
@@ -97,9 +206,9 @@ soon.
 <tr>
 <td colspan="2">
 <p>
-<a href="win32/netdde10r.zip">Binary (129k)</a>
-<a href="win32/netdde10s.zip">Source (317k)</a>
-<a href="win32/netdde10d.zip">Debug  (260k)</a>
+<a href="win32/netdde10r.zip">Binary (???k)</a>
+<a href="win32/netdde10s.zip">Source (???k)</a>
+<a href="win32/netdde10d.zip">Debug  (???k)</a>
 </p>
 </td>
 </tr>
@@ -110,7 +219,7 @@ soon.
 <a name="ChkClocks"></a>
 <table width="100%">
 <tr>
-<td><h3>ChkClocks v1.0 - Check Networked Computer Clocks</h3></td>
+<td><h3>Network Clock Checker v1.0</h3></td>
 <td align="right" valign="top">13/01/2003</td>
 </tr>
 <tr>
@@ -136,39 +245,10 @@ tested in a Windows NT/2K environment.
 
 <p></p>
 
-<a name="UTCacheMgr"></a>
-<table width="100%">
-<tr>
-<td><h3>UTCacheMgr v1.0 - UT Cache Manager</h3></td>
-<td align="right" valign="top">01/08/2002</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-This is a utility for Unreal Tournament which allows you to manage the cache where
-files are downloaded when you play online. It can move/copy files into your main
-folders so that you can play the maps offline, copy files from another users cache
-to save downloading over slow connections, remove failed downloads and old entries
-from the cache index and restore files back to the cache if a conflict occurs.
-</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/utcachemgr10r.zip">Binary (121k)</a>
-<a href="win32/utcachemgr10s.zip">Source (313k)</a>
-</p>
-</td>
-</tr>
-</table>
-
-<p></p>
-
 <a name="TaskTracker"></a>
 <table width="100%">
 <tr>
-<td><h3>TaskTracker v3.5 - Work Hours Database</h3></td>
+<td><h3>Task Tracker v3.5</h3></td>
 <td align="right" valign="top">09/08/2002</td>
 </tr>
 <tr>
@@ -197,7 +277,7 @@ grouping. The report can be viewed, printed or saved to a file or the clipboard.
 <a name="PQT"></a>
 <table width="100%">
 <tr>
-<td><h3>PQT v1.0 - Parameterised DB Query Tool</h3></td>
+<td><h3>Parameterised DB Query Tool v1.0</h3></td>
 <td align="right" valign="top">13/01/2003</td>
 </tr>
 <tr>
@@ -228,7 +308,7 @@ it quicker to find and run common scripts for a database.
 <a name="FCManager"></a>
 <table width="100%">
 <tr>
-<td><h3>FCManager - Football Club Manager</h3></td>
+<td><h3>Football Club Manager v0.3</h3></td>
 <td align="right" valign="top">18/09/2001</td>
 </tr>
 <tr>
@@ -259,10 +339,39 @@ it...
 
 <p></p>
 
+<a name="ClassGen"></a>
+<table width="100%">
+<tr>
+<td><h3>Class Generator v1.0</h3></td>
+<td align="right" valign="top">12/02/2003</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This is the class generator I use when adding new classes to my projects.
+It supports only a limited set of parameter tags and includes templates for
+various generic classes, dialogs, property sheets and property pages. It is
+included here only for completeness.
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win32/classgen10r.zip">Binary (???k)</a>
+<a href="win32/classgen10s.zip">Source (???k)</a>
+<a href="win32/classgen10d.zip">Debug  (???k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <a name="WCL"></a>
 <table width="100%">
 <tr>
-<td><h3>WCL - Windows C++ Library</h3></td>
+<td><h3>Windows C++ Library</h3></td>
 <td align="right" valign="top">04/03/2003</td>
 </tr>
 <tr>
@@ -295,7 +404,7 @@ applications forces it to, which isn't much these days.
 <a name="MDBL"></a>
 <table width="100%">
 <tr>
-<td><h3>MDBL - Memory Database Library</h3></td>
+<td><h3>Memory Database Library</h3></td>
 <td align="right" valign="top">04/03/2003</td>
 </tr>
 <tr>
@@ -325,7 +434,7 @@ features because I saw it most useful as a caching technology.
 <a name="NCL"></a>
 <table width="100%">
 <tr>
-<td><h3>NCL - Network &amp; Comms Library</h3></td>
+<td><h3>Network &amp; Comms Library</h3></td>
 <td align="right" valign="top">04/03/2003</td>
 </tr>
 <tr>
@@ -351,7 +460,7 @@ is still in its early days.
 <table width="100%">
 <tr><td align="left">
 Page Last Updated:<br>
-05/03/2003
+02/04/2003
 </td><td align="right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
