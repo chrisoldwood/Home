@@ -8,6 +8,8 @@
 <style>
 <!--
 body	{ font-family: Verdana, Arial }
+td		{ font-size: 10pt }
+.Header { font-size: 12pt; font-weight: bold  }
 p		{ font-size: 10pt }
 h3		{ font-size: 12pt }
 -->
@@ -17,7 +19,7 @@ h3		{ font-size: 12pt }
 
 function RunApplet(strURL)
 {
-	popupwnd = window.open(strURL, "Applet", "toolbar=no,width=620,height=460,scrollbars=no,resize=no");
+	popupwnd = window.open(strURL, "Applet", "toolbar=no,status=yes,width=620,height=460,scrollbars=no,resize=no");
 }
 
 function ShowExample(strURL)
@@ -31,139 +33,119 @@ function ShowExample(strURL)
 
 <body>
 <div align="center">
+
+<table>
+	<tr>
+		<td colspan=5 class="Header">Chris Oldwoods Home Page</td>
+	</tr>
+	<tr>
+		<td align="center"><a href="default.htm">Home </a></td>
+		<td align="center"><a href="java.htm"   >Java </a></td>
+		<td align="center"><a href="win32.htm"  >Win32</a></td>
+		<td align="center"><a href="win16.htm"  >Win16</a></td>
+		<td align="center"><a href="dos.htm"    >DOS  </a></td>
+	</tr>
+</table>
+
+<table width="600">
+<tr><td><hr></td></tr>
+</table>
+
 <table width="600">
 <tr><td>
 
+<a name="Introduction">
 <h3>Introduction</h3>
 <p>
-I have only been doing Java on and off for a year mostly on a project at work.
-These applets and the framework are the results of my initial toyings with the
-language. They are all based around the 1.1 JDK.
-<br>
-I warn you now, I have grown up with Microsoft Windows as a developer and as
-such both use and like Hungarian notation (my version of it that is), if you
-are easily offended by the sight of things like the <i>m_</i> prefix, don't
-look at the source code. Also don't expect any JavaDoc type comments, because you
-will be sorely disappointed - I'm sorry but I can't stand it.
+I started learning Java because of a project at work and what you see below is the
+results of my initial playing around with the language. It is all based around the
+1.1 JDK because I was looking at client side use.
 </p>
 
+<a name="Framework">
 <table width="100%">
 <tr>
 <td><h3>Framework - Java Class Packages</h3></td>
 <td align="right" valign="top">18/07/2001</td>
 </tr>
-<tr>
-<td colspan="2">
-<p>
-These packages contain all the classes that are common to all my Java applets.
+<tr><td colspan="2"><p>
+These packages contain all the classes that are common to my Java applets.
 Currently it only contains UI classes for creating message boxes and modal
 dialogs. The message box is styled to look like a standard Windows one.
-<br>
-There are a couple of stupid panel classes that I threw together to help me with
-the layouts in the JLogo applet, I hope to replace these when I write a proper
-layout manager.
-</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="java/src/gort.zip">Source</a>
-<a href="java/bin/gort.zip">Binary</a>
-</p>
-</td>
-</tr>
+</p></td></tr>
+<tr><td colspan="2"><p>
+<a href="java/gort.zip">Source (13k)</a>
+</p></td></tr>
 </table>
 
 <p></p>
 
+<a name="JLogo">
 <table width="100%">
 <tr>
 <td><h3>JLogo - Java Logo</h3></td>
-<td align="right" valign="top">20/07/2001</td>
+<td align="right" valign="top">17/10/2001</td>
 </tr>
-<tr>
-<td colspan="2">
-<p>
-This applet is a visual tool for writing "Logo" programs - at least that is what
-I wanted it to do. However, when I came to write it I realised that the only thing
-I could remember is the idea of a turtle and some basic drawing commands.
-Consequently JLogo is actually an approximation of a "Logo" IDE. The applet
-provides you with a turtle, and a set of drawing commands. It also provides a
-simple <i>loop</i> command and support for variables (of type <i>double</i>).
+<tr><td colspan="2"><p>
+This applet is a sort of IDE for Visually creating "Logo" type programs. It only
+resembles Logo though because you control a turtle. It supports some basic drawing
+stuff like pen control and forward/turning motions. It also supports loops and
+named variables (of type <i>double</i>) to allow you to produce vaguely interesting
+patterns.
+<br>
 To get around the lack of access to the file system, the program can be stored
-and loaded by cut and pasting from/to the source editor window.
-</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="java/src/jlogo.zip">Source</a>
-<a href="java/bin/jlogo.zip">Binary</a>
-<a href="javascript:RunApplet('java/run/jlogo.htm');">Run</a>
-</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p><br>
-Example Programs: 
-<a href="javascript:ShowExample('java/run/box.txt');">Box</a>
+and loaded by cutting/pasting from/to the source editor window.
+</p></td></tr>
+<tr><td colspan="2"><p>
+<a href="java/jlogos.zip">Source (47k)</a>
+<a href="java/jlogo.cab">Binary (42k)</a>
+<a href="javascript:RunApplet('java/jlogo.htm');">Run</a>
+</p></td></tr>
+<tr><td colspan="2"><p>
+<br>
+Example Programs:
+<a href="javascript:ShowExample('java/box.txt');">Box</a>
 <br>
 To run them, paste the program source into the source editor window, which is
 accessed by pressing the "Edit..." button in the "Program" controls section.
-</p>
-</tr>
+</p></td></tr>
 </table>
 
 <p></p>
 
+<a name="Img2Src">
 <table width="100%">
 <tr>
 <td><h3>Img2Src - Image To Source Code Converter</h3></td>
-<td align="right" valign="top">23/02/2001</td>
+<td align="right" valign="top">23/08/2001</td>
 </tr>
-<tr>
-<td colspan="2">
-<p>
-This applet basically loads an image file and converts the image pixels into a
-series of <i>int</i> values that can be pasted into a static int array defined 
-in a class. For an example look at the MsgBoxIcons.java class in the framework.
-<br>
-This applet came about because I wanted to remove the dependence of the MsgBox
-class on a .gif file which held the icons - I wanted to embed the image data into
-a byte array so that I could rely on the icons always being available.
+<tr><td colspan="2"><p>
+This applet loads an image file and converts the image pixels into a series of
+<i>int</i> values that can be pasted into a static int array defined in a class.
+For an example look at the MsgBoxIcons.java class in the framework.
 <br>
 It still needs alot of tarting up and runs too slowly because I populate the
-output window on the fly. I'll fix these problems soon.
+output window on the fly.
+</p></td></tr>
+<tr><td colspan="2"><p>
+<a href="java/img2srcs.zip">Source (19k)</a>
+<a href="java/img2src.cab">Binary (22k)</a>
+<a href="javascript:RunApplet('java/img2src.htm')">Run</a>
+</p></td></tr>
+<tr><td colspan="2"><p>
 <br>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="java/src/img2src.zip">Source</a>
-<a href="java/bin/img2src.zip">Binary</a>
-<a href="javascript:RunApplet('java/run/img2src.htm')">Run</a>
-</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p><br>
-Example Image: 
-<a href="javascript:ShowExample('java/run/icons.gif');">icons.gif</a>
+Example Image:
+<a href="javascript:ShowExample('java/icons.gif');">icons.gif</a>
 <br>
 Enter the filename into the edit box at the top left and click "Load". Then click
 "Convert...", enter the options and press OK. You will see the source appearing in
 the lower text area.
-</p>
-</tr>
+</p></td></tr>
 </table>
 
 </td></tr>
 </table>
+
 </div>
 </body>
 
