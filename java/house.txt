@@ -1,0 +1,77 @@
+//****************************************
+// Draw a house
+
+var right_angle = 90
+
+var wall_size = 50
+
+// Draw the walls
+COLOUR Blue
+REPEAT 4
+  FORWARD wall_size
+  RIGHT right_angle
+END
+
+// Move to top left
+FORWARD wall_size
+
+var roof_size = 50
+
+// Draw the roof
+COLOUR Red
+RIGHT 30
+FORWARD roof_size
+RIGHT 120
+FORWARD roof_size
+
+var door_width  = 10
+var door_height = 20
+
+// Move to bottom left of door
+PEN Up
+RIGHT 30
+FORWARD wall_size
+RIGHT right_angle
+FORWARD (wall_size/2)+(door_width/2)
+RIGHT right_angle
+
+// Draw the door
+PEN Down
+COLOUR Magenta
+FORWARD door_height
+RIGHT right_angle
+FORWARD door_width
+RIGHT right_angle
+FORWARD door_height
+
+var window_size = 10
+
+// Move to top left of left window
+PEN Up
+RIGHT right_angle
+FORWARD 30
+RIGHT right_angle
+FORWARD (wall_size-window_size)
+RIGHT right_angle
+FORWARD 10
+
+// Draw left-side window
+PEN Down
+COLOUR Green
+REPEAT 4
+    FORWARD window_size
+    RIGHT right_angle
+END
+
+// Move to top left of right window
+PEN Up
+FORWARD 20
+PEN Down
+
+// Draw right-side window
+PEN Down
+COLOUR Green
+REPEAT 4
+    FORWARD window_size
+    RIGHT right_angle
+END
