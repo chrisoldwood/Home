@@ -1,5 +1,13 @@
-- Add some more JLogo examples.
+- Add more links (Games, Blogs, Mirrors).
 
-- Added release notes for updates.
+- Check spelling and grammar.
 
-- Add more links.
+- Revise frontpage.
+
+- Revise keywords and descriptions.
+
+- Restructue to 1 sub-folder per project.
+
+- Add release notes for updates.
+
+- Add PayPal section.
