@@ -2,9 +2,9 @@
 
 <head>
 <meta name="author"      content="Chris Oldwood">
-<meta name="keywords"    content="Chris Oldwood HomePage Java Win32 Win16 DOS NetWare">
-<meta name="description" content="Chris Oldwoods Java Stuff">
-<title>Chris Oldwoods Java Stuff</title>
+<meta name="keywords"    content="Chris Oldwood HomePage Freeware Java Applet">
+<meta name="description" content="Chris Oldwood's freeware Java stuff">
+<title>Chris Oldwood's Freeware Java Stuff</title>
 <style>
 <!--
 body	{ font-family: Verdana, Arial }
@@ -19,12 +19,12 @@ h3		{ font-size: 12pt }
 
 function RunApplet(strURL)
 {
-	popupwnd = window.open(strURL, "Applet", "toolbar=no,status=yes,width=620,height=460,scrollbars=no,resize=no");
+	popupwnd = window.open(strURL, "Applet", "toolbar=no,status=yes,width=775,height=575,scrollbars=no,resize=no");
 }
 
 function ShowExample(strURL)
 {
-	popupwnd = window.open(strURL, "Example", "toolbar=no,width=300,height=400");
+	popupwnd = window.open(strURL, "Example", "toolbar=no,status=yes,width=400,height=400,scrollbars=yes");
 }
 
 -->
@@ -36,15 +36,17 @@ function ShowExample(strURL)
 
 <table>
 	<tr>
-		<td colspan="6" class="Header">Chris Oldwoods Java Page</td>
+		<td class="Header">Chris Oldwood's Freeware Java Stuff</td>
 	</tr>
+</table>
+<table>
 	<tr>
-		<td align="center"><a href="default.htm">Home </a></td>
-		<td align="center"><a href="win32.htm"  >Win32</a></td>
-		<td align="center"><a href="win16.htm"  >Win16</a></td>
-		<td align="center"><a href="dos.htm"    >DOS  </a></td>
-		<td align="center"><a href="java.htm"   >Java </a></td>
-		<td align="center"><a href="links.htm"  >Links</a></td>
+		<td align="center">&nbsp;<a href="default.htm">Home</a >&nbsp;</td>
+		<td align="center">&nbsp;<a href="win32.htm"  >Win32</a>&nbsp;</td>
+		<td align="center">&nbsp;<a href="win16.htm"  >Win16</a>&nbsp;</td>
+		<td align="center">&nbsp;<a href="dos.htm"    >DOS</a  >&nbsp;</td>
+		<td align="center">&nbsp;<a href="java.htm"   >Java</a >&nbsp;</td>
+		<td align="center">&nbsp;<a href="links.htm"  >Links</a>&nbsp;</td>
 	</tr>
 </table>
 
@@ -74,12 +76,14 @@ and loaded by cutting/pasting from/to the source editor window.
 <tr><td colspan="2"><p>
 <a href="java/jlogo.cab">Binary (42k)</a>
 <a href="java/jlogos.zip">Source (47k)</a>
-<a href="javascript:RunApplet('java/jlogo.htm');">Run</a>
+<a href="javascript:RunApplet('java/jlogo.htm');">Run Now</a>
 </p></td></tr>
 <tr><td colspan="2"><p>
 <br>
 Example Programs:
 <a href="javascript:ShowExample('java/box.txt');">Box</a>
+<a href="javascript:ShowExample('java/star.txt');">Star</a>
+<a href="javascript:ShowExample('java/house.txt');">House</a>
 <br>
 To run them, paste the program source into the source editor window, which is
 accessed by pressing the "Edit..." button in the "Program" controls section.
@@ -98,14 +102,11 @@ accessed by pressing the "Edit..." button in the "Program" controls section.
 This applet loads an image file and converts the image pixels into a series of
 <i>int</i> values that can be pasted into a static int array defined in a class.
 For an example look at the MsgBoxIcons.java class in the framework.
-<br>
-It still needs a lot of tarting up and runs too slowly because I populate the
-output window on the fly.
 </p></td></tr>
 <tr><td colspan="2"><p>
 <a href="java/img2src.cab">Binary (22k)</a>
 <a href="java/img2srcs.zip">Source (19k)</a>
-<a href="javascript:RunApplet('java/img2src.htm')">Run</a>
+<a href="javascript:RunApplet('java/img2src.htm')">Run Now</a>
 </p></td></tr>
 <tr><td colspan="2"><p>
 <br>
@@ -140,7 +141,7 @@ dialogs. The message box is styled to look like a standard Windows one.
 <table width="100%">
 <tr><td align="left">
 Page Last Updated:<br>
-01/09/2002
+23/04/2005
 </td><td align="right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
