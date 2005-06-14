@@ -7,11 +7,11 @@
 <title>Chris Oldwood's Freeware Win32 Stuff</title>
 <style>
 <!--
-body { font-family: Verdana, Arial }
-td { font-size: 10pt }
+body	{ font-family: Verdana, Arial }
+td		{ font-size: 10pt }
 .Header { font-size: 12pt; font-weight: bold }
-p { font-size: 10pt }
-h3 { font-size: 12pt }
+p		{ font-size: 10pt }
+h3		{ font-size: 12pt }
 --> 
 </style>
 <script language="JavaScript">
@@ -63,7 +63,9 @@ function ShowScreenShot(strURL)
 <p>
 This is a utility for querying DDE servers. It supports all the transaction types
 such as request, advise, poke and execute for both standard and custom clipboard
-formats.
+formats. It has an ASCII and binary viewer for looking in detail at the data sent
+from the DDE server and you can set-up and monitor a bunch of hot-links from a
+file.
 </p>
 </td>
 </tr>
@@ -135,7 +137,7 @@ This is the installer that I am using for all my applications. It is driven
 by a simple config (.ini) file that supplies the default folder name, program
 group, list of files to be copied, shortcuts to create etc. It now includes
 a GUI tool for creating the scripts.
-<br>
+</p><p>
 It has no uninstall support at present.
 </p>
 </td>
@@ -269,9 +271,9 @@ sort out issues with proxies and firewalls.
 <td colspan="2">
 <p>
 This is a client/server application that allows you to access DDE sources
-across a network. You run the NetDDEServer on the same machine as the DDE Server
-and run the NetDDEClient on the DDE Clients machine. Both the client and
-server can support multiple DDE Services.
+across a network, just like the built-in NetDDE service, but this one has
+some clever options and caching to reduce round-trip delays. Also, it is
+transparent to the DDE client, so no changes to the DDE links are required.
 </p>
 </td>
 </tr>
@@ -301,7 +303,7 @@ This is a utility to scan a network and compare the system clock times for all
 computers to the one on which the utility is being run.
 <br>
 This utility can only be run on a Windows NT/2K/XP machine and has only been
-tested in a Windows NT/2K environment.
+tested in a Windows NT/2K/XP environment.
 </p>
 </td>
 </tr>
@@ -512,7 +514,7 @@ The library provides a basic set of application classes for dialog and SDI based
 apps - wrappers for most of the common controls and GDI objects - a basic set of
 container classes and some I/O classes. It is not a complete class library, it
 grows when requirements from my applications forces it to, which isn't much these
-days.
+days. Also because of its heritage there is virtually no use of the STL or Boost.
 </p>
 </td>
 </tr>
@@ -585,7 +587,7 @@ contains classes for using Named Pipes, DDE &amp; Sockets.
 <table width="100%">
 <tr><td align="left">
 Page Last Updated:<br>
-23/04/2005
+14/06/2005
 </td><td align="right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
