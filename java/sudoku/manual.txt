@@ -1,0 +1,86 @@
+Introduction
+============
+
+Sudoku Solver is a utility aimed to help *you* solve Sudoku
+puzzles. Although it can provide the solution, this would be
+missing the point - that being that it allows you to solve
+the puzzle with the space to enter possible answers and
+correct mistakes without having to use a pencil and rubber
+and a larger sheet of paper... It also does not generate
+puzzles, it was expected that you'll already have one of
+these and you'll use this to help you solve it.
+
+Getting Started
+===============
+
+The first step is to enter your puzzle into Sudoku Solver so
+that it can distinguish between the original answers
+provided by the puzzle author and your answers. It also
+means you can start again without needing to re-enter it.
+
+Click the 'New' button, which shows the Sudoku grid where
+you enter your numbers. You can either click on a square or
+use the cursor keys to navigate from square to square. Then
+use the number keys "1..9" to enter the appropriate value.
+If you make a mistake you can either press Delete to remove
+it or just type the correct value.
+
+You can use the 'Check' button to help you avoid mistakes,
+as this ensures the numbers aren't invalid from the start.
+
+Once you have entered the puzzle, click the 'Start' button
+to allow you to enter your answers. These will appear in
+blue, to distinguish them from the answers provided. Once
+again you use the number keys "1..9", however you now also
+have the ability to enter more than one number in a square
+by using "Ctrl+1..9". This allows you to keep track of
+squares which you know only have a couple of possible
+answers - as you eliminate them you can use "Ctrl+1..9" to
+remove them from the square. Once you know the answer you
+can just type it the normal way, or use "Delete" to remove
+all the choices you have entered in one go.
+
+If you have made a mistake and want to start the puzzle
+again, click "Reset" and this will remove all your answers.
+If you want to do another puzzle you can click "New" to
+enter another one.
+
+Other Functions
+===============
+
+As you get further through the puzzle you can check that
+you haven't entered a number incorrectly by using the
+"Check" button. This only checks that you have not entered a
+number incorrectly in a square that breaks the rules (e.g.
+you have two number 6's in the same row), it does not check
+that the puzzle has been solved correctly to that point.
+
+If you get stuck you can press the "Hint" button and it will
+change the colour of a square to green, where it thinks you
+can enter an answer. If you still need a little more help
+you can press the "Solve" button which will show you the
+possible answers for each square to that point. You should
+be aware that it bases its answers on what you have already
+done, so if you have made a mistake earlier it will not take
+that into account, it only solves the puzzle according to
+the state at that moment.
+
+Loading & Saving Puzzles
+========================
+
+The ability the load and save puzzles is limited by what a
+Java applet can do (see * below). As a workaround I have
+provided a dialog into which a puzzle can be written in a
+text form so that you can copy-and-paste it into a text
+editor (e.g. Notepad) and then save it as a text document.
+To reload the puzzle you do the opposite, i.e. open the file
+with Notepad and copy the contents into the dialog window
+displayed after clicking "Load".
+
+*Java applets do not have the ability to read and write
+files locally without being 'signed'. To sign an applet that
+can be properly trusted requires me buying a certificate and
+also renewing it regularly.
+
+Chris Oldwood
+26th March 2007
