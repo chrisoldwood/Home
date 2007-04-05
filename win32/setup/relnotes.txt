@@ -1,0 +1,30 @@
+Version 1.2
+===========
+
+- Fixed a bug where it would crash if the user did not have sufficient rights to %ProgramFiles%.
+- Added ability to configure the default installation root path.
+- Added support for installing files into foldes other than the target.
+- Added annotated Example setup script .
+- Tarted up the UI's slightly by switching the dialog font.
+- Ported to VC++ 7.1 and refactored code to use the STL.
+
+
+Version 1.1
+===========
+
+- Added a GUI based tool (MkSetup) for generating the setup.ini file.
+- Replaced "Install Conflict" message box with a better dialog.
+- Added support for controlling the handling of subsequent install conflicts.
+- Added support for giving the shortcut its own name and description.
+
+
+Version 1.0
+===========
+
+- First public release.
+
+
+Chris Oldwood 
+[gort@cix.co.uk]
+
+26th March 2007
