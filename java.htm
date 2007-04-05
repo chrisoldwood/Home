@@ -2,7 +2,7 @@
 
 <head>
 <meta name="author"      content="Chris Oldwood">
-<meta name="keywords"    content="Chris Oldwood HomePage Freeware Java Applet">
+<meta name="keywords"    content="Chris Oldwood HomePage Freeware Java Applet Logo Sudoku">
 <meta name="description" content="Chris Oldwood's freeware Java stuff">
 <title>Chris Oldwood's Freeware Java Stuff</title>
 <style>
@@ -17,9 +17,9 @@ h3		{ font-size: 12pt }
 <script language="JavaScript">
 <!--
 
-function RunApplet(strURL)
+function RunApplet(strURL, nWidth, nHeight)
 {
-	popupwnd = window.open(strURL, "Applet", "toolbar=no,status=yes,width=775,height=575,scrollbars=no,resize=no");
+	popupwnd = window.open(strURL, "Applet", "toolbar=no,status=yes,width="+nWidth+",height="+nHeight+",scrollbars=no,resize=no");
 }
 
 function ShowExample(strURL)
@@ -57,10 +57,40 @@ function ShowExample(strURL)
 <table width="600">
 <tr><td>
 
+<a name="Sudoku"></a>
+<table width="100%">
+<tr>
+<td><h3>Sudoku Solver v1.0</h3></td>
+<td align="right" valign="top">26/03/2007</td>
+</tr>
+<tr><td colspan="2"><p>
+This applet is an aid to help solve Sudoku puzzles. It provides the ability to
+enter multiple numbers into each cell to make it easier to track the possible
+answers, and has a 'hint' and 'solve' feature to help you when you're stuck on
+the harder puzzles. It also means you don't need a pencil and rubber...
+</p></td></tr>
+<tr><td colspan="2"><p>
+<a href="java/sudoku/sudoku10s.zip">Source (35k)</a>
+<a href="javascript:RunApplet('java/sudoku/sudoku.htm', 550, 575)">Run Now</a>
+</p></td></tr>
+<tr><td colspan="2"><p>
+<br>
+Example Puzzles:
+<a href="javascript:ShowExample('java/sudoku/puzzle1.txt');">Puzzle 1</a>
+<a href="javascript:ShowExample('java/sudoku/puzzle2.txt');">Puzzle 2</a>
+<a href="javascript:ShowExample('java/sudoku/puzzle3.txt');">Puzzle 3</a>
+<br>
+To use one of the puzzles click "Load" and paste the puzzle text into the
+dialog that is displayed.
+</p></td></tr>
+</table>
+
+<p></p>
+
 <a name="JLogo"></a>
 <table width="100%">
 <tr>
-<td><h3>Java Logo</h3></td>
+<td><h3>Java Logo v1.0</h3></td>
 <td align="right" valign="top">17/10/2001</td>
 </tr>
 <tr><td colspan="2"><p>
@@ -74,16 +104,15 @@ To get around the lack of access to the file system, the program can be stored
 and loaded by cutting/pasting from/to the source editor window.
 </p></td></tr>
 <tr><td colspan="2"><p>
-<a href="java/jlogo.cab">Binary (42k)</a>
-<a href="java/jlogos.zip">Source (47k)</a>
-<a href="javascript:RunApplet('java/jlogo.htm');">Run Now</a>
+<a href="java/jlogo/jlogo10s.zip">Source (47k)</a>
+<a href="javascript:RunApplet('java/jlogo/jlogo.htm', 775, 575);">Run Now</a>
 </p></td></tr>
 <tr><td colspan="2"><p>
 <br>
 Example Programs:
-<a href="javascript:ShowExample('java/box.txt');">Box</a>
-<a href="javascript:ShowExample('java/star.txt');">Star</a>
-<a href="javascript:ShowExample('java/house.txt');">House</a>
+<a href="javascript:ShowExample('java/jlogo/box.txt');">Box</a>
+<a href="javascript:ShowExample('java/jlogo/star.txt');">Star</a>
+<a href="javascript:ShowExample('java/jlogo/house.txt');">House</a>
 <br>
 To run them, paste the program source into the source editor window, which is
 accessed by pressing the "Edit..." button in the "Program" controls section.
@@ -95,7 +124,7 @@ accessed by pressing the "Edit..." button in the "Program" controls section.
 <a name="Img2Src"></a>
 <table width="100%">
 <tr>
-<td><h3>Image To Source Code Converter</h3></td>
+<td><h3>Image To Source Code Converter v1.0</h3></td>
 <td align="right" valign="top">23/08/2001</td>
 </tr>
 <tr><td colspan="2"><p>
@@ -104,14 +133,13 @@ This applet loads an image file and converts the image pixels into a series of
 For an example look at the MsgBoxIcons.java class in the framework.
 </p></td></tr>
 <tr><td colspan="2"><p>
-<a href="java/img2src.cab">Binary (22k)</a>
-<a href="java/img2srcs.zip">Source (19k)</a>
-<a href="javascript:RunApplet('java/img2src.htm')">Run Now</a>
+<a href="java/img2src/img2src10s.zip">Source (19k)</a>
+<a href="javascript:RunApplet('java/img2src/img2src.htm', 775, 575)">Run Now</a>
 </p></td></tr>
 <tr><td colspan="2"><p>
 <br>
 Example Image:
-<a href="javascript:ShowExample('java/icons.gif');">icons.gif</a>
+<a href="javascript:ShowExample('java/img2src/icons.gif');">icons.gif</a>
 <br>
 Enter the filename into the edit box at the top left and click "Load". Then click
 "Convert...", enter the options and press OK. You will see the source appearing in
@@ -125,7 +153,7 @@ the lower text area.
 <table width="100%">
 <tr>
 <td><h3>Java Framework Classes</h3></td>
-<td align="right" valign="top">18/07/2001</td>
+<td align="right" valign="top">26/03/2007</td>
 </tr>
 <tr><td colspan="2"><p>
 These packages contain all the classes that are common to my Java applets.
@@ -133,7 +161,7 @@ Currently it only contains UI classes for creating message boxes and modal
 dialogs. The message box is styled to look like a standard Windows one.
 </p></td></tr>
 <tr><td colspan="2"><p>
-<a href="java/gort.zip">Source (13k)</a>
+<a href="java/libs/gort.zip">Source (14k)</a>
 </p></td></tr>
 </table>
 
@@ -141,7 +169,7 @@ dialogs. The message box is styled to look like a standard Windows one.
 <table width="100%">
 <tr><td align="left">
 Page Last Updated:<br>
-23/04/2005
+26/03/2007
 </td><td align="right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
