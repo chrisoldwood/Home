@@ -52,6 +52,45 @@ function ShowScreenShot(strURL)
 <table width="600">
 <tr><td>
 
+<a name="DDECOMClient"></a>
+<table width="100%">
+<tr>
+<td><h3>DDE COM Client v1.0</h3></td>
+<td align="right" valign="top">19/07/2007</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This COM component is an Automation Server (i.e. IDispatch based) for querying
+DDE Servers. It was designed to allow scripting languages such as VBScript to
+make simple DDE queries. The component provides two basic COM classes, one for
+the <i>DDE Client</i> that allows quering of running servers and adhoc DDE
+requests for text values, and the other is for a <i>DDE Conversation</i> which
+avoids the overhead of creating conversations on-the-fly, if you need to request
+many values.
+</p><p>
+A HelpFile is included that documents the API and provides some examples.
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<a href="win32/ddecomclient/ddecomclient10r.zip">Binary (77k)</a>
+<a href="win32/ddecomclient/ddecomclient10s.zip">Source (384k)</a>
+<a href="win32/ddecomclient/ddecomclient10d.zip">Debug  (176k)</a>
+</p>
+</td>
+<td align="right">
+<p>
+&nbsp
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <a name="DDEQuery"></a>
 <table width="100%">
 <tr>
@@ -529,6 +568,35 @@ days. Also because of its heritage there is virtually no use of the STL or Boost
 
 <p></p>
 
+<a name="Core"></a>
+<table width="100%">
+<tr>
+<td><h3>Core Library</h3></td>
+<td align="right" valign="top">19/07/2007</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+The Windows C++ Library has histrocially provided the basic framework for all my
+Windows applications because they are naturally platform specific. This class
+library takes the platform agnostic aspects out of WCL (as much as possible) so
+that I can write more platform independent code were possible. Initially it only
+contains some smart pointers and utility classes, and the common funtions and
+macros used to aid debugging.
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win32/libs/core.zip">Source (14k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <a name="MDBL"></a>
 <table width="100%">
 <tr>
@@ -584,10 +652,36 @@ contains classes for using Named Pipes, DDE &amp; Sockets.
 
 <p></p>
 
+<a name="COM"></a>
+<table width="100%">
+<tr>
+<td><h3>COM Class Library</h3></td>
+<td align="right" valign="top">19/07/2007</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+This class library contains classes for writing COM servers. At the moment it
+contains support for Inproc Servers only but covers both custom, IDispatch & Dual
+style interfaces. It also provides IErrorInfo support by default.
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>
+<a href="win32/libs/com.zip">Source (22k)</a>
+</p>
+</td>
+</tr>
+</table>
+
+<p></p>
+
 <table width="100%">
 <tr><td align="left">
 Page Last Updated:<br>
-26/03/2007
+19/07/2007
 </td><td align="right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
