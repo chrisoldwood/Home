@@ -1,3 +1,7 @@
-- Add more links (Games, Blogs, Mirrors).
+- Add more links (Blogs, ACCU, linked-in).
 
 - Add PayPal section.
+
+- Add icons before links to help with binary/source code.
+
+- Section on Visual Studio.
