@@ -5,351 +5,240 @@
 <meta name="keywords"    content="Chris Oldwood HomePage freeware DOS pmail IPX NetWare">
 <meta name="description" content="Chris Oldwood's freeware DOS stuff">
 <title>Chris Oldwood's Freeware DOS Stuff</title>
-<style>
-<!--
-body	{ font-family: Verdana, Arial }
-td		{ font-size: 10pt }
-.Header { font-size: 12pt; font-weight: bold }
-p		{ font-size: 10pt }
-h3		{ font-size: 12pt }
--->
-</style>
-<script language="JavaScript">
-<!--
-
-function ShowScreenShot(strURL)
-{
-	popupwnd = window.open(strURL, "Screenshot", "toolbar=no,status=yes,resize=yes");
-}
-
--->
-</script>
+<link href="stylesheet.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" src="javascript.js"></script>
 </head>
 
 <body>
-<div align="center">
 
-<table>
-	<tr>
-		<td class="Header">Chris Oldwood's Freeware DOS Stuff</td>
-	</tr>
-</table>
-<table>
-	<tr>
-		<td align="center">&nbsp;<a href="default.htm">Home</a >&nbsp;</td>
-		<td align="center">&nbsp;<a href="win32.htm"  >Win32</a>&nbsp;</td>
-		<td align="center">&nbsp;<a href="win16.htm"  >Win16</a>&nbsp;</td>
-		<td align="center">&nbsp;<a href="dos.htm"    >DOS</a  >&nbsp;</td>
-		<td align="center">&nbsp;<a href="java.htm"   >Java</a >&nbsp;</td>
-		<td align="center">&nbsp;<a href="links.htm"  >Links</a>&nbsp;</td>
-	</tr>
-</table>
-
-<table width="600">
-<tr><td><hr></td></tr>
-</table>
-
-<table width="600">
+<!-- main table -->
+<table class="main_table" align="center" id="main">
 <tr><td>
 
-<a name="ComPorts"></a>
-<table width="100%">
+<!-- header table -->
+<table class="header_table" id="header">
+<tr><td class="header_text">Chris Oldwood's Freeware DOS Stuff</td></tr>
+</table>
+
+<!-- navigation table -->
+<table class="navigation_table" align="center" id="navigation">
 <tr>
-<td><h3>COM Ports Lister</h3></td>
-<td align="right" valign="top">07/02/1997</td>
+<td>&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="default.htm">Home</a >&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="win32.htm"  >Win32</a>&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="win16.htm"  >Win16</a>&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class="sel" href="dos.htm"    >DOS</a  >&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="java.htm"   >Java</a >&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="links.htm"  >Links</a>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
+</table>
+
+</td></tr><tr><td class="main_table_cell">
+
+<!-- content table -->
+<a name="ComPorts"></a>
+<table class="content_table" align="center" id="content1">
 <tr>
-<td colspan="2">
+<td class="content_header">COM Ports Lister</td>
+<td class="content_date"  >07/02/1997</td>
+</tr>
+<tr><td class="content_body" colspan="2">
 <p>
 This is a simple program that just lists the COM ports section of the BIOS
 Data Area.
-</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/comprt10r.zip">Binary (5k)</a>
-<a href="dos/comprt10s.zip">Source (2k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</p><p>
+<a href="dos/comprt10r.zip">Binary [5 K]</a>&nbsp;
+<a href="dos/comprt10s.zip">Source [2 K]</a>&nbsp;
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="MTOSSUDG"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content2">
 <tr>
-<td><h3>PMail User-Defined Gateway</h3></td>
-<td align="right" valign="top">28/12/1995</td>
+<td class="content_header">PMail User-Defined Gateway</td>
+<td class="content_date"  >28/12/1995</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a User-Defined Gateway for PMail/WinPMail that converts emails in
 Internet format to PMail format. It takes two command line parameters, the
 email message file and the recipient's name and writes out the translated
 message to a folder specified in the config file.
+</p><p>
+<a href="dos/mailudg10r.zip">Binary [8 K]</a>&nbsp;
+<a href="dos/mailudg10s.zip">Source [10 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/mailudg10r.zip">Binary (8k)</a>
-<a href="dos/mailudg10s.zip">Source (10k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="VIEWNET"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content3">
 <tr>
-<td><h3>NetWare Network Scanner</h3></td>
-<td align="right" valign="top">09/10/1995</td>
+<td class="content_header">NetWare Network Scanner</td>
+<td class="content_date"  >09/10/1995</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 A GUI based NetWare network scanner that finds all the computers on a network
 and allows you to query details about each one. It is based on Ralph Davis'
 NetworkMap function in his NetWare Programmers Guide.
+</p><p>
+<a href="dos/vwnet10r.zip">Binary [62 K]</a>&nbsp;
+<a href="dos/vwnet10s.zip">Source [19 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/vwnet10r.zip">Binary (62k)</a>
-<a href="dos/vwnet10s.zip">Source (19k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="IPXCHAT"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content4">
 <tr>
-<td><h3>IPX Based Chat Utility</h3></td>
-<td align="right" valign="top">17/07/1995</td>
+<td class="content_header">IPX Based Chat Utility</td>
+<td class="content_date"  >17/07/1995</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a GUI based peer-to-peer two-way chat utility that uses IPX. It shows you
 a list of users on the network to whom you can chat with, and then establishes a
 connection and uses a split screen view for the conversation.
+</p><p>
+<a href="dos/chtipx10r.zip">Binary [51 K]</a>&nbsp;
+<a href="dos/chtipx10s.zip">Source [16 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/chtipx10r.zip">Binary (51k)</a>
-<a href="dos/chtipx10s.zip">Source (16k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="PRINTCAP"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content5">
 <tr>
-<td><h3>CAPTURE Clone</h3></td>
-<td align="right" valign="top">12/07/1995</td>
+<td class="content_header">CAPTURE Clone</td>
+<td class="content_date"  >12/07/1995</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a GUI based version of the CAPTURE NetWare utility that allows you to
 set-up the printer port redirection to NetWare printers.
+</p><p>
+<a href="dos/prtcap10r.zip">Binary [129 K]</a>&nbsp;
+<a href="dos/prtcap10s.zip">Source [17 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/prtcap10r.zip">Binary (129k)</a>
-<a href="dos/prtcap10s.zip">Source (17k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="SENDMSG"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content6">
 <tr>
-<td><h3>Send Message</h3></td>
-<td align="right" valign="top">10/07/1995</td>
+<td class="content_header">Send Message</td>
+<td class="content_date"  >10/07/1995</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 A GUI based utility for sending messages to other users on a NetWare network. It
 shows you a list of all users and groups to whom you can send a message, then
 prompts you for the message to send.
+</p><p>
+<a href="dos/sndmsg10r.zip">Binary [49 K]</a>&nbsp;
+<a href="dos/sndmsg10s.zip">Source [18 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/sndmsg10r.zip">Binary (49k)</a>
-<a href="dos/sndmsg10s.zip">Source (18k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="QWATCH"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content7">
 <tr>
-<td><h3>PCONSOLE Clone</h3></td>
-<td align="right" valign="top">04/07/1995</td>
+<td class="content_header">PCONSOLE Clone</td>
+<td class="content_date"  >04/07/1995</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a GUI based version of the PCONSOLE NetWare utility that allows you to
 monitor NetWare printers and queues. It shows a summary screen with details
 about all the printers on the network. You can then select a printer and get
 more detailed information about the current job, such as a progress bar showing
 how much of the job has been completed.
+</p><p>
+<a href="dos/qwatch13r.zip">Binary [144 K]</a>&nbsp;
+<a href="dos/qwatch13s.zip">Source [32 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/qwatch13r.zip">Binary (144k)</a>
-<a href="dos/qwatch13s.zip">Source (32k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="TMGFXLIB"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content8">
 <tr>
-<td><h3>TextMode Graphics Library</h3></td>
-<td align="right" valign="top">13/03/1997</td>
+<td class="content_header">TextMode Graphics Library</td>
+<td class="content_date"  >13/03/1997</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a graphics library for manipulating the text modes of display adapters
 under DOS. It was to be a more general purpose graphics library than the NetWare
-version below, providing blitting and other features.
-<p></p>
-This library is unfinished.
+version below, providing blitting and other features. This library is unfinished.
+</p><p>
+<a href="dos/tmgfx10s.zip">Source [21 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/tmgfx10s.zip">Source (21k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="NWGFXLIB"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content9">
 <tr>
-<td><h3>NetWare Graphics Library v1.2</h3></td>
-<td align="right" valign="top">17/07/1995</td>
+<td class="content_header">NetWare Graphics Library v1.2</td>
+<td class="content_date"  >17/07/1995</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is the graphics library used by all my NetWare applications to give them
 the look and feel of the real DOS NetWare tools. It provides functions to create
 and manipulate windows, popup menus, message boxes and dialogs.
+</p><p>
+<a href="dos/nwgfx12s.zip">Source [42 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="dos/nwgfx12s.zip">Source (42k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+<!-- main table -->
+</td></tr>
+</table>
 
-<table width="100%">
-<tr><td align="left">
+<!-- footer table -->
+<table class="footer_table" align="center" id="footer">
+<tr><td class="footer_left">
 Page Last Updated:<br>
-04/02/2004
-</td><td align="right">
+14/11/2007
+</td><td class="footer_right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
 <a href="http://s10.sitemeter.com/stats.asp?site=s10oldwood" target="_top">
 <img src="http://s10.sitemeter.com/meter.asp?site=s10oldwood" alt="Site Meter" border=0></a>
 <!--WEBBOT bot="HTMLMarkup" Endspan -->
-</td>
-</tr>
-</table>
-
 </td></tr>
 </table>
 
-</div>
 </body>
 
 </html>

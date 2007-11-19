@@ -5,61 +5,45 @@
 <meta name="keywords"    content="Chris Oldwood HomePage Freeware Win32 DDE NetDDE UT2003 UT2004 UT Cache Manager SQL HTTP TCP/IP WinSock Named Pipes">
 <meta name="description" content="Chris Oldwood's freeware Win32 stuff">
 <title>Chris Oldwood's Freeware Win32 Stuff</title>
-<style>
-<!--
-body	{ font-family: Verdana, Arial }
-td		{ font-size: 10pt }
-.Header { font-size: 12pt; font-weight: bold }
-p		{ font-size: 10pt }
-h3		{ font-size: 12pt }
---> 
-</style>
-<script language="JavaScript">
-<!--
-
-function ShowScreenShot(strURL)
-{
-	popupwnd = window.open(strURL, "Screenshot", "toolbar=no,status=yes,resize=yes");
-}
-
--->
-</script>
+<link href="stylesheet.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" src="javascript.js"></script>
 </head>
 
 <body>
-<div align="center">
 
-<table>
-	<tr>
-		<td class="Header">Chris Oldwood's Freeware Win32 Stuff</td>
-	</tr>
-</table>
-<table>
-	<tr>
-		<td align="center">&nbsp;<a href="default.htm">Home</a >&nbsp;</td>
-		<td align="center">&nbsp;<a href="win32.htm"  >Win32</a>&nbsp;</td>
-		<td align="center">&nbsp;<a href="win16.htm"  >Win16</a>&nbsp;</td>
-		<td align="center">&nbsp;<a href="dos.htm"    >DOS</a  >&nbsp;</td>
-		<td align="center">&nbsp;<a href="java.htm"   >Java</a >&nbsp;</td>
-		<td align="center">&nbsp;<a href="links.htm"  >Links</a>&nbsp;</td>
-	</tr>
-</table>
-
-<table width="600">
-<tr><td><hr></td></tr>
-</table>
-
-<table width="600">
+<!-- main table -->
+<table class="main_table" align="center" id="main">
 <tr><td>
 
-<a name="DDECOMClient"></a>
-<table width="100%">
+<!-- header table -->
+<table class="header_table" id="header">
+<tr><td class="header_text">Chris Oldwood's Freeware Win32 Stuff</td></tr>
+</table>
+
+<!-- navigation table -->
+<table class="navigation_table" align="center" id="navigation">
 <tr>
-<td><h3>DDE COM Client v1.0</h3></td>
-<td align="right" valign="top">19/07/2007</td>
+<td>&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="default.htm">Home</a >&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class="sel" href="win32.htm"  >Win32</a>&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="win16.htm"  >Win16</a>&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="dos.htm"    >DOS</a  >&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="java.htm"   >Java</a >&nbsp;</td>
+<td class="navigation_cell">&nbsp;<a class=""    href="links.htm"  >Links</a>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
+</table>
+
+</td></tr><tr><td class="main_table_cell">
+
+<!-- content table -->
+<a name="DDECOMClient"></a>
+<table class="content_table" align="center" id="content1">
 <tr>
-<td colspan="2">
+<td class="content_header">DDE COM Client v1.0</td>
+<td class="content_date"  >19/07/2007</td>
+</tr>
+<tr><td class="content_body" colspan="2">
 <p>
 This COM component is an Automation Server (i.e. IDispatch based) for querying
 DDE Servers. It was designed to allow scripting languages such as VBScript to
@@ -67,73 +51,51 @@ make simple DDE queries. The component provides two basic COM classes, one for
 the <i>DDE Client</i> that allows quering of running servers and adhoc DDE
 requests for text values, and the other is for a <i>DDE Conversation</i> which
 avoids the overhead of creating conversations on-the-fly, if you need to request
-many values.
+many values. A HelpFile is included that documents the API and provides some
+examples.
 </p><p>
-A HelpFile is included that documents the API and provides some examples.
+<a href="win32/ddecomclient/ddecomclient10r.zip">Binary [77 K]</a>&nbsp;
+<a href="win32/ddecomclient/ddecomclient10s.zip">Source [384 K]</a>&nbsp;
+<a href="win32/ddecomclient/ddecomclient10d.zip">Debug  [176 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/ddecomclient/ddecomclient10r.zip">Binary (77k)</a>
-<a href="win32/ddecomclient/ddecomclient10s.zip">Source (384k)</a>
-<a href="win32/ddecomclient/ddecomclient10d.zip">Debug  (176k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-&nbsp
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="DDEQuery"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content2">
 <tr>
-<td><h3>DDE Query v1.5</h3></td>
-<td align="right" valign="top">23/04/2005</td>
+<td class="content_header">DDE Query v1.5</td>
+<td class="content_date"  >23/04/2005</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a utility for querying DDE servers. It supports all the transaction types
 such as request, advise, poke and execute for both standard and custom clipboard
 formats. It has an ASCII and binary viewer for looking in detail at the data sent
 from the DDE server and you can set-up and monitor a bunch of hot-links from a
 file.
+</p><p>
+<a href="win32/ddequery/ddequery15r.zip">Binary [148 K]</a>&nbsp;
+<a href="win32/ddequery/ddequery15s.zip">Source [311 K]</a>&nbsp;
+<a href="win32/ddequery/ddequery15d.zip">Debug  [337 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/ddequery/ddequery.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/ddequery/ddequery15r.zip">Binary (148k)</a>
-<a href="win32/ddequery/ddequery15s.zip">Source (311k)</a>
-<a href="win32/ddequery/ddequery15d.zip">Debug  (337k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/ddequery/ddequery.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="UTCacheMgr"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content3">
 <tr>
-<td><h3>UT Cache Manager v2.5</h3></td>
-<td align="right" valign="top">31/03/2004</td>
+<td class="content_header">UT Cache Manager v2.5</td>
+<td class="content_date"  >31/03/2004</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a utility for Unreal Tournament, UT2003, UT2004 and all their mods, such
 as Tactical Ops and Frag Ops which allows you to manage the cache where files
@@ -143,270 +105,197 @@ downloading over slow connections, remove failed downloads and old entries from
 the cache index and restore files back to the cache if a conflict occurs. It can
 also install map packs and import directly into the cache from another one.
 </p>
-</td>
-</tr>
-<tr>
-<td>
 <p>
-<a href="win32/utcachemgr/utcachemgr25r.zip">Binary (259k)</a>
-<a href="win32/utcachemgr/utcachemgr25s.zip">Source (431k)</a>
-<a href="win32/utcachemgr/utcachemgr25d.zip">Debug  (405k)</a>
+<a href="win32/utcachemgr/utcachemgr25r.zip">Binary [259 K]</a>&nbsp;
+<a href="win32/utcachemgr/utcachemgr25s.zip">Source [431 K]</a>&nbsp;
+<a href="win32/utcachemgr/utcachemgr25d.zip">Debug  [405 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/utcachemgr/utcachemgr.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/utcachemgr/utcachemgr.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="Setup"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content4">
 <tr>
-<td><h3>Setup v1.2</h3></td>
-<td align="right" valign="top">26/03/2007</td>
+<td class="content_header">Setup v1.2</td>
+<td class="content_date"  >26/03/2007</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is the installer that I am using for all my applications. It is driven
 by a simple config (.ini) file that supplies the default folder name, program
 group, list of files to be copied, shortcuts to create etc. It also includes
-a GUI tool for creating the scripts.
+a GUI tool for creating the scripts. It has no uninstall support at present.
 </p><p>
-It has no uninstall support at present.
+<a href="win32/setup/setup12r.zip">Binary [207 K]</a>&nbsp;
+<a href="win32/setup/setup12s.zip">Source [303 K]</a>&nbsp;
+<a href="win32/setup/setup12d.zip">Debug  [306 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/setup/setup.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/setup/setup12r.zip">Binary (207k)</a>
-<a href="win32/setup/setup12s.zip">Source (303k)</a>
-<a href="win32/setup/setup12d.zip">Debug  (306k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/setup/setup.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="UTSvrBrowser"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content5">
 <tr>
-<td><h3>UT Server Browser v1.0 (Alpha*)</h3></td>
-<td align="right" valign="top">19/06/2003</td>
+<td class="content_header">UT Server Browser v1.0 [Alpha]</td>
+<td class="content_date"  >19/06/2003</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This utility for Unreal Tournament (and all its mods) allows you to find and
 monitor UT servers and to add/remove them from your favourites. It has a number
 of filtering options (mod, players, ping, partial name etc) to help you reduce
 the noise. It comes with configs for the most popular mods.
 <p>
-<b>* This is dependent on the unreal.epicgames.com master server which has
-been known to go offline every now and then.</b>
+This is dependent on the unreal.epicgames.com master server which has been
+known to go offline every now and then.
+</p><p>
+<a href="win32/utsvrbrw/utsvrbrw09r.zip">Binary [103 K]</a>&nbsp;
+<a href="win32/utsvrbrw/utsvrbrw09s.zip">Source [407 K]</a>&nbsp;
+<a href="win32/utsvrbrw/utsvrbrw09d.zip">Debug  [191 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/utsvrbrw/utsvrbrw.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/utsvrbrw/utsvrbrw09r.zip">Binary (103k)</a>
-<a href="win32/utsvrbrw/utsvrbrw09s.zip">Source (407k)</a>
-<a href="win32/utsvrbrw/utsvrbrw09d.zip">Debug  (191k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/utsvrbrw/utsvrbrw.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="SockTrace"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content6">
 <tr>
-<td><h3>Socket Tracer v1.5</h3></td>
-<td align="right" valign="top">07/07/2004</td>
+<td class="content_header">Socket Tracer v1.5</td>
+<td class="content_date"  >07/07/2004</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a kind of TCP/UDP proxy that allows you to capture the traffic sent
 and received by a client and server. You point the client to the tool and direct
 the tool to forward to the server and it writes any data sent between the two
 to a file. I wrote it to sniff the traffic between Unreal Tournament and the
 HTTP, master and game servers used in on-line play.
+</p><p>
+<a href="win32/socktrace/socktrace15r.zip">Binary [130 K]</a>&nbsp;
+<a href="win32/socktrace/socktrace15s.zip">Source [305 K]</a>&nbsp;
+<a href="win32/socktrace/socktrace15d.zip">Debug  [268 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/socktrace/socktrace15r.zip">Binary (130k)</a>
-<a href="win32/socktrace/socktrace15s.zip">Source (305k)</a>
-<a href="win32/socktrace/socktrace15d.zip">Debug  (268k)</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="HttpQuery"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content7">
 <tr>
-<td><h3>HTTP Query Tool v1.1</h3></td>
-<td align="right" valign="top">19/06/2003</td>
+<td class="content_header">HTTP Query Tool v1.1</td>
+<td class="content_date"  >19/06/2003</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a simple tool for formatting and executing HTTP queries against a web server.
 It allows you to specify and view the request and response headers, much as you can
 with 'telnet', but does it a little friendlier. I wrote it as a diagnostic tool to
 sort out issues with proxies and firewalls.
+</p><p>
+<a href="win32/httpquery/httpquery11r.zip">Binary [58 K]</a>&nbsp;
+<a href="win32/httpquery/httpquery11s.zip">Source [292 K]</a>&nbsp;
+<a href="win32/httpquery/httpquery11d.zip">Debug  [129 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/httpquery/httpquery.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/httpquery/httpquery11r.zip">Binary (58k)</a>
-<a href="win32/httpquery/httpquery11s.zip">Source (292k)</a>
-<a href="win32/httpquery/httpquery11d.zip">Debug  (129k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/httpquery/httpquery.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="NetDDE"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content8">
 <tr>
-<td><h3>DDE Network Bridge v2.0</h3></td>
-<td align="right" valign="top">21/11/2004</td>
+<td class="content_header">DDE Network Bridge v2.0</td>
+<td class="content_date"  >21/11/2004</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a client/server application that allows you to access DDE sources
 across a network, just like the built-in NetDDE service, but this one has
 some clever options and caching to reduce round-trip delays. Also, it is
 transparent to the DDE client, so no changes to the DDE links are required.
+</p><p>
+<a href="win32/netdde/netdde20r.zip">Binary [239 K]</a>&nbsp;
+<a href="win32/netdde/netdde20s.zip">Source [375 K]</a>&nbsp;
+<a href="win32/netdde/netdde20d.zip">Debug  [511 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/netdde/netdde20r.zip">Binary (239k)</a>
-<a href="win32/netdde/netdde20s.zip">Source (375k)</a>
-<a href="win32/netdde/netdde20d.zip">Debug  (511k)</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="ChkClocks"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content9">
 <tr>
-<td><h3>Network Clock Checker v1.2</h3></td>
-<td align="right" valign="top">21/11/2004</td>
+<td class="content_header">Network Clock Checker v1.2</td>
+<td class="content_date"  >21/11/2004</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a utility to scan a network and compare the system clock times for all
 computers to the one on which the utility is being run.
-<br>
-This utility can only be run on a Windows NT/2K/XP machine and has only been
-tested in a Windows NT/2K/XP environment.
+</p><p>
+This utility can only be run on a Windows NT/2K/XP/Vista machine and has only
+been tested in a Windows NT/2K environment.
+</p><p>
+<a href="win32/chkclocks/chkclocks12r.zip">Binary [150 K]</a>&nbsp;
+<a href="win32/chkclocks/chkclocks12s.zip">Source [327 K]</a>&nbsp;
+<a href="win32/chkclocks/chkclocks12d.zip">Debug  [331 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/chkclocks/chkclocks.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/chkclocks/chkclocks12r.zip">Binary (150k)</a>
-<a href="win32/chkclocks/chkclocks12s.zip">Source (327k)</a>
-<a href="win32/chkclocks/chkclocks12d.zip">Debug  (331k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/chkclocks/chkclocks.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="TaskTracker"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content10">
 <tr>
-<td><h3>Task Tracker v4.0</h3></td>
-<td align="right" valign="top">26/03/2007</td>
+<td class="content_header">Task Tracker v4.0</td>
+<td class="content_date"  >26/03/2007</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a simple tool for keeping track of the hours you spend at work on various
 projects. You clock in and out during the day and associate a short phrase with
 each block of work. At any time you can run a report which shows your hours grouped
 by week, month or task and it sums them up based on the grouping. The report can
 be viewed, printed or saved to a file or the clipboard. I wrote it whilst contracting.
+</p><p>
+<a href="win32/tasktrak/tasktrak40r.zip">Binary [341 K]</a>&nbsp;
+<a href="win32/tasktrak/tasktrak40s.zip">Source [448 K]</a>&nbsp;
+<a href="win32/tasktrak/tasktrak40d.zip">Debug  [453 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/tasktrak/tasktrak.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/tasktrak/tasktrak40r.zip">Binary (341k)</a>
-<a href="win32/tasktrak/tasktrak40s.zip">Source (448k)</a>
-<a href="win32/tasktrak/tasktrak40d.zip">Debug  (453k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/tasktrak/tasktrak.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="PQT"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content11">
 <tr>
-<td><h3>Parameterised DB Query Tool v1.1</h3></td>
-<td align="right" valign="top">19/06/2003</td>
+<td class="content_header">Parameterised DB Query Tool v1.1</td>
+<td class="content_date"  >19/06/2003</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This tool is designed to provide an alternative way to run parameterised queries
 without having to resort to writing stored procedures. You write your basic
@@ -415,137 +304,100 @@ names, e.g. $Name$. Next time when you run the query it will prompt you for
 the variables values in a dialog and substitute them in the query. It also allows
 you to configure logical connections and associate script paths with them to make
 it quicker to find and run common scripts for a database.
+</p><p>
+<a href="win32/pqt/pqt11r.zip">Binary [94 K]</a>&nbsp;
+<a href="win32/pqt/pqt11s.zip">Source [333 K]</a>&nbsp;
+<a href="win32/pqt/pqt11d.zip">Debug  [186 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/pqt/pqt.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/pqt/pqt11r.zip">Binary (94k)</a>
-<a href="win32/pqt/pqt11s.zip">Source (333k)</a>
-<a href="win32/pqt/pqt11d.zip">Debug  (186k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/pqt/pqt.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="FCManager"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content12">
 <tr>
-<td><h3>Football Club Manager v0.3 (Alpha*)</h3></td>
-<td align="right" valign="top">18/09/2001</td>
+<td class="content_header">Football Club Manager v0.3 [Alpha]</td>
+<td class="content_date"  >18/09/2001</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is an application for Football Club Secretaries to help them manage their
 sides. It helps you keep track of club members, fixtures and monetary details
 such as accounts and player debts. You can also use it to hold the details of
 other club secretaries and referees in the league.
-<p>
-* This is very much a "work-in-progress". A large majority of the functionality
+</p><p>
+This is very much a "work-in-progress". A large majority of the functionality
 is in place, but there is also still a lot to be done, particularly in the areas
 of printing, team sheets and account management. If you do take and look and
 think it might be useful, please let me know as it might spur me on to finish
 it...
+</p><p>
+<a href="win32/fcmanager/fcmanager03r.zip">Binary [134 K]</a>&nbsp;
+<a href="win32/fcmanager/fcmanager03s.zip">Source [440 K]</a>&nbsp;
+<a href="win32/fcmanager/fcmanager03d.zip">Debug  [228 K]</a>&nbsp;
+<a href="javascript:ShowScreenShot('win32/fcmanager/fcmanager.gif');">Screenshot</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/fcmanager/fcmanager03r.zip">Binary (134k)</a>
-<a href="win32/fcmanager/fcmanager03s.zip">Source (440k)</a>
-<a href="win32/fcmanager/fcmanager03d.zip">Debug  (228k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-<a href="javascript:ShowScreenShot('win32/fcmanager/fcmanager.gif');">Screenshot</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="ClassGen"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content13">
 <tr>
-<td><h3>Class Generator v1.1</h3></td>
-<td align="right" valign="top">19/06/2003</td>
+<td class="content_header">Class Generator v1.1</td>
+<td class="content_date"  >19/06/2003</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is the class generator I use when adding new classes to my projects.
 It supports only a limited set of parameter tags and includes templates for
 various generic classes, dialogs, property sheets and property pages. It is
 included here only for completeness.
+</p><p>
+<a href="win32/classgen/classgen11r.zip">Binary [57 K]</a>&nbsp;
+<a href="win32/classgen/classgen11s.zip">Source [249 K]</a>&nbsp;
+<a href="win32/classgen/classgen11d.zip">Debug  [128 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/classgen/classgen11r.zip">Binary (57k)</a>
-<a href="win32/classgen/classgen11s.zip">Source (249k)</a>
-<a href="win32/classgen/classgen11d.zip">Debug  (128k)</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="MDADBG"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content14">
 <tr>
-<td><h3>MDA Debug Monitor</h3></td>
-<td align="right" valign="top">15/02/1996</td>
+<td class="content_header">MDA Debug Monitor</td>
+<td class="content_date"  >15/02/1996</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 A debugging tool that dumps all the Trace output from the OS and from calls
 to OutputDebugString() onto the secondary monochrome display. It was written
 because there was no Win32 version of DBWIN. It accesses the MDA through a
-Win16 .DLL, which in turn is accessed by a Win32 thunking .DLL.
+Win16 .DLL, which in turn is accessed by a Win32 thunking .DLL. This requires
+the Thunk compiler from the DDK.
 </p><p>
-This requires the Thunk compiler from the DDK.
+<a href="win32/mdadbg/mdadbg10s.zip">Source [60 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td>
-<p>
-<a href="win32/mdadbg/mdadbg10s.zip">Source (60k)</a>
-</p>
-</td>
-<td align="right">
-<p>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="WCL"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content15">
 <tr>
-<td><h3>Windows C++ Library</h3></td>
-<td align="right" valign="top">26/03/2007</td>
+<td class="content_header">Windows C++ Library</td>
+<td class="content_date"  >26/03/2007</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is the core library that all my applications rely on to provide the basic
 C++ classes to wrap the WIN32 API. It is my equivalent of the MFC library.
@@ -554,28 +406,22 @@ apps - wrappers for most of the common controls and GDI objects - a basic set of
 container classes and some I/O classes. It is not a complete class library, it
 grows when requirements from my applications forces it to, which isn't much these
 days. Also because of its heritage there is virtually no use of the STL or Boost.
+</p><p>
+<a href="win32/libs/wcl.zip">Source [243 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/libs/wcl.zip">Source (243k)</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="Core"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content16">
 <tr>
-<td><h3>Core Library</h3></td>
-<td align="right" valign="top">19/07/2007</td>
+<td class="content_header">Core Class Library</td>
+<td class="content_date"  >19/07/2007</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 The Windows C++ Library has histrocially provided the basic framework for all my
 Windows applications because they are naturally platform specific. This class
@@ -583,28 +429,22 @@ library takes the platform agnostic aspects out of WCL (as much as possible) so
 that I can write more platform independent code were possible. Initially it only
 contains some smart pointers and utility classes, and the common funtions and
 macros used to aid debugging.
+</p><p>
+<a href="win32/libs/core.zip">Source [14 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/libs/core.zip">Source (14k)</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="MDBL"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content17">
 <tr>
-<td><h3>Memory Database Library</h3></td>
-<td align="right" valign="top">21/08/2004</td>
+<td class="content_header">Memory Database Library</td>
+<td class="content_date"  >21/08/2004</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This library provides classes to create an in-memory copy of a database. The data
 and table schema can be provided programmatically or derived from a query result
@@ -613,88 +453,69 @@ ADO on the list. The database can also be serialized into a binary file. The lib
 supports many data types and natural database features such as indexing, primary
 keys, foreign keys and triggers. It was designed with performance more in mind than
 features because I use it mostly for caching data.
+</p><p>
+<a href="win32/libs/mdbl.zip">Source [65 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/libs/mdbl.zip">Source (65k)</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="NCL"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content18">
 <tr>
-<td><h3>Network &amp; Comms Library</h3></td>
-<td align="right" valign="top">01/03/2005</td>
+<td class="content_header">Network &amp; Comms Library</td>
+<td class="content_date"  >01/03/2005</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This is a library of classes for networking, communications and IPC. It currently
 contains classes for using Named Pipes, DDE &amp; Sockets.
+</p><p>
+<a href="win32/libs/ncl.zip">Source [57 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/libs/ncl.zip">Source (57k)</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+</td></tr><tr><td class="main_table_cell">
 
+<!-- content table -->
 <a name="COM"></a>
-<table width="100%">
+<table class="content_table" align="center" id="content19">
 <tr>
-<td><h3>COM Class Library</h3></td>
-<td align="right" valign="top">19/07/2007</td>
+<td class="content_header">COM Class Library</td>
+<td class="content_date"  >19/07/2007</td>
 </tr>
-<tr>
-<td colspan="2">
+<tr><td class="content_body" colspan="2">
 <p>
 This class library contains classes for writing COM servers. At the moment it
 contains support for Inproc Servers only but covers both custom, IDispatch & Dual
 style interfaces. It also provides IErrorInfo support by default.
+</p><p>
+<a href="win32/libs/com.zip">Source [22 K]</a>&nbsp;
 </p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p>
-<a href="win32/libs/com.zip">Source (22k)</a>
-</p>
-</td>
-</tr>
+</td></tr>
 </table>
 
-<p></p>
+<!-- main table -->
+</td></tr>
+</table>
 
-<table width="100%">
-<tr><td align="left">
+<!-- footer table -->
+<table class="footer_table" align="center" id="footer">
+<tr><td class="footer_left">
 Page Last Updated:<br>
-19/07/2007
-</td><td align="right">
+14/11/2007
+</td><td class="footer_right">
 Visitors:<br>
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
 <a href="http://s10.sitemeter.com/stats.asp?site=s10oldwood" target="_top">
 <img src="http://s10.sitemeter.com/meter.asp?site=s10oldwood" alt="Site Meter" border=0></a>
 <!--WEBBOT bot="HTMLMarkup" Endspan -->
-</td>
-</tr>
-</table>
-
 </td></tr>
 </table>
-</div>
+
 </body>
 
 </html>
