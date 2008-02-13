@@ -9,6 +9,7 @@ td
 	margin:				0px;
 	padding:			0px;
 	font-size:			10pt;
+	text-align:			left;
 }
 
 table
@@ -56,13 +57,14 @@ a
 
 .navigation_table
 {
+	width:				100%;
 	background-color:	#E0FFF0;
 	color:				#1C2870;
 }
 
 .navigation_cell
 {
-	width:				10;
+	width:				10px;
 	text-align:			center;
 	background-color:	#E0FFF0;
 }
@@ -101,7 +103,7 @@ a
 
 .footer_table
 {
-	width:				750;
+	width:				750px;
 	color:				#000080;
 }
 
