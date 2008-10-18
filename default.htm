@@ -126,20 +126,30 @@ something back to the development community.
 <p>
 <table>
 <tr>
-	<td class="update">04/09/2008</td>
-	<td class="update">Class Generator 1.2 [Win32]</td>
+	<td class="update">17/10/2008</td>
+	<td class="update">Class Generator [Win32]</td>
+	<td class="update"><a href="wip/classgen/classgen20alpha.zip">v2.0 Alpha [386 K]</a></td>
+	<td class="update"><a href="wip/classgen/classgen.gif">Screenshot</a></td>
+	<td class="update"><a href="wip/classgen/classgen.mht">Manual</a></td>
 </tr>
+<!--
 <tr>
 	<td class="update">04/09/2008</td>
 	<td class="update">DDE Console Query [Win32]</td>
 </tr>
+-->
 <tr>
-	<td class="update">18/06/2008</td>
+	<td class="update">30/09/2008</td>
 	<td class="update">VC++ Project Compare [Win32]</td>
+	<td class="update"><a href="wip/vcprojcmp/vcprojcmp08d.zip">v0.8 Beta [817 K]</a></td>
+	<td class="update"><a href="wip/vcprojcmp/vcprojcmp.gif">Screenshot</a></td>
+	<td class="update"><a href="wip/vcprojcmp/vcprojcmp.mht">Manual</a></td>
 </tr>
 <tr>
-	<td class="update">18/06/2008</td>
+	<td class="update">30/09/2008</td>
 	<td class="update">XML Editor [Win32]</td>
+	<td class="update"><a href="wip/xmledit/xmledit05d.zip">v0.5 Alpha [730 K]</a></td>
+	<td class="update"><a href="wip/xmledit/xmledit.gif">Screenshot</a></td>
 </tr>
 <tr>
 	<td class="update">18/06/2008</td>
@@ -169,7 +179,8 @@ storing their settings and data in files in the application folder, a model
 which does not work well with Windows XP (Vista has a workaround). Consequently
 if you are not running as an Administrator (and you should try not to) you will
 need to install it to a folder other than "Program Files". I will be correcting
-the applications over time to detect the Windows version and behave accordingly.
+the applications when I can to use the %APPDATA% folder instead, for data, and
+allow the choice of Registry or .ini files for program settings.
 </p>
 </td></tr>
 </table>
@@ -188,14 +199,14 @@ the applications over time to detect the Windows version and behave accordingly.
 Binaries are available for virtually everything and the more recent releases
 come with a simple setup program I wrote. The native applications are all
 linked statically and use my own framework so there are no additional
-dependencies like the VB, MFC or .NET runtimes. The only occasional dependency
-is on the common controls DLL (COMCTL32.DLL) of which you need at least v4.71
-which shipped with IE 4.
+dependencies like the VB, MFC or .NET runtimes. The only dependency is on the
+common controls DLL (COMCTL32.DLL) of which you need at least v4.71 which
+shipped with IE 4.
 </p><p>
 All the Win32 applications are available as both a <i>Release</i> build and a
 <i>Debug</i> build. You should always follow the <b><i>Binary</i></b> link and
-download the release build, the debug build is only of use if you experience a
-problem and you want to help me fix it.
+download the Release build - the Debug build is only of use if you experience a
+problem and you wish to help me fix it.
 </p><p>
 The Java applets are all JDK 1.1 based and should run on any JVM.
 </p>
@@ -216,7 +227,7 @@ The Java applets are all JDK 1.1 based and should run on any JVM.
 The source code is available for everything, so if you want to tinker or fix
 a bug then you can. Alternatively if you want to use some of the classes in
 your own code, then you can do that as well, but you should be aware that I do
-not consider this production level code. The C++ framework classes are my own
+not consider this Production grade code. The C++ framework classes are my own
 and have a long heritage which predates templates (as far as Visual C++ support
 goes), so you will find non-STL style containers and other re-inventions of the
 wheel rather than use of say the Boost libraries. This is because of a number of
@@ -224,9 +235,15 @@ reasons - compiler support, licensing issues, paradigm shifts and the simple fac
 that a good way to learn is to <i>do-it-yourself</i>. That said, I intend to
 refactor as much as possible with STL equivalents as and when I can.
 </p><p>
-The archives include projects and workspaces for Visual C++ 7.1 only. However
-the code is targeted for Win95 and upwards and should still compile on
-Visual C++ 6.x. The Java stuff comes with a Visual J++ workspace.
+From February 2008 all source archives come as Visual C++ 7.1 [VS2003] projects
+and solutions, with Unicode set as the default build type. The code however should
+also build as ANSI, and is checked Visual C++ 8.0 [VS2005] and Visual C++ 9.0
+[VS2008] - albeit the Express editions. I also alternate between STLport 5.x and
+the native VC++ STL to try and ensure compatability.
+</p><p>
+Prior to this time you will find Visual C++ 7.1 projects back to about August 2004
+and before that it's Visual C++ 6.0 based. The Java stuff comes with a Visual J++
+workspace.
 </p>
 </td></tr>
 </table>
@@ -329,7 +346,7 @@ Chris Oldwood
 <table class="footer_table" align="center" id="footer">
 <tr><td class="footer_left">
 Page Last Updated:<br />
-04/09/2008
+17/10/2008
 </td><td class="footer_right">
 Visitors:<br />
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
