@@ -3,5 +3,3 @@
 - Add PayPal section.
 
 - Add icons before links to help with binary/source code.
-
-- Section on Visual Studio.
