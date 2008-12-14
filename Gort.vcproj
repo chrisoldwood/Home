@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="7.10"
 	Name="Gort"
-	SccProjectName="&quot;$/Webs&quot;, RKDAAAAA"
+	SccProjectName="&quot;$/Webs/Gort&quot;, ESBAAAAA"
 	SccAuxPath=""
 	SccLocalPath="."
 	SccProvider="MSSCCI:Microsoft Visual SourceSafe"
@@ -60,73 +60,73 @@
 				Name="img2src"
 				Filter="">
 				<File
-					RelativePath=".\Gort\java\img2src\icons.gif">
+					RelativePath=".\java\img2src\icons.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\java\img2src\img2src.cab">
+					RelativePath=".\java\img2src\img2src.cab">
 				</File>
 				<File
-					RelativePath=".\Gort\java\img2src\img2src.htm"
+					RelativePath=".\java\img2src\img2src.htm"
 					DeploymentContent="TRUE">
 				</File>
 				<File
-					RelativePath=".\Gort\java\img2src\img2src.jar">
+					RelativePath=".\java\img2src\img2src.jar">
 				</File>
 				<File
-					RelativePath=".\Gort\java\img2src\img2src10s.zip">
+					RelativePath=".\java\img2src\img2src10s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="jlogo"
 				Filter="">
 				<File
-					RelativePath=".\Gort\java\jlogo\box.txt">
+					RelativePath=".\java\jlogo\box.txt">
 				</File>
 				<File
-					RelativePath=".\Gort\java\jlogo\house.txt">
+					RelativePath=".\java\jlogo\house.txt">
 				</File>
 				<File
-					RelativePath=".\Gort\java\jlogo\jlogo.cab">
+					RelativePath=".\java\jlogo\jlogo.cab">
 				</File>
 				<File
-					RelativePath=".\Gort\java\jlogo\jlogo.htm"
+					RelativePath=".\java\jlogo\jlogo.htm"
 					DeploymentContent="TRUE">
 				</File>
 				<File
-					RelativePath=".\Gort\java\jlogo\jlogo.jar">
+					RelativePath=".\java\jlogo\jlogo.jar">
 				</File>
 				<File
-					RelativePath=".\Gort\java\jlogo\jlogo10s.zip">
+					RelativePath=".\java\jlogo\jlogo10s.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\java\jlogo\star.txt">
+					RelativePath=".\java\jlogo\star.txt">
 				</File>
 			</Filter>
 			<Filter
 				Name="libs"
 				Filter="">
 				<File
-					RelativePath=".\Gort\java\libs\gort.zip">
+					RelativePath=".\java\libs\gort.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="sudoku"
 				Filter="">
 				<File
-					RelativePath=".\Gort\java\sudoku\manual.txt">
+					RelativePath=".\java\sudoku\manual.txt">
 				</File>
 				<File
-					RelativePath=".\Gort\java\sudoku\sudoku.cab">
+					RelativePath=".\java\sudoku\sudoku.cab">
 				</File>
 				<File
-					RelativePath=".\Gort\java\sudoku\sudoku.htm"
+					RelativePath=".\java\sudoku\sudoku.htm"
 					DeploymentContent="TRUE">
 				</File>
 				<File
-					RelativePath=".\Gort\java\sudoku\sudoku.jar">
+					RelativePath=".\java\sudoku\sudoku.jar">
 				</File>
 				<File
-					RelativePath=".\Gort\java\sudoku\sudoku10s.zip">
+					RelativePath=".\java\sudoku\sudoku10s.zip">
 				</File>
 			</Filter>
 		</Filter>
@@ -137,203 +137,203 @@
 				Name="chkclocks"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\chkclocks\chkclocks.gif">
+					RelativePath=".\win32\chkclocks\chkclocks.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\chkclocks\chkclocks12d.zip">
+					RelativePath=".\win32\chkclocks\chkclocks12d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\chkclocks\chkclocks12r.zip">
+					RelativePath=".\win32\chkclocks\chkclocks12r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\chkclocks\chkclocks12s.zip">
+					RelativePath=".\win32\chkclocks\chkclocks12s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="classgen"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\classgen\classgen11d.zip">
+					RelativePath=".\win32\classgen\classgen11d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\classgen\classgen11r.zip">
+					RelativePath=".\win32\classgen\classgen11r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\classgen\classgen11s.zip">
+					RelativePath=".\win32\classgen\classgen11s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="ddequery"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\ddequery\ddequery.gif">
+					RelativePath=".\win32\ddequery\ddequery.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\ddequery\ddequery15d.zip">
+					RelativePath=".\win32\ddequery\ddequery15d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\ddequery\ddequery15r.zip">
+					RelativePath=".\win32\ddequery\ddequery15r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\ddequery\ddequery15s.zip">
+					RelativePath=".\win32\ddequery\ddequery15s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="fcmanager"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\fcmanager\fcmanager.gif">
+					RelativePath=".\win32\fcmanager\fcmanager.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\fcmanager\fcmanager03d.zip">
+					RelativePath=".\win32\fcmanager\fcmanager03d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\fcmanager\fcmanager03r.zip">
+					RelativePath=".\win32\fcmanager\fcmanager03r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\fcmanager\fcmanager03s.zip">
+					RelativePath=".\win32\fcmanager\fcmanager03s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="httpquery"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\httpquery\httpquery.gif">
+					RelativePath=".\win32\httpquery\httpquery.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\httpquery\httpquery11d.zip">
+					RelativePath=".\win32\httpquery\httpquery11d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\httpquery\httpquery11r.zip">
+					RelativePath=".\win32\httpquery\httpquery11r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\httpquery\httpquery11s.zip">
+					RelativePath=".\win32\httpquery\httpquery11s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="libs"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\libs\mdbl.zip">
+					RelativePath=".\win32\libs\mdbl.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\libs\ncl.zip">
+					RelativePath=".\win32\libs\ncl.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\libs\wcl.zip">
+					RelativePath=".\win32\libs\wcl.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="mdadbg"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\mdadbg\mdadbg10s.zip">
+					RelativePath=".\win32\mdadbg\mdadbg10s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="netdde"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\netdde\netdde20d.zip">
+					RelativePath=".\win32\netdde\netdde20d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\netdde\netdde20r.zip">
+					RelativePath=".\win32\netdde\netdde20r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\netdde\netdde20s.zip">
+					RelativePath=".\win32\netdde\netdde20s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="pqt"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\pqt\pqt.gif">
+					RelativePath=".\win32\pqt\pqt.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\pqt\pqt11d.zip">
+					RelativePath=".\win32\pqt\pqt11d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\pqt\pqt11r.zip">
+					RelativePath=".\win32\pqt\pqt11r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\pqt\pqt11s.zip">
+					RelativePath=".\win32\pqt\pqt11s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="setup"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\setup\setup.gif">
+					RelativePath=".\win32\setup\setup.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\setup\setup12d.zip">
+					RelativePath=".\win32\setup\setup12d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\setup\setup12r.zip">
+					RelativePath=".\win32\setup\setup12r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\setup\setup12s.zip">
+					RelativePath=".\win32\setup\setup12s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="socktrace"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\socktrace\socktrace15d.zip">
+					RelativePath=".\win32\socktrace\socktrace15d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\socktrace\socktrace15r.zip">
+					RelativePath=".\win32\socktrace\socktrace15r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\socktrace\socktrace15s.zip">
+					RelativePath=".\win32\socktrace\socktrace15s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="tasktrak"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\tasktrak\tasktrak.gif">
+					RelativePath=".\win32\tasktrak\tasktrak.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\tasktrak\tasktrak40d.zip">
+					RelativePath=".\win32\tasktrak\tasktrak40d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\tasktrak\tasktrak40r.zip">
+					RelativePath=".\win32\tasktrak\tasktrak40r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\tasktrak\tasktrak40s.zip">
+					RelativePath=".\win32\tasktrak\tasktrak40s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="utcachemgr"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\utcachemgr\utcachemgr.gif">
+					RelativePath=".\win32\utcachemgr\utcachemgr.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\utcachemgr\utcachemgr25d.zip">
+					RelativePath=".\win32\utcachemgr\utcachemgr25d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\utcachemgr\utcachemgr25r.zip">
+					RelativePath=".\win32\utcachemgr\utcachemgr25r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\utcachemgr\utcachemgr25s.zip">
+					RelativePath=".\win32\utcachemgr\utcachemgr25s.zip">
 				</File>
 			</Filter>
 			<Filter
 				Name="utsvrbrw"
 				Filter="">
 				<File
-					RelativePath=".\Gort\win32\utsvrbrw\utsvrbrw.gif">
+					RelativePath=".\win32\utsvrbrw\utsvrbrw.gif">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\utsvrbrw\utsvrbrw09d.zip">
+					RelativePath=".\win32\utsvrbrw\utsvrbrw09d.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\utsvrbrw\utsvrbrw09r.zip">
+					RelativePath=".\win32\utsvrbrw\utsvrbrw09r.zip">
 				</File>
 				<File
-					RelativePath=".\Gort\win32\utsvrbrw\utsvrbrw09s.zip">
+					RelativePath=".\win32\utsvrbrw\utsvrbrw09s.zip">
 				</File>
 			</Filter>
 		</Filter>
@@ -341,123 +341,123 @@
 			Name="Win16"
 			Filter="">
 			<File
-				RelativePath="Gort\win16\hfgen.gif">
+				RelativePath="win16\hfgen.gif">
 			</File>
 			<File
-				RelativePath="Gort\win16\hfgen10r.zip">
+				RelativePath="win16\hfgen10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\hfgen10s.zip">
+				RelativePath="win16\hfgen10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\killapp10r.zip">
+				RelativePath="win16\killapp10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\killapp10s.zip">
+				RelativePath="win16\killapp10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\mailtoss10s.zip">
+				RelativePath="win16\mailtoss10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\mdalib10r.zip">
+				RelativePath="win16\mdalib10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\mdalib10s.zip">
+				RelativePath="win16\mdalib10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\tasktrak.gif">
+				RelativePath="win16\tasktrak.gif">
 			</File>
 			<File
-				RelativePath="Gort\win16\tasktrak20r.zip">
+				RelativePath="win16\tasktrak20r.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\tasktrak20s.zip">
+				RelativePath="win16\tasktrak20s.zip">
 			</File>
 			<File
-				RelativePath="Gort\win16\wcl.zip">
+				RelativePath="win16\wcl.zip">
 			</File>
 		</Filter>
 		<Filter
 			Name="DOS"
 			Filter="">
 			<File
-				RelativePath="Gort\dos\chtipx10r.zip">
+				RelativePath="dos\chtipx10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\chtipx10s.zip">
+				RelativePath="dos\chtipx10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\comprt10r.zip">
+				RelativePath="dos\comprt10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\comprt10s.zip">
+				RelativePath="dos\comprt10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\mailudg10r.zip">
+				RelativePath="dos\mailudg10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\mailudg10s.zip">
+				RelativePath="dos\mailudg10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\nwgfx12s.zip">
+				RelativePath="dos\nwgfx12s.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\prtcap10r.zip">
+				RelativePath="dos\prtcap10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\prtcap10s.zip">
+				RelativePath="dos\prtcap10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\qwatch13r.zip">
+				RelativePath="dos\qwatch13r.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\qwatch13s.zip">
+				RelativePath="dos\qwatch13s.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\sndmsg10r.zip">
+				RelativePath="dos\sndmsg10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\sndmsg10s.zip">
+				RelativePath="dos\sndmsg10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\tmgfx10s.zip">
+				RelativePath="dos\tmgfx10s.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\vwnet10r.zip">
+				RelativePath="dos\vwnet10r.zip">
 			</File>
 			<File
-				RelativePath="Gort\dos\vwnet10s.zip">
+				RelativePath="dos\vwnet10s.zip">
 			</File>
 		</Filter>
 		<File
-			RelativePath="Gort\default.htm">
+			RelativePath="default.htm">
 		</File>
 		<File
-			RelativePath="Gort\dos.htm">
+			RelativePath="dos.htm">
 		</File>
 		<File
-			RelativePath="Gort\index.htm">
+			RelativePath="index.htm">
 		</File>
 		<File
-			RelativePath="Gort\java.htm">
+			RelativePath="java.htm">
 		</File>
 		<File
-			RelativePath=".\Gort\javascript.js">
+			RelativePath=".\javascript.js">
 		</File>
 		<File
-			RelativePath="Gort\links.htm">
+			RelativePath="links.htm">
 		</File>
 		<File
-			RelativePath=".\Gort\stylesheet.css">
+			RelativePath=".\stylesheet.css">
 		</File>
 		<File
-			RelativePath="Gort\TODO.txt">
+			RelativePath="TODO.txt">
 		</File>
 		<File
-			RelativePath="Gort\win16.htm">
+			RelativePath="win16.htm">
 		</File>
 		<File
-			RelativePath="Gort\win32.htm">
+			RelativePath="win32.htm">
 		</File>
 	</Files>
 	<Globals>

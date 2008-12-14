@@ -13,13 +13,14 @@ Global
 		CanCheckoutShared = true
 		SolutionUniqueID = {CD8C4B75-7A79-4E3D-BED0-390357894EB8}
 		SccProjectUniqueName1 = Gort.vcproj
-		SccProjectName1 = \u0022$/Webs\u0022,\u0020RKDAAAAA
 		SccLocalPath1 = .
 		CanCheckoutShared = true
 	EndGlobalSection
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug = Debug
 		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
 	EndGlobalSection
 	GlobalSection(ProjectConfiguration) = postSolution
 		{4E257C8B-4C2D-43DC-A7BD-597823632879}.Debug.ActiveCfg = Debug|Win32
