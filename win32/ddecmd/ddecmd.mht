@@ -1,0 +1,166 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: DDE Command Manual
+Date: Mon, 15 Dec 2008 07:09:25 -0000
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://D:\Dev\Win32\DDECmd\HelpFile\DDECmd.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>DDE Command Manual</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252">
+<META content=3D"Chris Oldwood" name=3Dauthor>
+<STYLE>BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial
+}
+TABLE {
+	BORDER-COLLAPSE: collapse
+}
+TH {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: =
+10pt; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid; =
+FONT-FAMILY: Verdana, Arial
+}
+TD {
+	BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: black =
+1px solid; PADDING-LEFT: 5px; FONT-SIZE: 10pt; PADDING-BOTTOM: 5px; =
+VERTICAL-ALIGN: top; BORDER-LEFT: black 1px solid; PADDING-TOP: 5px; =
+BORDER-BOTTOM: black 1px solid; FONT-FAMILY: Verdana, Arial
+}
+</STYLE>
+
+<META content=3D"MSHTML 6.00.6000.16762" name=3DGENERATOR></HEAD>
+<BODY>
+<H3 align=3Dcenter>DDE Command v1.0</H3><A name=3DIntroduction></A>
+<H5>Introduction</H5>
+<P>This is a command line (aka console) based tool for querying text =
+data from=20
+DDE servers. It is the counterpart to my much older GUI based tool =
+called DDE=20
+Query, which is available here, <A=20
+href=3D"http://www.cix.co.uk/~gort/win32.htm#DDEQuery">http://www.cix.co.=
+uk/~gort/win32.htm#DDEQuery</A>.=20
+</P><A name=3DCommands></A>
+<H5>Commands</H5>
+<P>The tool supports all the major DDE command types, such as =
+XTYP_REQUEST,=20
+XTYP_ADVSTART, XTYP_POKE &amp; XTYP_EXECUTE via similarly named =
+commands. The=20
+basic format for invoking DDE Command is to run it with a command type =
+and then=20
+provide any arguments using switches, e.g. </P><PRE>C:\&gt; ddecmd =
+command --option1 value1 --option2 value2
+</PRE>
+<P>The arguments can be specified using either Windows style (e.g. =
+/option) or=20
+the more common style (e.g. --option). Each switch has both a short name =
+and a=20
+longer name and you can see the list of all supported commands using =
+"ddecmd=20
+-?". Each command has its own help topic that describes it and lists the =
+
+switches that are applicable to it, e.g. ddecmd request -?. </P><A=20
+name=3DServersCommand></A>
+<H5>The Servers Command</H5>
+<P>This command invokes the XTYP_WILDCONNECT transaction type to list =
+the=20
+running DDE servers and their supported topics. This transaction type is =
+not=20
+always supported by servers, and is included more for development use. =
+The=20
+output is one server and topic per line, separated by a '|', the normal=20
+separator used for DDE Links, e.g. </P><PRE>C:\&gt;ddecmd servers
+Excel|System
+Excel|[Book1]Sheet3
+Excel|[Book1]Sheet2
+Excel|[Book1]Sheet1
+</PRE><A name=3DRequestCommand></A>
+<H5>The Request Command</H5>
+<P>The request command is used to retrieve the value for one or more =
+items from=20
+the server. This is the XTYP_REQUEST transaction type. The items must =
+all be=20
+from the same server as only a single server and topic can be specified. =
+</P><PRE>C:\&gt;ddecmd request --server REUTER --topic IDN_RWS --item =
+"GBP=3D,BID ASK" --item "EUR=3D,BID ASK"
++1.9058 +1.9062
++1.2981 +1.2982
+</PRE>
+<P>By default the request assumes CF_TEXT (i.e. ANSI text) for the value =
+format,=20
+but this can be overridden by using the --format switch. See below for =
+the=20
+format names. </P><A name=3DAdviseCommand></A>
+<H5>The Advise Command</H5>
+<P>To set up one or more advise loops with the server use the advise =
+command.=20
+This allows you to monitor the updates for a number of items. This =
+corresponds=20
+to the XTYP_ADVSTART transaction type. The same basic switches that are =
+used=20
+with the request command can also be used with this one. However, unlike =
+the=20
+other commands, this causes ddecmd to run indefinitely and so can only =
+be=20
+stopped by pressing Ctrl+C. </P><PRE>C:\&gt;ddecmd advise -s REUTER -t =
+IDN_RWS -i "GBP=3D,BID ASK" -i "EUR=3D,BID ASK"
++1.9060 +1.9062
++1.2981 +1.2986
++1.2980 +1.2982
++1.9059 +1.9064
++1.2978 +1.2983
++1.2982 +1.2984
++1.9059 +1.9062
+&lt;CTRL+C&gt;
+</PRE><A name=3DPokeCommand></A>
+<H5>The Poke Command</H5>
+<P>The poke command allows you to set a value for an item on servers =
+that=20
+support it. Unlike the previous request and advise commands you can only =
+set the=20
+value for a single item and that value will be passed in CF_TEXT format. =
+</P><PRE>C:\&gt;ddecmd poke -s excel -t [book1]sheet1 -i R1C1 --value =
+"test"
+</PRE><A name=3DExecuteCommand></A>
+<H5>The Execute Command</H5>
+<P>The final transaction type supported is XTYP_EXECUTE via the execute =
+command.=20
+This is used to send a command string to a server. =
+</P><PRE>C:\&gt;ddecmd execute -s excel -t [book1]sheet1 --command =
+"[App.Minimize]"
+</PRE><A name=3DClipboardFormats></A>
+<H5>Clipboard Formats</H5>
+<P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>Format</TH>
+    <TH>Description</TH></TR>
+  <TR>
+    <TD>CF_TEXT</TD>
+    <TD>ANSI text.</TD></TR>
+  <TR>
+    <TD>CF_UNICODETEXT</TD>
+    <TD>Unicode text.</TD></TR></TBODY></TABLE></P>
+<HR>
+<A name=3DWarranty></A>
+<H5>License &amp; Warranty</H5>
+<P>This application is freeware - you get what you pay for, nothing =
+more,=20
+nothing less. </P><A name=3DSourceCode></A>
+<H5>Source Code</H5>
+<P>The full source code (C++) is available from my web site listed =
+below. </P><A=20
+name=3DContact></A>
+<H5>Contact Details</H5>
+<P>Using the --version switch will also display my contact details. =
+Please check=20
+the web site for updates. </P>
+<P>Email: <A href=3D"mailto:gort@cix.co.uk">gort@cix.co.uk</A><BR>Web: =
+<A=20
+href=3D"http://www.cix.co.uk/~gort">www.cix.co.uk/~gort</A><BR></P>
+<P>Chris Oldwood<BR>15th December 2008<BR></P></BODY></HTML>
