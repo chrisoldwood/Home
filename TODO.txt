@@ -2,4 +2,8 @@
 
 - Add PayPal section.
 
-- Add icons before links to help with binary/source code.
+- Fix for IE8 (paragraphs around the blocks).
+
+- Change the "Binary" links to "Download" and separate the "Debug" + Source.
+
+- Use lowercase for the anchor names.
