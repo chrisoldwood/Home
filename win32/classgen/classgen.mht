@@ -1,0 +1,433 @@
+From: <Saved by Windows Internet Explorer 8>
+Subject: Class Generator Manual
+Date: Mon, 8 Jun 2009 15:28:45 +0100
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C9E84D.CFA56A60"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C9E84D.CFA56A60
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://D:\Dev\Win32\ClassGen\HelpFile\ClassGen.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Class Generator Manual</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3Dauthor content=3D"Chris Oldwood">
+<STYLE>BODY {
+	FONT-FAMILY: Verdana, Arial; FONT-SIZE: 10pt
+}
+TABLE {
+	BORDER-COLLAPSE: collapse
+}
+TH {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; =
+FONT-FAMILY: Verdana, Arial; FONT-SIZE: 10pt; BORDER-TOP: black 1px =
+solid; BORDER-RIGHT: black 1px solid
+}
+TD {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; =
+PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: =
+Verdana, Arial; FONT-SIZE: 10pt; VERTICAL-ALIGN: top; BORDER-TOP: black =
+1px solid; BORDER-RIGHT: black 1px solid; PADDING-TOP: 5px
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY>
+<H3 align=3Dcenter>Class Generator v2.0</H3><A name=3DIntroduction></A>
+<H5>Introduction</H5>
+<P>Class Generator is a tool for creating the skeleton of a new class. =
+It does=20
+this by transforming template files into the real class files by =
+performing text=20
+substitutions denoted by special strings, e.g. ${Class}. The tool comes =
+with the=20
+templates that I use for generating C++ classes, although it is not C++ =
+specific=20
+and there are templates for generating non-class based files. </P>
+<P>There are two main concepts - Templates and Components. Templates are =
+the=20
+files that are transformed to create the final skeleton. The tool also =
+supports=20
+the concept of Components which are a collection of common settings that =
+make it=20
+easier to generate a class for a specific library or application. The =
+classes of=20
+a Component generally live in the same folder and are defined in the =
+same=20
+namespace. </P>
+<P>Configuration is done manually by editing the Templates.ini file. =
+This file,=20
+which must reside in the same folder as the executable, tells Class =
+Generator=20
+what templates and components are available and also some other common =
+settings.=20
+</P><A name=3DUsing></A>
+<H5>Using Class Generator</H5>
+<P>It is easy to use Class Generator, the difficulty lies in the =
+configuration=20
+which is manual. However, once you have configured it, just fire up the =
+tool and=20
+you'll see a dialog like the one below. Just select the component from =
+the=20
+dropdown, which will default the folder and namespace, select the class =
+type=20
+from the template and enter the class name. Then press "Generate" to =
+create the=20
+source files. </P>
+<P><IMG align=3Dtop =
+src=3D"file:///D:/Dev/Win32/ClassGen/HelpFile/Main.gif"> </P><A=20
+name=3DTemplateConfiguration></A>
+<H5>Template Configuration</H5>
+<P>The Templates part defines the types of skeleton classes that can be=20
+generated. The actual [Templates] section lists the template names, =
+while the=20
+template definitions are then provided separately afterwards, e.g. =
+</P><PRE>[Templates]
+Path=3D.
+Count=3D2
+Template[0]=3DGeneric
+Template[1]=3DInterface
+</PRE>
+<P>The 'Path' entry determines where the actual template files live. By =
+default=20
+they are installed alongside the executable, but you could place them on =
+a=20
+network share and change the Path accordingly. </P>
+<P>Each template definition lives in its own section, which is created =
+by=20
+appending the word 'Template' to the name. The section has 4 entries, =
+e.g. </P><PRE>[Generic Template]
+Description=3DFull header &amp; source file class declaration
+Class=3DTrue
+HPP=3DGeneric.hpp
+CPP=3DGeneric.cpp
+</PRE>
+<P>The 'Description' entry provides a useful hint and is displayed under =
+the=20
+list of templates that are available. The 'Class' entry is a flag that =
+signals=20
+if the definition is for a class or not. In reality this just disables =
+the Class=20
+Name field on the dialog. The final two entries, 'HPP' and 'CPP', define =
+the=20
+files which contain the outline. Either of these two entries can be left =
+blank=20
+(e.g. see the Interface template) where you only need one or other file. =
+</P><A=20
+name=3DComponentConfiguration></A>
+<H5>Component Configuration</H5>
+<P>The Components section allows you to define common projects, such as=20
+libraries or applications, where you are likely to create many classes. =
+This=20
+means that just by selecting the component in the UI you will =
+automatically=20
+select the directory where the class will be created and apply the right =
+
+namespace. The [Components] section uses the same format as the =
+[Templates] one=20
+above, in that you specify a list of Component names and then provide =
+the=20
+definitions in a separate section later, e.g. </P><PRE>[Components]
+Count=3D2
+Component[0]=3DApplication
+Component[1]=3DLibrary
+</PRE>
+<P>Each component definition lives in its own section, which is created =
+by=20
+appending the word 'Component' to the name. The section has 5 entries, =
+e.g. </P><PRE>[Library Component]
+Description=3DThe library
+Include=3DStdAfx.h
+Comment=3DThe Library
+Namespace=3Dlib
+Folder=3DC:\Library
+</PRE>
+<P>The 'Description' entry provides a useful hint and is displayed under =
+the=20
+list of components that are available in the UI. The 'Folder' is the =
+default=20
+location where new classes should be generated and can be overridden in =
+the UI.=20
+The 'Include', 'Comment' and 'Namespace' entries are parameters that can =
+be=20
+applied to the template file and are explained in detail further down. =
+</P><A=20
+name=3DOtherOptions></A>
+<H5>Other Configuration Options</H5>
+<P>There are a few other miscellaneous settings that can be configured, =
+e.g.=20
+</P><PRE>[General]
+HppExt=3D.hpp
+CppExt=3D.cpp
+Author=3DThe Author
+</PRE>
+<P>The 'HppExt' and 'CppExt' entries allow you to choose what the =
+default file=20
+extension will be for the header and source filenames when they are =
+generated in=20
+the UI - I use .hpp and .cpp, but you may prefer .h and .cxx. The =
+'Author' entry=20
+is mapped directly onto the ${Author} parameter explained below. </P><A=20
+name=3DPlaceholders></A>
+<H5>Template File Placeholders</H5>
+<P>The template files consist of normal text with placeholders used to =
+define=20
+where certain strings should be applied. These placeholders are denoted =
+by a=20
+string enclosed inside a "${" and "}", where the string is the name of a =
+
+parameter. Every parameter name can be specified in Mixed case, all =
+UPPER case=20
+or all lower case to have the value applied in that same case. For =
+example, if=20
+the 'Author' parameter was set to "Chris Oldwood", these would be the=20
+substitutions, </P><PRE>${Author}=3DChris Oldwood
+${AUTHOR}=3DCHRIS OLDWOOD
+${author}=3Dchris oldwood
+</PRE>
+<P>The following table lists the full set of placeholders, their meaning =
+and how=20
+they can be configured, </P>
+<P></P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>Placeholder</TH>
+    <TH>Description</TH></TR>
+  <TR>
+    <TD>${Author}</TD>
+    <TD>The author of the class. This is configured in the [General] =
+section.=20
+      I use this with the "\author" Doxygen tag.</TD></TR>
+  <TR>
+    <TD>${Class}</TD>
+    <TD>The name of the class. This can be entered through the UI for =
+any=20
+      template that has 'Class=3DTrue' configured.</TD></TR>
+  <TR>
+    <TD>${Comment}</TD>
+    <TD>The comment for the component. This is configured in the [? =
+Component]=20
+      section. I used to use this in the file banner, but having both=20
+      ${Namespace} and ${Component} in the file now has made this use=20
+    redundant.</TD></TR>
+  <TR>
+    <TD>${Component}</TD>
+    <TD>The name of the component. This is configured in the =
+[Components]=20
+      section and is how a component is chosen in the UI. I use the =
+upper case=20
+      version of this, ${COMPONENT}, as the prefix for all #include =
+guards to=20
+      avoid conflicts where the same class/file name may be used in =
+different=20
+      libraries.</TD></TR>
+  <TR>
+    <TD>${Ext}</TD>
+    <TD>This gives you the extension of the file being created, without =
+the=20
+      leading period, e.g. for a source file it could be "cpp" and "hpp" =
+for a=20
+      header file.</TD></TR>
+  <TR>
+    <TD>${File.Ext}</TD>
+    <TD>This is the complete filename of the file being =
+generated.</TD></TR>
+  <TR>
+    <TD>${File}</TD>
+    <TD>This is just the title of the file being generated, i.e. no =
+extension.=20
+      I use the upper case version of this, ${FILE} along with ${EXT} to =
+create=20
+      the #include guard.</TD></TR>
+  <TR>
+    <TD>${Header}</TD>
+    <TD>The filename of the <I>header</I> file that was generated. I use =
+this=20
+      in the source file to #include the class header.</TD></TR>
+  <TR>
+    <TD>${Include}</TD>
+    <TD>The common #include file used with pre-compiled headers, e.g.=20
+      StdAfx.h. This is specified in the [? Component] =
+section.</TD></TR>
+  <TR>
+    <TD>${Namespace}</TD>
+    <TD>The namespace that the class should reside in. This can be =
+defaulted=20
+      in the [? Component] section of the configuration file and then =
+overridden=20
+      in the UI if required.</TD></TR></TBODY></TABLE>
+<P></P><A name=3DExample></A>
+<H5>Example</H5>
+<P>The example below is taken from the 'Interface' template that is =
+provided=20
+with Class Generator. The namespace used was 'Test' and the class name =
+was=20
+'ITest'. The tool generated a single file called Test.hpp. </P>
+<P>This is the template, =
+</P><PRE>////////////////////////////////////////////////////////////////=
+////////////////
+//! \file   ${File.Ext}
+//! \author ${Author}
+
+#ifndef ${COMPONENT}_${FILE}_${EXT}
+#define ${COMPONENT}_${FILE}_${EXT}
+
+namespace ${Namespace}
+{
+
+class ${Class}
+{
+protected:
+	virtual ~${Class}() =3D 0 {};=20
+};
+
+}
+
+#endif // ${COMPONENT}_${FILE}_${EXT}
+</PRE>
+<P>And this is the code that was generated, =
+</P><PRE>////////////////////////////////////////////////////////////////=
+////////////////
+//! \file   ITest.hpp
+//! \author Chris Oldwood
+
+#ifndef APPLICATION_ITEST_HPP
+#define APPLICATION_ITEST_HPP
+
+namespace Test
+{
+
+class ITest
+{
+protected:
+	virtual ~ITest() =3D 0 {};=20
+};
+
+}
+
+#endif // APPLICATION_ITEST_HPP
+</PRE>
+<HR>
+<A name=3DWarranty></A>
+<H5>License &amp; Warranty</H5>
+<P>This application is freeware - you get what you pay for, nothing =
+more,=20
+nothing less. </P><A name=3DSourceCode></A>
+<H5>Source Code</H5>
+<P>The full source code (C++) is available from my web site listed =
+below. </P><A=20
+name=3DContact></A>
+<H5>Contact Details</H5>
+<P>The "About" dialog also contains my contact details. Please check the =
+web=20
+site for updates. </P>
+<P>Email: <A href=3D"mailto:gort@cix.co.uk">gort@cix.co.uk</A><BR>Web: =
+<A=20
+href=3D"http://www.cix.co.uk/~gort">www.cix.co.uk/~gort</A><BR></P>
+<P>Chris Oldwood<BR>8th June 2009<BR></P></BODY></HTML>
+
+------=_NextPart_000_0000_01C9E84D.CFA56A60
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///D:/Dev/Win32/ClassGen/HelpFile/Main.gif
+
+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
+
+------=_NextPart_000_0000_01C9E84D.CFA56A60--
