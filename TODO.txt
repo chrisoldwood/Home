@@ -2,8 +2,8 @@
 
 - Add PayPal section.
 
-- Fix for IE8 (paragraphs around the blocks).
-
 - Change the "Binary" links to "Download" and separate the "Debug" + Source.
 
 - Use lowercase for the anchor names.
+
+- Add ACCU articles

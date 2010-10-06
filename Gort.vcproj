@@ -430,6 +430,10 @@
 			</File>
 		</Filter>
 		<File
+			RelativePath=".\articles.htm"
+			DeploymentContent="TRUE">
+		</File>
+		<File
 			RelativePath="default.htm">
 		</File>
 		<File
