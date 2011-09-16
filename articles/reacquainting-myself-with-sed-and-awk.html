@@ -1,0 +1,253 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List
+href="reacquainting-myself-with-sed-and-awk_files/filelist.xml">
+<title>Reacquainting Myself With Sed &amp; Awk</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Chris Oldwood</o:Author>
+  <o:LastAuthor>Chris Oldwood</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>4906</o:TotalTime>
+  <o:Created>2011-09-13T07:10:00Z</o:Created>
+  <o:LastSaved>2011-09-13T07:10:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>769</o:Words>
+  <o:Characters>4384</o:Characters>
+  <o:Company>Co Productions Ltd</o:Company>
+  <o:Lines>36</o:Lines>
+  <o:Paragraphs>10</o:Paragraphs>
+  <o:CharactersWithSpaces>5143</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>Reacquainting
+Myself with Sed &amp; Awk</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-GB>(ACCU
+– Inspirational Particles)</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>So, I’m sitting there slouched in my chair
+starring at the Visual Studio text editor whilst it does a rather lengthy, but
+albeit simple transformation of a text file and I’m coming to the realisation
+that this is no longer just a one-off event. In fact as I think harder I
+realise that during the last few weeks I’ve had to generate a number of long
+simple SQL scripts by transforming the CSV format result set from <span
+class=GramE>SSMS[</span>1] back into a bunch of INSERT statements. It’s also
+suddenly become noticeable that the tool I have historically been using for these
+simple tasks is no longer the svelte and nimble text editor that was VC6 (nay VS98),
+but has instead morphed into the bloated and sluggish VC9 (VS2008). I’ve read
+many complaints in the past about its increasing slothfulness but brushed them
+aside as they didn’t really resonate with me; but when a tool asks you if it
+can disable its own Undo feature to improve performance you know you’re in trouble…</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>I haven’t been paid by-the-hour since
+before the millennium so just sitting and waiting for it to finish was no
+longer an option. And then I started to hear the sniggers in the background as
+legions of smug <span class=GramE>Unix</span> programmers chortle to themselves
+and flick through their tool chest whispering “Vi?”, “Emacs?”, “Sed?”, “Awk?”… And
+then I heard a chorus of disapproval as every <i style='mso-bidi-font-style:
+normal'>other</i> programmer joined in with a round of “Use the right tool for
+the job – stupid”. The problem was that I haven’t used any of those tools since
+leaving university nearly 20 years ago and my previous experience of <span
+class=GramE>Unix</span> ports under DOS and 16-bit Windows was not favourable…</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Still, I put my metaphorical spade down
+(actually I left it working away in the background as I thought I might as well
+make use of my multi-tasking OS) and go in search of a <i style='mso-bidi-font-style:
+normal'>proper</i> Windows port of Sed and/or Awk. I mean one that respects
+Windows conventions like having spaces in filenames, using backslashes in paths
+and understanding that <i style='mso-bidi-font-style:normal'>it</i> has to
+process wildcards passed on the command line. I also didn’t want to have to
+install and run any kind of emulator; as Raymond Chen once said “If the
+solution starts with ‘First Install Product X’ then now you have two problems”.
+Fortunately I think I’ve found a suitable candidate in the shape of the
+UnxUtils project on good old <span class=GramE>SourceForge[</span>2]. Of course
+Visual Studio still finished before I had unpacked the .zip file, copied the
+files to a folder and updated my PATH, but that’s not the point – I now had the
+tools ready for action.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>I didn’t have to wait too long either as a
+few weeks later I needed to work out how much disk space a certain type of file
+was consuming in our one of our data stores. This was an awkward one as I kind
+of knew how to do it in PowerShell (which I’m also learning and has far more
+relevance for sysadmin work on Windows), but I was keen to spend a short time
+with Awk as I remembered that it could ‘do sums’ as well as transform text. A
+quick Google later and I had a one liner that did exactly what I wanted (albeit
+after some gnashing of teeth because ‘END’ has to be in upper case it seems).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Somewhat chuffed with myself at that point I
+decided that if I was going to make a real go if it then I should seek out some
+paper based tutorial so that I could harness (some) of the power of these two
+little gems. Mere seconds on Amazon unearthed “Sed &amp; Awk” (2nd Edition) by
+Dougherty &amp; Robbins with a second hand copy listed for just a handful of
+British Pounds. I also couldn’t resist the companion O’Reilly Pocket Reference
+either for a couple of quid. So a few clicks later and I’m done. The Dougherty
+&amp; Robbins book was the perfect introduction for me (ok, I’ll stop there and
+take the opportunity to write up a formal review to keep Mr Higgins off my
+back…) and many happy memories of my time at university came flooding back as I
+remembered some of the things these tools do well.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>A few months later I then had one of those
+glorious moments where I had a problem to solve and I knew exactly which would
+be the best tool for the job. I needed to extract some values from a file which
+was formatted somewhat like an XML data document with one element per line and
+a key value pair as an attribute. A simple GREP wouldn’t do it as the key/value
+pair occurred in a number of different contexts – what I needed to do was
+restrict the GREP to certain repeating portions of a file. And before you could
+say “<st1:place w:st="on"><st1:PlaceName w:st="on">Address</st1:PlaceName> <st1:PlaceType
+ w:st="on">Range</st1:PlaceType></st1:place>” I had already typed the command
+line and was exhibiting a grin so large it would make the Cheshire <span
+class=GramE>Cat</span> look miserable. It seems this old dog can still be
+taught new tricks, but also very old ones too…</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[1] SQL Server Management Studio</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[2] <a
+href="http://unxutils.sourceforge.net/">http://unxutils.sourceforge.net</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris Oldwood</span></p>
+
+<p class=MsoNormal><!--[if supportFields]><span lang=EN-GB><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SAVEDATE<span style='mso-spacerun:yes'> 
+</span>\@ &quot;dd/MM/yyyy&quot;<span style='mso-spacerun:yes'>  </span>\*
+MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span
+lang=EN-GB><span style='mso-no-proof:yes'>31/01/2011</span></span><!--[if supportFields]><span
+lang=EN-GB><span style='mso-element:field-end'></span></span><![endif]--></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Bio<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris started out as a bedroom coder in the
+80s, writing assembler on 8-bit micros. These days it’s C++ and C# on Windows
+in big plush corporate offices. He is also the commentator for the
+Godmanchester Gala Day Duck Race and can be contacted via gort@cix.co.uk.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
