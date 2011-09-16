@@ -132,10 +132,21 @@ a
 {
 	color:				#000080;
 	padding-right:		10px;
-	width:				33%;
+	width:				40%;
 }
 
 .link_addr
+{
+	color:				#000080;
+	padding-right:		10px;
+}
+
+.articles_table
+{
+	width:				100%;
+}
+
+.article_entry
 {
 	color:				#000080;
 	padding-right:		10px;

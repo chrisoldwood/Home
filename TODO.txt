@@ -1,9 +1,7 @@
-- Add more links (Blogs, ACCU, linked-in).
+- Add more links - Blogs.
+
+- Refresh libraries and dox.
+
+- Change online manuals to just the .html version.
 
 - Add PayPal section.
-
-- Change the "Binary" links to "Download" and separate the "Debug" + Source.
-
-- Use lowercase for the anchor names.
-
-- Add ACCU articles
