@@ -1,0 +1,22 @@
+Version 1.0
+===========
+
+- Fixed handling of excluded files.
+- Fixed handling of detected dependencies that have no TargetName.
+
+Version 0.9
+===========
+
+- Added proper support for converting the file-system layout.
+- Corrected the output file extensions to .wxs.
+
+Version 0.1
+===========
+
+- First public release.
+
+
+Chris Oldwood 
+[gort@cix.co.uk]
+
+31st October 2011
