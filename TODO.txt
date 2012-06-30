@@ -1,7 +1,3 @@
 - Add more links - Blogs.
 
-- Refresh libraries and dox.
-
-- Change online manuals to just the .html version.
-
 - Add PayPal section.
