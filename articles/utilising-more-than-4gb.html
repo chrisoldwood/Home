@@ -1,0 +1,1137 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="utilising-more-than-4gb_files/filelist.xml">
+<title>Utilising More Than 4GB of Memory in a 32-bit Windows Process</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Subject>Windows 32-bit process memory limits</o:Subject>
+  <o:Author>Chris Oldwood</o:Author>
+  <o:LastAuthor>Chris Oldwood</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>1965</o:TotalTime>
+  <o:Created>2013-02-07T08:13:00Z</o:Created>
+  <o:LastSaved>2013-02-07T08:13:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>3624</o:Words>
+  <o:Characters>20658</o:Characters>
+  <o:Company>Co Productions Ltd</o:Company>
+  <o:Lines>172</o:Lines>
+  <o:Paragraphs>48</o:Paragraphs>
+  <o:CharactersWithSpaces>24234</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;
+	mso-fareast-language:EN-GB;}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-GB;
+	mso-fareast-language:EN-GB;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:EN-GB;
+	mso-fareast-language:EN-GB;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:-270087558;}
+@list l0:level1
+	{mso-level-tab-stop:74.6pt;
+	mso-level-number-position:left;
+	margin-left:74.6pt;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:-1388787010;}
+@list l1:level1
+	{mso-level-tab-stop:60.45pt;
+	mso-level-number-position:left;
+	margin-left:60.45pt;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:1104307382;}
+@list l2:level1
+	{mso-level-tab-stop:46.3pt;
+	mso-level-number-position:left;
+	margin-left:46.3pt;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:948747750;}
+@list l3:level1
+	{mso-level-tab-stop:32.15pt;
+	mso-level-number-position:left;
+	margin-left:32.15pt;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:-348083034;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:74.6pt;
+	mso-level-number-position:left;
+	margin-left:74.6pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:936808248;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:60.45pt;
+	mso-level-number-position:left;
+	margin-left:60.45pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:1553655470;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:46.3pt;
+	mso-level-number-position:left;
+	margin-left:46.3pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:385626602;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:32.15pt;
+	mso-level-number-position:left;
+	margin-left:32.15pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:-544194118;}
+@list l8:level1
+	{mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-532637226;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:52386793;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1533391158 134807553 134807555 134807557 134807553 134807555 134807557 134807553 134807555 134807557;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableProfessional
+	{mso-style-name:"Table Professional";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid black 1.0pt;
+	mso-border-alt:solid black .75pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.75pt solid black;
+	mso-border-insidev:.75pt solid black;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableProfessionalFirstRow
+	{mso-style-name:"Table Professional";
+	mso-table-condition:first-row;
+	mso-tstyle-shading:white;
+	mso-tstyle-pattern:solid black;
+	mso-tstyle-diagonal-down:0cm none windowtext;
+	mso-tstyle-diagonal-up:0cm none windowtext;
+	color:windowtext;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-GB>Utilising More Than
+4GB of Memory in a 32-bit Windows Process</span></h1>
+
+<h3><span lang=EN-GB>Introduction</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Large scale enterprise services like SQL
+Server and Exchange Server can be memory hungry beasts. Given the chance they will
+devour as much RAM as you can feed them, using it for caching to reduce costly
+I/O requests. This kind of service is often deployed on some Big Iron hardware with
+the sole aim of allowing it free rein of the host machine - its job being to
+serve clients, preferably as many as possible, and in the shortest possible time.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This article will outline the various
+memory constraints that affect 32-bit processes on the Windows platform and the
+solutions that both Intel and Microsoft provide for overcoming them through
+hardware, OS configuration or API changes.</span></p>
+
+<h3><span lang=EN-GB>32-bit Process Memory Limits</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>When Windows NT was first being developed
+back in the early 1990’s you were lucky to find hard disks with a capacity over
+2GB, let alone that much physical RAM. The initial design decision was to split
+the 4GB virtual address space that every 32-bit process would be limited to
+into two halves. That meant 2GB was reserved for the system (or kernel space)
+and 2GB for the application (or user space). Even today this address space
+limit of 4GB is still in effect for 32-bit processes. What the Windows
+engineers have done instead is provide a variety of techniques to either
+shuffle the kernel/user allocation ratio about or provide other APIs to allow
+larger memory regions to be allocated and different portions of that to be
+mapped into the process address space on demand [Russinovich].</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Much of the confusion around this particular
+topic is due to the differences between the following limits: the virtual
+address space that a process is bound by, the amount of physical RAM that is
+defined by the hardware and the disk-based virtual memory provided by
+additional page-files. In some older articles the terms “memory”, “virtual
+memory” and “address space” are used interchangeably which only compounds the confusion.
+So, to ensure consistency throughout this article I am going to provide clear
+definitions of these key constraints.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Process Virtual Address Space<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>A process lives within a 4GB virtual
+address space. The limit mirrors that of a 32-bit pointer and is deemed “virtual”
+because the address pointer does not refer to physical memory but is actually a
+logical address. Instead, the page belonging to the address can be mapped
+anywhere within physical RAM or even inside a page-file. This is the classic “Level
+of Indirection” at play.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Physical Memory<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Naturally this is the hardware you have
+within your machine. Desktop editions of Windows have historically only allowed
+you to access up to 4GB, whereas the Data Centre Edition of Windows Server
+supports up to 64GB.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Page-Files<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>The hard disk can also act as a temporary
+store for memory pages that are not currently in use. This is called virtual
+memory because it can only be used for page storage – the pages still have to
+be present in physical memory to be accessed.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This total size of all paging files defines
+the virtual memory limit for the entire machine; this can be smaller or larger
+than the per-process 4GB limit.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Commit Charge (Total Memory)<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>If you open the Task Manager and look at
+the “Performance” tab you will see a number of system memory figures quoted.
+One of them is labelled “Commit Charge”. This represents the sum of both the
+Physical RAM and any space allocated via page-files. It is the total amount of
+memory available for <i style='mso-bidi-font-style:normal'>all</i> processes.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Reserved &amp; Committed Process Pages<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Within a process the pages that constitute
+the virtual address space can be in one of three states – Free, Reserved or
+Committed. Free pages are exactly that – pages which have yet to be used.
+Committed pages are those that are in use and count towards the process’s
+footprint as they must be backed either by the page-file (for data) or the
+executable image (for code). The intermediate state of Reserved is a half-way
+house used to put a region of address space to one side without actually
+forcing the OS to commit any physical resources to maintaining it (except for
+bookkeeping).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Reserved memory is a particularly tricky
+beast because it is invisible in the Task Manager due to there being no
+physical overhead and yet it creates contention and fragmentation that is
+difficult to observe without inspecting the process directly.</span></p>
+
+<h3><span lang=EN-GB>Running Out of Memory</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>There are essentially two ways that you can
+run out of memory. The first is to exhaust your <i style='mso-bidi-font-style:
+normal'>own</i> process’s virtual address space by utilising all the pages
+within it, or making it impossible for the heap manager to find enough free
+contiguous pages from which to satisfy a memory allocation request. The second
+method involves consuming all available system memory (i.e. both physical and
+virtual) so that the OS cannot allocate a free memory page to <i
+style='mso-bidi-font-style:normal'>any</i> process. The implication of the
+latter is that a different process is the cause of a memory allocation failure
+– you might only be the victim.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>To diagnose a process breaching its own
+limits you can monitor it with </span><code><span lang=EN-GB style='font-size:
+10.0pt'>PERFMON.EXE</span></code><span lang=EN-GB> and watch the Process |
+Virtual Bytes and Process | Private Bytes counters. The former represents the
+amount of virtual address space that has ever been allocated for heaps,
+page-file sections, executable code, etc. The latter is the number of Committed
+Pages which represents the footprint of the process within the total memory
+available to the system.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The Private Bytes counter can also be seen
+in Task Manager under the confusingly named column “VM Size”. Alternatively
+Process Explorer, via the Properties | Performance tab, provides a single
+dialog for a process that contains all the important memory statistics. However
+it uses the term “Virtual Size” in place of “Virtual Bytes”. The following
+table maps the terms between the various common tools:-</span></p>
+
+<span lang=EN-GB style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-GB;mso-fareast-language:
+EN-GB;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableProfessional border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid black .75pt;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.75pt solid black;mso-border-insidev:.75pt solid black'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+  <td width=132 valign=top style='width:99.0pt;border:solid black 1.0pt;
+  mso-border-alt:solid black .75pt;background:black;mso-shading:white;
+  mso-pattern:solid black;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:1'><b><span lang=EN-GB>Tool<o:p></o:p></span></b></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border:solid black 1.0pt;
+  border-left:none;mso-border-left-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  background:black;mso-shading:white;mso-pattern:solid black;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:1'><b><span lang=EN-GB>Working Set<o:p></o:p></span></b></p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border:solid black 1.0pt;
+  border-left:none;mso-border-left-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  background:black;mso-shading:white;mso-pattern:solid black;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:1'><b><span lang=EN-GB>Commit Charge<o:p></o:p></span></b></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border:solid black 1.0pt;
+  border-left:none;mso-border-left-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  background:black;mso-shading:white;mso-pattern:solid black;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:1'><b><span lang=EN-GB>Address Space<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width=132 valign=top style='width:99.0pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Task Manager</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Mem Usage</span></p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>VM Size</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>N/A</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=132 valign=top style='width:99.0pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Perfmon</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Working Set</span></p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Private Bytes</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Virtual Bytes</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=132 valign=top style='width:99.0pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Process Explorer</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Working Set</span></p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Private Bytes</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>Virtual Size</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As we shall see later when discussing the
+mechanisms for breaking the 4GB barrier the column name “Commit Charge” becomes
+less meaningful; but it is a good first-order approximation.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The exact cause of the process’s exhaustion
+will likely need much closer examination of the actual page usage, for which
+WinDbg can be of great assistance. Another more recent tool from the
+Sysinternals stables, called VMMap, can also be of use. The latter is more
+graphical in nature than WinDbg so is easier for visualisation.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Determining that the entire machine has hit
+the buffers can be a much simpler affair. Bring up the Performance tab in Task
+Manager and compare the <st1:place w:st="on"><st1:PlaceName w:st="on">Commit</st1:PlaceName>
+ <st1:PlaceName w:st="on">Charge</st1:PlaceName> <st1:PlaceName w:st="on">“</st1:PlaceName><st1:PlaceType
+ w:st="on">Peak</st1:PlaceType><st1:PlaceName w:st="on">”</st1:PlaceName></st1:place>
+to the “Limit” – if they’re the same you’ve maxed out. Things will likely start
+going awry before this point though. If for instance you’re making very heavy
+use of file or network I/O, you can drain the number of System Page Table
+Entries which is the pool from which everything flows. The likely indicators here
+are the Win32 error codes 1450 (Insufficient system resources exist to complete
+the requested service) and 1453 (Insufficient quota to complete the requested
+service). Perfmon is able to help you visualise the consumption of this vital
+system resource via the Memory | Free System Page Table Entries counter. If
+you’ve hit either of these two conditions then your problem is not going to be
+solved by any of the solutions below; they may even make it worse!</span></p>
+
+<h3><span lang=EN-GB>Memory Pressure Solutions</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>There are a number of different options
+available for remedying a memory bound 32-bit process that range from simple OS
+level configuration changes to architectural changes via the use of certain
+Win32 APIs. Porting to 64-bit Windows is mentioned here as well, but only out
+of completeness.</span></p>
+
+<h3><span lang=EN-GB>Configuration Based Remediation</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>We start with the OS/process configuration
+based solutions as they don’t require any code changes per-se.</span></p>
+
+<h3><span lang=EN-GB>The /3GB or /USERVA boot.ini Flag</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>One of the simplest ways to increase the
+amount of memory a process can use on 32-bit Windows is to enable the /3GB flag
+in the Window’s </span><code><span lang=EN-GB style='font-size:10.0pt'>booot.ini</span></code><span
+lang=EN-GB> file. This has the effect of adjusting the kernel/user address
+space split in favour of the application by 1GB, i.e. instead of a 2GB/2GB split
+you have a 3GB/1GB split. The downside to this is that the kernel address space
+is halved so there is less space for certain key kernel data structures such as
+the number of System Page Table Entries mentioned earlier. The /USERVA flag is
+an alternative to /3GB that allows for fine tuning of this ratio.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Unfortunately this magic flag is no good by
+itself. The increase in application address space means that all of a sudden an
+application could start dealing with addresses above 0x7FFFFFFF. Signed pointer
+arithmetic on memory allocated above this threshold could expose latent bugs
+that may lead to subtle data loss instead of catastrophic failure. Consequently
+an application or service must declare itself compatible with this larger
+address space by being marked with the /LARGEADDRESSAWARE flag in the
+executable image. This flag is accessible via the Visual C++ linker and is
+exposed by the later editions of the Visual Studio IDE under System | Linker |
+Enable Large Addresses. For .Net applications you currently need to use a
+custom build step that invokes </span><code><span lang=EN-GB style='font-size:
+10.0pt'>EDITBIN.EXE</span></code><span lang=EN-GB> to set the flag.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>To aid in testing your application’s
+compatibility with high addresses there is a flag (</span><code><span
+lang=EN-GB style='font-size:10.0pt'>MEM_TOP_DOWN</span></code><span lang=EN-GB>)
+that can be passed to </span><code><span lang=EN-GB style='font-size:10.0pt'>VirtualAlloc()</span></code><span
+lang=EN-GB> to force higher addresses to be allocated before lower ones (the
+default).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As an aside the more recent documentation
+from Microsoft on this topic now uses the term 4-Gigabyte Tuning (4GT) [MSDN].</span></p>
+
+<h3><span lang=EN-GB>Physical Address Extensions (The /PAE boot.ini Flag)</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Extending the virtual address space of a
+single process overcomes one limitation, but there is a second one in play on
+32-bit Windows that affects your ability to run many of these “large address
+aware” processes, such as in a Grid Computing environment. The maximum amount
+of physical memory that could be managed by Windows was also originally 4GB.
+This is still the case for the 32-bit desktop editions of Windows, but the
+server variants are able to address much more physical RAM – up to 64 GB on the
+Data Centre Server edition.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This has been achieved by utilising an
+Intel technology known as Physical Address Extensions which was introduced with
+the Pentium Pro. It adds an extra layer to the page table mechanism and extends
+entries from 32-bits to 64-bits so that up to 128GB could theoretically be
+addressed.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The introduction of PAE means that kernel
+drivers would now also be exposed to physical addresses above the 4GB barrier,
+something they may not have originally been tested for. Windows tries to keep
+buffers under the 4GB limit to aid reliability, but once again the enablement
+of the feature must be a conscious one – this time via the /PAE switch also in </span><code><span
+lang=EN-GB style='font-size:10.0pt'>boot.ini</span></code><span lang=EN-GB>. If
+the server hardware supports Hot Add Memory this flag is actually enabled by
+default.</span></p>
+
+<h3><span lang=EN-GB>The Danger of /3GB and /PAE</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>As always there is a cost to enabling this
+and the halving of the Page Table Index from 10-bits to 9-bits via /PAE means
+that there are half as many System Page Table Entries available for use. If you
+combine this with the /3GB flag you will have significantly reduced this
+resource and may see the server straining badly under heavy I/O load, i.e. you
+could start seeing those 1450 and 1453 errors mentioned earlier.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The other major casualty is the video
+adaptor [Chen], but this is often of little consequence as application servers
+are not generally renowned for their game playing abilities. Of course the rise
+in general-purpose graphics processing units (GPGPU) puts a different spin on
+the use of such hardware in modern servers.</span></p>
+
+<h3><span lang=EN-GB>Using 64-bit Windows to run a 32-bit Process</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Naturally all this /3GB and /PAE nonsense
+goes away under 64-bit Windows as the total system address space is massive by
+comparison. Although in theory you have 64-bits to play with, implementation limitations
+mean there are actually only 48-bits to work with. Still, 256 TB should be
+enough for anyone?</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>But, 64-bit Windows doesn’t just benefit
+64-bit processes; the architecture also changes the address space layout for
+32-bit processes too. The kernel address space now lives much higher up leaving
+the entire 4GB region for the application to play with (assuming that your
+image is marked with the /LARGEADDRESSAWARE flag as before).</span></p>
+
+<h3><span lang=EN-GB>Recompiling for 64-bit </span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The obvious solution to all these
+shenanigans might just simply be to recompile your application as a 64-bit
+process. Better still, if you rewrite it in .Net you have the ability to run as
+either a 32-bit or 64-bit process as appropriate with no extra work. Only, it’s
+never quite that simple…</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>There are many issues that make porting to
+a 64-bit architecture non-trivial, both at the source code level, and due to external
+dependencies. Ensuring your pointer arithmetic is sound and that any
+persistence code is size agnostic are two of the main areas most often written
+about. But you also need to watch those 3<sup>rd</sup> party libraries and COM
+components as a 64-bit process cannot host a 32-bit DLL, such as an inproc COM
+server.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The hardware and operating system will also
+behave differently. There are plenty of “gotchas” waiting to catch you out during
+deployment and operations. In the corporate world 32-bit Windows desktops are
+still probably the norm with 64-bit Windows becoming the norm in the server space.
+So, whilst the 64-bit editions of SQL &amp; Exchange Server are well bedded-in,
+custom applications are still essentially developed on a different platform.</span></p>
+
+<h3><span lang=EN-GB>Useable Memory</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Having a user address space of 2, 3, or even
+4 GB does not of course mean that you get to use every last ounce. You’ll have
+thread stacks and executable image sections taking chunks out. Plus, if you use
+C++ <i style='mso-bidi-font-style:normal'>and</i> COM you have at least two
+heaps competing, both of which will hold to ransom any virtual address descriptors
+(VADs) that they reserve, irrespective of whether they are in use or not. Throw
+in “Virtual Address Space Fragmentation” and you’re pretty much guaranteed
+(unless you’ve specifically tuned your application’s memory requirements) to
+get less than you bargained for.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The following table describes my
+experiences of the differences between the maximum and realistic usable memory
+for a process making general use of both the COM and CRT heaps:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableProfessional border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid black .75pt;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.75pt solid black;mso-border-insidev:.75pt solid black'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+  <td width=199 valign=top style='width:149.4pt;border:solid black 1.0pt;
+  mso-border-alt:solid black .75pt;background:black;mso-shading:white;
+  mso-pattern:solid black;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:1'><b><span lang=EN-GB>Max User
+  Address Space<o:p></o:p></span></b></p>
+  </td>
+  <td width=204 valign=top style='width:153.0pt;border:solid black 1.0pt;
+  border-left:none;mso-border-left-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  background:black;mso-shading:white;mso-pattern:solid black;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:1'><b><span lang=EN-GB>Useable Space<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width=199 valign=top style='width:149.4pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>2.0 GB</span></p>
+  </td>
+  <td width=204 valign=top style='width:153.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>1.7 GB</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 valign=top style='width:149.4pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>3.0 GB</span></p>
+  </td>
+  <td width=204 valign=top style='width:153.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>2.6 GB</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=199 valign=top style='width:149.4pt;border:solid black 1.0pt;
+  border-top:none;mso-border-top-alt:solid black .75pt;mso-border-alt:solid black .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>4.0 GB</span></p>
+  </td>
+  <td width=204 valign=top style='width:153.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  mso-border-alt:solid black .75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-GB>3.7 GB</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This kind of information is useful if you
+want to tune the size of any caches, or if you need to do process recycling
+such as in a grid or web-hosted scenario. To see the amount of virtual address
+space used by a process you can watch the “Virtual Bytes” Perfmon counter as
+described earlier.</span></p>
+
+<h3><span lang=EN-GB>Extending Your Footprint Over 4GB</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Those who went through the 16-bit to 32-bit
+Windows transition will no doubt be overly cautious - the risk/reward for
+porting a line-of-business application that is only in need of a little more
+headroom may not be sufficient to justify the cost and potential upheaval straight
+away.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If it’s caching you need, and you don’t
+mind going out-of-process on the same machine (or even making a remote call) then
+there are any number of off-the-shelf products in the NOSQL space, such as the open
+source based Memcached. However if you’re looking to do something yourself and
+you want to avoid additional dependencies, or need performance closer to
+in-process caching, then there are two options – Address Windowing Extensions
+and Shared Memory.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>What you need to bare in mind though is
+that it’s not possible to overcome the 4 GB address space limit, but what both
+these mechanisms allow is the ability to store and access more than 4GB memory
+very quickly – just not all at exactly the same time.</span></p>
+
+<h3><span lang=EN-GB>Address Windowing Extensions (AWE)</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Windows 2000 saw the addition of a new API
+targeted specifically at this problem, and it is the one SQL Server uses. The
+AWE API is designed solely with performance in mind and provides the ability to
+allocate and map portions of the physical address space into a process. As the
+name implies you cannot directly access all that memory in one go but need to
+create “windows” onto sections of it as and when you need to. The number and
+size of windows you can have mapped at any one time is still effectively bound
+by the 4GB per-process limit.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Due to the way the AWE work there are some
+restrictions on the memory that is allocated:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-GB>The memory is non-paged.</span></li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-GB>The application must be granted the “Lock Pages in Memory
+     Privilege”</span></li>
+</ul>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The API functions allow you to allocate
+memory as raw pages (as indicated by the use of the term Page Frame Numbers) –
+this is the same structure the kernel itself uses. You then request for a subset
+of those pages to be mapped into a region of the process’s restricted virtual
+address space to gain access to it, using the previously returned Page Frame
+Numbers.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For services such as SQL Server and
+Exchange Server, which are often given an entire host, this API allows them to
+make the most optimal use of the available resources on the proviso that the
+memory will never be paged out.</span></p>
+
+<h3><span lang=EN-GB>Page-File Backed Shared Memory</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>There is another way to access all that
+extra memory using the <i style='mso-bidi-font-style:normal'>existing</i>
+Windows APIs in a manner similar to the AWE mechanism, but without many of its
+limitations – Shared Memory. Apart from not needing any extra privileges the
+memory allocated can also be paged which is useful for overcoming transient
+spikes or exploiting the paging algorithm already provided by the OS.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Allocating shared memory under Windows is
+the job of the same API used for Memory Mapped Files. In essence what you are
+mapping <i style='mso-bidi-font-style:normal'>is</i> a portion of a file, though
+not an application defined file but a part of the system’s page-file. This is
+achieved by passing </span><code><span lang=EN-GB style='font-size:10.0pt'>INVALID_HANDLE_VALUE</span></code><span
+lang=EN-GB> instead of a real file handle to </span><code><span lang=EN-GB
+style='font-size:10.0pt'>CreateFileMapping()</span></code><span lang=EN-GB>.
+The example below creates a shared segment of 1MB:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>const size_t
+size = 1024 * 1024;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>HANDLE
+mapping = CreateFileMapping(INVALID_HANDLE_VALUE, NULL,<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>                              </span><span
+style='mso-spacerun:yes'>     </span>PAGE_READWRITE, 0u, size, NULL);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>if (mapping
+== NULL)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>throw std::runtime_error(&quot;Failed to
+create segment&quot;);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>At this point we have allocated a chunk of
+memory from the system, but we can’t access it. More importantly though we
+haven’t consumed any of our address space either. To read and write to it we
+need to map a portion (or all) of it into our address space, which we do with </span><code><span
+lang=EN-GB style='font-size:10.0pt'>MapViewOfFile()</span></code><span
+lang=EN-GB>. When we’re done we can free up the address space again with </span><code><span
+lang=EN-GB style='font-size:10.0pt'>UnmapViewOfFile()</span></code><span
+lang=EN-GB>. Continuing our example we require the following code to access the
+shared segment:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>const size_t
+offset = 0;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>const size_t
+length =<span style='mso-spacerun:yes'>  </span>1024 * 1024;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>void* region
+= MapViewOfFile(mapping, FILE_MAP_ALL_ACCESS, 0u, 0u, <o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>                             </span>length);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>if (region
+== NULL)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>throw std::runtime_error(&quot;Failed to
+map segment&quot;);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>// read
+&amp; write to the region...<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>UnmapViewOfFile(region);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Every time we need to access the segment we
+just map a view, access it and un-map the view again. When we’re completely
+done with it we can free up the system’s memory with the usual call to </span><code><span
+lang=EN-GB style='font-size:10.0pt'>CloseHandle()</span></code><span
+lang=EN-GB>.</span></p>
+
+<h3><span lang=EN-GB>Limitations of Shared Memory Segments</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This approach is not without its own
+constraints as anyone who has used </span><code><span lang=EN-GB
+style='font-size:10.0pt'>VirtualAlloc()</span></code><span lang=EN-GB> will
+know. Just as with any normal heap allocation the actual size will be rounded
+up to some extent to match the underlying page size. What is more restrictive
+though is that the “window” you map to access the segment (via </span><code><span
+lang=EN-GB style='font-size:10.0pt'>MapViewOfFile</span></code><span
+lang=EN-GB>) must start on an offset which is a multiple of the “allocation
+granularity”. This is commonly 64K and can be obtained by calling </span><code><span
+lang=EN-GB style='font-size:10.0pt'>GetSystemInfo()</span></code><span
+lang=EN-GB>. The length can be any size and will be rounded up to the nearest
+page boundary. The pretty much guarantees it’s only useful with larger chunks
+of data.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>A more subtle problem can arise if you fail
+to match the calls to </span><code><span lang=EN-GB style='font-size:10.0pt'>MapViewOfFile</span></code><span
+lang=EN-GB> with those to </span><code><span lang=EN-GB style='font-size:10.0pt'>UnmapViewOfFile</span></code><span
+lang=EN-GB>. Each call to </span><code><span lang=EN-GB style='font-size:10.0pt'>MapViewOfFile</span></code><span
+lang=EN-GB> bumps the reference count on the underlying segment handle and so
+calling </span><code><span lang=EN-GB style='font-size:10.0pt'>CloseHandle</span></code><span
+lang=EN-GB> will not free the segment if any views are still mapped. If left
+unchecked this could create one almighty memory leak that would be interesting
+to track down.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Apart from the API limitations there is
+also the problem of not being able to cache or store raw pointers to the data
+either outside or inside the memory block – you must use or store offsets
+instead. The base address of each view is only valid for as long as the view is
+mapped so care needs to be taken to avoid dangling pointers. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>One other operational side-effect of this
+technique that you need to warn your System Administrators about is the massive
+rise in page faults that they will see in the process stats. What they need to understand
+is that these are probably just “soft faults” where a physical page is mapped
+into a process and not a “hard fault” where a disk access also occurs. Although
+the segment is officially backed by the system page-file if enough physical RAM
+exists the page should never be written out to disk and so provides excellent
+performance.</span></p>
+
+<h3><span lang=EN-GB>Real-World Use</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>I have previously used shared memory
+segments very successfully in two 32-bit COM heavy services that ran alongside
+other services on a 64-bit Windows 2003 server. One of them cached up to 16 GB
+of data without any undue side effects, even when transient loads pushed it
+over the physical RAM limit and some paging occurred for short periods.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>I’m currently working on a .Net based
+system that is dependent on a 32-bit native library and have earmarked the
+technique again as one method of overcoming out-of-memory problems caused by
+needing to temporarily cache large intermediate blobs of data.</span></p>
+
+<h3><span lang=EN-GB>Research Project - Service-Less Caching</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The ability to cache data in shared memory,
+which is effectively reference counted by the OS, provided the basis for a prototype
+mechanism that would allow multiple “engine” processes running on the same host
+to cache common data without needing a separate service process to act as a
+gateway. This would avoid the massive duplication of cached data for each
+process, which, as the number of CPUs (and therefore engine processes)
+increased, would afford more efficient use of the entire pool of system RAM.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The mechanism was fairly simple. Instead of
+each engine process storing its large blobs of common data in private memory,
+it would be stored in a shared segment (backed by a deterministic object name)
+and mapped on demand. The use of similarly (deterministically) named
+synchronisation objects ensures that only one engine needed to request the data
+from upstream and the existence of a locally cached blob could be detected
+easily too. This was done by exploiting the fact that creation of an object
+with the same name as another succeeds <i style='mso-bidi-font-style:normal'>and</i>
+returns the special error ERROR_ALREADY_EXISTS.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The idea was prototyped but never used in
+production as far as I know.</span></p>
+
+<h3><span lang=EN-GB>Summary</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This article provided a number of
+techniques to illustrate how a 32-bit Windows process can access more memory
+that the 2GB default. These ranged from configuration tweaks involving the /3GB
+and /PAE flags through to the AWE and Shared Memory APIs. Along the way it
+helped explain some of the terminology and showed how to help diagnose memory
+exhaustion problems.</span></p>
+
+<h3><span lang=EN-GB>Credits</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Thanks to Matthew Wilson for reciprocating
+and commenting on my first draft, and to Frances Buontempo for her valuable
+feedback and encouragement too.</span></p>
+
+<h3><span lang=EN-GB>References</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>[Chen] Raymond Chen, Kernel address space
+consequences of the /3GB switch, </span></p>
+
+<p class=MsoNormal><span lang=EN-GB>http://blogs.msdn.com/b/oldnewthing/archive/2004/08/06/209840.aspx.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[MSDN] Memory Limits for Windows Releases, http://msdn.microsoft.com/en-gb/library/windows/desktop/aa366778(v=vs.85).aspx</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[Russinovich] Mark Russinovich and David
+Solomon, Windows Internals 4<sup>th</sup> edition</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><span style='mso-field-code:" AUTHOR   \\* MERGEFORMAT "'><span
+style='mso-no-proof:yes'>Chris Oldwood</span></span></span></p>
+
+<p class=MsoNormal><!--[if supportFields]><span lang=EN-GB><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SAVEDATE<span style='mso-spacerun:yes'> 
+</span>\@ &quot;dd/MM/yyyy&quot;<span style='mso-spacerun:yes'>  </span>\*
+MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span
+lang=EN-GB><span style='mso-no-proof:yes'>07/01/2013</span></span><!--[if supportFields]><span
+lang=EN-GB><span style='mso-element:field-end'></span></span><![endif]--></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Biography<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris started out as a bedroom coder in the
+80s, writing assembler on 8-bit micros. These days it’s C++ and C# on Windows
+in big plush corporate offices. He is also the commentator for the
+Godmanchester Gala Day Duck Race and can be contacted via <a
+href="mailto:gort@cix.co.uk">gort@cix.co.uk</a>.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
