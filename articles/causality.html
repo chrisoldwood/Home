@@ -1,0 +1,1582 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="causality_files/filelist.xml">
+<title>Causality – A Mechanism for Relating Distributed Diagnostic Contexts</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="time"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PersonName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Chris Oldwood</o:Author>
+  <o:LastAuthor>Chris Oldwood</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2776</o:TotalTime>
+  <o:Created>2013-03-10T07:56:00Z</o:Created>
+  <o:LastSaved>2013-03-10T07:56:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>4024</o:Words>
+  <o:Characters>22937</o:Characters>
+  <o:Company>Co Productions Ltd</o:Company>
+  <o:Lines>191</o:Lines>
+  <o:Paragraphs>53</o:Paragraphs>
+  <o:CharactersWithSpaces>26908</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-GB;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:EN-GB;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-GB>Causality – A Mechanism
+for Relating Distributed Diagnostic Contexts</span></h1>
+
+<h3><span lang=EN-GB>Definition</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Causality: The relationship between cause
+and effect [OED].</span></p>
+
+<h3><span lang=EN-GB>Introduction</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Supporting a Distributed System can be
+hard. When the system has many moving parts it is often difficult to piece
+together exactly what happened, at what time, and within which component or
+service. Despite advances in programming languages and runtime libraries the
+humble text format log file is still a mainstream technique for recording
+significant events within a system whilst it operates. However, logging
+libraries generally only concern themselves with ensuring that you can piece
+together the events from a single process; the moment you start to invoke
+remote services and pass messages around the context is often lost, or has to
+be manually reconstructed. If the recipient of a remote call is a busy
+multi-threaded service then you also have to start picking the context of
+interest out of all the other contexts before you can even start to analyse the
+remote flow.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This article will show one mechanism for
+overcoming this problem by borrowing a hidden feature of DCOM and then exposing
+it using an old design pattern from Neil Harrison.</span></p>
+
+<h3><span lang=EN-GB>Manually Stitching Events Together</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The humble text log file is still the preferred
+format for capturing diagnostic information. Although some attempts have been
+made to try and use richer encodings such as XML, a simple one line per event/fixed
+width fields format is still favoured by many [Nygard].</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For a single-process/single-threaded
+application you can get away with just a timestamp, perhaps a severity level
+and the message content, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>2013-01-01 <st1:time
+Minute="23" Hour="17" w:st="on">17:23:46</st1:time> INF Starting something rather
+important</span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Once the number of processes starts to rack
+up, along with the number of threads you need to start including a Process ID
+(PID) and Thread ID (TID) too, either in the log file name, within the log entries
+themselves, or maybe even in both, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>2013-01-01 <st1:time
+Minute="23" Hour="17" w:st="on">17:23:46</st1:time> <b style='mso-bidi-font-weight:
+normal'>1234</b> <b style='mso-bidi-font-weight:normal'>002</b> INF Starting something
+rather important</span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Even if you are mixing single-threaded
+engine processes with multi-threaded services it is still desirable to maintain
+a consistent log file format to make searching and parsing easier. For the sake
+of this article though, which is bound by the constraints of print based publishing,
+I’m going to drop some of the fields to make the log output shorter. The date,
+PID and severity are all tangential to most of what I’m going to show and so
+will be dropped leaving just the time, TID and message, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:46</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Starting something rather important</span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Assuming you can locate the correct log
+file to start with, you then need to be able to home-in on the temporal set of
+events that you’re interested in. One common technique for dealing with this
+has been to manually annotate log lines with the salient attributes of the task
+inputs, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:45</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Handling request from 192.168.1.1 for
+oldwoodc<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:46</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Doing other stuff now<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:47</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Now doing even more stuff<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:59</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Finished handling request from 192.168.1.1<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If your process is single-threaded you can
+probably get away with putting the key context details on just the first and
+last lines, and then just assume that everything in between belongs to the same
+context. Alternatively you can try and “remember” to include the salient
+attributes in every log message you write.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:45</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Handling request from 192.168.1.1<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:46</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Doing other stuff now (192.168.1.1)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:47</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 [192.168.1.1] Now doing even more
+stuff<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Minute="23" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:59</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Finished handling from 192.168.1.1<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Either way there is too much manual
+jiggery-pokery going on and as you can see from the last example you have to
+rely on all developers using a consistent style if you want a fighting chance
+of filtering the context successfully later.</span></p>
+
+<h3><span lang=EN-GB>Diagnostic Contexts</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The first problem we want to solve is how
+to “tag” the current context (i.e. a single thread/call stack in the first
+instance) so that whenever we go to render a log message we can automatically
+annotate the message with the key details (so we can then grep for them later).
+More importantly, we’d like to do this in such a way that any code that is not already
+aware of our higher-level business goals remains blissfully unaware of them
+too.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>In Pattern Languages of Program Design Vol.
+3, Neil Harrison presents a number of logging related design patterns [<st1:place
+w:st="on">Harrison</st1:place>], one of which is called Diagnostic Context. In
+it he describes a technique for associating arbitrary data with what he calls a
+“transaction”. The term transaction is often heavily associated with databases
+these days, but the transactions we are concerned with here are on a much
+larger scale, e.g. a single user’s “session” on a web site.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>A distributed system would therefore have
+many diagnostic contexts which are related somehow. The connection between
+these could be viewed as a parent/child relationship (or perhaps global/local).
+There is no reason why a context couldn’t store different “categories” of tags
+(such as problem domain and technical domain), in which case the term namespace
+might be more appropriate. However this article is not so much concerned with
+the various scopes or namespaces that you might create to partition your contexts
+but more about how you go about <i style='mso-bidi-font-style:normal'>relating</i>
+them. As you will see later it is a specific subset of the tags that interests
+us most.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Although you could conceivably maintain one
+context per task that acquires more and more tags as you traverse each service
+layer, you would in effect be creating a Big Ball of Mud. However, the more tags
+you create the more you’ll have to marshal and ultimately the more you’ll have
+to write to your log file and then read again when searching. Although the I/O
+costs should be borne in mind, the readability of your logs is paramount if
+you’re to use them effectively when the time comes. And so multiple smaller
+contexts are preferred, with thread and service boundaries providing natural limits.</span></p>
+
+<h3><span lang=EN-GB>Implementing a Simple Diagnostic Context</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The implementation for a Diagnostic Context
+can be as simple as a map (in C++) or a Dictionary (in C#) which stores a set
+of string key/value pairs (a tag) that relates to the current operation. The
+container will almost certainly utilise thread-local storage to allow multiple
+contexts to exist simultaneously for the multiple threads within the same
+process.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>It should be noted that some 3<sup>rd</sup>
+party logging frameworks already have support for diagnostic contexts built-in.
+However, they may not be usable in the way this article suggests and so you may
+still need an implementation like the simple one shown below.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>At the entry point to our “transaction” processing
+code we can push the relevant tags into the container for use later. By
+leveraging the RAII idiom in C++ or the Dispose pattern in C# we can make the
+attaching and detaching of tags automatic, even in the face of exceptions. For
+example in C# we could write:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void
+ProcessRequest(Request request)<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>using(new DiagnosticContextTag(“ID”, request.Id))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>using(new DiagnosticContextTag(“HOST”, request.Host))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>// Do some funky stuff with the request.<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Behind the scenes the constructor adds the tag
+to the underlying container and removes it again in the destructor/Dispose
+method. The need for the code to be exception safe is important as we don’t
+want the tags of one context to “leak” by accident and infect the parent context
+because it would cause unnecessary pollution later when we are searching.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As <st1:place w:st="on">Harrison</st1:place>’s
+original pattern suggests we can create contexts-within-contexts by using
+stack-like push/pop operations instead of just a simple add/remove. However you
+still want to be careful you don’t overload the meaning of any tag (e.g. “ID”) that
+will be used across <i style='mso-bidi-font-style:normal'>related</i> scopes as,
+once again, it will only create confusion later.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>When the time finally comes to render a log
+message we can extract the set of tags that relate to this thread context,
+format them up nicely and append them to the caller’s message behind the scenes,
+e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void WriteLogMessage(string
+message)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>string timestamp = FormatTimestamp();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>string threadId = FormatThreadId();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>string context = Context.Format(); //
+“ID=1234”<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>Console.WriteLine(“{0} {1} {2} [{3}]”, <br>
+<span style='mso-spacerun:yes'>                      </span>timestamp, threadId,
+message, context);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The example above would generate a log line
+like this:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><st1:time Hour="17" Minute="23" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:23:46</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 002 Doing other stuff now [ID=1234]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The statement </span><code><span
+lang=EN-GB style='font-size:10.0pt'>Context.Format(); </span></code><span
+lang=EN-GB>hopefully shows that I’ve chosen here to implement the diagnostic context
+as a static Façade. This is the same façade that the constructor and destructor
+of </span><code><span lang=EN-GB style='font-size:10.0pt'>DiagnosticContextTag</span></code><span
+lang=EN-GB> would have used earlier to attach and detach the attributes. In C# the
+diagnostic context could be implemented like this:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public
+static class Context<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>internal static void Attach(string key,
+string value)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>s_tags.Add(key, value);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>internal static void Detach(string key)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>s_tags.Remove(key);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public static string Format()<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>var builder = new StringBuilder();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>foreach(var tag in s_tags)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span>builder.AppendFormat(“{0}={1}”, tag.Key,
+tag.Value);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>return builder.ToString();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>[ThreadLocal]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>private static IDictionary&lt;string,
+string&gt; s_tags =<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>                               </span><span
+style='mso-spacerun:yes'>    </span>new Dictionary&lt;string, string&gt;();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The Attach/Detach methods here have been
+marked </span><code><span lang=EN-GB style='font-size:10.0pt'>internal</span></code><span
+lang=EN-GB> to show that tags should only be manipulated via the public </span><code><span
+lang=EN-GB style='font-size:10.0pt'>DiagnosticContextTag</span></code><span
+lang=EN-GB> helper class.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public class
+DiagnosticContextTag : IDispose<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public DiagnosticContextTag(string key,
+string value)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>Context.Attach(key, value);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>m_key = key;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public void Dispose()<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>Context.Detach(m_key);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>private string m_key;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<h3><span lang=EN-GB>Distributed COM/COM+</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The second aspect of this mechanism comes
+from DCOM/COM+. Each call-chain in DCOM is assigned a unique ID (a GUID in this
+case) called the Causality ID [Ewald]. This plays the role of the <i
+style='mso-bidi-font-style:normal'>Logical</i> Thread ID as the function calls
+move across threads, outside the process to other local processes and possibly
+even across the wire to remote hosts (i.e. RPC). In DCOM this unique ID is
+required to stop a call from deadlocking with itself when the logical call-chain
+suddenly becomes re-entrant. For example Component A might call Component B
+(across the wire) which locally calls C which then calls all the way back across
+the wire into A again. From A’s perspective it might seem like a new function
+call but via the Causality ID it can determine that it’s actually just an
+extension of the original one.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This Causality ID is allocated by the COM
+infrastructure and passed around transparently – the programmer is largely
+unaware of it.</span></p>
+
+<h3><span lang=EN-GB>The Primary Causality</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The Causality mechanism is therefore nothing
+more than a combination of these two ideas. It is about capturing the primary tags
+used to describe a task, action, operation, etc. and allowing them to be passed
+around, both within the same process and across the wire to remote services in
+such a way that it is mostly transparent to the business logic.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As discussed earlier, the reason for
+distilling the entire context down into one or more simple values is that it
+reduces the noise as the processing of the task starts to acquire more and more
+ancillary tags as you move from service to service. The local diagnostic context
+will be useful in answering questions within a specific component, but the primary
+causality will allow you to relate the various distributed contexts to one
+another and navigate between them.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>A GUID may be an obvious choice for a
+unique causality ID (as DCOM does), and failing any alternatives it might just have
+to do. But they are not very pleasing to the eye when browsing log data. If the
+request is tracked within a database via an Identity column then that could
+provide a succinct integral value, but it’s still not easy to eyeball.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>A better choice might be to use some
+textual data from the request itself, perhaps in combination with an ID, such
+as the name of the customer/user invoking it. The primary causality could be a
+single compound tag with a separator, e.g. 1234/Oldwood/192.168.1.1 or it could
+be stored as separate tags, e.g. ID=1234, LOGIN=Oldwood, IP=192.168.1.
+Ultimately it’s down to grep-ability but the human visual system is good at
+spotting patterns too and if it’s possible to utilise that as well it’s a
+bonus.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Putting all this together so far, along
+with a static helper, </span><code><span lang=EN-GB style='font-size:10.0pt'>Causality.Attach()</span></code><span
+lang=EN-GB>, to try and reduce the client-side noise, we could write the following
+single-threaded, multi-step workflow (a top-level request that invokes various
+sub-tasks):-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void
+ProcessRequest(Request request)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>using(Causality.Attach(“RequestId”,
+request.Id))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>foreach(var task in request.Tasks)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span>Log.WriteLogMessage(“Starting
+request”);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span><span
+style='mso-spacerun:yes'>    </span>ProcessTask(task);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span>Log.WriteLogMessage (“Request completed”);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void
+ProcessTask(Task task)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>using(Causality.Attach(“TaskId”, task.Id))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>Log.WriteLogMessage (“Starting task”);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>Log.WriteLogMessage (“Task completed”);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This could generate the following output:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><st1:time Minute="50" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:50:01</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 001 Starting request [RequestId=1234]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Hour="17" Minute="50" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:50:02</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 001 Starting task
+[RequestId=1234;TaskId=1]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Hour="17" Minute="50" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:50:02</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 001 Doing user stuff
+[RequestId=1234;TaskId=1;User=Chris]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Hour="17" Minute="50" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:50:03</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 001 Task completed
+[RequestId=1234;TaskId=1]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Hour="17" Minute="50" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:50:02</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 001 Starting task
+[RequestId=1234;TaskId=2]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Hour="17" Minute="50" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:50:02</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 001 Doing payment stuff
+[RequestId=1234;TaskId=2;Type=Card]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Hour="17" Minute="50" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:50:03</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 001 Task completed
+[RequestId=1234;TaskId=2]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><st1:time Minute="50" Hour="17" w:st="on"><code><span
+ lang=EN-GB style='font-size:10.0pt'>17:50:01</span></code></st1:time><code><span
+lang=EN-GB style='font-size:10.0pt'> 001 Request completed [RequestId=1234]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The decision on whether to extend the primary
+causality with the TaskId or just let it remain part of the local context will
+depend on how easy it is for you to piece together your workflow as it crosses
+the service boundaries.</span></p>
+
+<h3><span lang=EN-GB>Marshalling the Primary Causality across the Wire</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>We’ve removed much of the tedium associated
+with logging the context for a single-threaded operation, but that leaves the
+obvious question - how do you pass that across the wire to another service? We
+don’t usually have the luxury of owning the infrastructure used to implement our
+choice of transports but there is nothing to stop us differentiating between
+the <i style='mso-bidi-font-style:normal'>logical</i> interface used to make a
+request and the <i style='mso-bidi-font-style:normal'>wire-level</i> interface
+used to implement it. The wire-level interface may well already be different if
+we know of a more efficient way to transport the data (e.g. compression) when
+serializing. If we do separate these two concerns we can place our plumbing
+right on the boundary inside the proxy where the client can remain unaware of
+it, just as they are probably already unaware there is an RPC call in the first
+place.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The following <i style='mso-bidi-font-style:
+normal'>logical</i> interface describes the client side of an example service
+to request the details of a “bug” in an imaginary bug tracking system:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>interface IBugTrackerService<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>Bug FetchBug(int id);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>class
+BugTrackerProxy : IBugTrackerService<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public Bug FetchBug(int id)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The client would use it like so:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>// somewhere
+in main()<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var service =
+BugTrackerProxyFactory.Create();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>// somewhere
+in the client processing<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var bug =
+service.FetchBug(bugId);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>What we need to do when passing the request
+over the wire is to tag our causality data on the end of the existing
+parameters. To achieve this we have a separate <i style='mso-bidi-font-style:
+normal'>wire-level</i> interface that “extends” the methods of the logical one:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>interface IRemoteBugTrackerService<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>Bug FetchBug(int id, List&lt;Tag&gt; causality);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Then, inside the client proxy we can hoist
+the primary causality out of the diagnostic context container and pass it
+across the wire to the service’s remote stub:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>class
+BugTrackerProxy : IBugTrackerService<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public Bug FetchBug(int id)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>var causality = Causality.GetPrimaryCausality();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>return m_remoteService.FetchBug(id, causality);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>private IRemoteBugTrackerService
+m_remoteService;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>We then need to do the reverse (inject the
+primary causality into the new call stack) inside the remote stub on the
+service side:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>class
+BugTrackerServiceImpl : IBugTrackerService<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>class RemoteBugTrackerService
+: IRemoteBugTrackerService<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public Bug FetchBug(int id, List&lt;Tag&gt;
+causality)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>using (Causality.SetPrimaryCausality(causality))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span>return m_service.FetchBug(id);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>private BugTrackerServiceImpl m_service;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>In this example the client proxy (</span><code><span
+lang=EN-GB style='font-size:10.0pt'>BugTrackerProxy</span></code><span
+lang=EN-GB>) and service stub (</span><code><span lang=EN-GB style='font-size:
+10.0pt'>RemoteBugTrackerService</span></code><span lang=EN-GB>) classes merely
+provide the mechanism for dealing with the non-functional data. Neither the
+caller nor the service implementation class (</span><code><span lang=EN-GB
+style='font-size:10.0pt'>BugTrackerServiceImpl</span></code><span lang=EN-GB>)
+are aware of what’s going on behind their backs.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>In fact, as a double check that concerns
+are correctly separated, we should be able to invoke the real service
+implementation directly instead of the client proxy and still get the same
+primary causality appearing in our log output:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>//var
+service = BugTrackerClientFactory.Create();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var service =
+new BugTrackerServiceImpl();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var bug =
+service.FetchBug(bugId);<o:p></o:p></span></code></p>
+
+<h3><span lang=EN-GB>Marshalling the Primary Causality to Other Threads</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Marshalling the primary causality from one
+thread to another can be done in a similar manner as the remote case. The main
+difference is that you’ll likely already be using your language and runtime
+library in some way to hide some of the grunge, e.g. by using a
+delegate/lambda. You may need to give this up slightly and provide the
+proverbial “extra level of indirection” by wrapping the underlying
+infrastructure so that you can retrieve and inject the causality around the
+invocation of the business logic. Your calling code should still look fairly
+similar to before:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>Job.Run(()
+=&gt; <o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>backgroundTask.Execute();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>});<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>However instead of directly using </span><code><span
+lang=EN-GB style='font-size:10.0pt'>Thread.QueueUserWorkItem</span></code><span
+lang=EN-GB> we have another static façade (</span><code><span lang=EN-GB
+style='font-size:10.0pt'>Job</span></code><span lang=EN-GB>) that will marshal
+the causality behind the delegate’s back:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public class
+Job : IRunnable<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public static void Run(Action action)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>var causality = Causality.GetPrimaryCausality();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>ThreadPool.QueueUserWorkItem((o) =&gt;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span><span
+style='mso-spacerun:yes'>    </span>using (Causality.SetPrimaryCausality(causality))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span><span
+style='mso-spacerun:yes'>    </span>action();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>});<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<h3><span lang=EN-GB>Marshalling Via Exceptions</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>In the previous two sections the
+marshalling was very much one-way because you want to unwind the diagnostic context
+as you return from each scope. But there is another way to marshal the causality,
+which is via exceptions. Just as an exception in .Net carries around a call
+stack for the point of the throw and any inner exceptions, it could also carry
+the causality too. This allows you to avoid one common (anti) pattern which is
+the “log and re-throw”:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>try<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>// Read a file<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>catch
+(Exception e)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>Log.Error(“Failed to read file ‘{0}’”, filename);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>throw;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The only reason the try/catch block exists is
+to allow you to log some aspect of the current operation because you know that once
+the call stack unwinds the context will be gone. However, if the exception
+captured the causality (or even the entire diagnostic context) in its
+constructor at the point of being thrown this wouldn’t be necessary. You also won’t
+have a “spurious” error message either when the caller manages to completely
+recover from the exception using other means.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public class
+CustomException : Exception<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public CustomException(string message)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>: base(message)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>m_causality = Causality.GetPrimaryCausality();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>private List&lt;Tag&gt; m_causality;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Naturally this only works with your own
+exception classes, and so you might end up catching native exceptions anyway and
+re-throwing your own custom exception types just to capture the causality. However,
+you’ve avoided the potentially spurious log message though so it’s still a
+small net gain.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If the exception flows all the way back to
+the point where the transaction started you can then log the captured causality
+with the final exception message. In some cases this might be enough to allow
+you to diagnose the problem without having to find the local context where the
+action took place.</span></p>
+
+<h3><span lang=EN-GB>Tag Types</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>So far we’ve restricted ourselves to simple
+string based tags. But there is no reason why you couldn’t store references to
+the actual business objects and use runtime type identification (RTTI) to
+acquire an interface for handling causality serialization and formatting. If
+all you’re doing is rendering to a simple log file though this might be adding
+an extra responsibility to your domain types that you could do without.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This is one area where I’ve found Extension
+Methods in C# particularly useful because they only rely on the public state of
+an object and you can keep them with the infrastructure side of the codebase.
+The calling code can then look like this:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>using
+(customer.TagCausality())<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>// Do something with customer<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The extension method can then hide the
+“magic” tag key string:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public
+static class CustomerExtensions<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public Tag TagCausality(this Customer
+customer)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>return Causality.Attach(“Customer”,
+customer.Id);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<h3><span lang=EN-GB>Keeping the Noise Down</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Earlier I suggested that it’s worth
+differentiating between the primary and ancillary tags to keep the noise level
+down in your logs as you traverse the various layers within the system. This
+could be achieved either by keeping the tags in a separate container which are
+then merged during formatting, or marking them with a special flag. The same suggestion
+applies to your context interface/façade – separate method names or an
+additional flag, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>using (Causality.AttachPrimary(“ID”,
+Id))<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB>…versus…</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>using
+(Causality.Attach(“ID”, Id, Causality.Primary))<br style='mso-special-character:
+line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB>…versus…</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>using
+(Causality.Attach(“ID”, Id))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>using
+(Causality.MarkPrimary(“ID”))<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB>Whatever you decide it will probably be the
+choice that helps you keep the noise level down in your code too. Just as we
+wanted to keep the marshalling logic away from our business logic, we might
+also choose to keep our diagnostic code separate too. If you’re using other
+tangential patterns, such as the Big Outer Try Block [Longshaw], or measuring
+everything you can afford to [Oldwood], you’ll find weaving this aspect into
+your code as well might only succeed in helping you to further bury the functional
+part:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void
+ProcessAdditionRequest(Request request)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>try<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>using (Causality.Attach(“Request”,
+request.Id))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>using (Causality.Attach(“User”,
+request.Login))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>using (Causality.Attach(“Host”,
+request.Host))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'>     </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span>using
+(Instrument.MeasureElapsedTime(“Addition”))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span><span
+style='mso-spacerun:yes'>    </span>request.Answer = request.Left +
+request.Right;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>catch (MyException e)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>// Recover from known problem<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>catch (Exception e)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>// Recover from unknown problem<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>} <o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Most of the boilerplate code can be
+parcelled up into a helper method that takes a delegate/lambda so that the
+underlying functionality shines through again:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void
+ProcessAdditionRequest(Request request)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>HandleRequest(request, () =&gt;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>request.Answer = request.Left +
+request.Right;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>});<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>private void
+HandleRequest(Request request, Action action)<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>try<br>
+<span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>using (Causality.Attach(“Request”,
+request.Id))<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>            </span>action();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>catch (MyException e)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>// Recover from known problem<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>catch (Exception e)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>// Recover from unknown problem<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<h3><span lang=EN-GB>Testing Causality Interactions</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Due to the simplistic nature of the way the
+context is implemented it is an orthogonal concern to any business logic you
+might be testing. As the example implementation shows it is also entirely
+stateful and so there are no mocking concerns unless you want to explicitly test
+that the context itself is being correctly manipulated. Given that the modus
+operandi of the diagnostic context is to allow you to extract the tags for your
+own use the public API should already provide everything you need. This assumes
+of course that the operation you’re invoking provides you with a “seam” [Feathers]
+through which you can observe the effects, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public class
+TestService : IService<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public void DoSomething()<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>m_causality = Causality.GetPrimaryCausality();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>   </span><span style='mso-spacerun:yes'> </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>public List&lt;KeyValuePair&lt;string,
+string&gt;&gt; m_causality;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>[Test]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void
+RequestShouldSetPrimaryCausality()<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>var service = new TestService();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>var request = new Request(service);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>request.ProcessIt();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>Assert.That(service.m_causality.Count,
+Is.EqualTo(1));<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>Assert.That(service.m_causality[0].Key,
+Is.EqualTo(“ID”));<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>Assert.That(service.m_causality[0].Value,
+Is.EqualTo(“1234”));<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<h3><span lang=EN-GB>Summary</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This article demonstrated a fairly
+unobtrusive way to associate arbitrary tags with a logical thread of execution
+to aid in the diagnosis and support of system issues via log files. It then
+illustrated a mechanism to pass the primary tags to other threads and remote
+processes so that multiple distributed scopes could be related to one another.
+The latter part contained some ideas on ways to reduce the noise in the client
+code and finished with a brief comment on what effects the mechanism has on
+unit testing.</span></p>
+
+<h3><span lang=EN-GB>Acknowledgements</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>A large dollop of thanks goes to <st1:PersonName
+w:st="on">Tim Barrass</st1:PersonName> for providing me with the impetus to
+write this up in the first place and for forgoing sleep to review it too. <st1:PersonName
+w:st="on">Steve Love</st1:PersonName> also picked up many problems both big and
+small. Finally the Overload team (Frances Buontempo, <st1:PersonName w:st="on">Roger
+ Orr</st1:PersonName> and Matthew Jones) helped to add some spit and polish.</span></p>
+
+<h3><span lang=EN-GB>References</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>[Ewald] Transactional COM+: Building
+Scalable Applications, Tim Ewald</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[Feathers] Working Effectively With Legacy
+Code, Michael Feathers</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[<st1:place w:st="on">Harrison</st1:place>]
+Pattern Languages of Program Design 3, edited by Robert C. Martin, Dirk Riehle and
+Frank Buschmann.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[Longshaw] The Generation, Management and
+Handling of Errors (Part 2), Andy Longshaw and Eoin Woods, Overload 93</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[Nygard] Michael Nygard, Release IT!</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[OED] <st1:City w:st="on"><st1:place w:st="on">Oxford</st1:place></st1:City>
+English Dictionary</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[Oldwood] Chris Oldwood, Instrument
+Everything You Can Afford To, <a
+href="http://chrisoldwood.blogspot.co.uk/2012/10/instrument-everything-you-can-afford-to.html">http://chrisoldwood.blogspot.co.uk/2012/10/instrument-everything-you-can-afford-to.html</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris Oldwood</span></p>
+
+<p class=MsoNormal><!--[if supportFields]><span lang=EN-GB><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SAVEDATE<span style='mso-spacerun:yes'> 
+</span>\@ &quot;dd MMMM yyyy&quot;<span style='mso-spacerun:yes'>  </span>\*
+MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span
+lang=EN-GB><span style='mso-no-proof:yes'>06 March 2013</span></span><!--[if supportFields]><span
+lang=EN-GB><span style='mso-element:field-end'></span></span><![endif]--></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Bio<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris started out as a bedroom coder in the
+80s, writing assembler on 8-bit micros. These days it’s C++ and C# on Windows
+in big plush corporate offices. He is also the commentator for the
+Godmanchester Gala Day Duck Race and can be contacted via <a
+href="mailto:gort@cix.co.uk">gort@cix.co.uk</a> or @chrisoldwood.</span></p>
+
+</div>
+
+</body>
+
+</html>
