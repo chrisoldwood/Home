@@ -1,0 +1,319 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>In The Toolbox - Static Code Analysis</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+code
+	{font-family:"Courier New";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-GB>In The Toolbox –
+Static Code Analysis</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>There is a certain level of satisfaction to
+be gained from tracking down a really gnarly bug. If it’s a really tough one
+you might even be inclined to punch the air in a physical gesture that reflects
+the effort you put into finding it. Of course we’d all wish this was never
+needed; that we’d always write bug free code. Or at least track it down very
+quickly during (unit) testing when the code is freshest in our minds.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The antithesis of this is tracking down a
+bug only to find that a tool could have easily pointed it out for you. I find
+this kind of bug soul destroying because I know I’ve just wasted part of my
+life doing something the very machine I’m programming could have saved me from.
+Static Code Analysis is one of those tasks that a machine is perfectly suited to
+as it systematically reviews your code and points out those places where the
+dragons may be lying in wait.</span></p>
+
+<h3><span lang=EN-GB>To Err Is Human</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>One of the most common mistakes I used to
+make in my earlier days was the “assignment instead of comparison” inside an
+“if” statement, e.g. writing </span><code><span lang=EN-GB style='font-size:
+10.0pt'>if (x = 2)</span></code><span lang=EN-GB> instead of </span><code><span
+lang=EN-GB style='font-size:10.0pt'>if (x == 2)</span></code><span lang=EN-GB>.
+Another common mistake I used to fall foul of was uninitialised variables. There
+was always a desire to avoid unnecessarily initialising a variable with a default
+value despite the danger of ending up with a code path that might use its
+uninitialised value. The mantra of “not paying for what you don’t use” can lead
+you to prematurely optimise your code’s execution speed at the cost of
+significantly increased development time, and subsequent hair loss.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>There have been attempts to try and write
+code in a different style as a way of avoiding some of the more common
+mistakes. One of the most notable is probably the swapping of the arguments in
+an “if” statement so that you would end up trying to assign to a literal value
+instead of the variable, e.g. instead of writing </span><code><span lang=EN-GB
+style='font-size:10.0pt'>if (x == 2)</span></code><span lang=EN-GB> you use </span><code><span
+lang=EN-GB style='font-size:10.0pt'>if (2 == x)</span></code><span lang=EN-GB>.
+But that just makes the code harder to read, and anyway it doesn’t work when
+non-const variables are involved. The Single Assignment pattern [1], which gets
+an added boost via </span><code><span lang=EN-GB style='font-size:10.0pt'>const</span></code><span
+lang=EN-GB> in C++ and </span><code><span lang=EN-GB style='font-size:10.0pt'>final</span></code><span
+lang=EN-GB> in Java, is a more human friendly approach to the problem, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>    <b>const
+std::string</b> input = getInput();</span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>    <b>const
+size_t</b> index = input.find_first_of(‘&lt;’);</span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&nbsp;</span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>    if (index
+== std::string::npos)</span></code></p>
+
+<h3><span lang=EN-GB>The Free Lunch?</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Contorting your code to avoid common coding
+problems should not be your first line of inquiry. This is even more true today
+as the very first bit of advice in Steve Maguire’s 1993 book Writing Solid Code,
+is this:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-GB>“Enable all the
+optional warnings in your compiler”.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Those more familiar with the similarly aged
+Code Complete by the other Steve (McConnell) have to wait a little longer for
+the same advice, almost until the end of the book (Chapter 26 – Debugging) but
+it’s still there. This should be done in companion with enabling “warnings as
+errors” to make sure you don’t just try and ignore what the compiler <i>might</i>
+be trying to tell you. Yes, in many cases the warnings are possibly benign, but
+if you fail to deal with the issue there-and-then you risk missing the really
+important stuff in a sea of trivia when it finally rears its ugly head.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The best part about that advice is that
+it’s pretty much free. You’ve already paid for the compiler (either in pennies
+or time) and so you might as well put it to good use. In these modern times
+where there is an abundance of Open Source Software, even if you aren’t using
+it for your production builds, it can still be used as an additional pair of
+eyes that will cast a second opinion on your codebase.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For many years I was perfectly happy using
+/W4 /WX with Visual C++ and felt reasonably smug that I was getting some decent
+static analysis (this was long before they added the extra code analysis). Then,
+after a fair bit of refactoring I managed to get GCC to at least compile parts
+of my codebase (not all and it still wouldn’t link) and yet I was amazed at how
+much extra free static analysis I had been missing out on. GCC highlighted
+another 14 potential issues that Visual C++ was silent on. And this was before
+I had turned on the standards compliance and portability settings (which I had
+little need for production-wise). Clearly a propriety company like Microsoft has
+a vested interest in making money from their extra smarts and with an
+Enterprise-style budget you may get more out-of-the-box, but it just goes to remind
+us that the OSS offerings can often play and even outsmart their rivals in the
+big leagues.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As an aside the main place where the most
+refactoring was needed was in my COM components. I had a bit of extra work to manually
+convince the MIDL compiler to throw out something GCC could directly consume,
+as Visual C++ invokes it automatically, and I had to provide some workarounds
+for VC++ specific extensions like </span><code><span lang=EN-GB
+style='font-size:10.0pt'>__uuidof</span></code><span lang=EN-GB>. But, once that
+was done it meant a whole lot more code could be put under the microscope. In
+particular it highlighted a number of places in my error handling where I had
+switched from a custom string implementation (that had the same memory
+footprint as a </span><code><span lang=EN-GB style='font-size:10.0pt'>char*</span></code><span
+lang=EN-GB>) to </span><code><span lang=EN-GB style='font-size:10.0pt'>std::string</span></code><span
+lang=EN-GB> and I was passing it by value to a </span><code><span lang=EN-GB
+style='font-size:10.0pt'>printf()</span></code><span lang=EN-GB> style variable
+args function.</span></p>
+
+<h3><span lang=EN-GB>Custom Tooling</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>With potentially so much on offer before
+getting your wallet out you might be thinking there is little point in spending
+any money on custom tooling. Aside from the grief I’d get from at least one
+prominent ACCU member by suggesting that strategy, it’s simply not true – there
+is definitely a lot of value in tools like the venerable Lint. For starters not
+all languages even need a compiler, e.g. JavaScript, and so that’s not even an
+option. Secondly, even if you do have a compilation step, custom tools like
+Lint can provide more extensive coverage simply because they’re more focused in
+finding bugs in your code instead of generating binaries. Going back to
+JavaScript for a moment, Douglas Crockford, author of JavaScript: The Good
+Parts, illustrates nicely in his book how a tool like JSLint is essential due
+to some pretty ugly language features.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If you think that the cost of a license for
+a commercial tool like PC-lint (as opposed to one of the more extortionately
+priced tools) is too much, consider how much programmer time you’ve lost
+through bugs like uninitialised variables or missing/badly written copy
+constructors. Whilst working for a large bank, I was turned down access to PC-lint
+because they only had a handful of licenses. During that project I know of at
+least two occasions where programmers had lost an entire day tracking down a
+bug caused by just such an issue and both developers were paid more per day
+than a single license of the software that could have found it for them.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Of course there is a start-up cost in
+introducing such a tool and that cost is much larger on a legacy system, but as
+Anna-Jayne Metcalfe showed in her 2008 ACCU London [2] talk you don’t have to jump
+in and try and fix everything right at the start. You need to start small,
+enabling only the analysis of the most serious problems and then progress from
+there. Whilst integration into your build pipeline is an excellent eventual
+goal, just running it regularly manually should pay early dividends.</span></p>
+
+<h3><span lang=EN-GB>Design Smells</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Once you get passed the hardcore problems
+you might begin to wonder how much value there is in some of the softer
+complaints or suggestions the tool makes. ReSharper, which is a tool for the
+.Net world (although they’re moving into the realms of C++) will point out
+where you can pass an iterator instead of a container, because it can see that
+you’ve only iterated it. While both forms are <i>technically</i> correct, given
+the lack of const in C# along with the standard containers being mutable,
+you’re probably taking unnecessary liberties. Similarly I’ve seen cases where
+ReSharper spots that methods and even whole classes can be declared static
+which saves on unnecessary heap churn. The lack of free functions in C# coupled
+with an attitude that “static is bad” [3] means that some designs overuse
+Object-Orientation when a simple function will suffice.</span></p>
+
+<h3><span lang=EN-GB>Learning Aid</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This brings me along nicely to my final
+reason for using such a tool – it’s also a learning aid. As we get more
+experienced we make far less of the fundamental errors as we begin to remember
+the things that constantly trip us up, but in the early days we’re like a
+toddler as we keep falling over. Switch to a new language though, and even if
+we’re an experienced developer we can still regress back to that toddler stage
+if there are enough differences. Even moving to a new project that uses a newer
+version of the same language can surprise you as you might have forgotten all
+the cool things they added but you’ve yet to be able to get practical
+experience with.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>My own move from long term C++ developer to
+n00b C# developer was helped in part by a similarity in the languages around
+the basic constructs but also through the use of a static code analysis tool to
+show me the finer details. More recently the move from .Net 3.5 to .Net 4.0
+means that named and optional arguments are now at my disposal which I keep
+forgetting (although it’s the former rather that latter which I’m more interested
+in).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>By far the biggest win though has been in learning
+LINQ, which can be accessed either directly via the C# extension methods, or
+through the syntactic sugar the language provides. In the beginning I could
+write the really obvious SQL-like format pretty quickly but some of the more
+subtle forms, such as when transforming to a Dictionary, I struggled with. When
+I saw the tool suggest it could change the structure of my code I first guessed
+what it might do, then reveal what the answer was. If I didn’t get it right I’d
+switch back and forth with the editor’s Undo/Redo command to try and understand
+what it was proposing.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Even now when I see an error message, say,
+from the compiler I generally try not to read what the actual error messages says,
+instead favouring to just jump right to the code to see if I can quickly spot
+what the compiler has picked up.</span></p>
+
+<h3><span lang=EN-GB>Keep Control </span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>It’s tempting when you see a barrage of
+issues reported by a tool like this to just go through blindly and accept the
+changes it suggests on the basis that “it’s always right”. In the case of some
+of the LINQ transformations I’ve seen it do I’d definitely question that
+wisdom. A tool like this should be there to watch your back and do <i>your</i>
+bidding, don’t let it get out of control and start writing your code for you. The
+code it generates may be syntactically correct but it may not express it in the
+most human readable way and share your design intent.</span></p>
+
+<h3><span lang=EN-GB>References</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>[1] <a
+href="http://en.wikipedia.org/wiki/Assignment_(computer_science)#Single_assignment">http://en.wikipedia.org/wiki/Assignment_(computer_science)#Single_assignment</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[2] Taming the Lint Monster – 20<sup>th </sup> November 2008.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[3] <a
+href="https://twitter.com/codemonkey_uk/statuses/385518295958683649">https://twitter.com/codemonkey_uk/statuses/385518295958683649</a>.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris Oldwood</span></p>
+
+<p class=MsoNormal><span
+lang=EN-GB>09 October 2013</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Bio</span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris is a freelance developer who started
+out as a bedroom coder in the 80’s writing assembler on 8-bit micros; these
+days it’s C++ and C#. He also commentates on the Godmanchester duck race and
+can be contacted via <a href="mailto:gort@cix.co.uk">gort@cix.co.uk</a> or
+@chrisoldwood.</span></p>
+
+</div>
+
+</body>
+
+</html>

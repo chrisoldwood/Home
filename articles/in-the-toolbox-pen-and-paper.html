@@ -1,0 +1,260 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>In The Toolbox - Pen &amp; Paper</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+code
+	{font-family:"Courier New";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-GB>In The Toolbox –
+Pen &amp; Paper</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><i><span lang=EN-GB>…when
+people say “bring a notebook” they mean “bring a laptop”, not “bring a
+moleskine” -- @natpryce</span></i></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='text-align:right'><i><span lang=EN-GB>“Which
+is your favourite UML tool?” I swear by Crayola -- @jasongorman</span></i></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>First thing in the morning at work, after
+turning on my machine and taking a few gulps of coffee, the next thing I do is
+get out my notepad and pen. Despite all the advances in hardware and software
+and the plethora of apps on the market designed to aid in every office task, I
+still regularly use the old fashioned method of pen and paper.</span></p>
+
+<h3><span lang=EN-GB>TODOs</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>By far the main use of my notebook is a
+list of things that either needs to be done or have caught my attention and so <i>possibly</i>
+deserve further thought or scrutiny at a later date. Sadly, when it comes to
+remembering what I’m (supposed to be) doing I’m like the proverbial goldfish –
+I find it all too easy to head off on a tangent and then lose focus on what
+really matters at that point. Although I have the ability to remember significant
+amounts code I have written in my programming career I still can’t make it to
+the top of the stairs at home without remembering what it was I went up there…
+oh, look shiny thing!</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The sorts of things I end up making a note
+of are the questions (or quite possibly the WTFs [1]) that form in my mind as
+I’m working with both my own, and other people’s code. I have yet to work in an
+environment where code reviews happen formally, regularly and cover 100% of the
+codebase. Instead I tend to see what’s changed when I update my local copy,
+mostly out of self interest to see where any instability might arise, but also
+because I’m just a nosy person that likes to know what’s going on.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Most times the kind of things that raise
+questions are fairly isolated and so can often be resolved pretty quickly,
+especially if the other developer is happy to take it up there and then. The
+alternative is a wider issue that involves looking across the entire codebase
+for similar cases. For example, catching <i>every</i> type of exception, i.e. </span><code><span
+lang=EN-GB style='font-size:11.0pt'>catch(…)</span></code><span lang=EN-GB> in
+C++ or </span><code><span lang=EN-GB style='font-size:11.0pt'>catch(Exception)</span></code><span
+lang=EN-GB> in C#, is a code smell for me when not done on a module boundary
+and so I’d reserve a little time to review the codebase and look for similar
+occurrences. I probably wouldn’t want to take that on immediately, but I also
+don’t want to forget it either.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Naturally when trying to work in an agile
+kind of way one is often mindful of eliminating any waste, and these little
+nuggets of work are no exception. My notebook acts as a temporary store to
+record my observations, but at a later date they can be handled in a variety of
+ways. It could be that someone else has picked up on it too and it’s all
+resolved so I can just scribble out my note. Or perhaps what I initially
+thought was a smell turned out to be insignificant after all. At the other end
+of the scale are the items that have since mushroomed into a much larger task
+and so needs to be placed on the backlog as a formal piece of work – subject to
+further prioritisation of course. In between these two are the little things
+that aren’t really important enough to distract me now but I’m not quite sure
+whether there is any real substance to them – superficially they might seem to
+have value, but perhaps the cost of change could only be justified as part of
+some other work.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>There was an interesting question raised on
+ accu-general a few weeks back about tracking new tests that spring to mind
+whilst writing existing ones. In this particular instance I will use the code
+to record my thoughts, perhaps as a simple comment or more likely as a stub test
+case that shows up “inconclusive” to make it more visible. If the test is for
+another class outside the scope of the current feature it goes in the notebook
+as that’s probably a can of worms just waiting to be opened.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>In essence the moment when I commit my
+changes is a natural barrier for me because it signifies the publishing of a
+single atomic, tested change in the codebase. If something needs to happen
+before the next commit I might as well just get on and do it. Otherwise it goes
+in the book and I can recalibrate my workload again afterwards. Assuming I
+don’t break the build of course…</span></p>
+
+<h3><span lang=EN-GB>Diagrams</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>When I first discovered UML and started
+playing with a couple of Enterprise UML tools I, like many others, thought this
+was going to be a Big Thing. Of course it hasn’t really panned out that way, but
+what I have got from it is a common vocabulary to use when knocking up
+diagrams. Martin Fowler uses the term “sketches” in his UML Distilled book
+which I prefer as it takes a lot of the formality out of their use and recasts
+them as what they most usefully are – a conduit for further discussion.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>What I particularly like about diagrams
+drawn in my notebook is that they also contain all the little amendments and
+annotations that occurred during the discussion. While the end result might be
+a nice snapshot of the destination, the journey often says far more about the
+contention and ideas that were explored along the way. Seeing the furiously
+drawn circles and underlines again is a great reminder on where the points of
+contention were and consequently where future confusion may lie.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Then there is just the immediacy of being
+able to flick back a few pages to the diagram in the middle of a discussion.
+Nothing kills the flow more than sitting, idly waiting for someone to hunt
+around in their emails looking for a picture. You could of course just draw it
+again, perhaps slightly differently this time so that the perspective changes.
+That in itself is a smell – constantly referring to or drawing the same picture
+– as it might mean the design is unintuitive.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If you’re going to knock up a sketch it’s
+better still if you have a couple of different coloured pens to hand too. Even
+just using black and red gives you a way to call out the more important
+aspects. Given the wage of an average programmer it costs very little to buy
+your own set of pens. You might need to keep them in a locked drawer though if
+you ever want them to remain in your possession for longer than a few days!</span></p>
+
+<h3><span lang=EN-GB>Support</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Outside the usual run-of-the-mill
+development notes are the support ones. When in the heat of battle as I’m
+trying to resolve a production issue I need somewhere to jot down my
+observations. Often these are events that come from log files or specific data items
+like a unique customer ID. They often exist only transiently, appearing perhaps
+within the command line in my shell or a SQL query window. After the dust has
+settled I like to write-up a short post-mortem that explains the problem and
+contains the key data items in case a similar problem occurs again.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Anything that happens out of the ordinary
+in production has the hallmark of an edge case that will likely feed into some
+later development, such as a fix that requires a specific test case. Whilst a
+post-mortem email is readily searchable the margins of my notebook are often a
+quicker source when looking for some “interesting data” to put a test case
+together.</span></p>
+
+<h3><span lang=EN-GB>Post Script</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>My need to write things down was borne out
+of the frustration of forgetting things which had the undesirable consequence
+of me keep going off at a tangent and therefore disregarding the real priority.
+Sadly it took me a <i>very</i> long time to realise that the act of writing
+down notes was what mattered, not that I had actually written them. It also
+probably explains why I can remember much of the code I have written. This
+turns out to be a well known phenomenon [2] that is possibly even more
+effective when handwritten than typed.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The most important part of this discovery though
+affects my personal life. Where before I used to rely, and fail miserably, on
+trying to remember the hints my wife would drop for her birthday and Christmas
+presents; now I surreptitiously jot them down on my smart phone under the guise
+of sending another banal tweet. The old fashioned approach definitely works
+better for me in the office but in the great outdoors I’m happy to bow down to the
+convenience of modern technology.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>References</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[1] <a href="http://thedailywtf.com/">http://thedailywtf.com/</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[2] <a
+href="http://lifehacker.com/5738093/why-you-learn-more-effectively-by-writing-than-typing">http://lifehacker.com/5738093/why-you-learn-more-effectively-by-writing-than-typing</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris Oldwood</span></p>
+
+<p class=MsoNormal><span
+lang=EN-GB>15 August 2013</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Bio</span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris is a freelance developer who started
+out as a bedroom coder in the 80’s writing assembler on 8-bit micros; these
+days it’s C++ and C#. He also commentates on the Godmanchester duck race and
+can be contacted via <a href="mailto:gort@cix.co.uk">gort@cix.co.uk</a> or
+@chrisoldwood.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
