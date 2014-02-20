@@ -1,0 +1,1122 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="migrating-from-vss-to-git_files/filelist.xml">
+<link rel=Edit-Time-Data href="migrating-from-vss-to-git_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Migrating From Visual SourceSafe to Git</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="stockticker"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PersonName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Chris Oldwood</o:Author>
+  <o:LastAuthor>Chris Oldwood</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>4765</o:TotalTime>
+  <o:Created>2014-02-20T22:34:00Z</o:Created>
+  <o:LastSaved>2014-02-20T22:34:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>3712</o:Words>
+  <o:Characters>21160</o:Characters>
+  <o:Company>Co Productions Ltd</o:Company>
+  <o:Lines>176</o:Lines>
+  <o:Paragraphs>49</o:Paragraphs>
+  <o:CharactersWithSpaces>24823</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-GB;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	mso-ansi-language:EN-GB;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:EN-GB;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1144278246;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1501799736 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-GB>Migrating From Visual
+SourceSafe to Git</span></h1>
+
+<h3><span lang=EN-GB>Introduction</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Back in the late 1990’s I found myself
+starting to acquire a considerable volume of code from various personal
+projects that I had been working on in my spare time. Having been brought up to
+use a Version Control System (VCS) to manage my source code assets at work it
+seemed eminently sensible to do the same thing at home. Unsure about exactly
+which product to choose I naturally fell into using the one that came bundled
+with the compiler – Visual SourceSafe (VSS). Given that it was also the VCS
+product I had been using at my client back then I got training &amp; experience
+as a nice by-product of work.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Fast forward 15 years and I still find
+myself using the same VSS repo I set up all those years ago! Despite a considerable
+number of excellent free and open source alternatives springing up in the intervening
+years that were far superior, I found myself clinging on. This wasn’t because
+of any killer feature, but mostly because I didn’t want to lose <i
+style='mso-bidi-font-style:normal'>easy access</i> to my ever growing archive of
+version history when switching to another product. Mainstream support ended for
+SourceSafe last year so I don’t even have that to prop me up any longer either.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This article then is my journey on how I
+finally shook off the shackles of SourceSafe whilst maintaining as much history
+as possible. It also goes into some of the questions I asked myself about
+source code structure of shared components in the face of online repositories
+like GitHub. Eventually I’ll get to the mechanics of how to migrate source code
+and some of the problems I encountered along the way.</span></p>
+
+<h3><span lang=EN-GB>Why Git?</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>My lengthy procrastination has had the
+pleasant side-effect of letting the VCS ecosystem settle down quite a lot. I
+really didn’t fancy going through all this again every time The Next Big Thing
+came along. The two clear choices for me were Subversion and Git, with the
+former being what I had been working with for the last few years, while the
+latter was just too big to ignore. I was also aware of the Git/Subversion
+integration so felt that there was a clear migration path in sight either way after
+finally putting VSS to rest.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If you’re wondering whether I looked at any
+paid-for products, then, no. Remember that this was my own personal codebase
+and so I’m happy to live with whatever support I can get off the Internet these
+days. I might have shelled out for a migration tool if the freely available
+options didn’t come up to scratch – they didn’t with VSS2SVN, but fortunately they
+did with VSS2Git.</span></p>
+
+<h3><span lang=EN-GB>My Workflow</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Despite the Distributed Version Control
+System (DVCS) being a relatively modern invention compared to their Centralised
+(CVCS) counterparts, I’ve been (<span class=SpellE>ab</span>)using SourceSafe
+over the last decade in such a way that I’ve got a clunky similar model anyway.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Essentially I have a trusty old Network
+Attached Storage (NAS) box that contains the “master” copy of my VSS repo and
+then on my desktop and laptop(s) I hold a copy. This gives me the full access to
+the history, which I want when developing, along with a repo to store my “work
+in progress”. The downside of course is that I have to do a “formal” check-in
+to the master some time later and re-sync the repo (think ROBOCOPY) to bring in
+changes made via other routes. Like I said, it’s clunky.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Aside from the day-to-day development
+chores I also publish the source code along with the binaries on my web site to
+allow anyone foolish enough to tinker themselves. This has the nice added bonus
+of being an off-site backup. OK, so the .zip files don’t have the full history
+but it was better than nothing until the arrival of cheap, cloud based backup
+services.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This neatly brings me to the final piece of
+my migration puzzle – the introduction of an online source code repository.
+Given that I’d already discovered Git was the best choice for <span
+class=GramE>migrating</span> my history, another brief investigation also led
+me to GitHub as a suitable online provider. Once again the fact that all my
+source code is published (even the dross) means the public-only nature of the
+free repos happily suits my needs.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>That said I still feel uneasy about relying
+solely on a service like GitHub as the canonical source for my code and so I
+still have bare Git repos on my NAS box to act as the central point for
+collaboration across my own devices. Bare repos only store revisions so you
+cannot use them for merging or development, which is essentially what GitHub provides
+anyway.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This leads to a workflow where the
+laptop(s) and desktop are the clones where I do my main development. I then
+pull &amp; push to the repos on my NAS to synchronise (should the need arise)
+with a final push from the NAS to GitHub to publish (backup) my work in
+progress. When I want to formally release a new version I can build, package
+and publish to my web site as before. I’ll also include the source code as a
+snapshot like always just to make it easier for someone else to pick it up.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As you’ve probably guessed there isn’t
+exactly a lot of “collaboration” going on, which is a major selling point for
+tools like Git and GitHub, but that’s not the point really; for me it’s as much
+about creating and dealing with a legacy codebase as a learning tool.</span></p>
+
+<h3><span lang=EN-GB>The Monolithic Repo</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The biggest decision I had to make when
+deciding to move from VSS to another product was whether to keep using a single
+monolithic repo. My codebase contains around 50,000 SLOC of C, C++, SQL and
+PowerShell code distributed across 50 or so separate “components”; these consist
+of scripts, libraries and applications. This way of working (one repo) has
+always suited me, but with a desire to publish via a more collaborative service
+too, I felt it might be a good time to see if it would be better to split it up
+into smaller components; perhaps with a separate repo for each one. Another eventual
+driver was the difference in the way VSS, Git and Subversion handle labels – in
+short, they don’t; at least not in the same way that VSS does (on a per-file
+basis).</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For projects with no dependencies the
+decision was easy as everything would be self-contained. For my C++ codebase
+however, where I have a number of different static libraries (Lib-1, Lib-2,
+etc. below) that are reused across many different applications (App-1, App-2,
+etc. below) the choice was harder. If I created one repo per application (option
+1) I’d have to share <i style='mso-bidi-font-style:normal'>copies</i> of the
+libraries and then find a way to synchronise changes across them all. Doing
+this without just manually copy-and-pasting the changes is probably doable in
+Git but would likely require the kind of Git fu that is well beyond my current n00b
+<span class=SpellE>skillz</span>.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9500;&#9472;&#9472;&#9472;App-1
+(<i style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span>&#9500;&#9472;&#9472;&#9472;Lib-1<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span><span class=SpellE>&#9474;</span><span
+style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;Lib-1 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span>&#9500;&#9472;&#9472;&#9472;Lib-2<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span><span class=SpellE>&#9474;</span><span
+style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;Lib-2 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;App-1 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9492;&#9472;&#9472;&#9472;App-2
+(<i style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9500;&#9472;&#9472;&#9472;Lib-1<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'>  
+</span>&#9474;<span style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;Lib-1
+Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9500;&#9472;&#9472;&#9472;Lib-2<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'> </span><span style='mso-spacerun:yes'>  
+</span>&#9474;<span style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;Lib-2
+Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9492;&#9472;&#9472;&#9472;App-2 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The opposite choice (option 2) was to have
+one repo per shared component (i.e. static library) and then another separate
+repo for each of the application-level components (i.e. executable, COM server,
+etc.). My existing folder structure naturally lent itself to this approach
+because each component was already self-contained:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9500;&#9472;&#9472;&#9472;App-1
+(<i style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;App-1 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9500;&#9472;&#9472;&#9472;App-2
+(<i style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;App-2 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9492;&#9472;&#9472;&#9472;Lib<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9500;&#9472;&#9472;&#9472;Lib-1 (<i
+style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9474;<span style='mso-spacerun:yes'>  
+</span>&#9492;&#9472;&#9472;&#9472;Lib-1 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9492;&#9472;&#9472;&#9472;Lib-2 (<i
+style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>&#9492;&#9472;&#9472;&#9472;Lib-2 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Then there was the half-way house (option
+3) which would see separate repos for each application-level component, but just
+a single repo for all the shared static libraries.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9500;&#9472;&#9472;&#9472;App-1
+(<i style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;App-1 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9500;&#9472;&#9472;&#9472;App-2
+(<i style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9474;<span
+style='mso-spacerun:yes'>   </span>&#9492;&#9472;&#9472;&#9472;App-2 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9492;&#9472;&#9472;&#9472;Lib
+(<i style='mso-bidi-font-style:normal'>repo</i>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9500;&#9472;&#9472;&#9472;Lib-1<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9474;<span style='mso-spacerun:yes'>  
+</span>&#9492;&#9472;&#9472;&#9472;Lib-1 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>&#9492;&#9472;&#9472;&#9472;Lib-2<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>&#9492;&#9472;&#9472;&#9472;Lib-2 Tests<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The one exception to all this was my build
+scripts because they lived in the root of the tree. They aren’t essential for
+building any single application as they’re more for command-line batch-building
+of the entire estate. I decided they could live with the libraries or go in
+another separate repo.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>So many choices! In the end I opted to
+split out the applications and all the shared libraries into separate
+components and repos (i.e. option 2 above). My rationale was that a 3<sup>rd</sup>
+party should only need to clone the bare minimum to get the application to
+build – the waters should not be muddied by any of my really old nasty legacy
+library code that is of no importance to the application in question. I also
+elected to create a separate repo for my build scripts as they are optional
+too.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>From a Git migration perspective I was somewhat
+concerned about how much work this was going to be. The worst case seemed to be
+migrating the whole thing once and then trimming it down manually to just the tree
+of interest, along with moving all the files up into the root of the repo. Some
+VCS repos are immutable by default and Git is no exception, but it did appear
+that some advanced Git magic [1] might make it possible to physically remove
+the unwanted sub-trees afterwards to conceal the initial mess.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Once again lady luck shined on me and
+whilst I was investigating how other developers have solved the problem of
+shared components in project-focused repos I stumbled upon a recent addition to
+the Git toolset – </span><code><span lang=EN-GB style='font-size:10.0pt'>git <span
+class=SpellE>subtree</span> split</span></code><span lang=EN-GB> [2]. As we
+shall see later this command can rebase (in the file-system sense) a sub-folder
+right back up to the root of a repo.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The investigation also lead me to the
+concept of “<span class=SpellE>submodules</span>” [3] in Git, which are akin to
+“<span class=SpellE>svn:externals</span>” in Subversion, and it raised an
+important difference in the way that I, as owner and fundamentally the main
+developer of this entire codebase work differently to how another collaborator
+would. Essentially I am interested in developing the libraries with one eye on
+the changes that affect all dependents, whereas a collaborator is likely to be only
+concerned in the effects on the application that directly interests them.
+Naturally I decided to optimise for the common case (me as the sole developer) and
+keep the libraries parallel to the applications rather than move them “under” and
+then treat them as sub-modules. I can of course change my mind later as the
+hard work has already been done.</span></p>
+
+<h3><span lang=EN-GB>Project Migration</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Finally, after all that philosophical waffle
+we come to the mechanics of creating one or more Git repositories from a SourceSafe
+one.</span></p>
+
+<h2><span lang=EN-GB>Git Configuration</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>The first step is to read up on how Git
+handles line-endings as this will likely affect your code. GitHub have a
+splendid document that covers the practical aspects of this issue [4]. If you
+think it’s all rather convoluted you can read up on how the different settings
+evolved over time to cater for the different scenarios as they cropped up [5]. Suffice
+to say that after opening a shell with the Git toolkit on your <st1:stockticker
+w:st="on">PATH</st1:stockticker> you’ll want to run this:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>C:</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>\&gt;
+git config --global <span class=SpellE>core.autocrlf</span> true<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Next up create a folder under which you’re
+going to create your migrated Git repository(s):-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>C:</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>\&gt;
+<span class=SpellE>mkdir</span> D:\Git\vss2git<o:p></o:p></span></code></p>
+
+<h2><span lang=EN-GB>VSS2Git</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>The tool I chose to use for the migration
+was VSS2Git [6]. This is a GUI-based application that relies on another Git
+installation being installed, and being accessible via the <st1:stockticker
+w:st="on">PATH</st1:stockticker>. The GitHub for Windows package [7] contains
+both a UI and an easy way to launch a shell (CMD.EXE or PowerShell)
+pre-configured so that you don’t have to have Git permanently on your <st1:stockticker
+w:st="on">PATH</st1:stockticker>. With the planets suitably aligned you can run
+VSS2Git like so:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>C:</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>\&gt;
+&quot;c:\Program Files\Vss2Git\Vss2Git.exe&quot;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Before starting I <span class=SpellE>sync’ed</span>
+my local VSS repo to match the one on my NAS box to ensure I was working with
+the latest stuff; this also gave me a separate copy which I could mess around
+with and see what happens when I migrate sub-folders instead of the root, e.g.
+my build scripts.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:343.5pt;
+ height:330pt'>
+ <v:imagedata src="migrating-from-vss-to-git_files/image001.gif" o:title="VSS2Git"/>
+</v:shape><![endif]--><![if !vml]><img width=458 height=440
+src="migrating-from-vss-to-git_files/image001.gif" v:shapes="_x0000_i1025"><![endif]></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As an example when I <span class=GramE>migrated</span>
+my Core C++ library, which lives under $/Win32/Lib/Core, I used the following (non-default)
+settings:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>VSS
+Directory: D:\VSS\Git<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>VSS Project:
+$/Win32/Lib/Core<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>Git
+Directory: D:\Git\vss2git\Win32\Lib\Core<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>Email
+domain: chrisoldwood.com<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>These should be fairly obvious. What might
+be less obvious are the two settings at the bottom (<st1:place w:st="on"><st1:PlaceName
+ w:st="on"><span class=SpellE>Changeset</span></st1:PlaceName> <st1:PlaceType
+ w:st="on">Building</st1:PlaceType></st1:place>) that control how to turn a
+bunch of non-atomic commits into the more modern atomic ones. The only real check-in
+data VSS2Git can go on are the commit timestamps and the check-in comments, if
+present.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Personally I’m pretty fastidious about
+providing check-in comments and so I dialled down the setting that works off
+empty comments to a mere 15 seconds as I know any commit without a check-in
+comment is rare and almost certainly unimportant. In contrast I upped the other
+setting that matches comments to 600 seconds as I always tried to reuse the
+same check-in comment where possible; the only reason for a delay would have
+been getting temporarily distracted.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>With everything configured it’s time to hit
+“Go!” and wait for VSS2Git to weave its magic. Depending on the repo size this
+could take some time as it has to build and replay the commits into the Git
+repo. This means that you can’t point it to a bare Git repo because as
+explained earlier they have no working copy, but it will create a non-bare one for
+you at the path you specify.</span></p>
+
+<h2><span lang=EN-GB>Normalising Paths</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>If you’re <span class=GramE>migrating</span>
+your entire VSS repo to a single Git repo then you’re almost there, but if like
+me you want to split it up you have more work to do.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The VSS2Git tool converts files and folders
+exactly as they are in the source repo. This means that the file
+$/Win32/Lib/Core/ReadMe.txt will appear in the Git repo under the same relative
+path (\Win32\Lib\Core\ReadMe.txt) even if you only intend to migrate the
+$/Win32/Lib/Core project. What I wanted was for all the paths to be shifted up so
+that \Win32\Lib\Core is now the root of the Git repo, e.g. ReadMe.txt moves
+from \Win32\Lib\Core\ReadMe.txt to just \ReadMe.txt, and for all the superfluous
+parent folders to disappear.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As mentioned earlier Git has a separate command
+for this – </span><span class=SpellE><code><span lang=EN-GB style='font-size:
+10.0pt'>subtree</span></code></span><code><span lang=EN-GB style='font-size:
+10.0pt'> split</span></code><span lang=EN-GB> – although it appears to be a
+very recent addition at the time of writing. When I was originally
+investigating, some Git builds supported it (<span class=SpellE>msysgit</span>)
+and others didn’t (GitHub for Windows). Both of these now do, but it’s another
+thing to catch out the unwary.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The way I used this command was to create a
+new branch in the VSS2Git generated repo based on master (<span class=SpellE>a.k.a</span>
+trunk), but with the paths <span class=SpellE>munged</span> to strip off the leading
+$/Folder/Folder parents:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>D:\Repo&gt;
+git <span class=SpellE>subtree</span> split --prefix=Win32/Lib/Core -b split<o:p></o:p></span></code></p>
+
+<h2><span lang=EN-GB>Creating a Master Repo</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>When describing my current workflow earlier
+I suggested my point of collaboration was still going to be a central repo on
+my NAS box. Whilst the point of a DVCS like Git is that I can use it in a
+peer-2-peer like manner, it also gave me an opportunity to create a bare repo
+and see what the differences were in practice. The folder structure on my NAS
+box reflected the way I was going to clone them for use during development.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For the Core library I created the bare
+repo like so:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>C:</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>\&gt;
+git init //ziggy/Git/Win32/Lib/Core --bare<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>…and then pushed the cleaned-up branch from
+the VSS2Git generated repo to it:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>C:</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>\&gt;
+git push //ziggy/Git/Win32/Lib/Core <span class=SpellE>split:master</span>
+–tags<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This has the added effect of moving the
+changes from the “split” branch back onto the “master” branch where they belong
+going forward.</span></p>
+
+<h2><span lang=EN-GB>Linking the Master to GitHub</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>Once again this extra step is somewhat
+contrived because I’m using GitHub more as a backup than a point of
+collaboration. After creating a new repo on my GitHub account, called “Core”, I
+can then link it to the bare repo on my NAS box and push the migrated source
+like this:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>C:</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>\&gt;
+<span class=SpellE>pushd</span> \\Ziggy\Git\Win32\Lib\Core<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>Z:</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>\&gt;
+git remote add <span class=SpellE>github</span> <a
+href="https://github.com/chrisoldwood/Core.git"><span style='color:windowtext;
+text-decoration:none;text-underline:none'>https://github.com/chrisoldwood/Core.git</span></a><o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>Z:</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>\&gt;
+git push -u <span class=SpellE>github</span> master --tags<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>When cloning a Git repo the source is
+normally referred to by the name “origin”. I chose to name it “<span
+class=SpellE>github</span>” instead to signify its status as just another clone
+rather than being the canonical source.</span></p>
+
+<h2><span lang=EN-GB>Line Endings, Again!</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>If you read the article(s) listed at the
+beginning about line endings you’ll have noticed there is now a per-repo
+setting for handling the line endings issue in a way that allows developers to
+configure their machine how they like it whilst letting the repo decide what its
+own policy should be.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Of course there is a chicken-and-egg
+problem here because you need a repo to add the </span><code><span lang=EN-GB
+style='font-size:10.0pt'>.<span class=SpellE>gitattributes</span></span></code><span
+lang=EN-GB> file to, but trying to do this earlier means you can run into other
+problems because you’ve tainted the repo you want to push your migrated
+revisions to. This is not a major problem when you’re used to Git, but it’s a
+head-scratcher when you’re new to it. Consequently I left this step to be the
+first new commit following the migration.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>At a minimum you want to add a </span><code><span
+lang=EN-GB style='font-size:10.0pt'>.<span class=SpellE>gitattributes</span></span></code><span
+lang=EN-GB> file in the root of the repo that has this at the top:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'># Set
+default behaviour, in case users don't have <span class=SpellE>core.autocrlf</span>
+set.<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>* <span
+class=GramE>text=</span>auto<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If you read up on what goes into this file
+you’ll probably come across the </span><code><span lang=EN-GB style='font-size:
+10.0pt'>.<span class=SpellE>gitignore</span></span></code><span lang=EN-GB>
+file too and so I ended up committing them as a pair. If you’re using the
+GitHub for Windows UI you’ll find this is a key part of the Git repo configuration.
+Here is a tiny example of the kinds of files you normally avoid checking into
+any VCS repository and therefore get included in your </span><code><span
+lang=EN-GB style='font-size:10.0pt'>.<span class=SpellE>gitignore</span></span></code><span
+lang=EN-GB> file:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'># Build
+artefacts<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>*.dll<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>*.exe<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>*.lib<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>*.<span
+class=SpellE>obj</span><o:p></o:p></span></code></p>
+
+<h2><span lang=EN-GB>Stripping VSS Bindings</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>If your projects are based around Visual
+Studio then you’ll probably have enabled the VSS integration. The GUI friendly
+way to untie your solutions from VSS is to use the “File | Source Control | Change
+Source Control…” option and unbind the projects. You’ll still be left with some
+detritus in your repo and in a couple of cases I had manually prise the
+bindings from Visual Studio to stop it complaining every time I opened the
+solution. There is a blog post from Brian Carroll [8] that describes how to
+manually strip the bindings, but it basically boils down to the following
+steps:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-GB>Delete any </span><code><span lang=EN-GB style='font-size:10.0pt'>*.<span
+     class=SpellE>vspscc</span></span></code><span lang=EN-GB> and </span><code><span
+     lang=EN-GB style='font-size:10.0pt'>*.<span class=SpellE>vssscc</span></span></code><span
+     lang=EN-GB> files</span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-GB>Remove the “</span><span class=SpellE><code><span lang=EN-GB
+     style='font-size:10.0pt'>GlobalSection</span></code></span><code><span
+     lang=EN-GB style='font-size:10.0pt'>(<span class=SpellE>SourceCodeControl</span>)
+     = <span class=SpellE>preSolution</span></span></code><span lang=EN-GB>” fragment
+     from the </span><code><span lang=EN-GB style='font-size:10.0pt'>.<span
+     class=SpellE>sln</span></span></code><span lang=EN-GB> file</span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-GB>Remove any “</span><span class=SpellE><code><span lang=EN-GB
+     style='font-size:10.0pt'>Scc</span></code></span><code><span lang=EN-GB
+     style='font-size:10.0pt'>* = SAK</span></code><span lang=EN-GB>” lines
+     from the </span><code><span lang=EN-GB style='font-size:10.0pt'>.<span
+     class=SpellE>vcproj</span></span></code><span lang=EN-GB> file preamble</span></li>
+</ul>
+
+<h2><span lang=EN-GB>Automation</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>If, like me, you’re going to split out many
+libraries and projects this all becomes very tedious if done manually and so a
+little dash of automation goes a long way. By sticking to one simple convention
+– the local Git repo folder names and GitHub repo name match – you can apply
+the Swiss-Army knife of DOS programming (the </span><code><span lang=EN-GB
+style='font-size:10.0pt'>FOR</span></code><span lang=EN-GB> loop) and run the
+same commands across every repo.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>In my case I had a whole bunch of repos
+generated by VSS2Git at the same level in the file-system, except for the Lib
+folder, which itself contained another bunch of repos:-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9500;&#9472;&#9472;&#9472;App-1<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9500;&#9472;&#9472;&#9472;App-2<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9500;&#9472;&#9472;&#9472;Lib<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>&#9492;&#9472;&#9472;&#9472;App-N<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB>The following one-liner (ahem) will
+navigate into a repo folder, do the path normalisation, create the bare master repo,
+push the migrated changes, attach it to GitHub and push the changes to that
+too. And do it for every folder that appears to be a Git repo (i.e. has a
+hidden .git subfolder at its root):-</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>for</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+/d %d in (*) do @(<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> exist
+&quot;%d\.git&quot; (<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>pushd</span></span>
+%d<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'> </span><span
+class=GramE>git</span> <span class=SpellE>subtree</span> split
+--prefix=Win32/%d -b split<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'> </span><span
+class=GramE>git</span> init //ziggy/Git/Win32/%d --bare<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'> </span><span
+class=GramE>git</span> push //ziggy/Git/Win32/%d <span class=SpellE>split:master</span>
+--tags<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'> </span><span
+class=SpellE><span class=GramE>pushd</span></span> \\ziggy\Git\Win32\%d<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>git</span> remote add <span class=SpellE>github</span>
+https://github.com/chrisoldwood/%d.git<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'>  </span><span
+class=GramE>git</span> push -u <span class=SpellE>github</span> master --tags<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span style='mso-spacerun:yes'> </span><span
+class=SpellE><span class=GramE>popd</span></span><o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>popd</span></span><o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The most laborious part of the process now just
+becomes driving VSS2Git. There is a request open to suggest automating it via
+the command line [9] but I don’t know if there has been any progress on it at
+the time of writing.</span></p>
+
+<h3><span lang=EN-GB>Impedance Mismatches</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Whilst Git is superior to SourceSafe in <i
+style='mso-bidi-font-style:normal'>most</i> of the ways that truly matter there
+are a couple of features of SourceSafe I had used that do not translate well to
+Git. The problems I’ve run into largely stem from the use of a single repo to
+store multiple projects.</span></p>
+
+<h2><span lang=EN-GB>Labels</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>In VSS you can attach a label to any file
+at any version, whereas in Git labels are called tags and they are attached to
+commits. Because my VSS repo contains multiple independent applications I have
+multiple “v1.0” labels on different projects that are unrelated to one another.
+In contrast, Git tags are global and therefore you don’t appear to be able to mirror
+the concept. This became another driver for me to split my monolithic repo up
+as I often use the labels to see what’s changed between releases.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If I had chosen to maintain a monolithic
+repo under Git I could always have adopted a new convention whereby I prefix
+the version number with the application name, e.g. “<span class=SpellE>ProductX</span>
+v1.0” and “<span class=SpellE>ProductY</span> v1.0”. Of course the shared
+libraries ended up adopting this scheme anyway, even under VSS, as you can’t
+label two versions of the same file with the same physical label!</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The second problem with the way Git handles
+tags is more tooling related, but is a result of the indirect way that tags are
+associated with commits – you can’t <i style='mso-bidi-font-style:normal'>easily</i>
+see what tags are attached to what versions of a file. Hence if you have a bug
+in one version of a file it’s not easy to see what other releases might also be
+affected. Hopefully the tooling will eventually catch up in this area.</span></p>
+
+<h2><span lang=EN-GB>Shared Files</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>Git is efficient in the way that it stores
+content because it only ever stores one physical copy for any file with the
+same content. However that’s an implementation detail and two files cannot be
+linked in different places in the repo so that a change to one automatically
+affects the other. SourceSafe on the other hand does support this feature; in
+fact this is exactly how moving files in SourceSafe is implemented – share
+&amp; then delete.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Whilst in some scenarios this feature can
+prove dangerous it also has its uses, such as sharing scripts and common non-code
+assets across applications.</span></p>
+
+<h2><span lang=EN-GB>Dropped History</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>When migrating projects from SourceSafe
+that had later been moved to another folder (e.g. a “deprecated” folder), VSS2Git
+only imported any file revisions that existed at the point the project had been
+moved, or after. I’m not sure if this is a limitation of VSS2Git or a
+side-effect of the way files and folders are moved in SourceSafe. I have raised
+an issue on VSS2Git [10] to see if the problem could be investigated further.</span></p>
+
+<h3><span lang=EN-GB>Summary</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>This article was about making the
+transition from the propriety world of Microsoft’s Visual SourceSafe version
+control product to the modern, open-source world of Git. Along the way I
+discussed some of the more fundamental questions about how I wanted to
+re-organise my repository of projects, both to maintain as much history as
+possible, such as the labels, but also to allow easier collaboration in the
+future using an online repository like GitHub.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>With the rationale explained I then showed
+how I migrated and split up my monolithic VSS repo with the help of VSS2Git and
+some command-line driving of the Git toolset. Finally I described the major
+features in VSS that couldn’t be directly mapped onto Git and the effects they
+had on the migration.</span></p>
+
+<h3><span lang=EN-GB>Acknowledgments</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Once again the ever watchful eyes of <st1:PersonName
+w:st="on">Frances Buontempo</st1:PersonName> and <st1:PersonName w:st="on">Roger
+ Orr</st1:PersonName> have saved my blushes and added that much needed extra
+polish to the article. Thanks.</span></p>
+
+<h3><span lang=EN-GB>References</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>[1] <a
+href="https://help.github.com/articles/remove-sensitive-data">https://help.github.com/articles/remove-sensitive-data</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[2] <a
+href="http://log.pardus.de/2012/08/modular-git-with-git-subtree.html">http://log.pardus.de/2012/08/modular-git-with-git-subtree.html</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[3] <a
+href="http://git-scm.com/book/en/Git-Tools-Submodules">http://git-scm.com/book/en/Git-Tools-Submodules</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[4] <a
+href="https://help.github.com/articles/dealing-with-line-endings">https://help.github.com/articles/dealing-with-line-endings</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[5] <a
+href="http://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/">http://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[6] <a
+href="https://code.google.com/p/vss2git/">https://code.google.com/p/vss2git/</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[7] <a href="http://windows.github.com/">http://windows.github.com/</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[8] <a
+href="http://weblogs.asp.net/bkcarroll/archive/2004/03/08/86059.aspx">http://weblogs.asp.net/bkcarroll/archive/2004/03/08/86059.aspx</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[9] <a
+href="https://code.google.com/p/vss2git/issues/detail?id=2">https://code.google.com/p/vss2git/issues/detail?id=2</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[10] <a
+href="https://code.google.com/p/vss2git/issues/detail?id=8">https://code.google.com/p/vss2git/issues/detail?id=8</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><st1:PersonName w:st="on"><span lang=EN-GB>Chris Oldwood</span></st1:PersonName></p>
+
+<p class=MsoNormal><!--[if supportFields]><span lang=EN-GB><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SAVEDATE<span style='mso-spacerun:yes'> 
+</span>\@ &quot;dd MMMM yyyy&quot;<span style='mso-spacerun:yes'>  </span>\*
+MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span
+lang=EN-GB><span style='mso-no-proof:yes'>10 November 2013</span></span><!--[if supportFields]><span
+lang=EN-GB><span style='mso-element:field-end'></span></span><![endif]--></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Bio<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris is a freelance developer who started
+out as a bedroom coder in the 80’s writing assembler on 8-bit micros; these
+days it’s C++ and C#. He also commentates on the Godmanchester duck race and
+can be contacted via <a href="mailto:gort@cix.co.uk">gort@cix.co.uk</a> or @<span
+class=SpellE>chrisoldwood</span>.</span></p>
+
+</div>
+
+</body>
+
+</html>
