@@ -212,24 +212,41 @@ The source code is available for everything, so if you want to tinker or fix
 a bug then you can. Alternatively if you want to use some of the classes in
 your own code, then you can do that as well, but you should be aware that I do
 not consider this Production grade code. The C++ framework classes are my own
-and have a long heritage which predates templates (as far as Visual C++ support
+and have a long heritage which pre-dates templates (as far as Visual C++ support
 goes), so you will find non-STL style containers and other re-inventions of the
 wheel rather than use of say the Boost libraries. This is because of a number of
 reasons - compiler support, licensing issues, paradigm shifts and the simple fact
 that a good way to learn is to <i>do-it-yourself</i>. That said, I intend to
 refactor as much as possible with STL equivalents as and when I can.
 <p></p>
+<b>Project/Solution Format</b>
+<p></p>
 From February 2008 all source archives come as Visual C++ 7.1 [VS2003] projects
 and solutions, with Unicode set as the default build type. The code however should
 also build as ANSI, and is checked with Visual C++ 8.0 [VS2005], 9.0 [VS2008] and
 10.0 [VS2010] - albeit the Express editions. I also alternate between STLport 5.x and
-the native VC++ STL to try and maintain STL compatibility. The Core library is the
-only one I've managed to compile <i>and link</i> with GCC 4.x (via the
-CodeBlocks IDE).
+the native VC++ STL to try and maintain STL compatibility. The non-COM libraries
+and some non-COM applications are also built as ANSI with <a href="http://tdm-gcc.tdragon.net/">GCC 4.x</a>
+(via the <a href="http://www.codeblocks.org">Code::Blocks</a> IDE).
 <p></p>
 Prior to this time you will find Visual C++ 7.1 projects back to about August 2004
 and before that it's Visual C++ 6.0 based. The Java stuff comes with a Visual J++
 workspace.
+<p></p>
+<b>Latest vs. Stable Snapshot</b>
+<p></p>
+The latest version of the source code for any projects I actively maintain can
+be found on GitHub here: <a href="https://github.com/chrisoldwood">https://github.com/chrisoldwood</a>.
+Most projects contain a file in the root called <code>DevNotes.txt</code> that
+provides details on the source folder structure, git library repos to clone,
+build scripts, etc.
+<p></p>
+If you're looking for the last stable source code for any application you will
+find a snapshot of everything you need (app + libs + tests + scripts) in the
+application's "Source" .zip file on this site. Whilst there are tags in the
+GitHub <i>application</i> repos, there is no equivalent tag in the dependent
+library repos and so you'd have to find the nearest relevant commit by date to
+find the matching library code.
 </td></tr>
 </table>
 
