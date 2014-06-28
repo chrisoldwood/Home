@@ -1,3 +1,1 @@
-- Add more links - Blogs.
-
-- Add PayPal section.
+- Add GitHub notes and links
