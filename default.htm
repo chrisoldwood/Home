@@ -68,7 +68,7 @@ Some of the stuff here, such as that for 16-bit Windows and DOS, is ancient and
 probably of no interest to anyone, but you never know what people find useful,
 hence the reason why I have included some trivial DOS programs and even my
 unfinished projects. It is my attempt to give something back to the development
-community.
+community, even if that "something" is how <i>not</i> to do it nowadays.
 </td></tr>
 </table>
 
@@ -98,20 +98,6 @@ community.
 	<td class="update"><a href="sql.htm#ssunit">SQL Server Unit v1.5 [SQL]</a></td>
 	<td class="update"><a href="sql/ss-unit/relnotes.txt">Release Notes</a></td>
 </tr>
-<tr>
-	<td class="update">26/06/2012</td>
-	<td class="update"><a href="win32.htm#wmicmd">WMI Command v1.1 [Win32]</a></td>
-	<td class="update"><a href="win32/wmicmd/relnotes.txt">Release Notes</a></td>
-</tr>
-<tr>
-	<td class="update">11/05/2012</td>
-	<td class="update"><a href="win32.htm#scripts">Build Scripts [Win32]</a></td>
-</tr>
-<tr>
-	<td class="update">31/10/2011</td>
-	<td class="update"><a href="win32.htm#vdproj2wix">vdproj to WiX Converter v1.0 [PSH]</a></td>
-	<td class="update"><a href="win32/vdproj2wix/relnotes.txt">Release Notes</a></td>
-</tr>
 </table>
 </td></tr>
 </table>
@@ -127,6 +113,13 @@ community.
 </tr>
 <tr><td class="content_body" colspan="2">
 <table>
+<tr>
+	<td class="update">05/12/2014</td>
+	<td class="update">Farm Monitor [Win32]</td>
+	<td class="update"><a href="wip/farmmonitor/farm-monitor-01.msi">v0.1 Alpha [536 K]</a></td>
+	<td class="update"><a href="wip/farmmonitor/farm-monitor.gif">Screenshot</a> &nbsp;
+					   <a href="wip/farmmonitor/farm-monitor.html">Manual</a></td>
+</tr>
 <tr>
 	<td class="update">01/02/2012</td>
 	<td class="update">sql2doxygen [PSH]</td>
@@ -159,16 +152,19 @@ community.
 <td class="content_date"  >&nbsp;</td>
 </tr>
 <tr><td class="content_body" colspan="2">
-Most of the 32-bit applications were developed and tested under Windows 9x
-and 2000 and the underlying framework started out on Windows 3.x. My aim
+Most of the 32-bit applications were developed and tested under Windows 9x, 2000
+and XP and the underlying framework started out on Windows 3.x. My aim
 has always been to try and keep as much compatibility with the various 32-bit
-OS's as possible. Nearly all the applications use the older technique of
+OS's as possible.
+<p></p>
+Nearly all the applications use the older technique of
 storing their settings and data in files in the application folder, a model
-which does not work well with Windows XP (Vista has a workaround). Consequently
-if you are not running as an Administrator (and you should try not to) you will
-need to install it to a folder other than "Program Files". I will be correcting
-the applications when I can to use the %APPDATA% folder instead, for data, and
-allow the choice of Registry or .ini files for program settings.
+which does not work well with Windows XP and the Program Files folder (Vista and
+later has a workaround). Consequently if you are not running as an Administrator
+(and you should try not to) you will need to install it to a folder other than
+Program Files. I will be correcting the applications when I can to use the
+<code>%APPDATA%</code> folder instead for data, and allow the choice of
+Registry or <code>.ini</code> files for program settings.
 </td></tr>
 </table>
 
@@ -182,17 +178,21 @@ allow the choice of Registry or .ini files for program settings.
 <td class="content_date"  >&nbsp;</td>
 </tr>
 <tr><td class="content_body" colspan="2">
-Binaries are available for virtually everything and the more recent releases
-come with a simple setup program I wrote. The native applications are all
+Binaries are available for virtually everything with the more recent releases
+coming with an MSI style installer. Going a little further back I used a simple
+set-up program that I wrote, and for the rest the binaries are just bundled in a
+.zip file and you copy them over manually.
+<p></p>
+The native applications are all
 linked statically and use my own framework so there are no additional
 dependencies like the VB, MFC or .NET runtimes. The only dependency is on the
-common controls DLL (COMCTL32.DLL) of which you need at least v4.71 which
-shipped with IE 4.
+common controls DLL (<code>COMCTL32.DLL</code>) of which you need at least v4.71
+which shipped with IE 4.
 <p></p>
 All the Win32 applications are available as both a <i>Release</i> build and a
 <i>Debug</i> build. You should always follow the <b><i>Download</i></b> link and
 download the Release build - the Debug build is only of use if you experience a
-problem and you wish to help me fix it.
+problem and you wish to help me try and fix it.
 <p></p>
 The Java applets are all JDK 1.1 based and should run on any JVM.
 </td></tr>
@@ -208,42 +208,49 @@ The Java applets are all JDK 1.1 based and should run on any JVM.
 <td class="content_date"  >&nbsp;</td>
 </tr>
 <tr><td class="content_body" colspan="2">
-The source code is available for everything, so if you want to tinker or fix
-a bug then you can. Alternatively if you want to use some of the classes in
-your own code, then you can do that as well, but you should be aware that I do
-not consider this Production grade code. The C++ framework classes are my own
-and have a long heritage which pre-dates templates (as far as Visual C++ support
-goes), so you will find non-STL style containers and other re-inventions of the
-wheel rather than use of say the Boost libraries. This is because of a number of
-reasons - compiler support, licensing issues, paradigm shifts and the simple fact
-that a good way to learn is to <i>do-it-yourself</i>. That said, I intend to
-refactor as much as possible with STL equivalents as and when I can.
+The source code is available for everything I've written, so if you want to
+tinker or fix a bug then you can. Alternatively, if you want to use some of this
+code in your own then feel free to do so, but you should be aware that I do not
+consider this Production Grade code.
+<p></p>
+The C++ framework is my own creation and has a long heritage which pre-dates
+templates (as far as Visual C++ support goes). Hence you will find non-STL style
+containers in the older code and other reinventions of the wheel rather than
+use of, say, the Boost libraries. This is because of a number of reasons -
+compiler support, licensing issues, paradigm shifts and the simple fact that a
+good way to learn is to <i>do-it-yourself</i>. That said, I intend to refactor
+as much as possible with STL equivalents as and when I can.
 <p></p>
 <b>Project/Solution Format</b>
 <p></p>
-From February 2008 all source archives come as Visual C++ 7.1 [VS2003] projects
-and solutions, with Unicode set as the default build type. The code however should
-also build as ANSI, and is checked with Visual C++ 8.0 [VS2005], 9.0 [VS2008] and
-10.0 [VS2010] - albeit the Express editions. I also alternate between STLport 5.x and
-the native VC++ STL to try and maintain STL compatibility. The non-COM libraries
-and some non-COM applications are also built as ANSI with <a href="http://tdm-gcc.tdragon.net/">GCC 4.x</a>
-(via the <a href="http://www.codeblocks.org">Code::Blocks</a> IDE).
+From February 2008 all C++ source archives come as Visual C++ 7.1 (VS2003) projects
+and solutions with Unicode set as the default build type. The code should however 
+still build as ANSI and is checked with Visual C++ 8.0 (VS2005), 9.0 (VS2008) and
+10.0 (VS2010) - albeit the Express editions. I also alternate between STLport 5.x and
+the native VC++ STL to try and maintain STL compatibility.
 <p></p>
-Prior to this time you will find Visual C++ 7.1 projects back to about August 2004
-and before that it's Visual C++ 6.0 based. The Java stuff comes with a Visual J++
-workspace.
+The non-COM libraries and some non-COM applications are also built as ANSI with
+<a href="http://tdm-gcc.tdragon.net/">GCC 4.x</a> (via the <a href="http://www.codeblocks.org">Code::Blocks</a>
+IDE). You will find a Code::Blocks <code>.workspace</code> file and various <code>.cbp</code>
+files alongside the Visual C++ <code>.sln</code> and <code>.vcproj</code>
+equivalents. The Code::Blocks files are not always perfectly in sync though. 
 <p></p>
-<b>Latest vs. Stable Snapshot</b>
+Prior to February 2008 you will find Visual C++ 7.1 solutions back to about
+August 2004 and before that the Win32 solutions are Visual C++ 6.0 based. The
+Java solutions come with a Visual J++ workspace, the Win16 code comes with a
+Visual C++ 1.52c solution and the DOS tools come with an NMAKE makefile.
+<p></p>
+<b>Latest Code vs. Stable Snapshot</b>
 <p></p>
 The latest version of the source code for any projects I actively maintain can
 be found on GitHub here: <a href="https://github.com/chrisoldwood">https://github.com/chrisoldwood</a>.
 Most projects contain a file in the root called <code>DevNotes.txt</code> that
-provides details on the source folder structure, git library repos to clone,
-build scripts, etc.
+provides details on the source folder structure, dependent git library repos to
+clone, build scripts, etc.
 <p></p>
-If you're looking for the last stable source code for any application you will
+If you're looking for the last <i>stable</i> source code for any application you will
 find a snapshot of everything you need (app + libs + tests + scripts) in the
-application's "Source" .zip file on this site. Whilst there are tags in the
+application's "Source" .zip file on this web site. Whilst there are tags in the
 GitHub <i>application</i> repos, there is no equivalent tag in the dependent
 library repos and so you'd have to find the nearest relevant commit by date to
 find the matching library code.
@@ -260,11 +267,15 @@ find the matching library code.
 <td class="content_date"  >&nbsp;</td>
 </tr>
 <tr><td class="content_body" colspan="2">
-None of the code here is tied to any particular sort of licence. If you do
-find something of interest either by using one of the apps or using some of
-the source in one of your own apps, I would be grateful if you could drop
-me a line to let me know. Also, please let me know if you upload something to
-another site as I can then notify them of new releases.
+None of the code here is tied to any particular sort of licence. The only "legal
+framework" I have any interest in is one of common sense. As such I hope you
+will abide by <a href="">Wheaton's Law</a>.
+<p></p>
+If you do find something of interest, either by using one of the apps or some of
+the source code in your own projects I would be grateful if you could drop me
+a line. It's always nice to hear that I've done something of use to others, no
+matter how small. Also, if you upload a binary or code to another site please
+let me know as I can then notify you and them of new releases.
 </td></tr>
 </table>
 
@@ -278,10 +289,10 @@ another site as I can then notify them of new releases.
 <td class="content_date"  >&nbsp;</td>
 </tr>
 <tr><td class="content_body" colspan="2">
-I hope you're not looking for one, because it doesn't exist. All the code on
-this site is supplied without any guarantees whatsoever. If I've done a
-decent job you shouldn't experience any problems, but I have to cover my back
-and warn you that only get what you pay for :-)
+I hope you're not looking for one of these either, because it also doesn't exist.
+All the code on this site is supplied without any guarantees whatsoever. If I've
+done a decent job you shouldn't experience any problems, but I have to cover my
+back and warn you that only get what you pay for...
 </td></tr>
 </table>
 
@@ -295,9 +306,9 @@ and warn you that only get what you pay for :-)
 <td class="content_date"  >&nbsp;</td>
 </tr>
 <tr><td class="content_body" colspan="2">
-Whilst all the tools and code on this web site is made available for free, if
-you wish to make a small donation (no matter how tiny) to put towards hosting
-costs, etc. then please do.
+Whilst all the tools and code on this web site are made available for free, if
+you do wish to make a small donation (no matter how tiny) to show your appreciation
+then please feel free to do so :-).
 <p></p>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
@@ -319,19 +330,10 @@ costs, etc. then please do.
 <td class="content_date"  >&nbsp;</td>
 </tr>
 <tr><td class="content_body" colspan="2">
-Most of this software could not have been written without the time and resources
+Some of this software could not have been written without the time and resources
 of others, and so here is a big thank you to the people who have contributed to
-my efforts...
-<br /><br />
-<b><i>Ian Masters</i></b> and <b><i>Steve Sorrell</i></b> with whom I developed
-the various NetWare utilities.
-<br /><br />
-<b><i>Mark Woolcott</i></b> for a lot of technical assistance whilst writing the
-NetDDE Bridge and being my main beta tester on UT Cache Manager.
-<br /><br />
-<b><i>Graham Corless</i></b> for his feedback and ideas for F.C. Manager.
-<br /><br />
-<b><i>Rusty Biggs</i></b> for testing the localisation fixes to Task Tracker.
+my efforts. Most notable have been Ian Masters, Steve Sorrell, Mark Woolcott,
+Graham Corless and Rusty Biggs.
 </td></tr>
 </table>
 
@@ -377,7 +379,7 @@ Chris Oldwood
 <table class="footer_table" align="center" id="footer">
 <tr><td class="footer_left">
 Page Last Updated:<br />
-28/06/2014
+08/12/2014
 </td><td class="footer_right">
 Visitors:<br />
 <!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
