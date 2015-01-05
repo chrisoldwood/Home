@@ -1,0 +1,747 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="simplicity-through-immutability_files/filelist.xml">
+<title>Simplicity through Immutability</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="stockticker"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PersonName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Chris Oldwood</o:Author>
+  <o:LastAuthor>Chris Oldwood</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3617</o:TotalTime>
+  <o:Created>2015-01-04T19:54:00Z</o:Created>
+  <o:LastSaved>2015-01-04T19:54:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2033</o:Words>
+  <o:Characters>11593</o:Characters>
+  <o:Company>Co Productions Ltd</o:Company>
+  <o:Lines>96</o:Lines>
+  <o:Paragraphs>27</o:Paragraphs>
+  <o:CharactersWithSpaces>13599</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-GB;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:EN-GB;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-GB>Simplicity through
+Immutability</span></h1>
+
+<h3><span lang=EN-GB>Introduction</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Some languages, mostly notably C++, provide
+support for marking <i style='mso-bidi-font-style:normal'>instances</i> of
+objects as immutable, i.e. with the </span><code><span lang=EN-GB
+style='font-size:10.0pt'>const</span></code><span lang=EN-GB> keyword. Whilst
+C# supports a notion of </span><code><span lang=EN-GB style='font-size:10.0pt'>const</span></code><span
+lang=EN-GB>, it only applies to primitive values and is essentially an alias
+for a literal value. The best you can do with objects is to apply the Single
+Assignment Pattern [1] to member variables using the </span><code><span
+lang=EN-GB style='font-size:10.0pt'>readonly</span></code><span lang=EN-GB>
+keyword. Java’s </span><code><span lang=EN-GB style='font-size:10.0pt'>final</span></code><span
+lang=EN-GB> keyword has a wider scope than C#’s </span><code><span lang=EN-GB
+style='font-size:10.0pt'>readonly</span></code><span lang=EN-GB> for enforcing
+single assignment, but it still falls short of enforcing mutability of the
+referenced object.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Consequently in many languages immutability
+must be implemented through the design of the type, and as such every instance
+of that type will be immutable (use of reflection and other Machiavellian techniques
+notwithstanding). Generally speaking to create immutable objects you only pass
+any state at creation time through the constructor. Any properties that are
+exposed must only be readable and immutability must be deep, meaning that any
+types used in any exposed collections must themselves be immutable too. As it
+is with turtles [2] it should be immutability all the way down.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The most common examples of immutable types
+are the primitive types, such as integers and strings (at least in C#). But
+more complex types can easily be made immutable too <span class=GramE>with</span>
+just a little thought. The benefits, as you shall hopefully see, are a
+significant reduction in accidental complexity [3]. Whilst the implementation
+of the type itself may not contain significantly less lines of code, far fewer
+tests will be required and significantly less grey matter exercised to drive out
+the behaviours that matter.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The basis for this article is a real class
+I recently decided to refactor to make it simpler by making it immutable. Hence
+what follows below was my rationale for doing the refactoring in the first
+place.</span></p>
+
+<h3><span lang=EN-GB>The Mutable Example</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Imagine you are writing a service and you
+have a need to provide a simple lookup to map one value to another. The data
+changes pretty infrequently, but not so infrequently that you’re happy to hardcode
+it. You decide to store the mapping data in a simple .<st1:stockticker w:st="on">CSV</st1:stockticker>
+file and write a class to load the data and provide the mapping at runtime.
+This is one possible implementation:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>public</span></code></span><code><span lang=EN-GB style='font-size:
+10.0pt'> class ThingToWotsitMap<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span>
+ThingToWotsitMap()<br>
+<span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>_map = new Dictionary&lt;string, string<span
+class=GramE>&gt;(</span>);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> void
+LoadMap(string filename)<br>
+<span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>_<span class=GramE>map.Clear(</span>);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>using</span> (var stream
+= new StreamReader(filename))<br>
+<span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>// Parse .<st1:stockticker w:st="on">CSV</st1:stockticker>
+file data and build map<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>        </span>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>public</span> string
+LookupWotsit(string thing)<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>    </span>// Map thing to wotsit<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>private</span>
+Dictionary&lt;string, string&gt; _map;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If you are already screaming at the page because
+you spotted that the code touches the file-system and is therefore difficult to
+unit test, then have a gold star. But you’ll have to put that to the back of
+your mind as that is not what this article is about.</span></p>
+
+<h3><span lang=EN-GB>So Many Questions</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>The class is very simple, surely there’s
+not much to say. Is there? Looking over the unit tests (which were written
+after) one pattern immediately leaps out – the use of two-phase construction:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>[Test]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>public</span></code></span><code><span lang=EN-GB style='font-size:
+10.0pt'> void one_of_the_tests_for_the_map()<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>var</span> filename = . .
+.;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>var</span> map = new
+ThingToWotsitMap();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>map.LoadMap(</span>filename);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>Assert.That(</span>. . .);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The solution is simple. All we need to do
+is to add a constructor that takes a filename and then delegates to </span><span
+class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
+lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> for the
+heavy lifting, right?</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>That’s not the aspect of two-phase
+construction that bothered me; it was the fact that there was two-phase
+construction even to begin with. Adding another constructor does not take away
+the ability to mutate the class and it’s that mutability that starts to raise a
+number of questions about the behaviour of the class.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The first question I have is: what happens
+if the client doesn’t even call </span><span class=GramE><code><span
+lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
+lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB>? Does the
+class behave correctly if no data is loaded? This immediately leads to the
+question about </span><span class=GramE><code><span lang=EN-GB
+style='font-size:10.0pt'>LoadMap(</span></code></span><code><span lang=EN-GB
+style='font-size:10.0pt'>)</span></code><span lang=EN-GB> throwing an
+exception. Is the internal state consistent if that occurs, and what happens if
+the client discards the error? We are back to the first question again.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>So off we go and merrily find out the
+answers to these questions and write a bunch more tests to make sure that the
+class is exception-safe and also behaves “safely” should something happen
+during its (two-phase) construction.</span></p>
+
+<h3><span lang=EN-GB>Thread Safety</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Time passes and our semi-static data becomes
+not quite so static. We decide that restarting the service every time we need to
+change the data is untenable and would like to detect when the file changes and
+load it again automatically at some convenient moment.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>So we add a bit of code externally to the
+class to watch for when the file changes and then just call </span><span
+class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
+lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> to load
+the new data file.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>But wait. Have we got any tests for calling
+</span><span class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
+lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> on the
+class a <i style='mso-bidi-font-style:normal'>second</i> time? What happens if <i
+style='mso-bidi-font-style:normal'>this</i> load fails – is the internal
+structure still consistent, can we limp along with the old data or should it
+behave as if freshly constructed and therefore no data was loaded?</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>And all before we even get to questions
+about thread safety. This is a multi-threaded service, is this class thread
+safe? For example, what happens if one thread tries to lookup data whilst
+another is calling </span><span class=GramE><code><span lang=EN-GB
+style='font-size:10.0pt'>LoadMap(</span></code></span><code><span lang=EN-GB
+style='font-size:10.0pt'>)</span></code><span lang=EN-GB> to refresh the data?
+Should existing callers be blocked and wait for the new data or continue with
+the old data until the new set is fully loaded?</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Assuming you can answer all those
+questions, how confident are you in your ability to write thread-safe,
+exception-safe code? How confident are you that whatever techniques you’ve
+chosen to use will continue to be thread-safe as you move to new platforms in
+the future? Do you have adequate test coverage and/or documentation to show
+that you’ve even considered all these scenarios?</span></p>
+
+<h3><span lang=EN-GB>Refactoring to Immutability</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Let’s wind the clock back to the beginning
+where we noticed the two-phase construction and see if we can take a different
+path that doesn’t involve us writing so much production and test code, and lead
+to so many tricky questions too.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>My personal preference is to create
+immutable types where possible. Essentially a type should start immutable by
+default and prove that adding mutability will provide some significant
+advantage – performance perhaps – that could not be obtained via immutability.
+There are some very obvious cases, such as the Builder pattern [5], where
+mutability is required up front, but that can often be as a stepping stone to
+an immutable form of the same type.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The changes I made to the example code
+above were fairly minor. Naturally there are many other changes we could make
+and so the result below is not intended to be the final word on the matter, it
+is only intended to show the minor transformations that were needed to achieve
+immutability.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The first change I made was to make the
+constructor </span><code><span lang=EN-GB style='font-size:10.0pt'>private</span></code><span
+lang=EN-GB> and to take the underlying container as a constructor argument:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>private</span></code></span><code><span lang=EN-GB style='font-size:
+10.0pt'> ThingToWotsitMap(Dictionary&lt;string, string&gt; map)<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>_map = map;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The second step was to make the </span><span
+class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
+lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> method </span><code><span
+lang=EN-GB style='font-size:10.0pt'>static</span></code><span lang=EN-GB> and
+change it to return an instance of the class; essentially turning it into a
+Factory Method [6]:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>public</span></code></span><code><span lang=EN-GB style='font-size:
+10.0pt'> void LoadMap(string filename)<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>Dictionary&lt;string, string&gt; map = new
+Dictionary&lt;string, string<span class=GramE>&gt;(</span>);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>using</span> (var stream =
+new StreamReader(filename))<br>
+<span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span>// Parse .<st1:stockticker w:st="on">CSV</st1:stockticker>
+file data and build map<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>      </span>. . .<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>return</span> new
+ThingToWotsitMap(map);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>And that’s it really. One final step was to
+fix up the tests and production code to use this new factory method instead of
+the previous two-phase construction approach (I could lean heavily on the compiler
+here due to the nature of the refactoring):</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>[Test]<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>public</span></code></span><code><span lang=EN-GB style='font-size:
+10.0pt'> void one_of_the_tests_for_the_map()<br>
+{<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>var</span> filename = . .
+.;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>var</span> map =
+ThingToWotsitMap.LoadMap(filename);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>Assert.That(</span>. . .);<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
+
+<h3><span lang=EN-GB>Revisiting Those Questions</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>With our new design in place let’s revisit
+those earlier concerns and see how it stacks up. The first question around the
+behaviour of a default initialised object is moot because you cannot create one
+– you have to provide a filename. Likewise the second question around the exception
+safety of the </span><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>LoadMap(</span></code></span><code><span lang=EN-GB style='font-size:
+10.0pt'>)</span></code><span lang=EN-GB> method is also moot because if an
+exception is thrown you will not have a fully constructed object to worry
+about. Essentially the whole issue of state corruption is moot because the
+point of immutable types is that you can’t change them.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>So far so good, but what about our latter
+change in requirements where we need to reload the data on-the-fly when it
+changes whilst multiple threads might be accessing it? This is still largely a
+moot point because the type is immutable – you cannot change it, you can only <i
+style='mso-bidi-font-style:normal'>create a different object</i> with the new
+data in it.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>From the perspective of the type itself
+there are no thread-safety issues, but that does not mean there are no
+thread-safety issues at all. Instead of putting all the effort into making the
+type internally thread-safe we have pushed the problem up to the owner, but
+their problem is almost trivial by comparison; the owner just needs to switch
+ownership of the object in a thread safe manner, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+newMap = ThingToWotsitMap.LoadMap(filename); <o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>// <span
+class=GramE>This</span> assignment needs to be thread-safe<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_currentMap
+= newMap;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>In certain environments a write of a
+reference-sized value is already an atomic operation and so out-of-the-box this
+<i style='mso-bidi-font-style:normal'>could</i> already be enough, depending on
+how it is used. It is more likely that you’ll mark the member as “volatile” to
+introduce the relevant memory barrier and to ensure that the value is not
+aggressively cached. There shouldn’t be a need to use a heavyweight synchronization
+object like a mutex in this example as it’s just a single reference, but if you
+have to switch multiple references atomically it might be required.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Thinking about the performance of these two
+approaches they should be fairly similar, with the potential for the immutable
+version to win on the basis of needing less synchronization. Memory-wise reloading
+the data should be similar in both cases too, i.e. having two copies in memory
+at the point just before the switchover. You could choose to empty the internal
+container first in the mutable case before loading the file, but then you’d
+have to sacrifice exception safety which feels like a decision that needs
+serious consideration. On the face of it we don’t appear to have lost anything
+with our move to immutability.</span></p>
+
+<h3><span lang=EN-GB>Interlude: C# Initializer Syntax</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Sadly there are some programming constructs
+that make the design of immutable types less alluring; one is the Initializer
+Syntax for objects and collections in C#. Both of these rely on the type being
+mutable, with state being mutated through properties for the former case and an
+</span><span class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>Add(</span></code></span><code><span
+lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> method for
+the latter.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Here is an example of the object
+initializer syntax:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+point = new Point { X = 1, Y = 2 };<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Under the covers this is the same as writing:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+_point = new Point();<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_point.X =
+1;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_point.Y =
+2;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+point = _point;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>And this is the collection initializer
+syntax:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+points = new List&lt;Point&gt; { new Point(1, 2) };<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This is the same as writing:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+_points = new List&lt;Point&gt;(); <o:p></o:p></span></code></p>
+
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_<span
+class=GramE>points.Add(</span>new Point(1, 2));<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+points = _points;<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Whilst we should not blame the language
+authors for providing us with a construct that allows more readable
+construction of objects, its over use possibly means mutability has become the
+de facto choice by accident. In a later version of C# the introduction of named
+arguments has meant that the invocation of a constructor was now also succinct
+and so mutability no longer had to be sacrificed for readability:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
+10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
+point = new Point( x: 1, y: 2 );<o:p></o:p></span></code></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>On the collection front the additional of
+interfaces such as </span><code><span lang=EN-GB style='font-size:10.0pt'>IReadOnlyList</span></code><span
+lang=EN-GB> and the new Immutable Collections library [4] means that the
+runtime madness of </span><code><span lang=EN-GB style='font-size:10.0pt'>ReadOnlyCollection</span></code><span
+lang=EN-GB> can be laid to rest.</span></p>
+
+<h3><span lang=EN-GB>Summary</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Immutability is clearly not a panacea – one
+size never fits all – but hopefully following me through this thought exercise
+shows that it can vastly simplify the amount of time you spend thinking up
+scenarios to test, and therefore the amount of code you write to verify them.
+Given how tricky writing multi-threaded code already is, being able to reduce
+the amount you have to write will fill you with greater confidence that you
+haven’t missed some subtle race condition.</span></p>
+
+<h3><span lang=EN-GB>Acknowledgements</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Thanks to <st1:PersonName w:st="on">Jez
+ Higgins</st1:PersonName> and The Lazy Web (aka Twitter) for the brief
+discussion of Java’s </span><code><span lang=EN-GB style='font-size:10.0pt'>final</span></code><span
+lang=EN-GB> keyword and its effects.</span></p>
+
+<h3><span lang=EN-GB>References</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>[1] <a
+href="http://www.bigbeeconsultants.co.uk/blog/single-assignment-pattern">http://www.bigbeeconsultants.co.uk/blog/single-assignment-pattern</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[2] <a
+href="http://en.wikipedia.org/wiki/Turtles_all_the_way_down">http://en.wikipedia.org/wiki/Turtles_all_the_way_down</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[3] <a
+href="http://en.wikipedia.org/wiki/No_Silver_Bullet">http://en.wikipedia.org/wiki/No_Silver_Bullet</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[4] <a
+href="https://www.nuget.org/packages/Microsoft.Bcl.Immutable">https://www.nuget.org/packages/Microsoft.Bcl.Immutable</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[5] <a
+href="http://en.wikipedia.org/wiki/Builder_pattern">http://en.wikipedia.org/wiki/Builder_pattern</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[6] <a
+href="http://c2.com/cgi/wiki?FactoryMethod">http://c2.com/cgi/wiki?FactoryMethod</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><st1:PersonName w:st="on"><span lang=EN-GB>Chris Oldwood</span></st1:PersonName></p>
+
+<p class=MsoNormal><!--[if supportFields]><span lang=EN-GB><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SAVEDATE<span style='mso-spacerun:yes'> 
+</span>\@ &quot;dd MMMM yyyy&quot;<span style='mso-spacerun:yes'>  </span>\*
+MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span
+lang=EN-GB><span style='mso-no-proof:yes'>18 December 2014</span></span><!--[if supportFields]><span
+lang=EN-GB><span style='mso-element:field-end'></span></span><![endif]--></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Bio<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris is a freelance developer who started
+out as a bedroom coder in the 80’s writing assembler on 8-bit micros; these
+days it’s C++ and C#. He also commentates on the Godmanchester duck race and
+can be contacted via <a href="mailto:gort@cix.co.uk">gort@cix.co.uk</a> or
+@chrisoldwood.</span></p>
+
+</div>
+
+</body>
+
+</html>

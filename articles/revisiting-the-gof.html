@@ -1,0 +1,255 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="revisiting-the-gof_files/filelist.xml">
+<title>Revisiting the Gang of Four</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PersonName"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Chris Oldwood</o:Author>
+  <o:LastAuthor>Chris Oldwood</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>682</o:TotalTime>
+  <o:Created>2015-01-04T19:39:00Z</o:Created>
+  <o:LastSaved>2015-01-04T19:39:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>622</o:Words>
+  <o:Characters>3550</o:Characters>
+  <o:Company>Co Productions Ltd</o:Company>
+  <o:Lines>29</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4164</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:EN-GB;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-ansi-language:EN-GB;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span lang=EN-GB>Revisiting the Gang
+of Four</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>My education as a programmer recently took
+another unexpected turn as quite by accident I discovered the difference
+between types and classes. Whilst I was aware there was a difference I had
+never felt that my skills as a programmer were sufficiently impaired to feel
+the need to go out and discover the answer proactively.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This serendipitous moment came by way of a link
+in a tweet to a StackOverflow question written way back in 2012. It involved a
+comment made by James Coplien about the book Design Patterns and asked “Are
+there any patterns in GoF?” [SO]. The accepted answer, which <i
+style='mso-bidi-font-style:normal'>finally</i> came some 18 months later from
+James Coplien himself, caused me to go back and read the “Introduction” chapter
+of the seminal Design Patterns book [GoF]. When I reached Section 1.6, “How
+Design Patterns Solve Design Problems”, I found the difference between class and
+type described clear as day under the subsection “Class versus Interface
+Inheritance”:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-GB>“It’s important
+to understand the difference between an object’s <i style='mso-bidi-font-style:
+normal'>class</i> and its <i style='mso-bidi-font-style:normal'>type</i>…The
+class defines the object’s internal state and the implementation of its
+operations. In contrast, an object’s type only refers to its interface…”</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>It turns out Section 1.6, which is only 16
+pages long, is an absolute goldmine of information on the object-orientated (OO)
+paradigm, containing such gems as the sections: Programming to an Interface,
+not an Implementation, Inheritance versus Composition, Delegation, Inheritance
+versus Parameterized Types and Designing for Change.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>In some respects I find this sudden gain in
+clarity a little disturbing because I know I read that section for (at least) a
+second time, as I always read my books from cover-to-cover (eventually). So why
+did I not remember this particular nugget within the book, even if it was 20
+years ago, as I do so many other gems in other books? For example, the
+discussion of noumena and phenomena and the essence of objects in the weighty
+tome on OLE by Kraig Brockschmidt [KB] is far more tenuous, and yet apparently far
+more memorable.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>I think Emyr Williams probably hit the spot
+in his recent “Becoming a Better Programmer” blog post “Concepts Not Syntax”
+[EW]. At the start of your professional programming career you just don’t have
+the capacity to take in everything that you consume, especially when you’re
+being paid to write code. And unless you come from a Computer Science
+background in the first place you need to make a choice about what you focus
+on. I now realise I unconsciously chose to focus on learning the technology
+–platforms and programming languages – which means I’m now paying catch up to
+understand what it all means.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This isn’t the first time either. My career
+is littered with examples of where I finally really managed to grok something
+just as it goes out of fashion, e.g. COM, batch files, etc. With functional
+programming grabbing the headlines and object-orientation being given its last
+rites it’s somewhat apt that now is the time I start to discover what I probably
+should have known 20 years ago.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Irrespective of whether James Coplien is
+right or not on whether they are really idioms, and not patterns as Alexander
+intended, the book still contains some thoroughly useful knowledge about learning
+the principles behind OO.</span></p>
+
+<h3><span lang=EN-GB>References</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>[EW] <a
+href="http://becomingbetterdotnet.wordpress.com/2014/04/26/concepts-not-syntax/">http://becomingbetterdotnet.wordpress.com/2014/04/26/concepts-not-syntax/</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[GoF] Design Patterns: Elements of Reusable
+Object-Orientated Software – Gamma, Helm, Johnson &amp; Vlissides</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[KB] Inside OLE – Kraig Brockschmidt</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>[SO] <a
+href="http://stackoverflow.com/questions/12981021/are-there-any-patterns-in-gof">http://stackoverflow.com/questions/12981021/are-there-any-patterns-in-gof</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><st1:PersonName w:st="on"><span lang=EN-GB>Chris Oldwood</span></st1:PersonName></p>
+
+<p class=MsoNormal><!--[if supportFields]><span lang=EN-GB><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SAVEDATE<span style='mso-spacerun:yes'> 
+</span>\@ &quot;dd MMMM yyyy&quot;<span style='mso-spacerun:yes'>  </span>\*
+MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span
+lang=EN-GB><span style='mso-no-proof:yes'>13 August 2014</span></span><!--[if supportFields]><span
+lang=EN-GB><span style='mso-element:field-end'></span></span><![endif]--></p>
+
+<p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><u><span lang=EN-GB>Bio<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris is a freelance developer who started
+out as a bedroom coder in the 80’s writing assembler on 8-bit micros; these
+days it’s C++ and C#. He also commentates on the Godmanchester duck race and
+can be contacted via <a href="mailto:gort@cix.co.uk">gort@cix.co.uk</a> or
+@chrisoldwood.</span></p>
+
+</div>
+
+</body>
+
+</html>
