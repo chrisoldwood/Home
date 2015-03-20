@@ -1,3 +1,9 @@
+Version 1.5.1
+=============
+
+- Removed the --format switch from "execute" due to a possible bug in Windows/DDEML with CF_TEXT commands (#1).
+- Fixed handling of OnWildConnect() when listening and no topic specified.
+
 Version 1.5
 ===========
 
@@ -16,4 +22,4 @@ Version 1.0
 - Handles XTYP_REQUEST, XTYP_ADVSTART, XTYP_POKE and XTYP_EXECUTE transaction types.
 
 Chris Oldwood 
-24th July 2013
+18th March 2015
