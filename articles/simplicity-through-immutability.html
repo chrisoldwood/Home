@@ -11,29 +11,28 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <link rel=File-List href="simplicity-through-immutability_files/filelist.xml">
 <title>Simplicity through Immutability</title>
 <o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
- name="stockticker"/>
-<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
  name="PersonName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="stockticker"/>
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:Author>Chris Oldwood</o:Author>
   <o:LastAuthor>Chris Oldwood</o:LastAuthor>
   <o:Revision>2</o:Revision>
-  <o:TotalTime>3617</o:TotalTime>
-  <o:Created>2015-01-04T19:54:00Z</o:Created>
-  <o:LastSaved>2015-01-04T19:54:00Z</o:LastSaved>
+  <o:TotalTime>3622</o:TotalTime>
+  <o:Created>2015-03-26T19:48:00Z</o:Created>
+  <o:LastSaved>2015-03-26T19:48:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>2033</o:Words>
-  <o:Characters>11593</o:Characters>
+  <o:Words>2034</o:Words>
+  <o:Characters>11599</o:Characters>
   <o:Company>Co Productions Ltd</o:Company>
   <o:Lines>96</o:Lines>
   <o:Paragraphs>27</o:Paragraphs>
-  <o:CharactersWithSpaces>13599</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>13606</o:CharactersWithSpaces>
   <o:Version>11.9999</o:Version>
  </o:DocumentProperties>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:GrammarState>Clean</w:GrammarState>
   <w:ValidateAgainstSchemas/>
   <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
   <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
@@ -107,9 +106,6 @@ code
 	mso-fareast-font-family:"Times New Roman";
 	mso-hansi-font-family:"Courier New";
 	mso-bidi-font-family:"Courier New";}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
 @page Section1
 	{size:612.0pt 792.0pt;
 	margin:72.0pt 90.0pt 72.0pt 90.0pt;
@@ -181,12 +177,12 @@ is with turtles [2] it should be immutability all the way down.</span></p>
 
 <p class=MsoNormal><span lang=EN-GB>The most common examples of immutable types
 are the primitive types, such as integers and strings (at least in C#). But
-more complex types can easily be made immutable too <span class=GramE>with</span>
-just a little thought. The benefits, as you shall hopefully see, are a
-significant reduction in accidental complexity [3]. Whilst the implementation
-of the type itself may not contain significantly less lines of code, far fewer
-tests will be required and significantly less grey matter exercised to drive out
-the behaviours that matter.</span></p>
+more complex types can easily be made immutable too with just a little thought.
+The benefits, as you shall hopefully see, are a significant reduction in
+accidental complexity [3]. Whilst the implementation of the type itself may not
+contain significantly less lines of code, far fewer tests will be required and
+significantly less grey matter exercised to drive out the behaviours that
+matter.</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -206,20 +202,18 @@ This is one possible implementation:</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>public</span></code></span><code><span lang=EN-GB style='font-size:
-10.0pt'> class ThingToWotsitMap<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public class
+ThingToWotsitMap<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>{<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>public</span>
-ThingToWotsitMap()<br>
+style='mso-spacerun:yes'>  </span>public ThingToWotsitMap()<br>
 <span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>    </span>_map = new Dictionary&lt;string, string<span
-class=GramE>&gt;(</span>);<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>    </span>_map = new Dictionary&lt;string,
+string&gt;();<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
 style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
@@ -227,18 +221,17 @@ style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>public</span> void
-LoadMap(string filename)<br>
+style='mso-spacerun:yes'>  </span>public void LoadMap(string filename)<br>
 <span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>    </span>_<span class=GramE>map.Clear(</span>);<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>    </span>_map.Clear();<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>    </span><span class=GramE>using</span> (var stream
-= new StreamReader(filename))<br>
+style='mso-spacerun:yes'>    </span>using (var stream = new
+StreamReader(filename))<br>
 <span style='mso-spacerun:yes'>    </span>{<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
@@ -257,8 +250,7 @@ style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>public</span> string
-LookupWotsit(string thing)<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>public string LookupWotsit(string thing)<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
 style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></code></p>
@@ -272,8 +264,8 @@ style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>private</span>
-Dictionary&lt;string, string&gt; _map;<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>private Dictionary&lt;string, string&gt;
+_map;<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
 
@@ -294,38 +286,33 @@ after) one pattern immediately leaps out – the use of two-phase construction:</s
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>[Test]<o:p></o:p></span></code></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>public</span></code></span><code><span lang=EN-GB style='font-size:
-10.0pt'> void one_of_the_tests_for_the_map()<br>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void one_of_the_tests_for_the_map()<br>
 {<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>var</span> filename = . .
-.;<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>var filename = . . .;<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>var</span> map = new
-ThingToWotsitMap();<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>var map = new ThingToWotsitMap();<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>map.LoadMap(</span>filename);<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>map.LoadMap(filename);<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>Assert.That(</span>. . .);<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>Assert.That(. . .);<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-GB>The solution is simple. All we need to do
-is to add a constructor that takes a filename and then delegates to </span><span
-class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
-lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> for the
-heavy lifting, right?</span></p>
+is to add a constructor that takes a filename and then delegates to </span><code><span
+lang=EN-GB style='font-size:10.0pt'>LoadMap()</span></code><span lang=EN-GB>
+for the heavy lifting, right?</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -338,15 +325,13 @@ number of questions about the behaviour of the class.</span></p>
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-GB>The first question I have is: what happens
-if the client doesn’t even call </span><span class=GramE><code><span
-lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
-lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB>? Does the
-class behave correctly if no data is loaded? This immediately leads to the
-question about </span><span class=GramE><code><span lang=EN-GB
-style='font-size:10.0pt'>LoadMap(</span></code></span><code><span lang=EN-GB
-style='font-size:10.0pt'>)</span></code><span lang=EN-GB> throwing an
-exception. Is the internal state consistent if that occurs, and what happens if
-the client discards the error? We are back to the first question again.</span></p>
+if the client doesn’t even call </span><code><span lang=EN-GB style='font-size:
+10.0pt'>LoadMap()</span></code><span lang=EN-GB>? Does the class behave
+correctly if no data is loaded? This immediately leads to the question about </span><code><span
+lang=EN-GB style='font-size:10.0pt'>LoadMap()</span></code><span lang=EN-GB>
+throwing an exception. Is the internal state consistent if that occurs, and
+what happens if the client discards the error? We are back to the first
+question again.</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -365,31 +350,29 @@ load it again automatically at some convenient moment.</span></p>
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-GB>So we add a bit of code externally to the
-class to watch for when the file changes and then just call </span><span
-class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
-lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> to load
-the new data file.</span></p>
+class to watch for when the file changes and then just call </span><code><span
+lang=EN-GB style='font-size:10.0pt'>LoadMap()</span></code><span lang=EN-GB> to
+load the new data file.</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-GB>But wait. Have we got any tests for calling
-</span><span class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
-lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> on the
-class a <i style='mso-bidi-font-style:normal'>second</i> time? What happens if <i
-style='mso-bidi-font-style:normal'>this</i> load fails – is the internal
-structure still consistent, can we limp along with the old data or should it
-behave as if freshly constructed and therefore no data was loaded?</span></p>
+</span><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap()</span></code><span
+lang=EN-GB> on the class a <i style='mso-bidi-font-style:normal'>second</i>
+time? What happens if <i style='mso-bidi-font-style:normal'>this</i> load fails
+– is the internal structure still consistent, can we limp along with the old
+data or should it behave as if freshly constructed and therefore no data was
+loaded?</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-GB>And all before we even get to questions
 about thread safety. This is a multi-threaded service, is this class thread
 safe? For example, what happens if one thread tries to lookup data whilst
-another is calling </span><span class=GramE><code><span lang=EN-GB
-style='font-size:10.0pt'>LoadMap(</span></code></span><code><span lang=EN-GB
-style='font-size:10.0pt'>)</span></code><span lang=EN-GB> to refresh the data?
-Should existing callers be blocked and wait for the new data or continue with
-the old data until the new set is fully loaded?</span></p>
+another is calling </span><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap()</span></code><span
+lang=EN-GB> to refresh the data? Should existing callers be blocked and wait
+for the new data or continue with the old data until the new set is fully
+loaded?</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -433,9 +416,8 @@ lang=EN-GB> and to take the underlying container as a constructor argument:</spa
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>private</span></code></span><code><span lang=EN-GB style='font-size:
-10.0pt'> ThingToWotsitMap(Dictionary&lt;string, string&gt; map)<br>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>private
+ThingToWotsitMap(Dictionary&lt;string, string&gt; map)<br>
 {<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
@@ -445,29 +427,27 @@ style='mso-spacerun:yes'>  </span>_map = map;<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span lang=EN-GB>The second step was to make the </span><span
-class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap(</span></code></span><code><span
-lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> method </span><code><span
-lang=EN-GB style='font-size:10.0pt'>static</span></code><span lang=EN-GB> and
-change it to return an instance of the class; essentially turning it into a
-Factory Method [6]:</span></p>
+<p class=MsoNormal><span lang=EN-GB>The second step was to make the </span><code><span
+lang=EN-GB style='font-size:10.0pt'>LoadMap()</span></code><span lang=EN-GB>
+method </span><code><span lang=EN-GB style='font-size:10.0pt'>static</span></code><span
+lang=EN-GB> and change it to return an instance of the class; essentially
+turning it into a Factory Method [6]:</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>public</span></code></span><code><span lang=EN-GB style='font-size:
-10.0pt'> void LoadMap(string filename)<br>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public ThingToWotsitMap
+LoadMap(string filename)<br>
 {<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
 style='mso-spacerun:yes'>  </span>Dictionary&lt;string, string&gt; map = new
-Dictionary&lt;string, string<span class=GramE>&gt;(</span>);<o:p></o:p></span></code></p>
+Dictionary&lt;string, string&gt;();<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>using</span> (var stream =
-new StreamReader(filename))<br>
+style='mso-spacerun:yes'>  </span>using (var stream = new
+StreamReader(filename))<br>
 <span style='mso-spacerun:yes'>  </span>{<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
@@ -483,8 +463,7 @@ style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></code></p>
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>return</span> new
-ThingToWotsitMap(map);<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>return new ThingToWotsitMap(map);<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
 
@@ -492,32 +471,29 @@ ThingToWotsitMap(map);<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB>And that’s it really. One final step was to
 fix up the tests and production code to use this new factory method instead of
-the previous two-phase construction approach (I could lean heavily on the compiler
-here due to the nature of the refactoring):</span></p>
+the previous two-phase construction approach (I could lean heavily on the
+compiler here due to the nature of the refactoring):</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>[Test]<o:p></o:p></span></code></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>public</span></code></span><code><span lang=EN-GB style='font-size:
-10.0pt'> void one_of_the_tests_for_the_map()<br>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>public void
+one_of_the_tests_for_the_map()<br>
 {<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>var</span> filename = . .
-.;<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>var filename = . . .;<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>var</span> map =
-ThingToWotsitMap.LoadMap(filename);<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>var map = ThingToWotsitMap.LoadMap(filename);<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><span
-style='mso-spacerun:yes'>  </span><span class=GramE>Assert.That(</span>. . .);<o:p></o:p></span></code></p>
+style='mso-spacerun:yes'>  </span>Assert.That(. . .);<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>}<o:p></o:p></span></code></p>
 
@@ -526,13 +502,12 @@ style='mso-spacerun:yes'>  </span><span class=GramE>Assert.That(</span>. . .);<o
 <p class=MsoNormal><span lang=EN-GB>With our new design in place let’s revisit
 those earlier concerns and see how it stacks up. The first question around the
 behaviour of a default initialised object is moot because you cannot create one
-– you have to provide a filename. Likewise the second question around the exception
-safety of the </span><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>LoadMap(</span></code></span><code><span lang=EN-GB style='font-size:
-10.0pt'>)</span></code><span lang=EN-GB> method is also moot because if an
-exception is thrown you will not have a fully constructed object to worry
-about. Essentially the whole issue of state corruption is moot because the
-point of immutable types is that you can’t change them.</span></p>
+– you have to provide a filename. Likewise the second question around the
+exception safety of the </span><code><span lang=EN-GB style='font-size:10.0pt'>LoadMap()</span></code><span
+lang=EN-GB> method is also moot because if an exception is thrown you will not
+have a fully constructed object to worry about. Essentially the whole issue of
+state corruption is moot because the point of immutable types is that you can’t
+change them.</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -554,14 +529,13 @@ ownership of the object in a thread safe manner, e.g.</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
-newMap = ThingToWotsitMap.LoadMap(filename); <o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var newMap =
+ThingToWotsitMap.LoadMap(filename); <o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></code></p>
 
-<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>// <span
-class=GramE>This</span> assignment needs to be thread-safe<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>// This
+assignment needs to be thread-safe<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_currentMap
 = newMap;<o:p></o:p></span></code></p>
@@ -595,9 +569,8 @@ with our move to immutability.</span></p>
 that make the design of immutable types less alluring; one is the Initializer
 Syntax for objects and collections in C#. Both of these rely on the type being
 mutable, with state being mutated through properties for the former case and an
-</span><span class=GramE><code><span lang=EN-GB style='font-size:10.0pt'>Add(</span></code></span><code><span
-lang=EN-GB style='font-size:10.0pt'>)</span></code><span lang=EN-GB> method for
-the latter.</span></p>
+</span><code><span lang=EN-GB style='font-size:10.0pt'>Add()</span></code><span
+lang=EN-GB> method for the latter.</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -606,9 +579,8 @@ initializer syntax:</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
-point = new Point { X = 1, Y = 2 };<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var point =
+new Point { X = 1, Y = 2 };<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -616,9 +588,8 @@ point = new Point { X = 1, Y = 2 };<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
-_point = new Point();<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var _point =
+new Point();<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_point.X =
 1;<o:p></o:p></span></code></p>
@@ -626,9 +597,8 @@ _point = new Point();<o:p></o:p></span></code></p>
 <p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_point.Y =
 2;<o:p></o:p></span></code></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
-point = _point;<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var point =
+_point;<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -637,9 +607,8 @@ syntax:</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
-points = new List&lt;Point&gt; { new Point(1, 2) };<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var points =
+new List&lt;Point&gt; { new Point(1, 2) };<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -647,16 +616,14 @@ points = new List&lt;Point&gt; { new Point(1, 2) };<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
-_points = new List&lt;Point&gt;(); <o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var _points
+= new List&lt;Point&gt;(); <o:p></o:p></span></code></p>
 
-<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_<span
-class=GramE>points.Add(</span>new Point(1, 2));<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>_points.Add(new
+Point(1, 2));<o:p></o:p></span></code></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
-points = _points;<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var points =
+_points;<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
@@ -669,13 +636,12 @@ and so mutability no longer had to be sacrificed for readability:</span></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span class=GramE><code><span lang=EN-GB style='font-size:
-10.0pt'>var</span></code></span><code><span lang=EN-GB style='font-size:10.0pt'>
-point = new Point( x: 1, y: 2 );<o:p></o:p></span></code></p>
+<p class=MsoNormal><code><span lang=EN-GB style='font-size:10.0pt'>var point =
+new Point( x: 1, y: 2 );<o:p></o:p></span></code></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span lang=EN-GB>On the collection front the additional of
+<p class=MsoNormal><span lang=EN-GB>On the collection front the addition of
 interfaces such as </span><code><span lang=EN-GB style='font-size:10.0pt'>IReadOnlyList</span></code><span
 lang=EN-GB> and the new Immutable Collections library [4] means that the
 runtime madness of </span><code><span lang=EN-GB style='font-size:10.0pt'>ReadOnlyCollection</span></code><span
@@ -725,9 +691,9 @@ href="http://c2.com/cgi/wiki?FactoryMethod">http://c2.com/cgi/wiki?FactoryMethod
 <p class=MsoNormal><!--[if supportFields]><span lang=EN-GB><span
 style='mso-element:field-begin'></span><span
 style='mso-spacerun:yes'> </span>SAVEDATE<span style='mso-spacerun:yes'> 
-</span>\@ &quot;dd MMMM yyyy&quot;<span style='mso-spacerun:yes'>  </span>\*
-MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span
-lang=EN-GB><span style='mso-no-proof:yes'>18 December 2014</span></span><!--[if supportFields]><span
+</span>\@ &quot;dd MMMM yyyy&quot;<span style='mso-spacerun:yes'>  </span>\* MERGEFORMAT
+<span style='mso-element:field-separator'></span></span><![endif]--><span
+lang=EN-GB><span style='mso-no-proof:yes'>09 March 2015</span></span><!--[if supportFields]><span
 lang=EN-GB><span style='mso-element:field-end'></span></span><![endif]--></p>
 
 <p class=MsoNormal><span lang=EN-GB><o:p>&nbsp;</o:p></span></p>
