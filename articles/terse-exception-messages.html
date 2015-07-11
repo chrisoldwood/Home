@@ -1,0 +1,812 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="terse-exception-messages_files/filelist.xml">
+<title>Terse Exception Messages</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Chris Oldwood</o:Author>
+  <o:LastAuthor>Chris Oldwood</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>703</o:TotalTime>
+  <o:Created>2015-07-11T21:03:00Z</o:Created>
+  <o:LastSaved>2015-07-11T21:03:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2708</o:Words>
+  <o:Characters>15436</o:Characters>
+  <o:Lines>128</o:Lines>
+  <o:Paragraphs>36</o:Paragraphs>
+  <o:CharactersWithSpaces>18108</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073750139 0 0 159 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1073741899 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-GB;}
+h1
+	{mso-style-link:" Char Char3";
+	mso-style-next:Normal;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	color:#365F91;
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN-GB;}
+h2
+	{mso-style-link:" Char Char2";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:13.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	color:#4F81BD;
+	mso-ansi-language:EN-GB;}
+h3
+	{mso-style-link:" Char Char1";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:11.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	color:#4F81BD;
+	mso-ansi-language:EN-GB;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:" Char Char";
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
+	font-size:26.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-GB;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:" Char Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
+	font-size:26.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-GB;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:" Char Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
+	font-size:26.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-GB;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:" Char Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
+	font-size:26.0pt;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-GB;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.CharChar3
+	{mso-style-name:" Char Char3";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#365F91;
+	font-weight:bold;}
+span.CharChar2
+	{mso-style-name:" Char Char2";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#4F81BD;
+	font-weight:bold;}
+span.CharChar
+	{mso-style-name:" Char Char";
+	mso-style-locked:yes;
+	mso-style-link:Title;
+	mso-ansi-font-size:26.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#17365D;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+span.CharChar1
+	{mso-style-name:" Char Char1";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Cambria;
+	mso-bidi-font-family:"Times New Roman";
+	color:#4F81BD;
+	font-weight:bold;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Calibri;
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border:none;border-bottom:solid #4F81BD 1.0pt;
+padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle><span lang=EN-GB>Terse Exception Messages</span></p>
+
+</div>
+
+<h1><span lang=EN-GB>Introduction</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>Users are not the only people that have to
+deal with cryptic error messages; sadly support staff and developers can have
+an equally bad time too. Users have every right to complain as they are rarely able
+to do anything about it, whereas we programmers have it within our power to
+write better diagnostic messages to aid our colleagues, and in turn better
+serve our users by helping resolve <i style='mso-bidi-font-style:normal'>their</i>
+issues more quickly.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This article looks at some of the
+techniques we can apply when writing code that is going to throw an exception
+in response to some unexpected condition. Whilst exceptions are clearly not the
+only style of error reporting available, I have found that due to the “distance”
+that often exists between the throw and catch sites it is all the more
+important that thought be put into the message generated. I also have my
+suspicions that their very name “exceptions” lures the unwary programmer into
+believing they will only rarely occur and so will demand far less attention
+than other diagnostic messages.</span></p>
+
+<h1><span lang=EN-GB>A Rude Awakening</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>One “very early” Saturday morning, during
+my week on the support rota, I got a phone call from the 1<sup>st</sup> line
+support team to say that one of the weekend tasks had failed. They had kindly
+sent me the relevant portion of the service log file and the error said
+something along these lines:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR: Failed
+to calibrate currency pair!<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The task was a fairly lengthy one (taking over
+an hour) and there were no obvious clues as to which particular currency pair (of
+the non-trivial number being processed) that might be the source of the
+problem. I decided my only recourse was to set a breakpoint on the site of the
+thrown error and then wait for it to fail. When I located the line of code where
+the error was generated I was more than slightly annoyed to see it was written something
+like this:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>void</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> calibrate(string ccy1, string
+ccy2, . . .)<br>
+{<br>
+<span style='mso-spacerun:yes'>  </span>. . .<br>
+<span style='mso-spacerun:yes'>  </span>if (. . .)<br>
+<span style='mso-spacerun:yes'>    </span>throw Error(&quot;Failed to calibrate
+currency pair!&quot;);<br>
+}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>That’s right the throw site <i
+style='mso-bidi-font-style:normal'>knew</i> what the exact combination of
+currency pairs were, but had neglected to include them in the error message.
+Needless to say once I got back in the office on Monday morning the first thing
+I did was to fix the error message to save someone else wasting time
+unnecessarily in the future, and to allow the support team to do a bit more
+diagnosis themselves.</span></p>
+
+<h1><span lang=EN-GB>Clearer Exception Messages</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>The examples that provided the impetus for
+this article are equally terse:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>throw</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> new Exception(String.Empty);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>throw</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> new NotFoundException(&quot;Invalid
+ID&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>One hopes that the first example is simply
+an unfortunate mistake where the programmer truly intended to come back and
+write something useful, but clearly forgot. The second is better, but I would
+contend that it’s only marginally better because there is so much more than
+could be said by the message.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If we imagine the message in the context of
+a busy log file, rather than surrounded by its related code, it will likely
+appear with only the usual thread context information to back it up, e.g.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>[<span
+class=GramE>date</span> &amp; time, thread, etc] ERROR: Invalid ID<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If you also have a stack trace to work from
+that might at least give you a clue as to what type the “ID” refers to. You may
+also be able to hunt around and find an earlier diagnostic message from the
+same thread that could give you the value too, but you’re probably going to
+have to work to find it.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Consequently at a bare minimum I would also
+include the “logical” type and, if possible (and it usually is), then the
+offending value too. As such what I would have thrown is something more like
+this:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>throw</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> new NotFoundException(&quot;Invalid
+customer ID '{0}'&quot;, id);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This message now contains the two key
+pieces of information that I know are already available at the throw site and
+so would generate a more support-friendly message such as this:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>[...]
+ERROR: Invalid customer ID '1234-5678'<o:p></o:p></span></p>
+
+<h1><span lang=EN-GB>Discerning Empty Values</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>You’ll notice that the value, which in this
+case was a string value, is surrounded by quotes. This is important in a
+message where it might not be obvious that the value is empty. For example if I
+had not added the quotes and the customer ID was blank (a good indication of
+what the problem might be) then it would have looked thus:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+Invalid customer ID<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Unless you know intimately what all your
+log messages look like, you could easily be mistaken for believing that the
+error message contains little more than our first example, when in fact the
+value is in fact there too, albeit invisibly. In the improved case you would
+see this:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+Invalid customer ID ''<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For strings there is another possible
+source of problems that can be hard to spot when there are no delimiters around
+the value, and that is leading and trailing whitespace. Even when using a fixed
+width font for viewing log files it can be tricky to spot a single erroneous
+extra space – adding the quotes makes that a little easier to see:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+Invalid customer ID '1234-<span class=GramE>5678 '</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As an aside my personal preference for
+using single quotes around the value probably stems from many years working
+with SQL. I’ve lifted values out of log files only to paste them into a variety
+of SQL queries countless times and so automatically including the right sort of
+quotes seemed a natural thing to do.</span></p>
+
+<h1><span lang=EN-GB>Discerning Incorrect Values</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>It’s probably obvious but another reason to
+include the value is to discern the difference between a value that is badly
+formed, and could therefore never work (i.e. a logic error), and one that is
+only temporarily unusable (i.e. a runtime error). For example, if I saw the
+following error I would initially assume that the client has passed the wrong
+value in the wrong argument or that there is an internal logic bug which has
+caused the value to become “corrupted”:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+Invalid customer ID '10p off baked beans'<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If I wanted to get a little more nit-picky
+about this error message I would stay clear of the word “invalid” as it is a
+somewhat overloaded term, much like “error”. Unless you have no validation at
+all for a value, there are usually two kinds of errors you could generate – one
+during parsing and another during range validation. This is most commonly seen
+with datetimes where you might only accept ISO-8601 formatted values which,
+once parsed, could be range-checked, for example, to ensure that an end date
+does not precede a start date.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>To me the kind of error below would still
+be a terse message, better than some of our earlier ones, but could be even
+better:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+Invalid datetime '01/01/2001 10:12 am'<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>My preferred term for values that fail “structural
+validation” was adopted from XML parsing – malformed. A value that parses
+correctly is considered “well formed” whereas the converse would be one that is
+“malformed”. Hence I would have thrown:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+Malformed datetime '01/01/2001 10:12 am'<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For types like a datetime where there are
+many conventions I would also try and include the common name for the format or
+perhaps a template if the format is dynamically configurable so the caller
+doesn’t have to root around in the specs to find out what it should have been:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+Malformed datetime '01/01/2001 10:12 am' (Only ISO-8601 supported)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+Malformed datetime '01/01/2001 10:12 am' (Must conform to ‘YYYY-MM-DD
+HH:MM:SS’)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Once a value has passed structural
+validation, if it then fails “semantic validation” I would report that using an
+appropriate term, such as “out of range” or better yet include the failed comparison.
+With semantic validation you often know more about the role the value is
+playing (e.g. it’s a “start” or “end” date) and so you can be more explicit in
+your message about what the problem is:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+The end date '2010-01-01' precedes the start date '2014-02-03'<o:p></o:p></span></p>
+
+<h1><span lang=EN-GB>Terse Framework Messages</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>Framework exception messages are
+notoriously terse. The reason is probably that, like all general purpose library
+functions, there is a balance between performance, security, etc. and so
+including the value in the exception may well be highly undesirable in some
+types of application.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>One of the best examples of brevity in the
+.Net framework is probably the one below which is thrown from the LINQ
+extensions, such as </span><span class=GramE><span lang=EN-GB style='font-family:
+"Courier New"'>Single(</span></span><span lang=EN-GB style='font-family:"Courier New"'>)</span><span
+lang=EN-GB>:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>Sequence
+contains no matching element<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>The prevalent use of LINQ in modern C# code
+is to be applauded over traditional for-next loops, but as their use grows, so
+does the possibility of this kind of message popping up when things go awry.
+Whilst it’s a little extra code to write for the caller, one obvious choice is
+to use the non-throwing version </span><span class=GramE><span lang=EN-GB
+style='font-family:"Courier New"'>SingleOrDefault(</span></span><span
+lang=EN-GB style='font-family:"Courier New"'>)</span><span lang=EN-GB>, so that
+you can detect the failure manually and throw a more suitable exception, e.g.</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>var</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> customer =
+customers.SingleOrDefault(c =&gt;c.Id == id);<br>
+if (customer == null)<br>
+{<br>
+<span style='mso-spacerun:yes'>  </span>throw new NotFoundException(&quot;Failed
+to find customer with ID '{0}'&quot;, id);<br>
+}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As always there is a trade-off here. On the
+one hand I could write less code by directly using the LINQ methods provided,
+but at the cost of poorer diagnostics. However, as we shall see next, in C#
+there is nothing to stop me wrapping this extra code in my own extension method
+to keep the call site more readable.</span></p>
+
+<h1><span lang=EN-GB>Custom Parsing Methods</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>Whilst it’s perhaps understandable why the
+more generic methods are suitably terse, sadly the same also goes for the more
+focused string parsing methods too, such as </span><span lang=EN-GB
+style='font-family:"Courier New"'>int.Parse()</span><span lang=EN-GB>. On the kinds
+of systems I work with, I’d happily trade-off much better diagnostics for
+whatever little extra garbage this technique might incur, especially given that
+it’s only (hopefully) in exceptional code paths.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>My solution to this problem is the
+proverbial “extra level of indirection”, hence I wrap the underlying non-exception-throwing
+</span><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>TryParse(</span></span><span
+lang=EN-GB style='font-family:"Courier New"'>)</span><span lang=EN-GB> style framework
+methods with something that produces a more satisfying diagnostic. As suggested
+a moment ago, extension methods in C# are a wonderful mechanism for doing that.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For example I tend to wrap the standard
+configuration mechanism with little methods that read a string value, try to
+parse it, and if that fails then include the setting name and value in the
+message. Consequently instead of the usual terse </span><span lang=EN-GB
+style='font-family:"Courier New"'>FormatException</span><span lang=EN-GB>
+affair you get from the .Net framework when parsing an integer value with code
+like this:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>int.Parse(</span></span><span
+lang=EN-GB style='font-family:"Courier New"'>settings[&quot;TimeoutInMs&quot;]);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>You invoke a helper method like this
+instead:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>settings.ReadInt(</span></span><span
+lang=EN-GB style='font-family:"Courier New"'>&quot;TimeoutInMs&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>And if this fails you’ll get a much more useful
+error message:</span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='font-family:"Courier New"'>ERROR:
+The 'TimeoutInMs' configuration setting value '3.1415' was not a well formed
+integer value<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='mso-bidi-font-family:"Courier New"'>This
+handles the structural validation side of things. For the semantic validation
+it can either be done with traditional conditional statements or by chaining on
+a validation method, ala fluent style:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>settings.ReadInt(</span></span><span
+lang=EN-GB style='font-family:"Courier New"'>&quot;TimeoutInMs&quot;).EnsuringValueIsPositive();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB style='mso-bidi-font-family:"Courier New"'>For
+common “types” of settings this pair can itself be wrapped up further to once
+again simplify the call site:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>settings.ReadTimeout(</span></span><span
+lang=EN-GB style='font-family:"Courier New"'>&quot;SendRequestTimeoutInMs&quot;);</span><span
+lang=EN-GB style='mso-bidi-font-family:"Courier New"'><o:p></o:p></span></p>
+
+<h1><span lang=EN-GB>Formatting Exceptions in C#</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>Whenever I create a custom exception type
+in C# I generally add a variety of overloads so you can create one directly
+with a message format and selection of arguments without forcing the caller to manually
+use </span><span lang=EN-GB style='font-family:"Courier New"'>String.Format()</span><span
+lang=EN-GB>. This is how the example back near the beginning worked:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>throw</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> new NotFoundException(&quot;Invalid
+customer ID '{0}'&quot;, id);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>All the class needs for this kind of use is
+a signature akin to </span><span lang=EN-GB style='font-family:"Courier New"'>String.Format</span><span
+lang=EN-GB>’s:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>public</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> NotFoundException(string format,
+params object[] args)<br>
+<span style='mso-spacerun:yes'>    </span>: base(String.Format(format, args)) <br>
+{ }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>However this is not enough by itself – it’s
+dangerous. If we pass a raw message that happens to contain formatting
+instructions but no arguments (e.g. “Invalid list {0, 1, 2}”) it will throw
+during the internal call to </span><span class=GramE><span lang=EN-GB
+style='font-family:"Courier New"'>String.Format(</span></span><span lang=EN-GB
+style='font-family:"Courier New"'>)</span><span lang=EN-GB>, so we need to add
+a simple string overload as well:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>public</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> NotFoundException(string message)<br>
+<span style='mso-spacerun:yes'>    </span>: base(message)<br>
+{ }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>As an aside I never add a public default
+constructor <i style='mso-bidi-font-style:normal'>by default</i> because I’m
+not convinced you should be allowed to throw an exception without providing <i
+style='mso-bidi-font-style:normal'>some</i> further information.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Due to the framework exception classes not
+having a variable arguments (var-args) style constructor you might already be
+happy putting formatting calls into the callee, either directly with </span><span
+lang=EN-GB style='font-family:"Courier New"'>String.Format()</span><span
+lang=EN-GB> or via a simple extension method like </span><span lang=EN-GB
+style='font-family:"Courier New"'>FormatWith()</span><span lang=EN-GB> [1],
+e.g.</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>throw</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> new NotFoundException(String.Format(&quot;Invalid
+customer ID '{0}'&quot;, id));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>throw</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> new NotFoundException(&quot;Invalid
+customer ID '{0}'&quot;.FormatWith(id));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>One scenario where the var-args style constructor
+falls down in C# is when you start adding overloads to capture any inner
+exception. You can’t just add it on the end of the signature due to the final </span><span
+lang=EN-GB style='font-family:"Courier New"'>params</span><span lang=EN-GB>-based
+parameter, so you have to add it to the beginning instead:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>public</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> NotFoundException(Exception inner,
+string format,<br>
+<span style='mso-spacerun:yes'>                         </span>params object[]
+args)<br>
+<span style='mso-spacerun:yes'>    </span>: base(String.Format(format, args),
+inner)<br>
+{ }<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Sadly, as you can see from the </span><span
+class=GramE><span lang=EN-GB style='font-family:"Courier New"'>base(</span></span><span
+lang=EN-GB style='font-family:"Courier New"'>)</span><span lang=EN-GB>
+constructor call, this is the exact opposite of what the framework does; it expects
+them on the end because the preceding argument is always a simple string.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>In my experience little effort is put in by
+developers to simulate faults and validate that exception handling is behaving
+correctly, i.e. verifying “what” is reported and “how”. Consequently this makes
+the var-args overload potentially dangerous as adding an exception argument on
+the end (by following the .Net framework convention) would cause it to be
+silently swallowed as no string format placeholder would reference it.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Whilst this has never been a problem for me
+in practice because I virtually always throw custom exception types and nearly
+always end up formatting a non-trivial diagnostic message, that’s easy to say when
+you’re the one who discovers and instigates a pattern – others are more likely
+to follow the one they’re used to, which is almost certainly the way the .Net framework
+does it.</span></p>
+
+<h1><span lang=EN-GB>Testing Exception Messages</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>At the tail end of the previous section I
+touched briefly on what I think is at the heart of why (server-side) error
+messages can often be poor – a lack of testing to make sure that they satisfy
+the main “requirement”, which is to be helpful in diagnosing a problem. When
+unit tests <i style='mso-bidi-font-style:normal'>are</i> written for error
+scenarios it’s all too common to see something simplistic like this:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>Assert.That(</span></span><span
+lang=EN-GB style='font-family:"Courier New"'>() =&gt; o.DoIt(. . .),
+Throws.Exception);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This documents and verifies very little
+about what is expected to happen. In fact if the “</span><span lang=EN-GB
+style='font-family:"Courier New"'>o</span><span lang=EN-GB>” variable is a null
+reference the test will still pass and not even invoke the behaviour we want to
+exercise! Our expectations should be higher; but of course at the same time we
+don’t want to over specify the behaviour and make the test brittle instead.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If a caller is going to attempt recovery of
+the failure then they at least need to know what the type of the exception is,
+lest they be forced to resort to “message scraping” to infer its type.
+Consequentially it’s beneficial to verify that the exception is of <i
+style='mso-bidi-font-style:normal'>at least</i> a certain type (i.e. it may
+also be a derived type). Where an obvious value, such as an input argument, is
+a factor in the error we can include that as a real property if we believe it
+may be useful for recovery. If the exception type is likely to remain vague we can
+still loosely test that the value is contained somewhere within the message instead:</span></p>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-GB style='font-family:"Courier New"'>const</span></span><span
+lang=EN-GB style='font-family:"Courier New"'> string id = &quot;malformed-value&quot;;<br>
+<br>
+Assert.That(() =&gt; o.DoIt(id),<br>
+<span style='mso-spacerun:yes'>               </span>Throws.InstanceOf&lt;ValidationException&gt;()<br>
+<span style='mso-spacerun:yes'>       </span><span
+style='mso-spacerun:yes'>              </span>.And.Message.Contains(id));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If we’re writing tests for a method where there
+are many arguments to be validated it’s more important that we try and match on
+the message too (or some richer-typed property) to discern which of the many
+arguments caused the exception to be thrown. It’s all too easy when making a
+change to a method that you end up finding one or more of your tests are
+passing because they are detecting a different error to the one they were
+intended to, as the null reference example above highlights.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Whilst that takes care of our code-based
+contractual obligations we also have an obligation to those who will be
+consuming these messages to make sure they form a useful narrative within any
+diagnostic output. This is an article in its own right [2], but using a text
+editor that performs spell checking of string literals certainly goes a little
+way towards helping avoid silly mistakes.</span></p>
+
+<h1><span lang=EN-GB>Summary</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>If you’re going to rely on exception
+messages as a major source of your diagnostic output, such as through the use
+of Big Outer Try Blocks [3] and classic log files, then it pays to make sure
+that what you’re going to end up writing contains the information you really
+need. This article has provided a number of suggestions about how the content
+of these messages can be improved, along with some ideas about how you can help
+ensure the code doesn’t get swamped with these tangential concerns so that the
+underlying logic becomes obscured. The final section looked at what we can do
+to leverage automated testing as a means of helping to formalise the errors
+that we generate as an aid to throwing “better quality” exceptions.</span></p>
+
+<h1><span lang=EN-GB>Acknowledgements</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>Thanks as always to the Overload review
+team for sparing my blushes.</span></p>
+
+<h1><span lang=EN-GB>References</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>[1] FormatWith Extension Method – James
+Newton-King, <a
+href="http://james.newtonking.com/archive/2008/03/27/formatwith-string-format-extension-method">http://james.newtonking.com/archive/2008/03/27/formatwith-string-format-extension-method</a><br>
+[2] Diagnostic &amp; Support User Interfaces – Chris Oldwood, <a
+href="http://chrisoldwood.blogspot.co.uk/2011/12/diagnostic-support-user-interfaces.html">http://chrisoldwood.blogspot.co.uk/2011/12/diagnostic-support-user-interfaces.html</a><br>
+[3] The Generation, Management and Handling of Errors – Andy Longshaw, Overload
+#93, <a href="http://accu.org/index.php/journals/1586">http://accu.org/index.php/journals/1586</a></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Chris Oldwood<br>
+</span><!--[if supportFields]><span lang=EN-GB><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SAVEDATE<span style='mso-spacerun:yes'> 
+</span>\@ &quot;dd MMMM yyyy&quot;<span style='mso-spacerun:yes'>  </span>\*
+MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span
+lang=EN-GB><span style='mso-no-proof:yes'>07 May 2015</span></span><!--[if supportFields]><span
+lang=EN-GB><span style='mso-element:field-end'></span></span><![endif]--></p>
+
+<h3><span lang=EN-GB>Biography</span></h3>
+
+<p class=MsoNormal><span lang=EN-GB>Chris is a freelance developer who started
+out as a bedroom coder in the 80’s writing assembler on 8-bit micros; these
+days it’s C++ and C#. He also commentates on the Godmanchester duck race and
+can be contacted via gort@cix.co.uk or @chrisoldwood.</span></p>
+
+</div>
+
+</body>
+
+</html>

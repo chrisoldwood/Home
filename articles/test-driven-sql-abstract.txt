@@ -1,0 +1,13 @@
+TEST-DRIVEN SQL
+
+This session looks at applying the same principles and disciplines used in other areas of system development to tame the ever increasing complexity that has arisen from the maturity of the RDBMS. To show how easy it can be to apply TDD/Unit Testing to SQL development, part of the talk will involve coding up a procedure in a test-first manner using a freely available T-SQL based test framework.
+
+--
+
+Nobody ever sets out to write a 500-line stored procedure; they often just end up that way. Writing SQL code is often perceived as “simple” which is why we start out with short simple SQL statements and don’t realise they’ve turned into a behemoth until it’s far too late. It’s likely no one ever wrote any unit tests for the functionality either so the cost, and risks, of change are only going to keep rising.
+
+But it’s just the same story that we’ve been hearing for years about our client and server-side code. And yet SQL unit testing frameworks have been around for 10 years, so why doesn’t it get adopted along with other modern development practices such as Test-Driven Development (TDD)?
+
+For a closed, tightly-coupled system the database framework will take away much of the need to write raw SQL in the first place. However there are a huge number of systems out there, both old and new, that still rely on the RDBMS to provide an independent subsystem that is accessed by a formal, SQL-based public interface.
+
+The complexity of the modern RDBMS product means that refactoring is a necessity if it is to support future changes in safety; even if that change is to eventually move logic outside it. This in turn requires a good suite of automated tests and a Continuous Integration style build pipeline if changes are to be made in a reasonable time frame.
