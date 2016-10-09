@@ -1,0 +1,395 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>In The Toolbox - Home-Grown Tools</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>In The Toolbox – Home-Grown Tools</p>
+
+</div>
+
+<p class=MsoNormal>Up until now this column has largely talked about tooling
+from the perspective of using 3<sup>rd</sup> party tools to “get stuff done”
+but there are occasions when the one perfect tool we really need doesn’t exist.
+It’s often possible that we can cobble something together using the standard
+tools like cat, sed, grep, awk, etc. and solve our problem with a little
+composition, but if it’s not that sort of problem then perhaps it’s time to
+write our own.</p>
+
+<h1>Custom Tooling Spectrum</h1>
+
+<p class=MsoNormal>In the third instalment of this column [1] I covered what is
+probably the most lightweight approach to tooling which is to wrap one or more
+other tools inside a simple script. These are very easy to write and are often
+an enabler for automating some kind of task. The investment is small and it’s
+an easy win to reduce some friction in the development process and remove
+another source of human error from the loop. Despite the plethora of extensions
+and plug-ins available there still seems to be an endless supply of small
+analysis and integration jobs that need doing to create a free-flowing
+development process.</p>
+
+<p class=MsoNormal>At the opposite end of the spectrum are the kinds of
+constraints that lead to a serious investment in your own tooling. When you
+look at companies like Netflix and Google and see the tools that they put back
+into the development community you realise they are dealing with problems at a
+scale which many of us will never have to deal with. The rise of open source
+software has meant that companies who have invested in custom tooling are perhaps
+much more prominent than they once were as they often choose to release the
+fruits of their labour to the wider community. Clearly companies have had to do
+this in the past, but historically they may have seen this diversion as a
+technical advantage to be leveraged rather than a problem to be shared.</p>
+
+<p class=MsoNormal>One of the earliest examples I know of where a company decided
+to rely on custom tooling was the Microsoft Excel team which built its own C
+compiler [2]. Instead of having to use separate compilers for each platform
+they hedged their bets and created their own which would compile C code to a
+platform-independent bytecode called “p-code”. Although the anticipated
+plethora of platforms never materialised, keeping the compiler in-house still
+brought them a number of benefits, such as stability and consistency, which in
+turn allowed them to deliver a better product faster.</p>
+
+<h1>Striking a Balance</h1>
+
+<p class=MsoNormal>This latter example, along with Google creating its own
+version control system or Dropbox deciding to build its own cloud, is well
+outside the kinds of bounds I’ve ever experienced. I’m quite certain that if I
+told my clients that I needed to spend 6 months writing a continuous delivery system
+or web server framework I’d be given my marching orders right away. Like all
+engineering trade-offs there is a balance between trying to bend and twist a
+general purpose tool into shape versus building exactly what you (think you)
+need. For the kinds of programming I do the mainstream general-purpose
+programming languages available easily provide enough features, especially when
+coupled with the dizzying array of libraries that you now have easy access to.</p>
+
+<p class=MsoNormal>Back at the very start of my professional career I joined a
+small software house which was slowly feeling the pinch from ever tighter
+margins through competition. I suspect they didn’t have the kind of budget you
+needed for an enterprise scale internet mail gateway but they managed to adapt
+Phil Karn’s DOS-based KA9Q suite [3] to send and receive mail to and from their
+PMail / Netware based setup. Given the free availability of the original source
+they naturally published both the binaries and source code for their customised
+version on Cix, Compuserve and Demon.</p>
+
+<p class=MsoNormal>This was my first real foray into the world of writing &amp;
+sharing tools. Whilst I had been a consumer of plenty of free software at
+University it felt good to finally be on the other end – giving rather than
+receiving. Luckily the company was already licensed to use the NetWare SDK for
+its own licensing library and so I had the opportunity to fill the gaps left by
+Novell’s own tools and produce some little utilities on the side. These were
+mostly to help with managing the printers but I also wrote a little tool to map
+out the network and remotely query the machines to help diagnose network
+problems. These, along with my DOS-based text-mode graphics library that
+emulated the Netware tools look-and-feel, were all published in source and
+binary form on Cix too.</p>
+
+<p class=MsoNormal>Whilst my day job was supposedly writing desktop graphics
+software I presume my employer (I was permanent back then) was happy to indulge
+these minor distractions because I was learning relevant skills and still
+contributing <i>something</i> of business value too. Knowing the people there
+I’m sure the second-order effects, such as my resulting extra happiness at
+being given at little latitude, was factored in too. Building tools for
+pedagogical purposes has remained a theme ever since, however this has largely
+been restricted to my own personal time since I switched from permanent to
+freelance status for the reasons cited earlier.</p>
+
+<p class=MsoNormal>Sadly my desire to build tools to solve reoccurring problems
+was not always met with such gratitude. Whilst contracting at a large financial
+institute I found myself being berated for building a simple tool that would
+allow me to extract subsets of data from our huge trade data files. Despite
+there only being some arcane methods when I joined the team, and it being a
+fundamental part of our testing strategy, I was somewhat surprised when my
+efforts were questioned rather than applauded. Perhaps if I had spent weeks
+writing it when something more pressing was needed I could understand my poor
+judgment, but it was developed piecemeal a few hours at a time. Fortunately its
+true value was realised soon after when the BAU and Analysis teams both started
+using it to extract data too. However although I felt partly vindicated it
+still seemed like a shallow victory because it didn’t spark the interest in
+building and sharing tooling that I hoped it would.</p>
+
+<h1>From Test to Support</h1>
+
+<p class=MsoNormal>One of the things I’ve discovered from writing tools is that
+your audience often extends far wider than perhaps you envisaged. I mostly
+write them for <i>my</i> benefit – to make my own life easier – but naturally
+if it solves a problem for me then it probably will for someone else too. The
+area I find this has happened most in the past is with test tools that grow
+into administration or support tools. </p>
+
+<p class=MsoNormal>With any complex system you often need to be able to get
+“inside it” to be able to diagnose a problem that is not apparent from the
+usual logging and monitoring tools. This might mean that you need to replay a
+specific request, perhaps using a custom tool that you can drive via a debugger
+in the comfort of your own chair. Whilst remote debugging of a live system is
+possible it should obviously be reserved for extreme cases due to the
+disruption it causes.</p>
+
+<p class=MsoNormal>This is exactly what happened to the tool I mentioned earlier
+that I was chastised for spending time on. It was written initially to solve my
+own needs to generate test data sets and to safely and quickly get hold of
+production data so that I could replay requests to debug the large, monolithic
+service. I added a few extra filters to allow me to create data sets such as
+one that could replay the exact sequence of requests that had caused a grid
+computing engine to crash. When the BAU team “discovered” it they used it to answer
+questions about specific customers and the Analysis team used it to address
+regressions and regulatory questions.</p>
+
+<p class=MsoNormal>Sometimes it’s obvious how something you write can be used
+in multiple contexts and there is a clear path around adding features that bias
+it for one use or another.  For instance in production scenarios I like to
+ensure that any tool behaves in a strictly read-only manner, which I naturally make
+the default behaviour. On occasion when re-purposing someone else’s creation or
+a tool that’s already being automated in production I might have to add a
+command line switch (e.g. <span style='font-family:"Courier New"'>--ReadOnly</span>)
+to allow it to be run in a non-destructive “support mode”. This is one of the
+reasons why I prefer for all integration test environments to be locked down by
+default as tight as production because it allows you to drive out the security
+and support requirements by dog-fooding in your non-production environments.</p>
+
+<p class=MsoNormal>Even tools that you never thought had any use outside the
+development team have a funny way of showing up in support roles. A mock
+front-end I once wrote to allow the calculation engine developers to test and
+debug without waiting an eternity for the real front-end to load got used by
+the test users to work-around problems with the actual UI. Despite its
+Matrix-esque visuals one savvy user was so experienced they could see past the
+raw object identifiers and could have a good idea of what the results were
+based on the rough shape and patterns of the calculation’s solution.</p>
+
+<h1>System Testing</h1>
+
+<p class=MsoNormal>By now it should be pretty apparent that the lion’s share of
+the tools I write are for automating development tasks or for some form of system
+testing. Whilst I rely heavily on automated unit, integration and acceptance
+tests for the majority of test coverage I still prefer to do some form of
+system testing when I make changes that sit outside the norm. For example
+changes to 3<sup>rd</sup> party dependencies such as library upgrades or major
+tooling which might throw up something peculiar at deploy or runtime are good
+candidates. Also any change where I know the automated integration tests might
+be weak will cause me to give it the once over locally first before committing and
+publishing to avoid unnecessarily breaking the build or deployment.</p>
+
+<p class=MsoNormal>Replacing the real-front end with a lightweight alternative
+for testing, profiling and debugging is a common theme too. The calculation
+engines I’ve been involved in often have an extensive front-end, perhaps
+written Visual Basic or another GUI tool that makes getting to the library
+entry points I’m concerned with time consuming. In one case the front-end took
+4 minutes before it even hit our <i>initial</i> entry point and so building
+alternative scaffolding is a big time-saver. Often the library will just be
+fronted by a command line interface with various switches for common options.
+The command line approach also makes for a great host to use when profiling the
+library with specific data sets. Naturally this again leads towards a path of
+automation.</p>
+
+<p class=MsoNormal>Occasionally I’ve built a desktop GUI based front-end too if
+I think it will help other developers and testers. When the product has
+historically been manually tested through a fat client it can provide a
+half-way house that still helps on the exploratory side without the rawness of
+a hundred command line arguments and complex configuration files. When the
+interop layer involves a technology like COM then a proper UI can help unearth
+some quirks that only occur in these scenarios.</p>
+
+<p class=MsoNormal>More recently I’ve been working on web-based APIs which tend
+to be quite dry and boring affairs from a showcasing perspective. Like
+libraries they are quite tricky things to develop without having some bigger
+picture to drive them. Hence I favour creating a lightweight UI that can be
+used to invoke the API in the same manner as the anticipated clients. Not only
+does this help to elevate the discussion around the design of the API to the
+client’s perspective but it also provides a useful exploratory testing tool to
+compliment the suite of automated tests.</p>
+
+<h1>Architecture Benefits</h1>
+
+<p class=MsoNormal>Trying to isolate portions of a system, whether at the class
+or function level for unit testing, or subsystem level to support finer-grained
+servicing, generally has beneficial effects on the overall architecture. The
+need to be able to interact with a system through interfaces other than those
+which an end user or downstream system might use, for the purposes of testing
+or support, forces the creation of stable <i>internal</i> interfaces and
+consequently looser coupling between components.</p>
+
+<p class=MsoNormal>By providing a clear separation of concerns between the
+layers performing marshalling and IPC and the logic it encapsulates we can
+provide seams that allow us to compose the same components in different ways to
+achieve different ends. For example one system I worked on had a number of very
+small focused “services” which were distributed in the production deployment
+scenario, hosted in-process in a command line host for debugging and support,
+and scripted through PowerShell for administration of the underlying data
+stores. Supporting different modes of composability means that any underlying
+storage remains encapsulated because all access happens through the carefully
+designed interface rather than with ad-hoc scripts and general purpose tools that
+end up duplicating behaviour or taking shortcuts. This makes the implementation
+harder to change due to the unintended tight coupling, or the tools go stale
+and become dangerous because they may no longer account for any quirks that
+have developed.</p>
+
+<h1>Always Room for More</h1>
+
+<p class=MsoNormal>You might think that in this day and age most of our tooling
+problems have been solved. And yet one only has to look at the continued
+release of new text editors, new programming languages and new build systems to
+see that we are far from done yet. Even if your ambitions are far more modest
+there is still likely to be many problems specific to your own domain and
+system that would benefit from a sprinkling of custom tooling to reduce the
+burden of analysis, development, testing, support, documentation, etc. Whilst
+we should be mindful of not <i>unnecessarily</i> reinventing the wheel or
+blinkering ourselves with a Not Invented Here (NIH) mentality that does not mean
+we should also have to put up with a half-baked solution just to drink from the
+Holy Grail of Reusability. Even the venerable Swiss Army knife can’t be used
+for <i>every</i> job.</p>
+
+<h1>References</h1>
+
+<p class=MsoNormal>[1] In The Toolbox – Wrapper Scripts, C Vu 25-3,<br>
+<a
+href="http://www.chrisoldwood.com/articles/in-the-toolbox-wrapper-scripts.html">http://www.chrisoldwood.com/articles/in-the-toolbox-wrapper-scripts.html</a><br>
+[2] Joel on Software, In Defense of Not-Invented-Here Syndrome,<br>
+<a href="http://www.joelonsoftware.com/articles/fog0000000007.html">http://www.joelonsoftware.com/articles/fog0000000007.html</a><br>
+[3] Wikipedia, KA9Q,<br>
+<a href="https://en.wikipedia.org/wiki/KA9Q">https://en.wikipedia.org/wiki/KA9Q</a><br>
+<br>
+</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+16 August 2016</p>
+
+<h3>Biography</h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembler on 8-bit micros. These days it's enterprise
+grade technology in plush corporate offices. He also commentates on the
+Godmanchester duck race and can be easily distracted via gort@cix.co.uk or
+@chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>
