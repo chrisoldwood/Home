@@ -1,0 +1,18 @@
+Title: A Test of Strength
+
+Short Synopsis (40-60 words)
+----------------------------
+
+When it comes to writing tests we often live in the here-and-now and consequently end up producing "write-only" tests. This session looks at what we need to consider if we want to create tests that our future selves and teammates will find valuable instead of becoming another burden on top of delivering the feature itself.
+
+Longer Synopsis
+---------------
+
+If there is one place that we find it easy to take shortcuts it's when writing tests. Whether we're under the cosh or have an overly-optimistic view of our ability to write self-documenting code, instead of creating tests that support the production code and development process we can find ourselves producing WTFs (Weak Test Functions). The net effect is often a viscous cycle that disparages, instead of encourages us.
+
+In the past I've tried many different ways to try and short-circuit the test writing process, but have only come-up short every time. This session takes a look at why skimping on elements of the test structure, such as organisation, naming and scope only leads to pain and hardship in the long run. Along the way we'll uncover the truth behind common folklore, such as only having one assertion per test.
+
+Biography
+---------
+
+Chris is a freelance developer who started out as a bedroom coder in the 80’s writing assembler on 8-bit micros; these days it’s C++ and C# in plush corporate offices. He also commentates on the Godmanchester duck race and can be contacted via gort@cix.co.uk or @chrisoldwood.
