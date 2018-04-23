@@ -1,6 +1,5 @@
 body
 {
-	background-color:	#F0FFFF;
 	font-family:		Verdana, Arial, Helvetica, Sans-serif;
 }
 
@@ -31,8 +30,6 @@ a
 .main_table
 {
 	width:				750px;
-	border:				#4080CC thin solid;
-	background-color:	#E0FFF0;
 }
 
 .main_table_cell
@@ -43,14 +40,12 @@ a
 .header_table
 {
 	width:				100%;
-	background-color:	#E0FFF0;
 	color:				#1C2870;
 }
 
 .header_text
 {
 	text-align:			center;
-	background-color:	#E0FFF0;
 	font-size:			14pt;
 	font-weight:		bold;
 }
@@ -58,7 +53,6 @@ a
 .navigation_table
 {
 	width:				100%;
-	background-color:	#E0FFF0;
 	color:				#1C2870;
 }
 
@@ -66,14 +60,11 @@ a
 {
 	width:				10px;
 	text-align:			center;
-	background-color:	#E0FFF0;
 }
 
 .content_table
 {
 	width:				100%;
-	border:				#80A8D0 thin solid;
-	background-color:	#C0E0F8;
 	color:				#1C2870;
 }
 
@@ -81,7 +72,6 @@ a
 {
 	width:				100%;
 	border-bottom:		#80A8D0 thin solid;
-	background-color:	#C0E0F8;
 	font-size:			12pt;
 	font-weight:		bold;
 }
@@ -89,16 +79,14 @@ a
 .content_date
 {
 	width:				100%;
-	border-bottom:		#80A8D0 thin solid;
-	background-color:	#C0E0F8;
-	font-size:			12pt;
+	font-size:			10pt;
+	font-weight:		bold;
 }
 
 .content_body
 {
 	width:				100%;
 	padding:			5px;
-	background-color:	#FFFFFF;
 }
 
 .footer_table
