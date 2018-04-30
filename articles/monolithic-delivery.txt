@@ -1,0 +1,5 @@
+Monolithic Delivery
+
+When we hear the term "monolithic" we instantly think of architecture, but when was the last time you delivered an application on a mainframe or home computer? We've been using the term "monolithic architecture" as a pejorative for years but the real constraint is often not the architecture itself but the tight coupling in the delivery mechanism. What we have really been suffering from is "monolithic delivery". Even micro-services, the current darling of the software architecture world and answer to the monolith, is equally susceptible to tight coupling in the wrong hands.
+
+This session looks at the relationship between software design and delivery, and asks if the modern monolith is just misunderstood? In our rush to embrace the new world of micro-services are we prematurely optimising the wrong constraints?

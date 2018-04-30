@@ -1,0 +1,764 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-style:italic;}
+h5
+	{mso-style-link:"Heading 5 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Heading 6 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Heading 7 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Heading 8 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Heading 9 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"Quote Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"Intense Quote Char";
+	margin-top:10.0pt;
+	margin-right:46.8pt;
+	margin-bottom:14.0pt;
+	margin-left:46.8pt;
+	line-height:115%;
+	border:none;
+	padding:0cm;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleEmphasis
+	{color:gray;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	text-decoration:underline;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	letter-spacing:.25pt;
+	font-weight:bold;
+	text-decoration:underline;}
+span.MsoBookTitle
+	{font-variant:small-caps;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-link:"Heading 5";
+	font-family:"Cambria","serif";
+	color:#243F60;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-link:"Heading 6";
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-style:italic;}
+span.Heading7Char
+	{mso-style-name:"Heading 7 Char";
+	mso-style-link:"Heading 7";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.Heading8Char
+	{mso-style-name:"Heading 8 Char";
+	mso-style-link:"Heading 8";
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+span.Heading9Char
+	{mso-style-name:"Heading 9 Char";
+	mso-style-link:"Heading 9";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+span.QuoteChar
+	{mso-style-name:"Quote Char";
+	mso-style-link:Quote;
+	color:black;
+	font-style:italic;}
+span.IntenseQuoteChar
+	{mso-style-name:"Intense Quote Char";
+	mso-style-link:"Intense Quote";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle><span lang=X-NONE>In The Toolbox – Getting Personal</span></p>
+
+</div>
+
+<p class=MsoNormal>The history of software development is littered with wars
+between factions who have differing opinions on various aspects of the way it
+should be analysed, designed, presented, tested, etc. Aside from the tabs vs
+spaces debate the other giant flame war is almost certainly around the choice
+of text editor – vi vs emacs. While the devotees of each side remain steadfast
+in their cause there are other groups who seek to douse the flames either by
+making the point a moot one (the “pragmatists”) or by taking choice away
+altogether by mandating a preference. This latter approach can, and does make
+sense in various circumstances, but it often gets taken too far so that even
+when it <i>doesn’t</i> matter the only choice is effectively Hobson’s choice – no
+choice at all.</p>
+
+<h1><span lang=X-NONE>Consistency – The Sacred Altar</span></h1>
+
+<p class=MsoNormal>When it comes to tooling, most notably in the enterprise
+arena, the organisation will classically play its trump card – consistency. In
+its endeavour to treat IT as a cost centre, and therefore be made as efficient
+as possible, their desire appears to be to limit the choice of tooling as much
+as possible on the premise that it’s then easier to move “resources” around
+because there will be a shorter learning curve, at least technology wise. Hence
+technology stacks tend to be limited to a set of core languages and products,
+both for the system being built and the supporting development “infrastructure”,
+i.e. CI service, test framework, deployment tools, etc.</p>
+
+<p class=MsoNormal>Don’t get me wrong consistency of tooling is undeniably
+important. The modern “virtual machine” approach to runtimes such as the JVM
+and .Net allow for different components to be written in entirely different
+languages and paradigms, but actually using a <i>multitude</i> of languages
+within the same application is likely to cause more friction than it solves unless
+the team are all seriously experienced polyglots. Similarly, maintaining your
+own personal build scripts because you don’t like the team’s is unlikely to be
+the best use of one’s time either. One size never fits all but a few well
+picked sizes might fit most problems well enough that the cost/benefit ratio is
+favourable without being over constraining.</p>
+
+<p class=MsoNormal>Essentially we are talking about architectural level stuff
+here – the kind of choices where changing your mind or going against the grain
+is likely to incur some non-trivial expense, usually in the form of time, and
+therefore indirectly in money.</p>
+
+<h1><span lang=X-NONE>Room for Personal Taste</span></h1>
+
+<p class=MsoNormal>Consistency however is also not the end of the argument.
+Just as my choice of desktop wallpaper or text editor font or colour scheme does
+not impact what I deliver, so the same goes for a number of tooling choices in
+the overall development process. Sadly there appears to be a lack of
+recognition that software development is far more than simply churning out
+source code with an IDE. There are numerous additional activities whilst
+programming such as research, design, documenting, testing, support, etc. that demand
+very little consistency in tooling as the tools themselves provide no material
+impact on the delivered artefacts (source code, documentation, etc.),
+particularly when the artefact is of a common, interoperable file format such a
+text file.</p>
+
+<p class=MsoNormal>In an earlier episode of this column [1] I described how the
+answer to the simple question of “what tool do you use to find text” is a
+complex affair with a dizzying array of answers that all depend heavily on the
+context of the problem and the familiarity of the tools at hand. I am far more
+au fait with the command line switches of the classic Unix <span
+style='font-family:"Courier New"'>grep</span> tool than I am of the Windows
+built-in <span style='font-family:"Courier New"'>find</span> and <span
+style='font-family:"Courier New"'>findstr</span> despite spending virtually my entire
+career to date on that one platform. Over the years Microsoft have added a few
+more command line tools here and there but many essentials, like <span
+style='font-family:"Courier New"'>curl</span> and <span style='font-family:
+"Courier New"'>tar</span> are only just seeing the light of day which means we
+have to rely on third parties to fill the void; or create our own [2]. There is
+an air of irony about being labelled “inconsistent” when you prefer to use the
+same tools as the wider development community over the smaller organisational
+sized one.</p>
+
+<h1><span lang=X-NONE>Pairing / Mobbing</span></h1>
+
+<p class=MsoNormal>There is perhaps one area where differences in tooling could
+generate some unnecessary friction and that is when pairing or mobbing on a
+problem. The entire premise of the exercise is to share one machine and focus
+on solving the problem together by allowing anyone to just get on and move the
+solution further forward by being able to take over control of the keyboard and
+“just start typing”. Putting a copy of Vim in front of an entrenched Visual
+Studio developer or a Cygwin bash prompt towards a CMD prompt die-hard is not
+going to be a recipe for rapid progression if the impedance mismatch is a
+continual distraction.</p>
+
+<p class=MsoNormal>That’s the theory, but I’m happy to report that I’ve found
+it doesn’t really play out like that in practice, at least not with those people
+I’ve paired with. Whilst the keyboard may not have moved around quite as freely
+as you might hope, it’s fairly easy to remain focused on the problem and type
+enough of a snippet to get your point across without having to go on and
+produce production ready refactored code or a blazing one-liner; the “driver”
+can easily adapt and finish off your “scribbles”.</p>
+
+<p class=MsoNormal>If anything I prefer watching other people using other tools
+because that’s when you get to see what you’re missing out on. A perfect
+example of this was multi-cursor support in Sublime Text.</p>
+
+<h1><span lang=X-NONE>Common Battlegrounds</span></h1>
+
+<p class=MsoNormal>The following non-exhaustive list contains some of the bigger
+areas of contention that have arisen in the past for which I personally feel
+are outside the scope of effecting delivery and provide a significant enough
+impact on productivity that it’s worth fighting for.</p>
+
+<h2><span lang=X-NONE>Version Control System Client</span></h2>
+
+<p class=MsoNormal>The war on version control systems is over – git won.
+Unfortunately, like databases, teams rarely switch their VCSs at the flick of a
+switch. Consequently the long tail contains CVS, Visual SourceSafe, Subversion,
+TFS, etc. Even Microsoft has seen the light of day and git is now promoted to a
+first class citizen in its ongoing transformation. What this means is that for
+those of us who have already experienced the benefits of a distributed VCS,
+such as git or Mercurial, will find any means possible to continue using it
+even if the <i>back-end</i> isn’t either of those.</p>
+
+<p class=MsoNormal>One of the earliest bridges to be included with git was for
+Subversion and it’s obvious to see why as Subversion was itself a logical step
+on from CVS for many organisations. If you’ve ever messed up your working copy
+trying to integrate the latest changes from the repo, “git svn” is worth the
+price of admission alone to avoid that expensive mistake. (Arguably smaller
+commits also minimises the loss and is better from an integration perspective.)</p>
+
+<p class=MsoNormal>In a similar vein “git tfs” is a bridge for talking to
+Microsoft’s heavily ridiculed Team Foundation Server. If you’re using TFS
+without gated check-ins it pretty much works out of the box and understands the
+normal branching convention (like the Subversion bridge), although personally I
+have always avoided branching with TFS. If you do have gated check-ins then,
+when you push, it will invoke the standard TFS commit dialog to invoke its
+custom workflow. It also supports automatically attaching commits to work items
+using the normal “#&lt;id&gt;” convention in the commit message.</p>
+
+<h2><span lang=X-NONE>Code Analysis &amp; Refactoring</span></h2>
+
+<p class=MsoNormal>One assumes that the starting point for this reluctance to
+allow programmers the freedom to use their own choice of tools stems from the
+need to restrict the download and installation of <i>any</i> third party
+software. Whilst I understand some of the reasons why – security and licensing
+[3] – they do not make it easy for those of us who wish to use our own
+purchases of professional, licensed software tools on site (license permitting,
+of course). It would be ludicrous to expect a carpenter or plumber to arrive at
+your house and fix your problem only with the tools laying around the garage or
+kitchen, but for some contract positions that scenario is not quite as absurd
+as you might think.</p>
+
+<p class=MsoNormal>One category of tools that falls squarely into this category
+are those plug-ins and extensions to common major development products, such as
+IDEs, which perform on-the-fly code analysis and refactoring. In particular
+Whole Tomato’s Visual Assist and JetBrains’ ReSharper are two tools which have
+fast become essential tools for the modern developer that likes to write clean,
+maintainable code.</p>
+
+<p class=MsoNormal>For me this particular battle started back in my C++ days
+with the venerable PC-Lint and Visual Lint tools which, along with Visual
+Assist provided a useful arsenal of tools for tracking down and fixing those kinds
+of bugs which C++ is sadly all too famous for. On one contract I was rejected a
+company licence for PC-Lint (a few hundred dollars back then) and refused the
+option to use my own license too, but in a delicious twist of irony a few
+months later I discovered that a colleague (a fellow contractor) had wasted a
+day and a half tracking down an initialisation bug that would have been picked
+up by PC-Lint. At contractor rates that bug alone cost the company more than
+twice the license cost of the tool it refused me access to and it wasn’t the
+only painfully buried initialisation bug that surfaced later either.</p>
+
+<h2><span lang=X-NONE>Log Viewer</span></h2>
+
+<p class=MsoNormal>Another tool I shelled out for because there were no decent
+open source alternatives on Windows at the time was a log file viewer called
+BareTail. With sterling incredibly favourable against the dollar and the pro
+version offering all sorts of nice filtering and highlighting options it became
+my tool of choice. Naturally log files are only read by this tool and not written,
+and therefore it makes very little sense to control the exact choice and, given
+than support is usually of a time sensitive nature, I would have thought
+familiarity with tooling was commendable.</p>
+
+<p class=MsoNormal>There are a number of excellent freeware tools available now
+on Windows that have since surpassed BareTail and with logs often being pumped directly
+into cloud-based logging services the goalposts have moved on significantly
+here from monitoring a handful of servers. Even so, due to cost reasons these
+may not be available outside of the production environment and therefore you
+might still be trawling log files in development and test environments with a
+traditional set of tools.</p>
+
+<h2><span lang=X-NONE>File &amp; Folder Comparison</span></h2>
+
+<p class=MsoNormal>I’ve never been a big fan of the classic patch file format for
+displaying diffs in text files, and even less so for doing that in a command
+prompt window. The “diff” tool is another one of those bread-and-butter tools which
+is in continual use and yet it has no impact on the delivered artefacts –
+source files, mostly. Many years ago the diff tool bundled with the version
+control system you were using was fairly limited – they might only show the two
+files side-by-side and block colour the edits. Even simple features like
+ignoring changes due to whitespace were missing.</p>
+
+<p class=MsoNormal>Once again this is an area where there are number of
+excellent freeware and open source alternatives that provide a pretty good experience.
+And there are even products like Semantic Merge which aim to go beyond simpler
+textural diffs and apply more far intelligence to changes it detects. But even
+simple features like Beyond Compare’s CSV diff could make a difference to your
+productivity without resorting to an “untrusted” third party tool.</p>
+
+<p class=MsoNormal>The only reason I can imagine any company would stop you
+using products like those from genuine software houses is to avoid any jealousy
+your co-workers might have.</p>
+
+<h2><span lang=X-NONE>Web Browser</span></h2>
+
+<p class=MsoNormal>I suspect the only modern battle that can outshine the war
+around text editors is the one for your favourite web browser. For those
+actually developing web based services it’s the bane of their life – having to
+support so many different flavours, even with third party libraries attempting
+to plug the gaps. Despite being dominant for so many years the tyranny of IE 6
+is finally behind us and even the enterprise has graciously accepted that
+oranges are not the only fruit.</p>
+
+<p class=MsoNormal>Once again I absolutely understand that if you are
+developing an in-house web application the business is entirely justified in
+only putting its money behind supporting the preferred “house” option. However
+many of us write traditional, non-web based applications and services or even RESTful
+<i>services</i> and therefore our choice of browser is likely of very little
+consequence to delivering our goals. In fact, once again, I suspect familiarly
+is of more benefit, not for the core browser itself but the bells and whistles.</p>
+
+<p class=MsoNormal>For those outside the world of IT I suspect their view of
+the web browser is still rooted in the simple display of text and images /
+videos. Consequently they would have little cause to investigate the
+proliferation of extensions and plug-ins the modern browser affords. If you
+store documentation in your source code repo using some kind of mark-up
+language then you’ll probably want to view them in their rendered state when
+reading and browser extensions are one possible choice here. When working on
+web APIs I found myself trying out a whole bunch of different REST clients,
+such as Postman and Advanced REST Client, to see which I preferred or had
+features I found useful. That didn’t cause me to stop using CURL, but they make
+chaining together REST requests into a “journey” far less painful with their
+support for variables and response parsing.</p>
+
+<h2><span lang=X-NONE>Text Editors &amp; IDEs</span></h2>
+
+<p class=MsoNormal>You would think that the problem of editing text was a
+solved one by now and yet the last few years have still seen remarkable growth
+in the market with VS Code and JetBrains’ Rider proving that the hearts and
+minds of developers are still yet to be won.</p>
+
+<p class=MsoNormal>It’s hard to talk about text editors without crossing over
+into IDE territory as the face of the IDE is pretty much the text editor. In my
+couple of decades as a programmer I’ve seen the humble text editor grow into
+the behemoth that is the modern, bloated IDE as more and more of the build and
+debug tooling has been grafted on. At the same time the need to automate builds
+and deployments has also meant that this tooling has had to remain at arm’s
+length to some degree and therefore it’s still possible to work with just a
+shell and simple text editor. The folly of proprietary binary project files
+came and went with JSON now the in-vogue choice for some languages, despite its
+shortcomings.</p>
+
+<p class=MsoNormal>The enterprise IDE must seem like a bean counter’s dream –
+“a text editor, build system, debugger and deployment tool all in one package!”
+If you’ve worked on a codebase of any appreciable size that only uses the tools
+that come with the enterprise package you’ll eventually discover their
+limitations, especially if you want to adopt a heavily automated approach to
+testing. Ever tried merging or automating testing of an old-fashioned DTS
+package? This isn’t the product’s fault, but it does put the onus on us to
+recognise when we’ve outgrown it either because we want more from our delivery
+process or the technology is moving too fast for it to keep up.</p>
+
+<p class=MsoNormal>The rise of the polyglot and concepts like “infrastructure
+as code” means that we spend far more time editing source files that are not part
+of the core product we’re delivering. Although you might be writing your REST
+API in C# you might be using Terraform for your infrastructure, Go for your
+deployment tools, and a range of batch files, PowerShell scripts and Bash
+scripts for gluing it all together. Your documentation could be in Markdown,
+your database support queries in N1QL and have a variety of configuration files
+using XML, JSON and the classic .ini format.</p>
+
+<p class=MsoNormal>The natural fallout of all this is that although I might be
+forced into using the IDE of the company’s choice for the core product, there
+is still plenty of room to use both open source offerings like VS Code and
+licensed products such as Sublime Text because they offer certain essential
+features which are missing from the jack-of-all-trades offering, e.g.
+multi-cursor support or a plug-in that integrates the Go toolchain directly
+into it. Editing documentation in markdown format for instance is so much
+easier when you have the classic source + preview two-pane view like you have
+in VS Code; and these days I expect everywhere that I have to type any natural
+language to support spelling and grammar checking too.</p>
+
+<p class=MsoNormal>If you think we’ve now reached “peak IDE” know that
+JetBrains has launched a commercial Go-centric IDE for those that need more
+than what they’re getting from the current crop of plug-ins. VS Code happens to
+suffice for my Golang purposes at the moment but it’s good to know this is one
+battle that’s still raging on.</p>
+
+<h2><span lang=X-NONE>Other Stuff</span></h2>
+
+<p class=MsoNormal>That list has covered all the big ones that immediately spring
+to mind and yet I can still think of many other areas where I have a different
+personal taste to my colleagues, such as still using the old fashioned Windows
+command prompt in preference to PowerShell. Consequently the multi-tabbed
+ConEmu fills a void you don’t have with its more modern counterpart which,
+incidentally, shipped with its own IDE. And we haven’t even touched on how the
+new Windows Subsystem for Linux is going to shake things up. I may finally give
+up on Gnu on Windows (my preferred bundle of the core Unix command line tools
+such as grep, sed, awk, etc.) as I’ll have the real deal to use instead.</p>
+
+<p class=MsoNormal>I don’t currently do much in the way of web based stuff
+myself but I know from osmosis that the world of transpilers and Node.js adds
+another heap of tooling choices into the melting point, some of which form part
+of the end product, whilst others are alternative, portable implementations of
+existing native tools. Despite what I said about personal build scripts earlier
+I did once keep my own PSake (PowerShell) based build script alongside the real
+Gulp (Node.js) one because it saved me a couple of minutes every build not
+waiting for “npm install” to check its cache. (The team switched over
+permanently soon after.)</p>
+
+<h1><span lang=X-NONE>(Executive) Summary</span></h1>
+
+<p class=MsoNormal>It’s not just in IT that we have our own personal choices in
+tooling; the same is true in other walks of life. For instance nobody tells you
+what kind of pen you have to use or whether you should be using lined or clear
+paper to write your notes on. I happen to favour the gel pens but I know others
+that still prefer to use traditional ink. I think it’s fair for any organisation
+to expect me to speak and write documentation in the English language if that’s
+the one most commonly by them.</p>
+
+<p class=MsoNormal>What I find objectionable is the lack of distinction between
+when a choice of tooling affects the <i>deliverable</i> itself as opposed to
+only affecting the means of <i>delivery</i>, especially when the personal
+choice would be more beneficial to the team or organisation. Consistency within
+tooling is not an all or nothing affair – we need to question our choices when
+delivery might be impacted but also embrace different approaches when possible
+so that we can learn from our colleagues.</p>
+
+<h1><span lang=X-NONE>References</span></h1>
+
+<p class=MsoNormal>[1] In The Toolbox - Finding Text, C Vu 27-6,<br>
+<a href="http://www.chrisoldwood.com/articles/in-the-toolbox-finding-text.html">http://www.chrisoldwood.com/articles/in-the-toolbox-finding-text.html</a>
+<br>
+[2] In The Toolbox - Home-Grown Tools, C Vu 28-4,<br>
+<a
+href="http://www.chrisoldwood.com/articles/in-the-toolbox-home-grown-tools.html">http://www.chrisoldwood.com/articles/in-the-toolbox-home-grown-tools.html</a>
+<br>
+[3] Developer Freedom, C Vu 26-1,<br>
+<a href="http://www.chrisoldwood.com/articles/developer-freedom.html">http://www.chrisoldwood.com/articles/developer-freedom.html</a>
+</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+07 February 2018</p>
+
+<h3><span lang=X-NONE>Biography</span></h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembler on 8-bit micros. These days it's enterprise
+grade technology in plush corporate offices. He also commentates on the
+Godmanchester duck race and can be easily distracted via gort@cix.co.uk or
+@chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>
