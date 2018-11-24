@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>VaultCmd Manual</title>
+<title>Ansible Vault Command Manual</title>
 <meta name="author" content="Chris Oldwood">
 <style>
 body	{ font-family: Verdana, Arial; font-size: 10pt }
@@ -14,7 +14,7 @@ td		{ font-family: Verdana, Arial; font-size: 10pt; border: 1px solid black; ver
 
 <body>
 
-<h3 align="center">VaultCmd v1.0</h3>
+<h3 align="center">Ansible Vault Command v1.0</h3>
 
 <a name="Introduction"></a>
 <h4>Introduction</h4>
@@ -37,7 +37,7 @@ By default the program reads and writes to the standard inout and output streams
 so you need only provide the password.
 </p>
 <pre>
-> type ciphertext.txt | VaultCmd.exe --password password
+> type ciphertext.txt | AnsVaultCmd.exe --password password
 TEST
 </pre>
 
@@ -51,7 +51,7 @@ You can use the <code>--infile</code> and <code>--outfile</code> switches
 independently so that you can mix-and-match the source and destination
 </p>
 <pre>
-> VaultCmd.exe --infile ciphertext.txt --password password --outfile "%TEMP%\plaintext.txt"
+> AnsVaultCmd.exe --infile ciphertext.txt --password password --outfile "%TEMP%\plaintext.txt"
 > type "%TEMP%\plaintext.txt"
 TEST
 </pre>
@@ -84,7 +84,7 @@ Email: <a href="mailto://gort@cix.co.uk">gort@cix.co.uk</a><br>
 Web: <a href="http://www.chrisoldwood.com">www.chrisoldwood.com</a><br>
 </p><p>
 Chris Oldwood<br>
-16th October 2018<br>
+24th November 2018<br>
 </p>
 
 </body>
