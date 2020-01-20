@@ -1,0 +1,11 @@
+Monitoring: Turning Noise into Signal
+=====================================
+
+The free-text format log file has been a staple technique for diagnosing systemic problems for decades and yet it has always served its masters poorly by being a victim of its own unstructured nature. Even just a little structure and an appreciation of the two competing narratives of operations and development can make a big difference to gaining an understanding about what's really going on inside our systems. Modern tooling, which provides superior querying and visualisation today, is no panacea and still requires effort to compensate for their limitations.
+
+This session looks at what techniques we can use to make monitoring of our systems, its dependencies, and its consumers easier and more comprehensible so that when the klaxon sounds we are better informed about where the problem may lie. And then, when resolved, how that knowledge is fed back into the backlog so the system can adapt to it in the future to help separate the signal from the noise.
+
+Biography
+---------
+
+Chris is a freelance programmer who started out as a bedroom coder in the 80’s writing assembler on 8-bit micros; these days it's enterprise grade technology in plush corporate offices. He also commentates on the Godmanchester duck race.
