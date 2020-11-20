@@ -1,0 +1,586 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Liberation Sans";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Microsoft YaHei";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Lucida Sans";
+	panose-1:2 11 6 2 3 5 4 2 2 4;}
+@font-face
+	{font-family:"\@Microsoft YaHei";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-style:italic;}
+h5
+	{mso-style-link:"Heading 5 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;}
+h6
+	{mso-style-link:"Heading 6 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Heading 7 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Heading 8 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Heading 9 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;}
+p.MsoList, li.MsoList, div.MsoList
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:7.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:7.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"Quote Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:black;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"Intense Quote Char";
+	margin-top:10.0pt;
+	margin-right:46.8pt;
+	margin-bottom:14.0pt;
+	margin-left:46.8pt;
+	line-height:115%;
+	border:none;
+	padding:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleEmphasis
+	{color:gray;
+	font-style:italic;}
+span.MsoIntenseEmphasis
+	{color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	text-decoration:underline;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	color:#C0504D;
+	letter-spacing:.25pt;
+	font-weight:bold;
+	text-decoration:underline;}
+span.MsoBookTitle
+	{font-variant:small-caps;
+	letter-spacing:.25pt;
+	font-weight:bold;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.WW8Num1z0
+	{mso-style-name:WW8Num1z0;}
+span.WW8Num1z1
+	{mso-style-name:WW8Num1z1;}
+span.WW8Num1z2
+	{mso-style-name:WW8Num1z2;}
+span.WW8Num1z3
+	{mso-style-name:WW8Num1z3;}
+span.WW8Num1z4
+	{mso-style-name:WW8Num1z4;}
+span.WW8Num1z5
+	{mso-style-name:WW8Num1z5;}
+span.WW8Num1z6
+	{mso-style-name:WW8Num1z6;}
+span.WW8Num1z7
+	{mso-style-name:WW8Num1z7;}
+span.WW8Num1z8
+	{mso-style-name:WW8Num1z8;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria","serif";
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-link:"Heading 5";
+	font-family:"Cambria","serif";
+	color:#243F60;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-link:"Heading 6";
+	font-family:"Cambria","serif";
+	color:#243F60;
+	font-style:italic;}
+span.Heading7Char
+	{mso-style-name:"Heading 7 Char";
+	mso-style-link:"Heading 7";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.Heading8Char
+	{mso-style-name:"Heading 8 Char";
+	mso-style-link:"Heading 8";
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+span.Heading9Char
+	{mso-style-name:"Heading 9 Char";
+	mso-style-link:"Heading 9";
+	font-family:"Cambria","serif";
+	color:#404040;
+	font-style:italic;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	letter-spacing:.75pt;
+	font-style:italic;}
+span.QuoteChar
+	{mso-style-name:"Quote Char";
+	mso-style-link:Quote;
+	color:black;
+	font-style:italic;}
+span.IntenseQuoteChar
+	{mso-style-name:"Intense Quote Char";
+	mso-style-link:"Intense Quote";
+	color:#4F81BD;
+	font-weight:bold;
+	font-style:italic;}
+p.Heading, li.Heading, div.Heading
+	{mso-style-name:Heading;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Liberation Sans","sans-serif";}
+p.Index, li.Index, div.Index
+	{mso-style-name:Index;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 2.0cm 2.0cm 2.0cm;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB style='line-break:strict'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>I’m a big fan of quotes, not the funny little marks we use
+to enclose strings in source code and speech in prose, or use inappropriately
+when distinguishing between plurals and possession, but those tiny utterances
+which are either written or spoken and yet manage to convey much more. One man
+who has provided so many of the latter and yet equally suffered from the
+malaise of the complex rules of the apostrophe is Fred Brooks. (I constructed
+that sentence very carefully to avoid that particular trap and therefore save
+valuable time for the editor and reviewers.) From his vast catalogue of
+memorable writing I can easily single out one quote which sums up a career in
+programming without passing judgement on those who find themselves on the wrong
+side of the tracks:</p>
+
+<p class=MsoNormal>“Good judgement comes from experience, and experience comes
+from bad judgement.”</p>
+
+<p class=MsoNormal>Relayed in its entirety it stands as a shining example of
+how even failure can be seen in a good light – a continuous source of learning
+– so long as the culture surrounding us provides us with the safety we need to
+experiment.</p>
+
+<p class=MsoNormal>Sadly not all quotes have the structure that allows them to
+remain intact or at least to withstand the continual need to compress and
+distil a concept into as few words as possible. This reductionism works pretty
+well in the Design Patterns community where we have managed to reduce many
+common solutions to repeating problems in software design down to just a few
+words. In the case of the Gang of Four they reached the holy grail of just a single
+word for a number of fundamental concepts and gave us the power to communicate
+volumes with a ubiquitous language. In time they even gave us the power to
+evoke a complex emotional response simply by uttering the word “singleton”.</p>
+
+<p class=MsoNormal>In one of her many (self-confessed) failed attempts to write
+an editorial the Overload editor reminded us of those immortal words from
+Strunk &amp; White which no doubt play a significant role in the crusade to
+eliminate the superfluous – “omit needless words”. Given the prevalence of soot
+in the printing process (as an ingredient of ink) you could make an argument
+that following this advice would lead you to a reduction in your carbon
+footprint too. Fran amusingly points out that with undue care you can take this
+too far and quickly lose the essence, creating a monster in its wake. Needless
+to say that naively paraphrasing Strunk &amp; White as “omit words” is not a
+zero sum game.</p>
+
+<p class=MsoNormal>I’m sure there are people who feel <i>that</i> famous
+six-word story from Ernest Hemingway about unworn baby shoes on eBay <i>can</i>
+be improved upon, although that wasn’t it. I’ve definitely been in project
+meetings where Kent Beck’s succinct expression of how late you can leave a
+decision, namely the “last responsible moment”, has undoubtedly been
+irresponsibly re-interpreted as the “last moment”, at which point a mad
+scramble takes place to continue to hit the (no doubt artificial) deadline.
+From the vitriol that appears regularly on the Internet you could be mistaken
+for believing that Beck was also responsible for suggesting that we merely “do
+the simplest thing” and forgo any thought or planning (the consequences be
+damned). After all, what possible extra value does “...that could possibly
+work” add to such a proposition – who would be stupid enough to trade-off “simplicity”
+over “working”? Maybe the very same people that would prefer to just “Keep It
+Simple” and kiss goodbye to correctness.</p>
+
+<p class=MsoNormal>Sir Tony Hoare is definitely no stranger to this phenomenon.
+I wonder if our industry’s billion pound mistake is an inability to write
+quotes out in full. The poster child for this whole affair is almost certainly
+the continued debate around whether or not someone is “prematurely optimising”.
+Delivered by itself Hoare may as well have written: “we should forget about
+full quotations, say about 97% of the time”. I guess some quotes need to be
+made so simple they have no obvious deficiencies.</p>
+
+<p class=MsoNormal>Sometimes it feels like there is a Newton’s Third Law of
+Truism – for every quotation there is an equal and opposite (misguided)
+interpretation. This makes some conversations seem like a game of Quote Trumps™
+where you try to make a succinct point and then your colleague feels the need
+to respond with a “superior” quote in the hope of scoring more points. For
+example “the customer is always right” is almost always “trumped” by that old
+classic (which is commonly attributed to Henry Ford) about the customer really
+wanting “faster horses”. This quote is almost always used to justify why
+developers know better than their customers and therefore give themselves the
+right to explore some shiny new technology rather than spend <i>more time</i>
+understanding what problem the customer is really trying to solve. Sometimes
+the problem is to discover what the problem is.</p>
+
+<p class=MsoNormal>I don’t believe it’s limited to our industry but maybe we’re
+just in more of a rush than anyone else and are therefore more content to skip
+the research and critical thinking phases and move straight on to the executive
+summary. Mind you, <i>that</i> expression is now considered overly verbose too
+and has been undercut by the new kid on the block “TL;DR”. How long before we
+capture this sentiment within a single emoji and continue to prematurely
+optimise reading time over comprehension?</p>
+
+<p class=MsoNormal>Quotations are written for people to read and only
+incidentally for inclusion in motivational books (or for comedic effect). The
+moment we start to paraphrase we run the risk of subtly changing the meaning in
+such a way that our audience will miss the point, with the catastrophic effect
+that they may even take away the opposite view to what was intended by the
+original author; in the wrong hands quotes could be considered harmful.</p>
+
+<p class=MsoNormal>For those less familiar with Strunk &amp; White they need
+look no further than Hoare himself as he was the one who suggested that inside
+every large program is a small one struggling to get out. Reductionism is
+therefore an essential process but how do we ensure that we make things as
+simple as possible, but no simpler? I fear there is no silver bullet...</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+12 May 2020</p>
+
+<h3 style='margin-left:0cm;text-indent:0cm'>Biography</h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembler on 8-bit micros. These days it's enterprise
+grade technology in plush corporate offices. He also commentates on the
+Godmanchester duck race and can be easily distracted via gort@cix.co.uk or
+@chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>
