@@ -1,0 +1,262 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Liberation Sans";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Microsoft YaHei";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Lucida Sans";
+	panose-1:2 11 6 2 3 5 4 2 2 4;}
+@font-face
+	{font-family:"\@Microsoft YaHei";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria",serif;
+	color:#4F81BD;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+a:link, span.MsoHyperlink
+	{color:navy;
+	text-decoration:underline;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria",serif;
+	color:#17365D;
+	letter-spacing:.25pt;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria",serif;
+	color:#4F81BD;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 2.0cm 2.0cm 2.0cm;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white lang=EN-GB link=navy vlink=maroon style='word-wrap:break-word;
+line-break:strict'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>Way back in 2014 I gave a slightly extended lightning talk
+at the ACCU Conference titled <i>The Art of Code</i> [1]. One of the “humorous”
+code snippets I presented lampooned the hidden complexity that can arise from
+the overuse of reflection based libraries and frameworks, most notably of the
+dependency injection kind. At the time I had found myself face-to-face with a
+C# codebase that was difficult to reason about due to this very affliction and
+it also lead me to make the following pun on Twitter:</p>
+
+<p class=MsoNormal>“They say C# &amp; Java developers have a habit of overusing
+reflection. Given the quality of their code I'd say they're not reflecting
+enough...”</p>
+
+<p class=MsoNormal>The vast majority of my Twitter puns are poor attempts at
+wordplay and throwaway comments but every once in a while I realise there may
+be something deeper in the punchline that I wasn’t immediately aware of. Consequently
+I now find myself reflecting on reflection which feels awfully meta!</p>
+
+<p class=MsoNormal>While I never realised it until very recently I believe my
+own interest in reflection is another one of those characteristics which I can
+attribute to Steve Maguire’s 1993 book <i>Writing Solid Code</i>. One of the
+ideas he introduces quite early on is the notion that when you find a bug,
+before fixing it, you ask yourself some questions, such as “how could I have
+prevented this” and “how could I have automatically detected it”. The book goes
+on to introduce the use of ASSERTs to verify assumptions along with cranking up
+optional compiler diagnostics and using static analysers to work smarter instead
+of harder.</p>
+
+<p class=MsoNormal>Initially I limited this practice to what the book was
+addressing – writing code – but as my experience as a programmer grew and I got
+to branch out into other disciplines I found myself adopting the question more
+and more whenever something went awry. Around the same time Ed Nisley’s column
+in Dr Dobbs Journal began to explore some of the post mortems that NASA had
+been publishing and while I took solace in even their ability to fail
+spectacularly on occasion with the vast resources they had available, their
+desire to reflect and improve at every scale was an attitude I felt was laudable.</p>
+
+<p class=MsoNormal>Consequently that question grew from being a way to help
+avoid bugs in native code to being one that pervaded more and more aspects of
+both my professional and personal life. It wasn’t just limited to trying to
+help avoid my own mistakes either but became a more natural question to ask
+whenever something went wrong. I found I started developing a strong desire to
+avoid settling for simply fixing incidents in isolation and instead to see if
+there might be an underlying pattern and therefore find a way to avoid the
+entire <i>class</i> of incidents in future.</p>
+
+<p class=MsoNormal>After many late nights in those early days debugging native
+code I was perfectly happy to buy into Maguire’s advice around leveraging
+tooling and practices that would minimise these problems. It didn’t take me
+long to be sold on unit testing and then Test Driven Development (TDD) either
+once I eventually became aware of them and my own inadequacies at manual testing.
+(Interestingly Maguire only makes a passing comment about unit tests – <i>if
+you have them</i>, you should run them. I now wonder what unit tests looked
+like back in the early ‘90s!)</p>
+
+<p class=MsoNormal>In a metaphorical sense you might consider a test-first
+mentality to be the “reflection” in a timeline from a post-debugging
+retrospective – a desire to unearth defects as early as possible is a natural
+consequence of frustration after being by bitten by a problem that could have
+easily been avoided. Even if the problem was unavoidable, being in a position
+to automatically validate and deploy the resulting fix quickly is still a much
+better place to be than facing another phase of handovers and manual testing.</p>
+
+<p class=MsoNormal>That level of pessimism which comes with hard won experience
+was once summed up wonderfully by @fioroco on Twitter back in 2017 [2]:</p>
+
+<p class=MsoNormal>junior dev: &quot;i found the bug&quot;<br>
+senior dev: &quot;i found a bug&quot; </p>
+
+<p class=MsoNormal>Naturally there is a balance here. Sometimes it is just a
+simple mistake but other times it’s a more fundamental misunderstanding. I once
+discovered a memory leak caused by a non-virtual destructor in a base class.
+Rather than fix it and move on I checked for a pattern and quickly found the
+same author had done it another 19 times and, although not in my team any more,
+were still only a few desks away. They really appreciated the heads up and I
+managed to stem the tide in two systems.</p>
+
+<p class=MsoNormal>On the interviewing front I’ve begun to feel that a tendency
+to reflect on one’s work is probably a strong indicator of quality, even if
+they haven’t performed it as a formal exercise like a retrospective. I’ve never
+really been one to ask classic interview questions like “What does SOLID stand
+for” but I want candidates to try and embellish more on the “why” when talking
+about what they’ve worked on – I like decisions to be conscious rather than
+done by rote. Hence if a candidate lists something like SOLID on their CV I’d
+ask them “give me an example when you applied one of the SOLID principles as
+part of a refactoring”. I’ve found this style of question provides more avenues
+to explore their thought processes and understanding of a topic.</p>
+
+<p class=MsoNormal>Even if behaviours are automatic now, maybe they were once
+done more consciously and it’s been a while since any reflection was performed on
+the practice or the conditions under which they once applied. It’s taken a
+beating over the last few years due to misuse in some circles but the principle
+of “strong opinions weakly held” is one I still feel is valuable. The school of
+hard knocks can send us down a more cautious path which often bears fruit for a
+considerable time, but we should be open to being challenged and accept that
+progress may have been made in the intervening years. I now find that usually
+comes from others, but not necessarily as direct criticism, more as a fleeting
+comment which I once might have simply dismissed but now embrace as an
+opportunity to re-evaluate past decisions.</p>
+
+<p class=MsoNormal>Maguire’s book also taught me to step through new code with
+a debugger, a practice which I found invaluable for so many years. Even after
+adopting unit testing and then TDD I struggled to let go of the debugger even
+when writing tests. But what caused me to drop it in the end wasn’t more
+confidence in my ability to solve problems correctly first time but that the
+massively reduced cost of failure and recovery in modern software development meant
+I could be far less paranoid of the consequences.</p>
+
+<p class=MsoNormal>[1] <a
+href="https://www.slideshare.net/chrisoldwood/the-art-of-code">https://www.slideshare.net/chrisoldwood/the-art-of-code</a></p>
+
+<p class=MsoNormal>[2] <a
+href="https://twitter.com/fioroco/status/937824968594853888">https://twitter.com/fioroco/status/937824968594853888</a>
+</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+23 September 2021</p>
+
+<h3>Biography</h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembler on 8-bit micros. These days it's enterprise
+grade technology <s>in plush corporate offices</s> from the comfort of his
+breakfast bar. He has resumed commentating on the Godmanchester duck race but
+continues to be easily distracted by messages to gort@cix.co.uk and
+@chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>
