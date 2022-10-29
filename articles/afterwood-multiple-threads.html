@@ -1,0 +1,226 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #5B9BD5 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>I was recently watching an episode of Marvel’s Agents of
+S.H.I.E.L.D with my youngest before his bedtime. In the episode they had travelled
+back in time to 1940’s America and were changing into clothes considered more appropriate
+for the times, to blend in. After they all got changed and met back up again one
+character remarked to the other “nice threads!” In this instance they were
+referring to another person’s clothes, but it got me thinking that nobody has
+ever said that to me, which, given my weak fashion skills is not surprising,
+but more topically for this publication, it’s not a phrase I’ve ever heard somebody
+remark about another person’s code either. Given the problems that all too often
+arise from the introduction of additional threads into a program it’s far more likely
+that you’ll be chastised for your threads rather than commended for them.</p>
+
+<p class=MsoNormal>The late Rusel Winder was a programmer who was no stranger
+to problems involving concurrency and had the good fortune to work with some
+serious parallel hardware when some of use were still all gooey eyed over the <i>second</i>
+CPU in our desktop machine. I’m pretty sure Russel would never congratulate anyone
+on their choice of threads as he was a big proponent of solving concurrency problems
+by using higher-level concepts. Like so much in the world of Computer Science many
+of the techniques for managing concurrency have been around for decades and
+Russel was always keen to promote the Actor Model, Communicating Sequential
+Processes (CSP), etc. in his talks and writings. I never really grokked either
+of these until Russel published his <i>Introduction to GPars</i> in C Vu 22(6) back
+in 2011. I’ve still never written a line of Groovy or done anything significant
+on the JVM but this article provided the clarity I needed to start seeing how
+these ideas were realized in a modern language.</p>
+
+<p class=MsoNormal>If you grew up in the UK during the 1980’s you might already
+have an aversion to threads due to the BBC’s film of the same name which depicted
+the state of Britain after a nuclear war. I was slightly too young to watch it
+first time around, although like any teenager that didn’t stop me trying to
+because apparently there were “other kids” in our school who had allegedly watched
+it. Despite the grown-ups slapping a 15 certificate on it to advise us youngsters
+against being foolish and dabbling in issues we were emotionally under equipped
+to deal with we jumped right in anyway and regretted it later. Why do we never listen
+to our elders? As the old joke goes “some programmers, when confronted with a problem,
+think ‘I’ll use threads’, now problems two have they.”</p>
+
+<p class=MsoNormal>I once interviewed someone for a highly technical role and casually
+asked them how they felt about lock-free programming. They simply replied, “I’ll
+give anything a go.” While I admire their positive outlook on life this was not
+really the response I was expecting. Anthony Williams’ book on concurrency with
+C++ weighs in at six hundred pages and Joe Duffy’s concurrency book for Windows
+hits nine hundred. What this tells me is that it isn’t something you can “dabble
+in”, it feels more like a career in its own right.</p>
+
+<p class=MsoNormal>Debugging multi-threaded programs is always an interesting prospect,
+especially trying to single step through functions which are executing similar workloads
+on different threads. It reminds me of my first foray into the Usenet way back at
+university before the common availability of “threaded newsreaders”. Contrary
+to what you might be thinking these weren’t programs which used multiple threads
+to achieve better UI responsiveness (we’re talking Unix terminals here), this
+was about stitching together a continuous stream of forum posts on different topics
+so that you could focus on one conversation at a time instead of constantly context
+switching between subjects. Single stepping through a multi-threaded program is
+always a bit of a shot in the dark as you wonder how far you’ll get before you’re
+whisked away to another land. At least we eventually get to return to where we
+left off unlike poor old Sam Beckett in Quantum Leap. “Oh, boy!” indeed.</p>
+
+<p class=MsoNormal>It wasn’t just late 80’s newsreaders though, this was also how
+Twitter felt in its early years. Fortunately, everything was largely unrelated anyway
+so there wasn’t really a context to be dragged away from and return to. The
+introduction of the 280 character limit in late 2017 was swiftly followed by
+the appearance of “threads” as Twitter tried to convince its users that brevity
+was no longer the soul of wit. Further correlation between social media platforms
+and concurrent programming are possible when you consider their problems with
+coherence and false sharing.</p>
+
+<p class=MsoNormal>One career that seems to have died out since the C++
+committee finally decided to come clean with C++11 and define a thread aware memory
+model is that of answering Stack Overflow questions about how to safely implement
+a Double-Checked Lock (DCL). The Internet was awash with solutions on how to safely
+acquire a Singleton (though, once again, you now have two problems) that turned
+out to be wrong. The dominance at the time of the Intel CPU meant that “works
+on my machine” was almost a statistically valid argument. A few people working on
+more advanced CPU architectures got bitten but the strong view taken by the incumbent
+x86 meant that many of us lived in ignorant bliss. When Herb Sutter declared to
+the world that the free lunch was over, he was talking about CPU single core performance,
+but he might as well have been talking about the rise of the ARM which has a
+weaker view on ordering and a stronger view on messing with your head. Java had
+its DCL crisis just after Y2K calmed down whereas .Net had another decade to go
+before its bubble finally burst, even the JVM &amp; CLR are not immune it seems.</p>
+
+<p class=MsoNormal>With the continued working from home and decline of the suit
+&amp; tie in the workplace I suspect my chances for a fashion compliment have
+long since passed. As for the prospect of never having to deal with a threading
+issue again, all I can say is “promises, promises!”</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+18 May 2022</p>
+
+<h3>Biography</h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembler on 8-bit micros. These days it's enterprise
+grade technology <s>in plush corporate offices</s> from the comfort of his
+breakfast bar. He has resumed commentating on the Godmanchester duck race but
+continues to be easily distracted by messages to gort@cix.co.uk and
+@chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>
