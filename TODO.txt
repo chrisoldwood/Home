@@ -1,0 +1,5 @@
+- Replace the tables with divs.
+
+- Use proper headings for section headings.
+
+- Simplify the CSS.
