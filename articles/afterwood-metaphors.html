@@ -1,0 +1,248 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#4472C4;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#4472C4;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Calibri Light",sans-serif;
+	color:#4472C4;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#4472C4;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4472C4 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>The second most popular joke in programming reminds us that
+naming is hard. (In a Programming Jokes Top 10, this would be the other one.) That
+hasn’t stopped some people apparently attempting to overcome this problem by applying
+a “formula” which generally involves concatenating various Computer Science and
+business terms together and finally appending one of Manager, Service, or Provider
+to give it extra gravitas. The problem appears to be particularly acute in the enterprise
+world of Java and C# where Design Pattern Bingo is a popular pastime.</p>
+
+<p class=MsoNormal>What triggered this latest Afterwood was working in a C# codebase
+where there had been a need to write tests for code that invoked <span
+style='font-family:"Courier New"'>DateTime.Now()</span> which is a static
+method that returns the current date and time. Doing a spot of software archaeology,
+I noticed there had been an initial attempt to work around the non-deterministic
+nature of this method by doing an assertion in the tests with a small tolerance,
+but the woefully underpowered CI server put paid to that as the tolerance was widened
+every time the tests took longer than usual to run.</p>
+
+<p class=MsoNormal>The solution had been to mock out the method call entirely and
+return a fixed value in the tests and the real date &amp; time in production by
+introducing a suitable interface and pair of concrete implementations. Naturally,
+if you’re looking to name an interface for such an abstraction you’re probably thinking
+“what do I call an interface that provides a date &amp; time value?” and so you
+go with the first thing that pops into your head – <span style='font-family:
+"Courier New"'>IDateTimeProvider</span>. Wait, that’s not right…</p>
+
+<p class=MsoNormal>I don’t know for sure how this name really came about but
+the seemingly robotic approach to so many names in the codebase suggested they
+were driven by terms from the <i>solution</i> domain instead of the problem domain
+or, say, The Real World™. I posited on the team chat that the <span
+style='font-family:"Courier New"'>IDateTimeProvider</span> abstraction was basically
+just a “clock”, and that was largely met with approval, so the refactoring went
+straight in. It also opened the door for a further discussion about naming, metaphors,
+and typing less. (Strunk famously tells us to “omit needless words” which has
+the marginal added benefit of less wear and tear on the keyboard.)</p>
+
+<p class=MsoNormal>The world of software is entirely virtual in nature and
+therefore we must rely very heavily on metaphors as a source of inspiration for
+how we name stuff. The great thing about the world of horology is that it provides
+us with a whole host of physical devices to draw from. “Clocks” and “calendars”
+allow us to discover the current time and date, “stopwatches” allow us to measure
+time, and “timers” can be used to notify us when a period has elapsed. Clocks
+come in many different shapes and sizes, and degrees of precision, so if you
+want to capture that in your naming scheme you could use “wall clock” for the low-end
+and a highfalutin name like “chronometer” for the high-end.</p>
+
+<p class=MsoNormal>While the name <span style='font-family:"Courier New"'>IDateTimeProvider</span>
+might on the surface appear to be sufficient for the task, I argued that it’s <i>too</i>
+abstract. This also gave the perfect opportunity to play one of my Programming Quote
+Top Trump cards [1] from Edsger Dijkstra:</p>
+
+<p class=MsoNormal>&quot;Being abstract is something profoundly different from
+being vague … The purpose of abstraction is not to be vague, but to create a
+new semantic level in which one can be absolutely precise.&quot;</p>
+
+<p class=MsoNormal>The point of using a metaphor is to allow us to be <i>more</i>
+precise about the kind of thing we're talking about by borrowing from a
+recognisable domain. When talking to the business we would expect to use a “ubiquitous
+language” and expect the problem domain to provide many of the terms we use in
+our code. When it comes to the technical domain, something which the business will
+have almost no input on, we are left to our own devices. This does not absolve us
+of the responsibility to be clear about what we mean in the code. If anything, we
+have to work harder because it’s not handed to us on a plate. (Pro Tip: always keep
+a thesaurus on hand for inspiration [2].) </p>
+
+<p class=MsoNormal>One comment to my suggested renaming was that it didn’t really
+matter because although the code said “<span style='font-family:"Courier New"'>IDateTimeProvider</span>”,
+in their head they mentally translated that into “clock” anyway. This misses
+one of the key points about why we refactor code – to ensure that it always reflects
+the best understanding we have of the domain at any given point in time. If your
+best mental model is currently a clock, then that’s what it should be called (for
+now), don’t make people waste brain cycles second-guessing what might have been
+meant.</p>
+
+<p class=MsoNormal>And it is just a model, and an imperfect one at that. Playing
+my second Quote Top Trump card – George Box – we are reminded that “all models
+are wrong, some are useful”. In some scenarios it could be a poor metaphor because
+a clock may conjure up a different kind of device, such as in electronics where
+the clock is an oscillating signal, more like a metronome ticking left and
+right, than a pair of hands slowly turning around a circle. Fortunately, the
+same stable that brought us the notion of a ubiquitous language also helps us
+resolve our conflict here by applying a “bounded context” around our codebase
+so that the interpretation is the most fitting one for our part of the business
+instead of encompassing every potential definition covered by Wikipedia.</p>
+
+<p class=MsoNormal>Hopefully the use of the clock metaphor will be timeless,
+but as we get older we do need to be aware of anachronisms, such as the nautical
+terms I wrote about back in June [1]. Once upon a time Hi-Fi Separates (where
+the turntable, tape deck, CD player, amp, etc. were all distinct devices
+connected by standard RCA cables) was a common metaphor for a component-based
+architecture but that seems to have died out as headphones (except on public
+transport) is the only accessory for the “modern Hi-Fi”, aka the phone. And if
+you’re still thinking of using a floppy disk for your save icon then I’m afraid
+that ship sailed a long time ago!</p>
+
+<h2>References</h2>
+
+<p class=MsoNormal>[1] Afterwood – Quote Top Trumps, Overload 175, June 2023. <br>
+[2] In The Toolbox – Dictionary &amp; Thesaurus, C Vu, 27(3), July 2015.</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+12 September 2023</p>
+
+<h3>Biography</h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembly language on 8-bit micros. These days it's
+enterprise grade technology <s>in plush corporate offices</s> from the comfort of
+his breakfast bar. He also commentates on the Godmanchester duck race and is easily
+distracted by emails and DMs to gort@cix.co.uk and @chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>

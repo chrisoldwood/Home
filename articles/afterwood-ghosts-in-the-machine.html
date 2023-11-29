@@ -1,0 +1,216 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#4472C4;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Calibri Light",sans-serif;
+	color:#4472C4;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #4472C4 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>I always find writing an article at this time of year particularly
+challenging. Due to the lead time in publishing we’re currently celebrating
+Halloween, but by the time this hits the metaphorical shelves we’ll be enjoying
+the Christmas festivities. In the world of programming this Halloween / Christmas
+duality is even immortalised in a joke that riffs on date formats and number bases
+to illustrate that “<span style='font-family:"Courier New"'>OCT 31 == DEC 25</span>”.</p>
+
+<p class=MsoNormal>If you’ve ever worked with databases you may have come
+across The Halloween Problem. This was an issue coined back in the 1970’s where
+a database update to adjust employee salaries used an index on the <i>same</i>
+column that was being updated. As each salary was increased it caused the row
+to move further down the index and consequently was visited multiple times, meaning
+that every salary was bumped repeatedly until it exceeded the threshold specified
+for the raise. If you were one of the lowest paid employees in that company, then
+Christmas would definitely have come very early that year!</p>
+
+<p class=MsoNormal>By the time I had started working with databases all these
+issues had been worked out and the ACID guarantee had become a staple question at
+job interviews. It wasn’t until the rise of the NoSQL movement in the late 2000’s
+and the new breed of document-oriented databases like CouchDB and MongoDB that
+I started to become more aware of issues like The Halloween Problem, and its
+associated problems like Phantom Reads. The performance demands of “Web 2.0 at
+scale” meant that the cool kids were happy to trade their ACID guarantees for throughput,
+and so the pendulum started to swing back the other way, and we also got to use
+the new excuse “eventual consistency” whenever things didn’t quite add up. In those
+early days some database products traded off more than just the ACID guarantees,
+in the race to appear fastest in the benchmarks they chose dangerous defaults
+which meant you couldn’t even be sure if your request left the machine. The pitchforks
+came out, the “NoSQL Considered Harmful” posts were written, and the pendulum
+swung back again towards the Pit of Success.</p>
+
+<p class=MsoNormal>Even if you do manage to avoid the phantoms in your result-sets
+you’ll struggle to escape one of the most curious perversions in relational database
+logic — the non-value “NULL”. After scratching your head wondering why your SQL
+query doesn’t work as you expect when NULLs are present, you learn that one NULL
+does not equal another NULL and you need to litter your SQL code with IS NULL, ISNULL,
+COALESCE, etc. instead. Until that is you introduce certain aggregations,
+grouping, or sorting constructs at which point NULL starts to feel like it does
+have equivalence semantics after all. But the SQL standards committee are a
+cunning bunch and with a little sleight of hand they sidestep the apparent similarities
+of equivalence by introducing the concept of “distinctness” instead and any
+notion of equivalence remains merely a figment of your imagination.</p>
+
+<p class=MsoNormal>If a database NULL is a value which doesn’t exist, then in
+the world of floating-point numbers the undead comes in the form of a nan – once
+a number, full of life, but now destined to walk the Earth turning every other
+number it meets into the undead too. This one really is evil though as there is
+no standards committee to save you here if one creeps into your collection before
+you try and sort it. Depending on the language and sort implementation you
+might be lucky and escape with a sequence that remains intact whereas if you’re
+unlucky your sort won’t complete until the heat death of the universe making
+the outcome a moot point. I’m pretty sure IEEE754 wasn’t what the late Fred
+Brooks had in mind when we warned us there was no silver bullet but maybe he
+also advised us to decorate our collection types with garlic in one of his lesser-known
+essays.</p>
+
+<p class=MsoNormal>If you’ve dabbled in computing for even a small amount of
+time you’ll likely have experienced The Ghost in the Machine. Like many real-world
+ghost sightings they eventually get debunked. That elusive bug, which initially
+appears to be from another realm turns out to be entirely real, and all too
+often self-inflicted. We might call it Undefined Behaviour to avoid frightening
+the children but it’s really a portal to another dimension where only those
+tooled up like Ash Williams will make it out alive. C++ in particular has the kind
+of power to contact the dead all too easy, although it tends to be hackers that
+celebrate its “use after free” abilities.</p>
+
+<p class=MsoNormal>Einstein famously coined the phrase “spooky action at a
+distance” to describe the weirdness of quantum mechanics but you don’t need to
+delve <i>that</i> far down the technology stack to experience the spookiness of
+hardware. Even though we’re becoming less susceptible to the vagaries of some
+older technologies like hard disk drives, aka “spinning rust”, we are more reliant
+on network connectivity, meaning that Leslie Lamport’s famous quip from the
+late 80’s about distributed systems and being reliant on computers you didn’t even
+know exist is becoming ever more prescient. Failing and loosely seated RAM
+chips also provide just enough of a distraction to make you question your
+sanity before declaring the host cursed. </p>
+
+<p class=MsoNormal>The complexities of modern hardware and software can make it
+feel like you’re constantly being haunted by a poltergeist as you struggle to
+reason why your code is not behaving the way you intended. Halloween might only
+be one day for normal people but for programmers it can feel like we’re permanently
+living in The Upside Down. When you’re battling with phantoms, daemons, and zombies
+sometimes it can feel more like exorcism than programming.</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+18 November 2023</p>
+
+<h3>Biography</h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembly language on 8-bit micros. These days it's
+enterprise grade technology <s>in plush corporate offices</s> from the comfort of
+his breakfast bar. He also commentates on the Godmanchester duck race and is easily
+distracted by emails and DMs to gort@cix.co.uk and @chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>
