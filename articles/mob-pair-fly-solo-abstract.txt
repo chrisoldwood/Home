@@ -1,0 +1,9 @@
+Mob, Pair, or Fly Solo?
+
+Collaboration lies at the heart of sustainable software delivery. With pair and ensemble programming becoming ever more established practices you might wonder if they're for you (or your team), or maybe you're just curious about how multiple people working on the same problem can be as, or more effective than working individually. This session looks at the benefits of ensemble programming but also when it might be more appropriate to tackle problems in smaller groups, or even individually.
+
+On the face of it pair and ensemble programming appears to an inefficient way to deliver software, but that's because it's often perceived like a production line where each item is independent of any others. However, software delivery is a creative process where our choices today have a material impact on our ability to effectively deliver further change tomorrow and in the distant future. By understanding the forces that eventually limit our ability to make changes efficiently we can try to slow the rate of entropy. Programming in groups increases the rate of communication and consequently leads to a better understanding of the codebase and its evolution which in turn helps minimise problems like Technical Debt because they are tackled at source. That said, there is still room for individualism in a team as one size never fits all.
+
+---
+
+Chris is a freelance programmer who started out as a bedroom coder in the 80’s writing assembly language on 8-bit micros; these days it's enterprise grade technology in plush corporate offices, or remotely from his breakfast bar. He also commentates on the Godmanchester duck race.

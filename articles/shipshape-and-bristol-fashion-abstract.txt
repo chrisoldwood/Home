@@ -1,0 +1,13 @@
+Shipshape and Bristol Fashion
+=============================
+
+Unless you're working by yourself on a throwaway program, delivering software
+requires more than simply writing some code and running a few tests. Software is
+only every done when it's decommissioned and the last user uninstalls it, until
+then it will be subject to continuous change as either the users find new and
+interesting problems to solve or the environment around it evolves. The only
+constant is change and the question is how do we do that safely?
+
+This segment looks at what it takes to go from "works on my machine" to
+"shipped". Along the way we'll look into why tools and automation are essential
+but, more importantly, why team communication sits at the heart of the problem.
