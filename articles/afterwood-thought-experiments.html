@@ -1,0 +1,238 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+.MsoChpDefault
+	{font-family:"Aptos",sans-serif;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #5B9BD5 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>As the pendulum swings ever closer towards being leaner, and
+focusing on simplicity, I grow more concerned about how this is beginning to
+affect software architecture. By breaking our work down into ever smaller
+chunks and then focusing on delivering the next most valuable thing, how much
+of what is further down the pipeline is being factored into the design
+decisions we make today? And consequently, how much pain are we storing up for
+ourselves because we took the pejorative Big Design Up Front (BDUF) too far and
+ended up with No Design Up Front?</p>
+
+<h2>Wasteful Thinking</h2>
+
+<p class=MsoNormal>Part of the ideas around being leaner is an attempt to
+reduce waste caused by speculative requirements which has led many a project in
+the past into a state of “analysis paralysis” where they can’t decide what to
+build because the goalposts keep moving or the problem is so underspecified
+there are simply too many options and we have to second-guess everything. By
+focusing on delivering something simpler, much sooner, we begin to receive an
+initial return on our investment earlier which helps shape the future design based
+on <i>practical</i> feedback from today, rather than guessing what we need.</p>
+
+<p class=MsoNormal>When we’re building those simpler features that sit nicely
+upon our existing foundations we have much less need to worry about the cost of
+rework from getting it wrong as it’s unlikely to be overly expensive. But as we
+move from independent features to those which are based around, say, a new
+“concept” or “pillar” we should not be afraid to spend a little more time
+looking further down the product backlog to see how any design choices we are
+considering now, <i>might</i> play out later. Emergent Design is not a Random
+Walk but a set of educated guesses based on what we currently know, and strongly
+suspect about the near future.</p>
+
+<h2>Thinking to Excess?</h2>
+
+<p class=MsoNormal>The term “overthinking” implies that we are doing <i>more</i>
+thinking than is actually necessary; trying to fit everyone’s requirements in
+and getting bogged down in analysis is definitely an undesirable outcome of
+spending too much time thinking about a problem. As a consequence, we are
+starting to think less and less up-front about the problems we solve to try and
+ensure that we only solve the problems we actually have and not the problems we
+think we’ll have in the future. Solving problems that we are only speculating
+about <i>can</i> lead to overengineering if they never manage to materialise or
+could have been solved more simply when the facts are eventually known.</p>
+
+<p class=MsoNormal>But how much thinking is overthinking? If I have a feature
+to develop and only spend as much effort thinking as I need to solve that
+problem today then, by definition, any more thinking than that is “overthinking
+it”. But not thinking about the wider picture is exactly what leads to the
+kinds of architecture &amp; design problems that begin to hamper us later in
+the product’s lifetime, and later on might not be measured in years but could
+be weeks or even days if we are looking to build a set of related features that
+all sit on top of a new concept or pillar. Building the simplest thing that
+could possibly work does not mean being naïve about the future.</p>
+
+<h2>The Thinking Horizon</h2>
+
+<p class=MsoNormal>Hence, it feels to me that some amount of overthinking is
+necessary to ensure that we don’t prematurely pessimise our solution and paint
+ourselves into a corner too quickly. As such, we should factor in related work
+further down the backlog, at least into our thoughts, to help us see the bigger
+picture and work out how we can shape our decisions today to ensure it biases
+our thinking towards our anticipated future rather than an arbitrary one.</p>
+
+<p class=MsoNormal>Acting on our impulses prematurely can lead to
+overengineering if we implement what’s in our thoughts without having a fairly
+solid backlog to draw on, and overengineering is wasteful. In contrast a small
+amount of overthinking – thought experiments – are relatively cheap and can go
+towards helping to maintain the integrity of the system’s architecture by
+narrowing the solution space to something more realistic. Very few software
+products have the need to scale to anything like what you read about in the technology
+news pages, despite what the optimists in the business might have you planning
+for.</p>
+
+<p class=MsoNormal>The phrase “think globally, act locally” is usually reserved
+for talking about the health of the planet, but I think it is fractal in
+nature, in that you can also apply it at the software system level too, to
+suggest factoring in thinking about the design &amp; architecture of the system
+even though you are only implementing a feature in a small part of it.</p>
+
+<p class=MsoNormal>One has to be careful quoting old adages like “a stitch in
+time saves nine” or “an ounce of prevention is worth a pound of cure” because
+they can send the wrong message and lead us back to where we were before –
+stuck for eternity in The Analysis Phase. That said, I also want us to avoid
+“throwing the baby out with the bathwater” and end up forgetting exactly how
+much thinking is required to achieve sustained delivery in the longer term.</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+15 January 2024</p>
+
+<h3>Biography</h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembly language on 8-bit micros. These days it's
+enterprise grade technology <s>in plush corporate offices</s> from the comfort
+of his breakfast bar. He also commentates on the Godmanchester duck race and is
+easily distracted by emails and DMs to gort@cix.co.uk and @chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>

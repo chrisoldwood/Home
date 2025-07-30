@@ -1,0 +1,227 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+.MsoChpDefault
+	{font-family:"Aptos",sans-serif;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #5B9BD5 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>One of the books which had a profound impact on me early on
+in my programming career was <i>Writing Solid Code</i> by Steve Maguire.  In
+Chapter 4 (<i>Step Through Your Code</i>) he introduces the practice of
+stepping through any new code you write, in the debugger, to see the code in
+action so that you can check the data flow, such as loop variables, to help
+avoid the perennial programmer nemesis – the off-by-one error. One of the
+side-effects of this practice is that it forces you to think about how to make
+it easy to get to that point in code in a debugger. If the code is many layers
+deep in the application then you might be tempted to create an explicit test
+harness that allows you to invoke the code more easily, along with the added
+benefit of giving you more control over the inputs. In turn <i>that</i> thought
+process can have an effect on the design of the code as you make it more “debuggable”
+in the first place.</p>
+
+<p class=MsoNormal>Although he didn’t use the term in his book back in 1993,
+this notion of shaping the code to make it easier to test is now known as
+Design for Testability and has a history in the hardware world that dates back
+to at least the early half of the 20<sup>th</sup> century. Black Box Testing,
+while useful, can only get you so far in the hardware world and, as complexity
+grew, they started to add additional features to help ensure the product was
+working correctly internally. In the software world White Box Testing has materialized
+under the guise of Unit Testing, with Mocking in particular being a realization
+of how the desire to make code more testable can affect the design of
+components.</p>
+
+<p class=MsoNormal>I continued to use the practice of stepping through my code
+in the debugger as my primary means of testing for the better part of a decade.
+What brought it to an end was being introduced to the newfangled practice of
+automated unit testing, along with the realization that the computer was so
+much more reliable at repetitive tasks like regression testing than a human.
+(More details on my eventual fall from grace and subsequent epiphany can be
+found in my ACCU 2017 conference talk <i>A Test of Strength</i>.)</p>
+
+<p class=MsoNormal>Being able to easily and reliably test my code was
+definitely a big win, but it also had another side-effect that I hadn’t
+anticipated until I started working on more complex systems – supportability. I
+got my first glimpse of this when I discovered that a test harness I wrote to
+make development of a back-end scheduling engine easier was being bundled with
+the application, for when bugs in the front-end made it impossible to fix-up
+the schedule. My test harness, while very raw from a GUI point of view (the sea
+of database IDs felt a bit like staring at The Matrix) allowed direct access to
+the back-end code so the schedule could be fixed-up by manually driving it
+using the real business logic. This was considered far safer than hacking about
+directly in the database as it minimised the chances of corrupting the state.
+(Debugging through the front-end, the default practice up to that point, cost
+you 8 minutes just waiting for it to load before you could invoke any back-end
+logic.)</p>
+
+<p class=MsoNormal>That experience taught me that there was more value in test
+harnesses than simply being able to make a developer’s life easier. As I
+started to interact with more support engineers, I began to see how hard their
+life was supporting applications and systems because they were so far removed
+from the developers building the system. In the intervening three decades since
+that episode took place the industry as a whole has started to empathise more with
+those outside the development team and have recognised that other areas such as
+InfoSec and Ops are also valid stakeholders in the system and their needs have
+to be listened to and addressed alongside those from the end users. This
+culminated in the creation of the DevOps movement and a “you build it, you run
+it” mentality, although it has since grown so much wider as the realisation
+dawned that only a holistic approach to building and running systems works in
+practice over the long term.</p>
+
+<p class=MsoNormal>While perhaps somewhat easier now, in the past I have had to
+fight for my belief in what appears to be only informally known today as Design
+for Supportability. One project manager back in the late 2000’s even suggested
+that any time spent creating custom tooling should be <i>my own time</i>, as it
+was not part of The Deliverables. When the BAU and Analysis teams discovered a
+testing tool I wrote to help me create custom test data sets, they openly
+thanked me, and then I felt my approach and time was vindicated.</p>
+
+<p class=MsoNormal>When I moved to another organization in the same industry to
+work on a similar system I put supportability front and centre, letting it
+drive the design and architecture to such an extent that for production it ran
+as a bunch of distributed services, but the same code could also be hosted in a
+<i>single</i> command line tool using local instead of remote procedure calls.
+I called it a “gig-in-a-box” because the entire distributed calculation engine
+was essentially running as a monolithic process which allowed us to easily
+debug, test, profile, and hence support the majority of the system’s codebase.
+We even had a formal database schema called “support” so our ad-hoc SQL
+snippets could become first class citizens.</p>
+
+<p class=MsoNormal>For sure, wasting time on speculative requirements and
+gold-plating are a concern, but there are ways to make that visible and, more
+importantly, discover what is driving that behaviour. Any team probably already
+has a bunch of half-baked, stale, duplicated support scripts and tools, so formalising
+them by adding them to the codebase can only be a good thing as then they will
+get the care and attention they deserve. Production incidents are stressful
+enough as it is, having a good toolkit can reduce the chances of that turning
+into a full-on disaster.</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+23 May 2024</p>
+
+<h3>Biography</h3>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembly language on 8-bit micros. These days it's
+enterprise grade technology <s>in plush corporate offices</s> from the comfort
+of his breakfast bar. He also commentates on the Godmanchester duck race and is
+easily distracted by emails and DMs to gort@cix.co.uk and @chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>

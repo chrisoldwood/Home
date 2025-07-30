@@ -1,0 +1,279 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+a:link, span.MsoHyperlink
+	{color:#467886;
+	text-decoration:underline;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+.MsoChpDefault
+	{font-family:"Aptos",sans-serif;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB link="#467886" vlink="#96607D" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #5B9BD5 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>Einstein famously told us to keep things as simple as
+possible, and no simpler. Hence, you’d think that being presented with a small snippet
+of simple code would generate a flurry of correct answers along with lots of
+metaphorical shrugging of shoulders and cries of “meh?” as people wonder what
+all the fuss is about.  Jason Gorman, someone who specialises in training &amp;
+coaching software teams, recently posted the following question on his various
+social media accounts [1][2]:</p>
+
+<p class=MsoNormal><i>Quick experiment: what's the expected result that's been
+blanked out in this test code?</i></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>[</span><span
+style='font-family:"Tahoma",sans-serif'>&#65279;</span><span style='font-family:
+"Courier New"'>Test]<br>
+public void FundsTransferDebitsPayer()<br>
+{<br>
+  // Arrange<br>
+  Account payer = new Account();<br>
+  payer.Credit(1000.0);<br>
+  Account payee = new Account();<br>
+<br>
+  // Act<br>
+  payer.Transfer(250.0, payee);<br>
+<br>
+  //Assert<br>
+  Assert.That(payer.Balance, Is.EqualTo(_____));<br>
+}</span></p>
+
+<p class=MsoNormal>He doesn’t say what programming language this is written in
+but it’s fair to say it’s either Java or C# -- a pair that are so similar these
+days they are easier to mix-up than Pluto and Goofy, or The Munsters and The
+Addams family. Either way, both these languages generally hold very few
+surprises, or dark corners that could lead to the pit of undefined behaviour. For
+those playing along at home, the answer really is just 750.0.</p>
+
+<p class=MsoNormal>My own response was a somewhat guarded “750, right?”,
+followed by a flippant suggestion that if this was an interview there would
+almost certainly be some gotcha that I hadn’t accounted for. There wasn’t, this
+time, but <i>nobody</i> ever posts a snippet of code on social media that does
+exactly what it says on the tin, so is it any wonder that nearly every reply
+was caveated in some way? We programmers can be such a jaded bunch at times,
+our bodies metaphorically covered from head-to-toe in scar tissue.</p>
+
+<p class=MsoNormal>Naturally I blame all those ridiculous interviews we go
+through where the apparent goal is not to hire someone capable of doing the job
+but to allow the interviewer to show the candidates how clever <i>they</i> are.
+If this code snippet was presented in a code review or generated during a pair
+/ ensemble session I would hardly think twice about it. (That’s not entirely
+true because of the apparent ill-advised use of floating-point numbers for
+monetary values instead of using <span style='font-family:"Courier New"'>decimal</span>
+in C#, <span style='font-family:"Courier New"'>BigDecimal</span> in Java, scaled
+integer, etc. but that wasn’t the point of the question.)</p>
+
+<p class=MsoNormal>Another side-effect of unrealistic interviews is that it
+makes it much harder to convince candidates that <i>your</i> interview process
+is not like that, and any code you ask them to write really should be simple.
+One client I worked for adopted a variation of Fizz Buzz to help separate “the
+wheat from the chaff” and, despite trying their best to convince candidates
+that they were after simple, boring code, candidates still felt the need to
+create an entire rules engine instead of writing a few “<span style='font-family:
+"Courier New"'>if</span>” statements. Using pair programming as an interview
+format [3] is also a technique I picked up there, and being present gives you
+an opportunity to ram home the message that KISS (Keep It Simple, Stupid!) is the
+expected mode of operation. Also, asking candidates for examples of
+refactorings they’ve done in the past has proved to be a useful seam to get a
+feel for what <i>they</i> might consider as unnecessary complex and consequently
+what their idea of “simpler” is.</p>
+
+<p class=MsoNormal>Many of the teams I’ve worked in over the years have
+generally been of the “you build it, you run it” stance and so your current
+teammates provide a useful barometer for what passes as “simple enough”. In a
+few cases though I’ve worked in The Enterprise™ where they have a different
+approach to maintenance, one where they hire a bunch of experienced developers
+to create a new service or application and then, when the first release is done,
+they hand it over to “the support team” for any future bug fixes or enhancements.
+What surprised me was that this team mostly spends their time doing system
+administration but then only gets to don their software developer hat
+occasionally.</p>
+
+<p class=MsoNormal>This difference in maintenance approach started to make me
+consider the readership of my code more deeply than usual and this popular
+quote from <i>The Elements of Programming Style</i> took on a new perspective:</p>
+
+<p class=MsoNormal>“Everyone knows that debugging is twice as hard as writing a
+program in the first place. So if you're as clever as you can be when you write
+it, how will you ever debug it?” – Brian Kernighan</p>
+
+<p class=MsoNormal>Consequently, patterns and idioms which, up to that point I
+assumed to be perfectly acceptable, I now felt less comfortable using and
+started questioning whether I was carrying over anachronisms instead of adopting
+more modern idioms that would make the code more accessible to this different
+audience. For example, as an industry we now discourage people from writing manual
+loops, and so I’d posit that a retry loop in C# of the form:</p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>var attempt = 5;<br>
+while(attempt-- &gt; 0) { … }</span></p>
+
+<p class=MsoNormal>is now becoming trickier to reason about than:</p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>foreach(var attempt
+in Enumerable.Range(1, 5)) { … }</span></p>
+
+<p class=MsoNormal>when it comes to mentally checking the maximum number of
+times around the loop. While the former technique might have been inherited
+from C by several popular languages, that doesn’t guarantee universal
+comprehension. It might be marginally less typing, and closer to the metal, but
+as we embrace more functional idioms the latter style of code is becoming the
+new norm.</p>
+
+<p class=MsoNormal>On the other hand, am I falling foul of Einstein’s advice
+and heading into oversimplification territory and as a consequence verging on
+patronisation? Can code become <i>too</i> simple?</p>
+
+<p class=MsoNormal>What I liked about the replies to Jason’s experiment was
+seeing people answer their own questions about the code without realising it.
+As Alex Horne often says to contestants in this situation on Taskmaster “all
+the information is on the task”, though in Jason’s example it’s in the names of
+the test, class, methods, and variables. Any other assumptions, like the
+default balance being 0.0, feel like a no-brainer too.</p>
+
+<p class=MsoNormal>At some point we have to put our spade down and trust that
+the reader will engage their own brain. The trouble seems to be that the reader
+doesn’t always trust us to hold up our end of the bargain.</p>
+
+<h2>References</h2>
+
+<p class=MsoNormal>[1] <a
+href="https://x.com/jasongorman/status/1736733070726721935">https://x.com/jasongorman/status/1736733070726721935</a>
+<br>
+[2] <a href="https://mastodon.cloud/@jasongorman/111601548580386385">https://mastodon.cloud/@jasongorman/111601548580386385</a>
+<br>
+[3] <a
+href="https://chrisoldwood.blogspot.com/2020/11/pair-programming-interviews.html">https://chrisoldwood.blogspot.com/2020/11/pair-programming-interviews.html</a>
+</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+22 July 2024</p>
+
+<h2>Biography</h2>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembly language on 8-bit micros. These days it's
+enterprise grade technology <s>in plush corporate offices</s> from the comfort
+of his breakfast bar. He also commentates on the Godmanchester duck race and is
+easily distracted by emails and DMs to <a href="mailto:gort@cix.co.uk">gort@cix.co.uk</a>
+and @chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>

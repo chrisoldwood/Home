@@ -1,0 +1,240 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	border:none;
+	padding:0cm;
+	font-size:26.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+a:link, span.MsoHyperlink
+	{color:#467886;
+	text-decoration:underline;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#5B9BD5;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	color:#323E4F;
+	letter-spacing:.25pt;}
+.MsoChpDefault
+	{font-family:"Aptos",sans-serif;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB link="#467886" vlink="#96607D" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<div style='border:none;border-bottom:solid #5B9BD5 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Afterwood</p>
+
+</div>
+
+<p class=MsoNormal>Pattern matching is a concept traditionally associated with
+functional programming but the more I think about my day-to-day job in the
+world of software development the more I realise that pattern matching in
+general is something which pervades everything from working with the codebase, to
+processes, and ultimately the people in the organisation.</p>
+
+<p class=MsoNormal>I was reminded again recently that we don’t all see the same
+patterns in code. (Before going on we need to stop and remind ourselves of Ralph
+Waldo Emerson's famous quote “A foolish consistency is the hobgoblin of little
+minds” but this not about being right or wrong, just a reflection on the
+disparity.)</p>
+
+<p class=MsoNormal>I discovered that someone had inserted 7DY (a financial
+period, aka “tenor”, representing 7 days) between 0DY and 0YR instead of
+between 6DY and 1WK in this sequence below, and that threw me.</p>
+
+<p class=MsoNormal>0DY, 0YR, 4DY, 5DY, 6DY, 1WK, 30DY, 1MO, …</p>
+
+<p class=MsoNormal>Now, I should point out that each entry was on a separate
+line as they were the keys of a dictionary, but they were still on consecutive
+lines. In the past even alphabetised lists have not been immune to seemingly
+random insertions, and they have slipped through the review process too because
+diff tools only show a few lines of context which incentivises you to largely
+ignore the wider context unless you go out of your way. (If it <i>really</i>
+matters, enforce it in code or with a test.)</p>
+
+<p class=MsoNormal>In essence you could consider the first choice of insertion
+point a <i>local</i> maximum (between days and years, albeit both zero) whereas
+the second one might be more like a <i>global</i> maximum (between six days and
+one week – yes, finance is weird). And that, I think, is one difference that
+distinguishes programmers along their journey to mastery – they typically go looking
+for the global maxima rather than settling for the first local maxima they find.</p>
+
+<p class=MsoNormal>As we start to zoom out of the codebase we see patterns at
+different levels – statements, functions, classes, components, systems, etc.
+For some reason we refer to small-scale patterns as mere “idioms” whereas once
+they get large enough, they get promoted to Design Pattern™ status. (Although
+ironically the original design patterns made famous by the Gang of Four were
+relegated to “idiom” by many commentators.) In the past I’ve quipped that many
+interfaces I see are more <i>adhesive</i> than cohesive as people have a
+tendency to just stick a new method on the end instead of looking for a “more logical”
+place to insert it.</p>
+
+<p class=MsoNormal>On the subject of terminology, a favoured pattern-oriented
+approach to software development goes by the moniker Convention over
+Configuration. The idea is that it should be easier to follow an existing
+pattern and have the right thing magically happen, than be given free rein and
+then need to explicitly link the artefacts together. Some conventions, e.g.
+putting all source files under a “src” folder to avoid you needing to add each
+filename to a project  / makefile / build script, span technologies and helps
+you fall into the Pit of Success. Other conventions, which typically involve
+using reflection and adhering to seemingly arbitrary naming rules are less
+obvious. In the past I’ve discovered tests that weren’t run because they only
+started with “test” and not “test_” (the former style is the convention in more
+than one popular test framework, but not the one we were using.) Likewise, I’ve
+discovered entire test assemblies being missed out of the CI pipeline due to
+being <i>un</i>conventional. Typically, this then begs the question about how someone
+could write tests and not notice that they weren’t being run.</p>
+
+<p class=MsoNormal>I think this is another area where those of us further along
+their programming journey begin to explore patterns outside the codebase and
+architecture – people and their behaviours. For example, I once noticed that a
+certain member of the team would consistently submit merge requests with a
+large commit history with tiny changes and typically the word “fixed” in the
+message. When reviewing, it’s common to only consider the final outcome of the entire
+changeset and not the journey, so you probably miss the signs buried in the
+history. In this instance what was missing was taking the time to review their
+code properly and run the entire test suite <i>before</i> pushing the branch thereby
+creating an excessive amount of context switching.</p>
+
+<p class=MsoNormal>A few decades earlier I remember joining a team to help
+improve the scalability and reliability of a distributed system. One of my
+first jobs was to deal with a serious memory leak which actually turned out to
+be a considerable number of smaller leaks – forgetting to mark the destructor
+of a base class as <span style='font-family:"Courier New"'>virtual</span>.
+While I could have just fixed the leaks and moved on, I wondered if there was a
+pattern there. It turned out they were all written by the same person, and
+although no longer in the team, they were still at the company and only a few
+rows away. They were very appreciative of my discovery and for taking the time
+to talk to them about the mistake. (Sadly, not everyone there was quite so
+happy with my ability to spot suspect code patterns and use the version control
+tool to work backwards to identity the author.)</p>
+
+<p class=MsoNormal>Monitoring systems is another area where our pattern
+recognition abilities get put to the test as we scour over log files and
+performance graphs looking for the clues that caused the system to behave in an
+odd way. The trick here, like elsewhere, is not to fall foul of the old adage
+about correlation being mistaken for causation. Of course, before you can spot
+a system that’s behaving weirdly you have to know what it looks like when it’s
+behaving <i>normally</i> which likely entails spotting a different kind of pattern.
+This is why I like to write-up postmortems, it’s hard to spot a pattern if you
+don’t have the history to draw upon.</p>
+
+<p class=MsoNormal>Cohesion, whether it be in  the code, design, system,
+processes, or organisation is an enabler for successful delivery, but it
+requires us to stand back to see the bigger picture and course-correct when
+things have gone wayward. Inside the chaos there may well be order fighting to
+get out, but only if you go looking for it.</p>
+
+<p class=MsoNormal>Chris Oldwood<br>
+12 May 2025</p>
+
+<h2>Biography</h2>
+
+<p class=MsoNormal>Chris is a freelance programmer who started out as a bedroom
+coder in the 80’s writing assembly language on 8-bit micros. These days it's
+enterprise grade technology <s>in plush corporate offices</s> from the comfort
+of his breakfast bar. He also commentates on the Godmanchester duck race and is
+easily distracted by emails and DMs to <a href="mailto:gort@cix.co.uk">gort@cix.co.uk</a>
+and @chrisoldwood.</p>
+
+</div>
+
+</body>
+
+</html>
