@@ -1,0 +1,10 @@
+The Test Driven Developer
+=========================
+
+There is a trope in software development that developers don't do testing, which is weird, because unless you are trained in Formal Methods and can literally prove your code is correct it's the best we've got, unless you're happy to go on "feels" alone. Being "test driven" is more than just writing a few unit tests and clicking a few random buttons in the UI, it's an entire mindset where thinking about how you'd even define "working software" affects how you approach software development.
+
+This talk looks at what it means for a developer to embrace testing and let the question "how would I even test this?" shape the way you go about writing code, but also the wider issues of what to build, and how to support it after hitting production.
+
+---
+
+Chris is a freelance programmer who started out as a bedroom coder in the 80’s writing assembly language on 8-bit micros; these days it's enterprise grade technology in plush corporate offices, or remotely from his breakfast bar. He also commentates on the Godmanchester duck race.
