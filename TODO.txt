@@ -3,3 +3,5 @@
 - Use proper headings for section headings.
 
 - Simplify the CSS.
+
+- Sort out the fonts used for the articles.
