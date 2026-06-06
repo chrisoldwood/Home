@@ -8,7 +8,7 @@ $ErrorActionPreference = 'Stop'
 
 $fixups = @(
     @{ Pattern = '@font-face\s*\{[^\}]*\}'; Replacement = '' },
-    @{ Pattern = 'font-family\s*:\s*[^;\}\r\n]+;'; Replacement = '' },
+    @{ Pattern = 'font-family\s*:\s*[^;\}\r\n>]+;'; Replacement = '' },
     @{ Pattern = 'font-size:11.0pt;'; Replacement = 'font-size: 13.0pt;' },
     @{ Pattern = 'width: 600px;'; Replacement = 'width: 700px;' }
     @{ Pattern = 'Afterwood\s*[-–]\s*'; Replacement = 'Afterwood – ' }
